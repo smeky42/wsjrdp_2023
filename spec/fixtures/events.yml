@@ -1,0 +1,13 @@
+top_event:
+  name: Top Event
+  groups: root
+
+top_course:
+  name: Top Course
+  groups: root
+  type: Event::Course
+  kind: dummy
+  priorization: true
+  requires_approval: true
+  external_applications: true
+
