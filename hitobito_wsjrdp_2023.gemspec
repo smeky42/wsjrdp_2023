@@ -8,11 +8,11 @@ Gem::Specification.new do |s|
   # rubocop:disable SingleSpaceBeforeFirstArg
   s.name        = 'hitobito_wsjrdp_2023'
   s.version     = HitobitoWsjrdp2023::VERSION
-  s.authors     = ['Your name']
-  s.email       = ['Your email']
+  s.authors     = ['Peter Neubauer']
+  s.email       = ['development@smeky.de']
   # s.homepage    = 'TODO'
   s.summary     = 'Wsjrdp 2023'
-  s.description = 'Wagon description'
+  s.description = 'This hitobito wagon is the registration for the German Contingent'
 
   s.files = Dir['{app,config,db,lib}/**/*'] + ['Rakefile']
   s.test_files = Dir['test/**/*']
