@@ -19,24 +19,9 @@ class Wsjrdp2023PersonSeeder < PersonSeeder
 
 end
 
-puzzlers = ['Pascal Zumkehr',
-            'Pierre Fritsch',
-            'Andreas Maierhofer',
-            'Mathis Hofer',
-            'Andre Kunz',
-            'Pascal Simon',
-            'Roland Studer']
-
-devs = {'Customer Name' => 'customer@email.com'}
-puzzlers.each do |puz|
-  devs[puz] = "#{puz.split.last.downcase}@puzzle.ch"
-end
-
 seeder = Wsjrdp2023PersonSeeder.new
 
 seeder.seed_all_roles
 
 root = Group.root
-devs.each do |name, email|
-  seeder.seed_developer(name, email, root, Group::Root::Leader)
-end
+seeder.seed_developer("Andi Admin", "andi.admin@wsjrdp.de", root, Group::Root::Admin)

@@ -6,4 +6,4 @@
 #  https://github.com/hitobito/hitobito_wsjrdp_2023.
 
 
-Group::Root.seed_once(:parent_id, name: 'Hauptgruppe')
+Group::Root.seed_once(:parent_id, name: 'Kontingent')

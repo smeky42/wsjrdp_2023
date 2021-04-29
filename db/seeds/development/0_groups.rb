@@ -20,6 +20,59 @@ if root.address.blank?
   end
 end
 
-# TODO: define more groups
+Group::UnitSupport.seed(:name, :parent_id,
+  {
+    name: 'Unit Betreuung',
+    address: "Chausseestraße 128/129",
+    zip_code: "10115",
+    town: "Berlin",
+    country: "DE",
+    email: "unit-info@wsjrdp.de",
+    parent_id: root.id
+  }
+)
+
+Group::Ist.seed(:name, :parent_id,
+  {
+    name: 'IST',
+    address: "Chausseestraße 128/129",
+    zip_code: "10115",
+    town: "Berlin",
+    country: "DE",
+    email: "ist-info@wsjrdp.de",
+    parent_id: root.id
+  }
+)
+
+unit_support = Group.find_by_name('Unit Betreuung')
+Group::Unit.seed(:name, :parent_id,
+  {
+    name: 'Unit Unassigned',
+    address: "Nirgendwo 42",
+    zip_code: "1234",
+    town: "Niemandsland",
+    country: "DE",
+    email: "unitnunassigned@wsjrdp.de",
+    parent_id: unit_support.id
+  },
+  {
+    name: 'Unit NBG',
+    address: "Äußere Bayreuther Straße 1234",
+    zip_code: "90411",
+    town: "Nürnberg",
+    country: "DE",
+    email: "unitnbg@wsjrdp.de",
+    parent_id: unit_support.id
+  },
+  {
+    name: 'Unit HH',
+    address: "Reeperbahn 63",
+    zip_code: "20359",
+    town: "Hamburg",
+    country: "DE",
+    email: "unitnbg@wsjrdp.de",
+    parent_id: unit_support.id
+  }
+)
 
 Group.rebuild!
