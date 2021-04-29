@@ -7,30 +7,27 @@
 
 
 # TODO: rename class to specific name and change all references
-class Group::Root < ::Group
+class Group::Unit < ::Group
 
   self.layer = true
 
-  children Group::UnitSupport
-  children Group::Ist
-
   ### ROLES
-  class Admin < ::Role
-    self.permissions = [:layer_and_below_full, :admin]
-  end
-
   class Leader < ::Role
-    self.permissions = [:layer_and_below_full]
+    self.permissions = [:group_other_roles_and_below_full]
   end
 
   class Member < ::Role
     self.permissions = []
   end
 
-  class Unassigned < ::Role
+  class UnassignedLeader < ::Role
     self.permissions = []
   end
 
-  roles Admin, Leader, Member, Unassigned
+  class UnassignedMember < ::Role
+    self.permissions = []
+  end
+
+  roles Leader, Member, UnassignedLeader, UnassignedMember
 
 end
