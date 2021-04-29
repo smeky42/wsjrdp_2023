@@ -3,23 +3,73 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_wsjrdp_2023.
 
-
 de:
   activerecord:
     models:
 
-      ### GROUPS
-
+      ### GROUP ROOT
       group/root:
-        one: Hauptgruppe
-        other: Hauptgruppen
+        one: Kontingentsteam
+        other: Kontingentsteam
 
-
-      ### ROLES
-
+      ### ROLES ROOT
+      group/root/admin:
+        one: Admin 
+        description: Administratoren verwalten die Applikation.
       group/root/leader:
-        one: Leitung
-        description: Leitungspersonen verwalten die Applikation.
+        one: Kontingentsleitung
+        description: Kontingentsleitungsmitglieder mit vollem Zugriff z.B. HoC, Finanzen, Orga. 
       group/root/member:
-        one: Mitglied
-        description: Mitglieder sind alle anderen.
+        one: Kontingentsteam
+        description: KT Mitglieder sind alle anderen im Kontingentsteam.
+      group/root/unassigned:
+        one: KT Unassigned
+        description: KT Mitglieder die noch nicht bestätigt wurden.
+
+      ### GROUP Unit Support
+      group/unit_support:
+        one: Unit Betreuung
+        other: Unit Betreuung
+
+      ### ROLES Unit Support
+      group/unit_support/leader:
+        one: Head Unitbetreuung
+        description: Head Unitbetreuung mit vollem Zugriff auf alle Units. 
+      group/unit_support/member:
+        one: Unitbetreuung
+        description: Unitbetreuung mit vollem Zugriff auf alle Units.
+
+     ### GROUP IST
+      group/ist:
+        one: IST 
+        other: ISTs 
+
+      ### ROLES IST
+      group/ist/leader:
+        one: Head IST
+        description: Head IST mit vollem Zugriff auf alle ISTs. 
+      group/ist/member:
+        one: IST
+        description: International Service Team
+      group/ist/unassigned:
+        one: IST Unassigned
+        description: IST  Mitglieder die noch nicht bestätigt wurden.
+
+      ### GROUP Unit
+      group/unit:
+        one: Unit 
+        other: Units 
+
+      ### ROLES Unit
+      group/unit/leader:
+        one: Unitleitung
+        description: Unitleitung mit vollem Zugriff auf seine Unit. 
+      group/unit/member:
+        one: Teilnehmende
+        description: Teilnehmende
+      group/unit/unassigned_leader:
+        one: UL Unassigned
+        description: UL Mitglieder die noch nicht bestätigt wurden.
+      group/unit/unassigned_member:
+        one: TN Unassigned
+        description: TN  Mitglieder die noch nicht bestätigt wurden.
