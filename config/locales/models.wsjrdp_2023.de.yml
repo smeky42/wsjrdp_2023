@@ -76,9 +76,29 @@ de:
     
     attributes:
       person:
+        role: Wunschrolle
+        first_name_dummy: Baden
+        last_name_dummy: Powell
+        email_dummy: baden.powell@worldscoutjamboree.de
         nickname: Spitzname / Fahrtenname
         rdp_association: Verband
         rdp_association_region: Land, Diözese
         rdp_association_sub_region: Bezirk, Region
         rdp_association_group: Stamm, Ortsgruppe
         rdp_association_number: Mitgliedsnummer
+
+    header:
+      registration_header: Für die Voranmeldung zum Worldscoutjamboree als Unit Leitung hier registrieren
+
+    button:
+      register: Registrieren
+
+    text:
+      more_info: Die Anmeldungen für IST und Teilnehmende beginnt im Juli. Mehr Informationen findest du auf unserer
+      homepage: Homepage
+      homepage_link: https://www.worldscoutjamboree.de/
+    
+    alert: 
+      name: Bitte gib deinen vollständigen Vor- und Nachnamen ein.
+      mail: Bitte gib deine korrekte Mailadresse ein.
+      already_registered: Es existiert schon ein Account mit dieser e-Mail Adresse. Du kannst dein Passwort über "Passwort vergessen?" zurücksetzen.

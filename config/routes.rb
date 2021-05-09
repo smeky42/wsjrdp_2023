@@ -11,8 +11,9 @@ Rails.application.routes.draw do
   extend LanguageRouteScope
 
   language_scope do
-    # Define wagon routes here
-
+    get '/registration', to: "registration#index"
+    post '/registration', to: "registration#index"
+    put '/registration', to: "registration#index"
   end
 
 end

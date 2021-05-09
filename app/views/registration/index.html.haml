@@ -1,0 +1,24 @@
+%html
+%head
+
+%h1= t('activerecord.header.registration_header')
+= t('activerecord.text.more_info')
+=link_to t('activerecord.text.homepage'), t('activerecord.text.homepage_link')
+
+= form_tag '/registration', :method => :post do
+  = field_set_tag do
+    = label_tag :frist_name, t('activerecord.attributes.person.first_name')
+    = text_field_tag :first_name, nil, placeholder: t('activerecord.attributes.person.first_name_dummy')
+    = label_tag :last_name, t('activerecord.attributes.person.last_name')
+    = text_field_tag :last_name, nil, placeholder: t('activerecord.attributes.person.last_name_dummy')
+    = label_tag :mail, t('activerecord.attributes.person.email')
+    = email_field_tag :mail, nil, placeholder: t('activerecord.attributes.person.email_dummy')
+    = label_tag :role, t('activerecord.attributes.person.role')
+    = select_tag(:role, 
+      options_for_select(@possible_roles))
+    %br
+    = submit_tag t('activerecord.button.register'), class: "btn btn-primary"
+
+
+
+
