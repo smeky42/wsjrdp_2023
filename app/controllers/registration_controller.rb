@@ -11,8 +11,12 @@ class RegistrationController < ActionController::Base
 
   def index
     @possible_roles = Settings.person.roles
-    if request.post? && check_mail && check_name
-      register_person
+
+    if request.post?
+      if check_mail && check_name
+        person = register_person
+        send_registration_mail(person)
+      end
     end
   end
 
@@ -29,8 +33,9 @@ class RegistrationController < ActionController::Base
   def check_name
     if params[:first_name].length < 2 || params[:last_name].length < 2
       flash[:alert] = 'Bitte gib deinen vollständigen Vor- und Nachnamen ein.'
-      false
+      return false
     end
+    true
   end
 
   def check_mail
@@ -52,6 +57,11 @@ class RegistrationController < ActionController::Base
                                           params[:last_name],
                                           params[:role])
     person
+  end
+
+  def send_registration_mail(person)
+    WelcomeMailer.welcome_email(person).deliver_now
+    flash[:notice] = 'Eine Mail mit deinen Login Daten wurde an ' + params[:mail] + ' versandt!'
   end
 
 end
