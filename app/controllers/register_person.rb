@@ -37,8 +37,8 @@ class RegisterPerson < PersonSeeder
     case role_wish
     when 'Unit Leitung'
       Group::Unit::UnassignedLeader
-    when 'Kontingentsleitung'
-      Group::Cmt::UnassignedMember
+    when 'Kontingentsteam'
+      Group::Root::Unassigned
     end
   end
 
@@ -46,7 +46,7 @@ class RegisterPerson < PersonSeeder
     case role_wish
     when 'Unit Leitung'
       Group.find_by(name: 'Unit Unassigned')
-    when 'Kontingentsleitung'
+    when 'Kontingentsteam'
       Group.find_by(name: 'Hauptgruppe')
     end
   end
