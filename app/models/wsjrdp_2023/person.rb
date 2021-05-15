@@ -6,17 +6,32 @@
 #  https://github.com/hitobito/hitobito_wsjrdp_2023.
 
 module Wsjrdp2023::Person
-    extend ActiveSupport::Concern
-  
-    included do
-        Person::PUBLIC_ATTRS += [
-            :rdp_association,
-            :rdp_association_region,
-            :rdp_association_sub_region,
-            :rdp_association_group,
-            :rdp_association_number,
-            :longitude,
-            :latitude
-        ]
+  extend ActiveSupport::Concern
+
+  included do
+    Person::PUBLIC_ATTRS += [
+      :rdp_association,
+      :rdp_association_region,
+      :rdp_association_sub_region,
+      :rdp_association_group,
+      :rdp_association_number,
+      :longitude,
+      :latitude
+    ]
+  end
+
+  def role?(role)
+    # TODO: use view.can
+    unless roles.loaded?
+      Person::PreloadGroups.for([self])
     end
+
+    roles.each do |r|
+      if r.type == role.to_s
+        return true
+      end
+    end
+    false
+  end
+
 end
