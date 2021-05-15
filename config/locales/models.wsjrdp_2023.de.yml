@@ -86,6 +86,7 @@ de:
         rdp_association_sub_region: Bezirk, Region
         rdp_association_group: Stamm, Ortsgruppe
         rdp_association_number: Mitgliedsnummer
+        additional_information: Zusätzliche Angaben
 
     header:
       registration_header: Für die Vorregistrierung zum Worldscoutjamboree als Unit Leitung hier registrieren
