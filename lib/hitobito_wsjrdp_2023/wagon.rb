@@ -23,9 +23,10 @@ module HitobitoWsjrdp2023
     config.to_prepare do
       # extend application classes here
       Group.include Wsjrdp2023::Group
-      PeopleController.send :include, Wsjrdp2023::PeopleController
-      # TODO if Export is needed Export::Tabular::People::PeopleAddress.send :include, Wsjrdp2023::Export::Tabular::People::PeopleAddress
-      PersonSerializer.send :include, Wsjrdp2023::PersonSerializer
+      PeopleController.include Wsjrdp2023::PeopleController
+      Person.include Wsjrdp2023::Person
+      # TODO: if Export is needed Export::Tabular::People::PeopleAddress.send :include, Wsjrdp2023::Export::Tabular::People::PeopleAddress
+      PersonSerializer.include Wsjrdp2023::PersonSerializer
     end
 
     initializer 'wsjrdp_2023.add_settings' do |_app|
