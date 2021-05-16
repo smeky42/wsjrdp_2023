@@ -6,18 +6,28 @@
 #  https://github.com/hitobito/hitobito_wsjrdp_2023.
 
 module Wsjrdp2023
-    module PeopleController
-      extend ActiveSupport::Concern
-      included do
-        self.permitted_attrs += [
-            :rdp_association,
-            :rdp_association_region,
-            :rdp_association_sub_region,
-            :rdp_association_group,
-            :rdp_association_number,
-            :longitude,
-            :latitude
-          ]
+  module PeopleController
+    extend ActiveSupport::Concern
+    included do
+      self.permitted_attrs += [
+        :rdp_association,
+        :rdp_association_region,
+        :rdp_association_sub_region,
+        :rdp_association_group,
+        :rdp_association_number,
+        :longitude,
+        :latitude
+      ]
+
+      # Override crud_controller
+      # Display a form to edit an exisiting entry of this model.
+      #   GET /entries/1/edit
+      def edit(&block)
+        @rdp_groups = YAML.load_file(Rails.root.join('' \
+                                    '../hitobito_wsjrdp_2023/config/rdp_groups.yml'))[Rails.env]
+
+        respond_with(entry, &block)
       end
     end
   end
+end
