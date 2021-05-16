@@ -32,7 +32,7 @@ module Contactable
     before_validation :set_self_in_nested
 
     validates :country, inclusion: Countries.codes, allow_blank: true
-    validate :assert_is_valid_swiss_post_code
+    validate :assert_is_valid_swiss_post_code, :assert_is_valid_german_post_code
   end
 
   def country_label
@@ -50,6 +50,10 @@ module Contactable
 
   def swiss?
     Countries.swiss?(country)
+  end
+
+  def germany?
+    ['', 'de'].include?(country.to_s.strip.downcase)
   end
 
   def canton
@@ -70,6 +74,12 @@ module Contactable
 
   def assert_is_valid_swiss_post_code
     if zip_code.present? && swiss? && !zip_code.to_s.match(/\A\d{4}\z/)
+      errors.add(:zip_code)
+    end
+  end
+
+  def assert_is_valid_german_post_code
+    if zip_code.present? && germany? && !zip_code.to_s.match(/\A\d{5}\z/)
       errors.add(:zip_code)
     end
   end
