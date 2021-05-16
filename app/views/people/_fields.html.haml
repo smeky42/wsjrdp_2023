@@ -10,6 +10,10 @@
 
 - without_relations ||= false
 
+= javascript_include_tag "https://rawgithub.com/indrimuska/jquery-editable-select/master/dist/jquery-editable-select.min.js"
+%link{:rel => :stylesheet, :type => :"text/css", :href => "https://rawgithub.com/indrimuska/jquery-editable-select/master/dist/jquery-editable-select.min.css"}
+
+
 = field_set_tag do
   = f.labeled_input_fields :first_name, :last_name, :nickname
   -# = f.labeled_string_field(:company_name,
@@ -42,3 +46,71 @@
 
 = field_set_tag do
   = f.labeled_input_field(:additional_information, help: t('.no_sensitive_information'))
+
+:javascript
+  var association_tree = JSON.parse('#{raw @rdp_groups.to_json}');
+  var rdp_association = '#{@person.rdp_association}';
+  var rdp_association_region = '#{@person.rdp_association_region}';
+  var rdp_association_sub_region = '#{@person.rdp_association_sub_region}';
+  var rdp_association_group = '#{@person.rdp_association_group}';
+
+  function loadDropdown(id, level, tree){
+    $(id).editableSelect('clear');
+    $(id).editableSelect('add', level);
+    for (const [key, value] of Object.entries(tree)) {
+      if(level != key) {
+        $(id).editableSelect('add',key);
+      }
+    }
+    $(id).editableSelect();
+  }
+
+  function loadDropdowns() {
+    loadDropdown("#person_rdp_association",rdp_association, association_tree);
+    loadDropdown("#person_rdp_association_region",rdp_association_region, association_tree[rdp_association]);
+    loadDropdown("#person_rdp_association_sub_region",rdp_association_sub_region, association_tree[rdp_association][rdp_association_region]);
+    loadDropdown("#person_rdp_association_group",rdp_association_group, association_tree[rdp_association][rdp_association_region][rdp_association_sub_region]);
+  }
+
+  function setEvents() {
+    $('#person_rdp_association').editableSelect().on('select.editable-select', function (e, li) {
+      rdp_association = li.text();
+      loadDropdown("#person_rdp_association_region",rdp_association_region, association_tree[rdp_association]);
+    });
+  
+    $("#person_rdp_association_region").editableSelect().on('select.editable-select', function (e, li) {
+      rdp_association_region = li.text();
+      loadDropdown("#person_rdp_association_sub_region",rdp_association_sub_region, association_tree[rdp_association][rdp_association_region]);
+
+    });
+  
+    $("#person_rdp_association_sub_region").editableSelect().on('select.editable-select', function (e, li) {
+      rdp_association_sub_region = li.text();
+          loadDropdown("#person_rdp_association_group",rdp_association_group, association_tree[rdp_association][rdp_association_region][rdp_association_sub_region]);    
+    });
+  }
+
+  $(document).ready(function () {
+    try {
+      console.log("Document Ready");
+      loadDropdowns();
+      setEvents();
+    } catch (e) {
+      console.log("Failed on Document Ready"  + e)
+      setTimeout(
+        function() 
+        {
+          console.log("Timeout set Events")
+          setEvents();
+        }, 2000);
+    }
+  });
+
+  $(window).load(function () {
+    try {
+      console.log("Window load set Events")
+      setEvents();
+    }catch (e) {
+      console.log("Failed on Window load")
+    }
+  });
