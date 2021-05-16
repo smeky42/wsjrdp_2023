@@ -12,19 +12,19 @@
 - if can?(:create_invoice, entry)
   = invoice_button(people: [entry])
 
-= dropdown_people_export(can?(:show_full, entry), false, true, false)
+-# = dropdown_people_export(can?(:show_full, entry), false, true, false)
 
-- if entry.email && entry.roles.any?
-  = action_button(t('.send_login'),
-                  send_password_instructions_group_person_path(parent, entry),
-                  :envelope,
-                  remote: true,
-                  method: :post,
-                  rel: :tooltip,
-                  'data-container' => 'body',
-                  'data-html' => 'true',
-                  'data-placement' => 'bottom',
-                  title: send_login_tooltip_text)
+-# - if entry.email && entry.roles.any?
+-#   = action_button(t('.send_login'),
+-#                   send_password_instructions_group_person_path(parent, entry),
+-#                   :envelope,
+-#                   remote: true,
+-#                   method: :post,
+-#                   rel: :tooltip,
+-#                   'data-container' => 'body',
+-#                   'data-html' => 'true',
+-#                   'data-placement' => 'bottom',
+-#                   title: send_login_tooltip_text)
 
 - if entry == current_user && can?(:update_password, entry)
   = action_button t('devise.registrations.edit.change_password'), edit_person_registration_path
