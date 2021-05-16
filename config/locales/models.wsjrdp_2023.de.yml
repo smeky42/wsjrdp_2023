@@ -86,7 +86,7 @@ de:
         rdp_association_sub_region: Bezirk, Region
         rdp_association_group: Stamm, Ortsgruppe
         rdp_association_number: Mitgliedsnummer
-        additional_information: Zusätzliche Angaben
+        additional_information: Zusätzliche Angaben z.B Mitunitleiter*innen
         genders:
           m: männlich
           w: weiblich
