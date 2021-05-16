@@ -34,10 +34,13 @@ countries:
 
 phone_number:
   predefined_labels:
-    - Privat
-    - Vater
-    - Mutter
+    - Festnetz
     - Mobil
+    - Teilnemende*r
+    - Vater (Mobil)
+    - Mutter (Mobil)
+    - Vater (Festnetz)
+    - Mutter (Festnetz)
     - Arbeit
     - Fax
     - Andere
@@ -45,17 +48,18 @@ phone_number:
 
 social_account:
   predefined_labels:
-    - TikTok
     - Instragram
+    - TikTok
     - Snapchat
-    - Facebook
     - Twitter
+    - Facebook
     - Webseite
     - Andere
 
 additional_email:
   predefined_labels:
     - Privat
+    - Teilnehmende*r
     - Vater
     - Mutter
     - Arbeit
