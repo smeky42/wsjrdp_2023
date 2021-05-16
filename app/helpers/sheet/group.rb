@@ -21,22 +21,32 @@ module Sheet
         :simple_group_events_path,
         params: { returning: true },
         if: (lambda do |view, group|
-          group.event_types.include?(::Event) &&
-          view.can?(:index_events, group)
+          view.current_user.role?('Group::Root::Admin')
+          # TODO: use view.can
+          # group.event_types.include?(::Event) &&
+          # view.can?(:index_events, group)
         end)
 
     tab 'activerecord.models.event/course.other',
         :course_group_events_path,
         params: { returning: true },
         if: (lambda do |view, group|
-          group.event_types.include?(::Event::Course) &&
-            view.can?(:'index_event/courses', group)
+          view.current_user.role?('Group::Root::Admin')
+          # TODO: use view.can
+          # group.event_types.include?(::Event::Course) &&
+          #   view.can?(:'index_event/courses', group)
         end)
 
     tab 'activerecord.models.mailing_list.other',
         :group_mailing_lists_path,
-        if: :index_mailing_lists,
-        params: { returning: true }
+        # if: :index_mailing_lists,
+        params: { returning: true },
+        if: (lambda do |view, group|
+          view.current_user.role?('Group::Root::Admin')
+          # TODO: use view.can
+          # group.event_types.include?(::Event::Course) &&
+          #   view.can?(:'index_event/courses', group)
+        end)
 
     tab :tab_person_add_request_label,
         :group_person_add_requests_path,
@@ -51,7 +61,13 @@ module Sheet
 
     tab 'groups.tabs.deleted',
         :deleted_subgroups_group_path,
-        if: :deleted_subgroups
+        # if: :deleted_subgroups
+        if: (lambda do |view, group|
+          view.current_user.role?('Group::Root::Admin')
+          # TODO: use view.can
+          # group.event_types.include?(::Event::Course) &&
+          #   view.can?(:'index_event/courses', group)
+        end)
 
     tab 'activerecord.models.group_setting.other',
         :group_group_settings_path,
