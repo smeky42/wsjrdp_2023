@@ -22,3 +22,12 @@ person:
   roles:
     - Unit Leitung
     - Kontingentsteam
+
+countries:
+  prioritized:
+    - DE
+    - CH
+    - AT
+    - LI
+    - FR
+    - IT
