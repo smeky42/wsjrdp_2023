@@ -9,6 +9,9 @@ module Wsjrdp2023::Person
   extend ActiveSupport::Concern
 
   included do
+    # TODO: Requires change in person.rb hitobito
+    Person::GENDERS += ['d']
+
     Person::PUBLIC_ATTRS += [
       :rdp_association,
       :rdp_association_region,

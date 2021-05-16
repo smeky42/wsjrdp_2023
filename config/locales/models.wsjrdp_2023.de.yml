@@ -87,6 +87,11 @@ de:
         rdp_association_group: Stamm, Ortsgruppe
         rdp_association_number: Mitgliedsnummer
         additional_information: Zusätzliche Angaben
+        genders:
+          m: männlich
+          w: weiblich
+          d: divers
+          _nil: unbekannt
 
     header:
       registration_header: Für die Vorregistrierung zum Worldscoutjamboree als Unit Leitung hier registrieren
