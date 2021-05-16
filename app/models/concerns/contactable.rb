@@ -45,7 +45,7 @@ module Contactable
   end
 
   def ignored_country?
-    swiss?
+    germany?
   end
 
   def swiss?
