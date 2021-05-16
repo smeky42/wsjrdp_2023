@@ -31,3 +31,32 @@ countries:
     - LI
     - FR
     - IT
+
+phone_number:
+  predefined_labels:
+    - Privat
+    - Vater
+    - Mutter
+    - Mobil
+    - Arbeit
+    - Fax
+    - Andere
+  default_country: DE
+
+social_account:
+  predefined_labels:
+    - TikTok
+    - Instragram
+    - Snapchat
+    - Facebook
+    - Twitter
+    - Webseite
+    - Andere
+
+additional_email:
+  predefined_labels:
+    - Privat
+    - Vater
+    - Mutter
+    - Arbeit
+    - Andere
