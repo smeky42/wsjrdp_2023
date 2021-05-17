@@ -23,6 +23,11 @@ person:
     - Unit Leitung
     - Kontingentsteam
 
+
+addresses:
+  imported_countries:
+    - DE
+
 countries:
   prioritized:
     - DE
