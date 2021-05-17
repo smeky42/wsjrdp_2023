@@ -12,8 +12,8 @@
 // -------------------------
 $black:                 #474E5D !default;
 $grayDarker:            #797E89 !default;
-$grayDark:              #8b8b8b !default;
-$gray:                  #979CA6 !default;
+$grayDark:              #ffffff !default;
+$gray:                  #7e7c7c !default;
 $grayLight:             #E8EBF0 !default;
 $grayLighter:           #F8F9FA !default;
 $white:                 #fff !default;
@@ -35,13 +35,13 @@ $red:                   $orange !default;
 $textColor:             $black !default;
 $borderColor:           $grayLight !default;
 
-$pageBackground:        lighten($green, 5%);
-$contentBackground:     $grayLight;
+$pageBackground:        $white;//lighten($green, 5%);
+$contentBackground:     $green;//$grayLight;
 $footerBackground:      $blue;
 $bodyBackground:        $blue;
 
 $focusColor:            $purple;
-$shadowColor:           darken($pageBackground, 10%);
+$shadowColor:           darken($green, 10%);//darken($pageBackground, 10%);
 $linkColor:             $blue !default;
 $linkColorHover:        $purpleDark !default;
 
