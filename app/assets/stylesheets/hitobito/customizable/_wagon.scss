@@ -2,12 +2,35 @@
 	display: block;
 	position: relative;
 	text-indent: -9999px;
-	background: url("https://test.worldscoutjamboree.de/app/uploads/2021/04/logo-final.jpg") transparent no-repeat;
+	background: url("../../../images/jamb-logo.png") transparent no-repeat;
 	width: 90px;
 	height: 90px;
 	background-size: contain;
 	background-position: 50% 55%;
 	border-radius: 6px;
 	margin-left: -10px;
-	margin-top: -15px;
+	margin-top: -30px;
+}
+
+
+#page-footer {
+  margin-top: 0px;
+}
+
+.sheet.parent .level {
+  color: white;
+}
+
+.level + .nav-sub a {
+  color: #ffffff73;
+}
+
+#page-header > a {
+  color: #76A5D7;
+}
+
+#page {
+  background: url("../../../images/trees.png") white no-repeat;
+  background-size: 15%;
+  background-position: 0% 100%;
 }
