@@ -10,17 +10,11 @@ module Wsjrdp2023::Person
 
   included do
     # TODO: Requires change in person.rb hitobito
-    Person::GENDERS += ['d']
+    # Person::GENDERS += ['d']
 
-    Person::PUBLIC_ATTRS += [
-      :rdp_association,
-      :rdp_association_region,
-      :rdp_association_sub_region,
-      :rdp_association_group,
-      :rdp_association_number,
-      :longitude,
-      :latitude
-    ]
+    Person::PUBLIC_ATTRS << :rdp_association << :rdp_association_region
+    Person::PUBLIC_ATTRS << :rdp_association_sub_region << :rdp_association_group
+    Person::PUBLIC_ATTRS << :rdp_association_number << :longitude << :latitude
   end
 
   def role?(role)
