@@ -108,3 +108,7 @@ de:
       name: Bitte gib deinen vollständigen Vor- und Nachnamen ein.
       mail: Bitte gib deine korrekte Mailadresse ein.
       already_registered: Es existiert schon ein Account mit dieser e-Mail Adresse. Du kannst dein Passwort über "Passwort vergessen?" zurücksetzen.
+  
+  contactable:
+    additional_email_fields:
+      tooltip_mailings: Versände von E-Mails werden zusätzlich an alle hier markierten Adressen im CC verschickt.
