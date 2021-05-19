@@ -47,7 +47,7 @@ class RegisterPerson < PersonSeeder
     when 'Unit Leitung'
       Group.find_by(name: 'Unit Unassigned')
     when 'Kontingentsteam'
-      Group.find_by(name: 'Hauptgruppe')
+      Group.find_by(name: 'Kontingent')
     end
   end
 end
