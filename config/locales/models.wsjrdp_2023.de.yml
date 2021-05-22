@@ -77,9 +77,9 @@ de:
     attributes:
       person:
         role: Wunschrolle
-        first_name_dummy: Baden
-        last_name_dummy: Powell
-        email_dummy: baden.powell@worldscoutjamboree.de
+        first_name_dummy: Robert
+        last_name_dummy: Baden-Powell
+        email_dummy: robert.baden-powell@worldscoutjamboree.de
         nickname: Spitzname / Fahrtenname
         rdp_association: Verband
         rdp_association_region: Land, Diözese
