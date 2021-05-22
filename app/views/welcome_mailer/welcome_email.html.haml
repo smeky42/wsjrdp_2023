@@ -1,15 +1,13 @@
 %p Hallo #{@resource.first_name},
 
-%p du hast den ersten Schritt zur Vorregistrierung als Unit Leitung für das deutsche Kontingent zum Worldscoutjamboree 2023 in Korea gemacht.
-%br/
-Bitte lege dein Passwort fest und stelle deine Vorregistrierung fertig unter:
-%p= link_to edit_password_url(@resource, reset_password_token: @token),
-            edit_password_url(@resource, reset_password_token: @token)
+%p du hast den ersten Schritt zur Vorregistrierung als Unitleitung für das deutsche Kontingent zum World Scout Jamboree 2023 in Korea gemacht.
 
-%p Mit der Emailadresse #{@resource.email} bist du jetzt registriert. Alle weiteren Mails wirst du auf diese Emailadresse geschickt bekommen.
-%p Mehr Informationen zu unserer Unternehmung findest du unter https://worldscoutjamboree.de !
-%br/
-%p Für deine Vorregistrierung zum Jamboree benötigen wir nur ein paar Daten, dafür musst du unter Info auf "Bearbeiten" klicken und alle Felder ausfüllen. 
-%br/
+%p Für deine Vorregistrierung benötigen wir nur ein paar Daten, dafür musst du in der Registrierung unter Info auf "Bearbeiten" klicken und alle Felder ausfüllen. 
+
+Bitte lege zuerst dein Passwort fest und stelle danach deine Vorregistrierung hier fertig: #{link_to "Passwort initial setzen.", edit_password_url(@resource, reset_password_token: @token)}
+
+%p Alle weiteren Mails von uns wirst du an #{@resource.email} geschickt bekommen. Dies ist auch deine Mailadresse für das #{link_to "Registrierungsportal", "https://anmeldung.worldscoutjamboree.de"}.
+%p Mehr Informationen zum Jamboree findest du auf unserer #{link_to "Homepage", "https://worldscoutjamboree.de"}. 
+
 %p Wir freuen uns auf dich!
 %p Deine Kontingentsleitung

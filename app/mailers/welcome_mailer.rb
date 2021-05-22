@@ -14,6 +14,6 @@ class WelcomeMailer < JamboreeMailer
     @resource = person
     @token = person.generate_reset_password_token!
     mail(to: person.email, subject:   'Willkommen bei der Vorregistrierung für Unit Leitungen'\
-                                      'zum Worldscoutjamboree 2023')
+                                      ' zum World Scout Jamboree 2023')
   end
 end
