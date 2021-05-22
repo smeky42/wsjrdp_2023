@@ -98,6 +98,7 @@
   }
 
   function loadDropdown(id){
+    $(id).attr("autocomplete", "off");
     $(id).editableSelect('clear');
     $(id).editableSelect('add', $(id).val());
     var subTree = getSubTree(id);
