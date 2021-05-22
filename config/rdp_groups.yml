@@ -1,5 +1,38 @@
 development:
+
+  Verband1:
+    Land D1:
+      RegionD1: 
+        Stamm1:
+        Stamm2:
+        Stamm4:
+      RegionD2: 
+        Stamm5:
+        Stamm6:
+        Stamm7:
+    Land D2: 
+      RegionD3:
+        Stamm8:
+        Stamm9:
+        Stamm10:
+  Verband2:
+    Land D3:
+      RegionD3: 
+        Stamm1:
+        Stamm2:
+        Stamm4:
+      RegionD4: 
+        Stamm5:
+        Stamm6:
+        Stamm7:
+    Land D4: 
+      RegionD3:
+        Stamm8:
+        Stamm9:
+        Stamm10:
   
+production: 
+
   DPSG:
     Aachen:
       Rheinbezirk:
