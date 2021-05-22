@@ -23,7 +23,7 @@ de:
         one: Kontingentsteam
         description: KT Mitglieder sind alle anderen im Kontingentsteam.
       group/root/unassigned:
-        one: KT Unassigned
+        one: KT noch nicht zugewiesen
         description: KT Mitglieder die noch nicht bestätigt wurden.
 
       ### GROUP Unit Support
@@ -52,7 +52,7 @@ de:
         one: IST
         description: International Service Team
       group/ist/unassigned:
-        one: IST Unassigned
+        one: IST noch nicht zugewiesen
         description: IST  Mitglieder die noch nicht bestätigt wurden.
 
       ### GROUP Unit
@@ -68,10 +68,10 @@ de:
         one: Teilnehmende
         description: Teilnehmende
       group/unit/unassigned_leader:
-        one: UL Unassigned
+        one: UL noch nicht zugewiesen
         description: UL Mitglieder die noch nicht bestätigt wurden.
       group/unit/unassigned_member:
-        one: TN Unassigned
+        one: TN noch nicht zugewiesen
         description: TN  Mitglieder die noch nicht bestätigt wurden.
     
     attributes:
