@@ -45,7 +45,7 @@ class RegisterPerson < PersonSeeder
   def get_group(role_wish)
     case role_wish
     when 'Unit Leitung'
-      Group.find_by(name: 'Unit Unassigned')
+      Group.find_by(name: 'Ohne Unit')
     when 'Kontingentsteam'
       Group.find_by(name: 'Kontingent')
     end
