@@ -49,11 +49,11 @@ phone_number:
   predefined_labels:
     - Festnetz
     - Mobil
-    - Teilnemende*r
-    - Vater (Mobil)
-    - Mutter (Mobil)
-    - Vater (Festnetz)
-    - Mutter (Festnetz)
+    - Teilnehmende*r
+    - Erziehungsberechtigte*r 1 (Mobil)
+    - Erziehungsberechtigte*r 2 (Mobil)
+    - Erziehungsberechtigte*r 1 (Festnetz)
+    - Erziehungsberechtigte*r 2 (Festnetz)
     - Arbeit
     - Fax
     - Andere
@@ -73,7 +73,7 @@ additional_email:
   predefined_labels:
     - Privat
     - Teilnehmende*r
-    - Vater
-    - Mutter
+    - Erziehungsberechtigte*r 1
+    - Erziehungsberechtigte*r 2
     - Arbeit
     - Andere
