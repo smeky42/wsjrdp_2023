@@ -96,6 +96,7 @@ de:
     header:
       registration_header: Für die Vorregistrierung zum Worldscoutjamboree als Unit Leitung hier registrieren
       map: Kontingentskarte 
+      test_environment: Testumgebung, Daten können jederzeit gelöscht werden!
 
     button:
       register: Registrieren
