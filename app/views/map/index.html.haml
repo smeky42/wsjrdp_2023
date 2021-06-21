@@ -126,7 +126,8 @@
 %input{:onclick =>"showMarkers();", :type=>"button", :value=>"Show Markers"}
 %br 
 %br
-=t('activerecord.text.invalid_adress')
-%br 
-- @invalid_users.each do |iu|
-  %li= link_to raw(iu[2])
+- if @invalid_users.present?
+  =t('activerecord.text.invalid_adress')
+  %br 
+  - @invalid_users.each do |iu|
+    %li= link_to raw(iu[2])
