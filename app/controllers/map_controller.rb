@@ -78,7 +78,7 @@ class MapController < ApplicationController
   end
 
   def get_link(person)
-    '<a href="https://anmeldung.worldscoutjamboree.de/groups/' + person.primary_group_id.to_s +
+    '<a href="' + request.base_url + '/groups/' + person.primary_group_id.to_s +
       '/people/' + person.id.to_s + '/management/edit">' + person.full_name.to_s + '</a>'
   end
 end
