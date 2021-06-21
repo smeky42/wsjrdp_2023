@@ -79,6 +79,6 @@ class MapController < ApplicationController
 
   def get_link(person)
     '<a href="' + request.base_url + '/groups/' + person.primary_group_id.to_s +
-      '/people/' + person.id.to_s + '/management/edit">' + person.full_name.to_s + '</a>'
+      '/people/' + person.id.to_s + '" target="_blank">' + person.full_name.to_s + '</a>'
   end
 end
