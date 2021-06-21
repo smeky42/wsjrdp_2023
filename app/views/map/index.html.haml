@@ -1,0 +1,132 @@
+!!!
+%html
+%head
+
+-title t('activerecord.header.map')
+-if @access
+  #main.row-fluid
+    %div{:style => 'width:100%;'}
+      #map{:style => 'width: 100%; height: 1200px;'}
+
+
+    :javascript
+        var markers = [];
+        var map = null;
+
+        function createPin(person, f){
+            var pers = toPersonObject(person)
+            //console.log(pers.name + " " + pers.location)
+            f(pers);
+            return -1;
+        }
+
+        function createPinImage(person) {
+            //console.log(person)
+
+            var pinIcon = (person.status ? "pin_star" : "pin"); // Accepted
+            var pinColor = 'ffffff'; // Unit
+            var pinLetter = getLetterForPin(person); // Role
+            var pinLetterColor = "daa520"; 
+            var pinStarColor = 'ffffff';
+            var pinImage = new google.maps.MarkerImage("https://chart.apis.google.com/chart?chst=d_map_xpin_letter&chld=" + pinIcon + "|" + pinLetter + "|" + pinColor + "|"+ pinLetterColor + "|" + pinStarColor,
+              new google.maps.Size(21, 34),
+              new google.maps.Point(0,0),
+              new google.maps.Point(10, 34));
+    
+           return pinImage;
+    
+        }
+
+        function getLetterForPin(person) {
+            if(person.role == "Unitleitung")
+            {
+                return "U";    
+            }
+            return person.role[0];
+        }
+
+        function toPersonObject(personArray) {
+            var person = new Object();
+            // @users.push([id, name, latitude, longitude, role, link])
+            person.id = personArray[0];
+            person.name = personArray[1];
+            person.location = {lat: parseFloat(personArray[2]), lng: parseFloat(personArray[3])};
+            person.role = personArray[4];
+            person.link = personArray[5];
+            return person;
+        }
+
+        function initMap() {
+            const germany = {lat: 51.1642, lng: 10.4541};
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 7,
+                center: germany,
+             });
+
+            var people =  #{raw @users} ;
+            //console.log("People " + people.length);
+
+            for (var i = 0; i < people.length; i++) {
+                selPeople = people[i];
+                createPin(selPeople, function(pers) {
+                 var marker = new google.maps.Marker({
+                   map: map,
+                   position: pers.location,
+                   icon: createPinImage(pers),
+                   unit_old: pers.unit_old,
+                   unit_planned: pers.unit_planned,
+                   role: pers.role 
+                 });
+      
+                 var infowindow = new google.maps.InfoWindow({
+                   content: pers.id + " - " + pers.link + "</br>" + 
+                            pers.role + "</br>" 
+                 });
+                 marker.addListener('click', function() {
+                   infowindow.open(map, marker);
+                 });
+                 markers.push(marker);
+                });
+            };
+
+        }
+
+        // Sets the map on all markers in the array.
+        function setMapOnAll(map) {
+          for (var i = 0; i < markers.length; i++) {
+            markers[i].setMap(map);
+          }
+        }
+
+        // Removes the markers from the map, but keeps them in the array.
+        function clearMarkers() {
+          setMapOnAll(null);
+        }
+
+        // Shows any markers currently in the array.
+        function showMarkers() {
+          setMapOnAll(map);
+        }
+
+        var mapScript = document.createElement("script");
+        mapScript.src = "https://cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js";
+        document.getElementsByTagName("head")[0].appendChild(mapScript)
+
+        var mapScript = document.createElement("script");
+        mapScript.src = "https://cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js";
+        document.getElementsByTagName("head")[0].appendChild(mapScript)
+
+        var mapScript = document.createElement("script");
+        mapScript.src = "https://maps.google.com/maps/api/js?key=AIzaSyAPS-uHgTIug9RlK_wBotqn_hrMTkQeUVM&callback=initMap";
+        document.getElementsByTagName("head")[0].appendChild(mapScript)
+
+      
+
+%input{:onclick =>"clearMarkers();", :type=>"button", :value=>"Hide Markers"}
+%input{:onclick =>"showMarkers();", :type=>"button", :value=>"Show Markers"}
+%br 
+%br
+=t('activerecord.text.invalid_adress')
+%br 
+- @invalid_users.each do |iu|
+  %li= link_to raw(iu[2])
