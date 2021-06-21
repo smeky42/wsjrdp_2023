@@ -95,6 +95,7 @@ de:
 
     header:
       registration_header: Für die Vorregistrierung zum Worldscoutjamboree als Unit Leitung hier registrieren
+      map: Kontingentskarte 
 
     button:
       register: Registrieren
@@ -103,12 +104,14 @@ de:
       more_info: Die Anmeldungen für IST und Teilnehmende beginnt im Juli. Mehr Informationen findest du auf unserer
       homepage: Homepage
       homepage_link: https://www.worldscoutjamboree.de/
+      invalid_adress: Personen mit ungültiger Adresse
     
     alert: 
       name: Bitte gib deinen vollständigen Vor- und Nachnamen ein.
       mail: Bitte gib deine korrekte Mailadresse ein.
       already_registered: Es existiert schon ein Account mit dieser e-Mail Adresse. Du kannst dein Passwort über "Passwort vergessen?" zurücksetzen.
-  
+      map_access: Du hast nicht die Rolle um diese Informationen zu sehen
+      
   contactable:
     additional_email_fields:
       tooltip_mailings: Versände von E-Mails werden zusätzlich an alle hier markierten Adressen im CC verschickt.
