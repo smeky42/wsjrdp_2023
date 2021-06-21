@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     get '/registration', to: "registration#index"
     post '/registration', to: "registration#index"
     put '/registration', to: "registration#index"
+    
+    get '/map', to: "map#index"
   end
 
 end
