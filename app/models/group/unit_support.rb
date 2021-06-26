@@ -19,7 +19,7 @@ class Group::UnitSupport < ::Group
   end
 
   class Member < ::Role
-    self.permissions = [:group_other_roles_and_below_full]
+    self.permissions = [:layer_and_below_full]
   end
 
   roles Leader, Member
