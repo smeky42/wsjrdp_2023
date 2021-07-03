@@ -80,6 +80,8 @@ de:
         first_name_dummy: Robert
         last_name_dummy: Baden-Powell
         email_dummy: robert.baden-powell@worldscoutjamboree.de
+        birthday_info: Geburtstag (dd.mm.yyyy)
+        birthday_dummy: 22.02.1857
         nickname: Spitzname / Fahrtenname
         rdp_association: Verband
         rdp_association_region: Landesebene, Diözese

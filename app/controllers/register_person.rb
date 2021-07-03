@@ -9,11 +9,11 @@ require Rails.root.join('db', 'seeds', 'support', 'person_seeder')
 
 class RegisterPerson < PersonSeeder
 
-  def seed_person(mail, first_name, last_name, role_wish)
+  def seed_person(mail, first_name, last_name, role_wish, birthday)
     Rails.logger.debug('== Initially Seed Person: ' + mail + ' ' + first_name + ' ' + last_name \
                       + ' ' + role_wish.to_s)
 
-    attrs = { email: mail, first_name: first_name, last_name: last_name }
+    attrs = { email: mail, first_name: first_name, last_name: last_name, birthday: birthday }
 
     Person.seed_once(:email, attrs)
     person = Person.find_by(email: attrs[:email])

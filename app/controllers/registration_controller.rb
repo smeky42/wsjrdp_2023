@@ -5,7 +5,8 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_wsjrdp_2023.
 
-class RegistrationController < ActionController::Base
+class RegistrationController < ApplicationController
+  skip_authorization_check
   layout 'application'
   helper_method :current_user, :origin_user
 
@@ -13,7 +14,7 @@ class RegistrationController < ActionController::Base
     @possible_roles = Settings.person.roles
 
     if request.post?
-      if check_mail && check_name
+      if check_mail && check_name && check_birthday
         person = register_person
         send_registration_mail(person)
       end
@@ -50,12 +51,35 @@ class RegistrationController < ActionController::Base
     true
   end
 
+  def check_birthday
+    unless params[:birthday].match(/\d\d\.\d\d\.\d\d\d\d/)
+      flash[:alert] = 'Bitte gib deinen Geburstag im Format dd.mm.yyyy ein.'
+      return false
+    end
+
+    check_age
+  end
+
+  def check_age
+    birthday = params[:birthday].to_date
+    if params[:role] == 'Kontingentsteam' || params[:role] == 'Unit Leitung'
+      if birthday < Date.new(1920, 1, 1)
+        flash[:alert] = 'Bitte gib deinen richtigen Geburtstag an.'
+        false
+      elsif birthday > Date.new(2003, 10, 31)
+        flash[:alert] = 'Als ' + params[:role] + ' musst du mindestens 18 Jahre alt sein.'
+        false
+      end
+    end
+  end
+
   def register_person
     register_person = RegisterPerson.new
     person = register_person.seed_person(params[:mail],
-                                          params[:first_name],
-                                          params[:last_name],
-                                          params[:role])
+                                         params[:first_name],
+                                         params[:last_name],
+                                         params[:role],
+                                         params[:birthday])
     person
   end
 

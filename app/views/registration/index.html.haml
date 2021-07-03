@@ -16,6 +16,8 @@
     = label_tag :role, t('activerecord.attributes.person.role')
     = select_tag(:role, 
       options_for_select(@possible_roles))
+    = label_tag :birthday, t('activerecord.attributes.person.birthday_info')
+    = text_field_tag :birthday, nil, placeholder: t('activerecord.attributes.person.birthday_dummy')
     %br
     = submit_tag t('activerecord.button.register'), class: "btn btn-primary"
 
