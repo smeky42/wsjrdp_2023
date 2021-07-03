@@ -5,8 +5,8 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_wsjrdp_2023.
 
-class RegistrationController < ApplicationController
-  skip_authorization_check
+class RegistrationController < ActionController::Base # rubocop: disable Rails/ApplicationController
+
   layout 'application'
   helper_method :current_user, :origin_user
 
