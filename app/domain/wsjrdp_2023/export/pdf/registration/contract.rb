@@ -147,6 +147,25 @@ module Wsjrdp2023
 
         pdf.move_down 5.mm
 
+
+
+        text 'Lastschrifteinzug', size: 10
+
+        pdf.move_down 3.mm
+        text 'Das SEPA Lastschriftverfahren wird nach folgendem Plan eingezogen.'\
+        + ' Der Einzug erfolgt am 5. des jeweigen Monats bzw. am darauf folgenden Werktag.'
+        pdf.move_down 3.mm
+        # rubocop:disable LineLength
+        pdf.make_table([
+                         [' ', 'Beitrag', 'Dez 21', 'Jan 22', 'Feb 22', 'Mär 22', 'Apr 22', 'Mai 22', 'Jun 22', 'Jul 22', 'Aug 22', 'Sep 22', 'Okt 22', 'Nov 22', 'Dez 22', 'Jan 23', 'Feb 23', 'Mär 23', 'Apr 23', 'Mai 23'],
+                         ['TN ', ' 4.100 € ',  ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 300 € ', ' 300 € ', ' 300 € ', ' 300 € ', ' 300 € ', ' 300 € '],
+                         ['UL ', ' 3.250 € ',  ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 200 € ', ' 200 € ', ' 200 € ', ' 200 € ', ' 200 € ', ' 200 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' -   € '],
+                         ['IST ', ' 1.650 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 50 € ', ' -   € '],
+                         ['KT ', ' 1.300 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' -   € ', ' -   € ', ' -   € ', ' -   € ', ' -   € ']
+                       ], cell_style: { padding: 1, border_width: 0,
+                                        inline_format: true, size: 6 }).draw
+        # rubocop:enable LineLength
+        pdf.move_down 3.mm
         pdf.make_table([
                          [{ content: @person.town + ' den ' + Date.today.strftime('%d.%m.%Y'),
                             height: 30 }],
