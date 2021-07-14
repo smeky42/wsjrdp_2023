@@ -25,7 +25,8 @@ module HitobitoWsjrdp2023
       Group.include Wsjrdp2023::Group
       PeopleController.include Wsjrdp2023::PeopleController
       Person.include Wsjrdp2023::Person
-      # TODO: if Export is needed Export::Tabular::People::PeopleAddress.send :include, Wsjrdp2023::Export::Tabular::People::PeopleAddress
+      # TODO: if Export is needed Export::Tabular::People::PeopleAddress.send :include,
+      # Wsjrdp2023::Export::Tabular::People::PeopleAddress
       PersonSerializer.include Wsjrdp2023::PersonSerializer
     end
 
