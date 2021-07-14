@@ -137,6 +137,16 @@ module Wsjrdp2023
         '
 
         pdf.move_down 1.mm
+        text 'Es bestehen folgende Mobilitätsbedürfnisse auf Grund von:', size: 10
+        text 'There are the following mobility needs due to '\
+        + 'exist:', size: 6, style: :italic
+        pdf.move_down 1.mm
+        text '
+        ..... Mobiliätsbedüfnisse ......
+
+        '
+
+        pdf.move_down 1.mm
         text 'Es besteht zur Zeit eine infektiöse Erkrankung, wenn ja welche:', size: 10
         text 'There is currently an infectious disease, if so which one:', size: 6, style: :italic
         pdf.move_down 1.mm
