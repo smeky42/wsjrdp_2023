@@ -15,11 +15,11 @@ class Group::UnitSupport < ::Group
 
   ### ROLES
   class Leader < ::Role
-    self.permissions = [:layer_and_below_full]
+    self.permissions = [:layer_and_below_full, :event]
   end
 
   class Member < ::Role
-    self.permissions = [:layer_and_below_full]
+    self.permissions = [:layer_and_below_full, :event]
   end
 
   roles Leader, Member
