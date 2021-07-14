@@ -5,8 +5,8 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_wsjrdp_2023.
 
-class RegistrationController < ActionController::Base # rubocop: disable Rails/ApplicationController
-
+# rubocop:disable Rails/ApplicationController
+class RegistrationController < ActionController::Base
   layout 'application'
   helper_method :current_user, :origin_user
 
@@ -63,14 +63,30 @@ class RegistrationController < ActionController::Base # rubocop: disable Rails/A
   def check_age
     birthday = params[:birthday].to_date
     if params[:role] == 'Kontingentsteam' || params[:role] == 'Unit Leitung'
-      if birthday < Date.new(1920, 1, 1)
-        flash[:alert] = 'Bitte gib deinen richtigen Geburtstag an.'
-        false
-      elsif birthday > Date.new(2003, 10, 31)
-        flash[:alert] = 'Als ' + params[:role] + ' musst du mindestens 18 Jahre alt sein.'
-        false
+      if to_old(birthday) || to_young(birthday)
+        return false
       end
+
+      return true
     end
+    flash[:alert] = 'Deine Wunschrolle gibt es nicht.'
+    false
+  end
+
+  def to_old(birthday)
+    if birthday < Date.new(1920, 1, 1)
+      flash[:alert] = 'Bitte gib deinen richtigen Geburtstag an.'
+      return true
+    end
+    false
+  end
+
+  def to_young(birthday)
+    if birthday > Date.new(2003, 10, 31)
+      flash[:alert] = 'Als ' + params[:role] + ' musst du mindestens 18 Jahre alt sein.'
+      return true
+    end
+    false
   end
 
   def register_person
@@ -89,3 +105,4 @@ class RegistrationController < ActionController::Base # rubocop: disable Rails/A
   end
 
 end
+# rubocop:enable Rails/ApplicationController
