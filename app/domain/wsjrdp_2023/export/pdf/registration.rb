@@ -59,7 +59,7 @@ module Wsjrdp2023
             end
           end
 
-          pdf.number_pages 'Seite <page> von <total>, Signatur Gesamtdokument: ',
+          pdf.number_pages 'Seite <page> von <total>',
                            at: [pdf.bounds.left, pdf.bounds.bottom], size: 8
 
           pdf
@@ -86,7 +86,6 @@ module Wsjrdp2023
       def self.new_pdf(person, pdf_preview)
         runner.new.new_pdf(person, pdf_preview)
       end
-
     end
   end
 end
