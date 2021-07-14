@@ -20,8 +20,9 @@ module Sheet
     tab 'activerecord.models.event.other',
         :simple_group_events_path,
         params: { returning: true },
-        if: (lambda do |view, group|
-          view.current_user.role?('Group::Root::Admin')
+        if: (lambda do |_view, _group|
+          true
+          # view.current_user.role?('Group::Root::Admin')
           # TODO: use view.can
           # group.event_types.include?(::Event) &&
           # view.can?(:index_events, group)
@@ -30,7 +31,7 @@ module Sheet
     tab 'activerecord.models.event/course.other',
         :course_group_events_path,
         params: { returning: true },
-        if: (lambda do |view, group|
+        if: (lambda do |view, _group|
           view.current_user.role?('Group::Root::Admin')
           # TODO: use view.can
           # group.event_types.include?(::Event::Course) &&
@@ -41,7 +42,7 @@ module Sheet
         :group_mailing_lists_path,
         # if: :index_mailing_lists,
         params: { returning: true },
-        if: (lambda do |view, group|
+        if: (lambda do |view, _group|
           view.current_user.role?('Group::Root::Admin')
           # TODO: use view.can
           # group.event_types.include?(::Event::Course) &&
@@ -62,7 +63,7 @@ module Sheet
     tab 'groups.tabs.deleted',
         :deleted_subgroups_group_path,
         # if: :deleted_subgroups
-        if: (lambda do |view, group|
+        if: (lambda do |view, _group|
           view.current_user.role?('Group::Root::Admin')
           # TODO: use view.can
           # group.event_types.include?(::Event::Course) &&
