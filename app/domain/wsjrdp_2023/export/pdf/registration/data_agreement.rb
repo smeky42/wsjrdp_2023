@@ -21,8 +21,8 @@ module Wsjrdp2023
       # rubocop:disable AbcSize,MethodLength
       def list
         pdf.start_new_page
-        text 'Vertrag zur Daten Datenspeicherung und -nutzung zum Zwecke der Durchführung der '\
-        + 'Veranstaltung', size: 14
+        text 'Datenschutzrechtlichen Daten Datenspeicherung und -nutzung zum Zwecke der '\
+        + 'Durchführung der Veranstaltung', size: 14
         text 'Ich bin damit einverstanden, dass die, im Folgenden aufgeführten Daten im Rahmen'\
         + ' meiner Teilnahme am World Scout Jamboree und den damit verbundenen Angeboten bzw.'\
         + ' Veranstaltungen des Deutschen Kontingents (Vorbereitung auf das World Scout Jamboree,'\

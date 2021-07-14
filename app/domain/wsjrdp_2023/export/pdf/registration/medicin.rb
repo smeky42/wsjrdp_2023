@@ -7,6 +7,7 @@
 
 module Wsjrdp2023
   module Export::Pdf::Registration
+    # rubocop:disable ClassLength
     class Medicin < Section
       def render
         pdf.y = bounds.height - 60
@@ -20,11 +21,36 @@ module Wsjrdp2023
       # rubocop:disable AbcSize
       # rubocop:disable MethodLength
       def list
+        of_legal_age = false # @person.years.to_i >= 18
+        if of_legal_age
+          signature = pdf.make_table([
+                                       [{ content: @person.town + ' den ' \
+                                        + Time.zone.today.strftime('%d.%m.%Y'), height: 30 }],
+                                       ['______________________________', ''],
+                                       [{ content: @person.full_name, height: 30 }, '']
+                                     ],
+                                     cell_style: { width: 240, padding: 1, border_width: 0,
+                                                   inline_format: true })
+        else
+          signature = pdf.make_table([
+                                       [{ content: @person.town + ' den ' \
+                                         + Time.zone.today.strftime('%d.%m.%Y'), height: 30 }],
+                                       %w(__________________________ __________________________),
+                                       [{ content: 'Sorgeberechtigte*r', height: 30 },\
+                                        + 'Sorgeberechtigte*r'],
+                                       ['______________________________', ''],
+                                       [{ content: @person.full_name, height: 30 }, '']
+                                     ],
+                                     cell_style: { width: 240, padding: 1, border_width: 0,
+                                                   inline_format: true })
+        end
+
+
         pdf.start_new_page
         text 'Gesundheitsfragebogen', size: 14
-        text 'Von ' + @person.full_name
-        text 'Erziehungsberechtigte: ' + ' TODO NAME 1 ' + ' TODO NAME 2'
-        text 'im Notfall zu erreichen unter TODO'
+        text 'zu Teilnehmer: ' + @person.full_name
+        text 'Sorgeberechtigte: ' + ' TODO NAME 1 ' + ' TODO NAME 2'
+        text 'im Notfall zu erreichen unter TODO Telefonnummer'
         pdf.move_down 3.mm
 
         text 'Grundsätzlich:', size: 12
@@ -34,6 +60,11 @@ module Wsjrdp2023
         pdf.move_down 1.mm
         text 'Krankenversicherungskarte und Impfausweis sind mitzuführen. Der Gesundheitsbogen '\
         + 'ist von der Unitleitung mitzuführen.'
+        pdf.move_down 1.mm
+        text 'Auf dem Gesundheitsbogen werden sensilbe Daten erfasst. Wir benötigen diese '\
+        + 'zur Durchführung der Reise und für den Veranstalter des World Scout Jamborees.'\
+        + ' Wir verfahren sehr sorfältig mit den Daten, mehr dazu findet sich in unseren'\
+        + ' Datenschutzhinweisen im Anhang.'
 
         pdf.move_down 3.mm
         text 'Schutzimpfungen :', size: 10
@@ -155,10 +186,10 @@ module Wsjrdp2023
         pdf.move_down 1.mm
         text 'Weiteres:', size: 12
         pdf.move_down 1.mm
-        text 'Bei meinem / unserem Kind ist auf Folgendes zu Achten (Einschränkungen z.B. auf '\
-        + 'Grund der Religionszugehörigkeit, etc.):', size: 10
-        text 'Please pay attention to the following for my / our child (restrictions e.g. based '\
-        + 'on religious affiliation, etc.): ', size: 6, style: :italic
+        text 'Bei meinem / unserem Kind ist auf Folgendes zu Achten (z.B. Einschränkungen, etc.):',
+             size: 10
+        text 'Please pay attention to the following for my / our child (restrictions'\
+        + ' etc.): ', size: 6, style: :italic
         pdf.move_down 1.mm
         text '
         .......Achtung Ah.......
@@ -192,6 +223,21 @@ module Wsjrdp2023
         ..... Ganz Wichtig .....
         '
 
+        pdf.move_down 3.mm
+        text '' + (of_legal_age ? 'Ich habe' : 'Wir haben') + ' den Gesundheitsfragebogen '\
+        + 'warheitsgemäß ausgefüllt.'
+        pdf.move_down 1.mm
+        text '' + (of_legal_age ? 'Ich bin' : 'Wir sind') + ' damit einverstanden, dass die '\
+        + 'persönlichen Daten und so wie Behandlungsdaten zum Zwecke der gesetzlich '\
+        + 'vorgeschriebenen Dokumentation gespeichert werden. Nach Ablauf der gesetzlichen '\
+        + 'Aufbewahrungsfrist werden die Daten gelöscht.'
+        pdf.move_down 3.mm
+        signature.draw
+        pdf.move_down 3.mm
+
+
+
+
         text 'Für Rückfragen stehen die Ärzte im Kontingentsteam unter '\
         + 'medizin@worldscoutjamboree.de zur Verfügung.'
         text ''
@@ -199,5 +245,7 @@ module Wsjrdp2023
       # rubocop:enable AbcSize
       # rubocop:enable MethodLength
     end
+    # rubocop:enable ClassLength
+
   end
 end

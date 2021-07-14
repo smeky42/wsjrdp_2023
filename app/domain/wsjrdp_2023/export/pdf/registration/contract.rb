@@ -18,7 +18,7 @@ module Wsjrdp2023
         end
       end
 
-      # rubocop:disable AbcSize,MethodLength,PerceivedComplexity,CyclomaticComplexity
+      # rubocop:disable AbcSize,MethodLength
       def list
         of_legal_age = false # @person.years.to_i >= 18
 
@@ -36,8 +36,8 @@ module Wsjrdp2023
                                        [{ content: @person.town + ' den ' \
                                          + Time.zone.today.strftime('%d.%m.%Y'), height: 30 }],
                                        %w(__________________________ __________________________),
-                                       [{ content: 'Erziehungsberechtigte*r', height: 30 },\
-                                        + 'Erziehungsberechtigte*r'],
+                                       [{ content: 'Sorgeberechtigte*r', height: 30 },\
+                                        + 'Sorgeberechtigte*r'],
                                        ['______________________________', ''],
                                        [{ content: @person.full_name, height: 30 }, '']
                                      ],
@@ -53,23 +53,50 @@ module Wsjrdp2023
         pdf.stroke_horizontal_rule
         pdf.move_down 3.mm
 
-        text 'Teilnahmevertrag', size: 12
+        text 'Anmeldung', size: 12
 
-        text 'zwischen ' + @person.full_name  \
+        text 'von ' + @person.full_name + ', geboren am ' + @person.birthday.strftime('%d.%m.%Y') \
         + ', wohnhaft in ' + @person.address + ', ' + @person.zip_code + ', ' + @person.town
-        text 'und dem Ring deutscher Pfadfinder*innenverbände e.V (rdp) Chausseestraße 128/129,'\
+        text 'beim Ring deutscher Pfadfinder*innenverbände e.V (rdp) Chausseestraße 128/129,'\
         + ' 10115 Berlin.'
+        text ' für das deutsche Kontingent zum 25. World Scout Jamboree 2023 in Südkorea.'
+
+        pdf.move_down 3.mm
+        text 'Die Teilnahme im Deutschen Kontingent kostet TODO Preis € und beinhaltet'\
+        + ' die Vor- und Nachbereitung in Deutschland,'\
+        + ' die Teilnahme am 25. World Scout Jamboree in Südkorea,'\
+        + ' die Reise nach Südkorea (nur Units)'\
+        + 'eine Vor oder Nachtour (nur Units).'
+        text 'Die Reise ist für den Zeitraum vom 20.07 bis 21.08.2023'\
+        +' geplant. Der Reisezeitraum variiert je nach gewähltem Paket und Lage der'\
+        +' Sommerferien, Reisedauer sind 13 bis 25 Tage.'
 
         pdf.move_down 3.mm
 
         text 'Hiermit ' + (of_legal_age ? 'melde ich mich ' : 'melden wir unser Kind ') \
         + @person.full_name + ', geboren am ' + @person.birthday.strftime('%d.%m.%Y') \
-        + ' verbindlich als ' + 'TODO @person.role' + ' zur Teilnahme im Deutschen Kontingent'\
+        + ' verbindlich mit dem Paket ' + 'TODO paket' + ' zur Teilnahme im Deutschen Kontingent'\
         + ' zum 25. World Scout Jamboree 2023 an. Mit '\
-        + (of_legal_age ? 'meiner Unterschrift'\
-        + ' bestätige ich' : 'unserer Unterschrift bestätigen wir') + ' die Kenntnis- und Annahme'\
-        + ' der Reisebedingungen des Veranstalters (rdp) im Anhang (TODO Eindeutige Referenz).'
+        + (of_legal_age ? 'meiner Unterschrift bestätige ich' :
+          'unserer Unterschrift bestätigen wir')\
+        + ' die Kenntnis- und Annahme'\
+        + ' der Reisebedingungen des Veranstalters (rdp) in Version 1.0 vom 31.07'\
+        + ' (TODO Downloadlink).'
+
         pdf.move_down 3.mm
+
+        text 'Anlagen zum Dokument sind die Datenschutzhinweise in Version 1.0 vom 31.07 '\
+        + ' (TODO Downloadlink) und die Medienrichtlinie (rdp) in Version 1.0 vom 31.07'\
+        + ' (TODO Downloadlink) im Anhang.'
+        text '' + (of_legal_age ? 'Ich bestätige' : 'Wir bestätigen') + ' die Dokumente'\
+        + ' zur Kenntnis genommen zu haben. Das gilt Insbesondere für die Hinweise zur'\
+        + ' Datenübtragung zum Veranstalter im nicht EU-Ausland, zu Bild und Tonaufnahmen'\
+        + ' und zur Erfassung und Weitergabe von Gesundheitsdaten.'
+        pdf.move_down 3.mm
+
+        text 'Den Medizinbogen im Anhang haben wir gesondert unterschrieben.'
+        pdf.move_down 3.mm
+
         unless of_legal_age
           text 'Für die Dauer der Reise übertragen wir die Ausübung der Aufsichtspflicht und das'\
         + ' Aufenthaltsbestimmungsrecht über unser Kind dem Reiseveranstalter. Wir sind damit'\
@@ -91,7 +118,7 @@ module Wsjrdp2023
         pdf.move_down 2.mm
         text 'Hinweis: Ich kann innerhalb von acht Wochen, beginnend mit dem Belastungsdatum, die '\
         + 'Erstattung des belasteten Betrages verlangen. Es gelten dabei die mit meinem '\
-        + 'Kreditinstitut vereinbarten Bedingungen. TODO ist dieser Satz notwendig?'
+        + 'Kreditinstitut vereinbarten Bedingungen.'
         pdf.move_down 2.mm
         attendee_data = pdf.make_table([
                                          [{ content: 'IBAN:', width: 150 }, 'TODO @person.iban'],
@@ -113,78 +140,18 @@ module Wsjrdp2023
                        ],
                        cell_style: { width: 240, padding: 1, border_width: 0,
                                      inline_format: true }).draw
+        pdf.move_down 3.mm
         pdf.stroke_horizontal_rule
-        pdf.move_down 3.mm
-        text 'DSGVO', size: 12
-        text 'Im Weiteren ist ' + (of_legal_age ? 'mir' : 'uns') + ' bekannt, dass eine Teilnahme '\
-        + (of_legal_age ? 'meine' : 'unseres Kindes ') + ' an die Zustimmung zum Vertrag zur '\
-        + 'Datenspeicherung und -nutzung zum Zwecke der Durchführung (siehe Anhang) gebunden ist.'
 
-        pdf.move_down 1.mm
 
-        text 'Der rdp weist hiermit darauf hin, dass ausreichende technische Maßnahmen zur '\
-        + 'Gewährleistung des Datenschutzes getroffen wurden. Dennoch kann bei einer '\
-        + 'Veröffentlichung von personenbezogenen Mitgliederdaten im Internet ein umfassender '\
-        + 'Datenschutz nicht garantiert werden. Daher nimmt der Teilnehmende die Risiken für '\
-        + 'eine eventuelle Persönlichkeitsrechtsverletzung zur Kenntnis und ist sich bewusst, dass:'
-        pdf.move_down 1.mm
-        text '- die personenbezogenen Daten auch in Staaten abrufbar sind, die keine der '\
-        + 'Bundesrepublik Deutschland vergleichbaren Datenschutzbestimmungen kennen,'
-        pdf.move_down 1.mm
-        text '- die Vertraulichkeit, die Integrität (Unverletzlichkeit), die Authentizität '\
-        + '(Echtheit) und die Verfügbarkeit der personenbezogenen Daten nicht garantiert ist.'
-
-        pdf.move_down 3.mm
-        text '' + (of_legal_age ? 'Ich bestätige' : 'Wir bestätigen') + 'das Dokument im Anhang '\
-        + 'zur Kenntnis genommen zu haben und ' + (of_legal_age ? 'willige' : 'willigen') \
-        + ' ein, '\
-        + 'dass der rdp die, im Anhang genannten Daten zu TODO NAME wie im Anhang angegeben '\
-        + 'speichert und TODO Drittanbieter zur Durchführung des World Scout Jamborees 2023 '\
-        + 'weiter gibt.'
-        pdf.move_down 3.mm
-
-        signature.draw
-
-        pdf.stroke_horizontal_rule
-        pdf.move_down 3.mm
-        text 'Medizinbogen', size: 12
-        text '' + (of_legal_age ? 'Ich habe' : 'Wir haben') + ' den Gesundheitsfragebogen '\
-        + 'warheitsgemäß ausgefüllt.'
-        pdf.move_down 1.mm
-        text '' + (of_legal_age ? 'Ich bin' : 'Wir sind') + ' damit einverstanden, dass die '\
-        + 'persönlichen Daten und so wie Behandlungsdaten zum Zwecke der gesetzlich '\
-        + 'vorgeschriebenen Dokumentation gespeichert werden. Nach Ablauf der gesetzlichen '\
-        + 'Aufbewahrungsfrist werden die Daten gelöscht.'
-        pdf.move_down 3.mm
-        signature.draw
-
-        pdf.stroke_horizontal_rule
-        pdf.move_down 3.mm
-        text 'Verwendung von Medien', size: 12
-        text 'Im Weiteren ist ' + (of_legal_age ? 'mir' : 'uns') + ' bekannt, dass eine'\
-        + ' Teilnahme ' + (of_legal_age ? 'meine' : 'unseres Kindes') + ' an die '\
-        + 'Vereinbarung über die Nutzung von Fotografien und Filmen für die'\
-        + ' Berichterstattung des Rings deutscher Pfadfinder*innen e.V. (rdp) '\
-        + 'und seiner Mitgliedsverbände für das World Scout Jamboree 2023 gebunden ist.'
-        pdf.move_down 3.mm
-        text '' + (of_legal_age ? 'Ich bestätige' : 'Wir bestätigen') + ' das Dokument im '\
-        + 'Anhang zur Kenntnis genommen zu haben und willigen in die Nutzung von '\
-        + 'Fotografien und Filmen für die Berichterstattung des Ringes deutscher '\
-        + 'Pfadfinder*innen e.V. (rdp) und seiner Mitgliedsverbände für das World '\
-        + 'Scout Jamboree 2023 ein:'
-        pdf.move_down 3.mm
-        signature.draw
-
-        pdf.stroke_horizontal_rule
         pdf.move_down 3.mm
         text 'AV Ü18', size: 12
-        text 'TODO AV Formulierung'
+        text 'TODO AV Formulierung kommt noch'
         signature.draw
 
         text ''
       end
-      # rubocop:enable AbcSize,MethodLength,PerceivedComplexity,CyclomaticComplexity
-
+      # rubocop:enable AbcSize,MethodLength
     end
   end
 end

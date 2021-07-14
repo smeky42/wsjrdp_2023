@@ -22,7 +22,7 @@ module Wsjrdp2023
         pdf.start_new_page
         text 'Nutzung von Medien', size: 14
         pdf.move_down 3.mm
-        text 'Vereinbarung über die Nutzung von Fotografien und Filmen für die Berichterstattung'\
+        text 'Nutzung von Fotografien und Filmen für die Berichterstattung'\
         +' des Rings deutscher Pfadfinder*innen e.V. (rdp) und ihrer Mitgliedsverbände für'\
         +' das World Scout Jamboree 2023', size: 12
         pdf.move_down 1.mm
@@ -75,10 +75,8 @@ module Wsjrdp2023
         +'Fall eine ähnliche Regelung zu treffen, die dem Ziel der betroffenen Klausel '\
         +'möglichst nahe kommt.'
         pdf.move_down 1.mm
-        text 'TODO Satz zu den Koreanern und Unit-Treffen? TODO was ist mit Tonaufnahmen?
-
-        Bei Fragen zu dieser Vereinbarung und zu den aufgenommenen Fotos und deren Verwendung '\
-        +'steht Ihnen unser Medienteam unter media@worldscoutjamboree.de zur Verfügung.'
+        text 'Bei Fragen zu dieser Vereinbarung und zu den aufgenommenen Fotos und deren '\
+        +' Verwendung steht unser Medienteam unter media@worldscoutjamboree.de zur Verfügung.'
       end
       # rubocop:enable AbcSize,MethodLength
     end
