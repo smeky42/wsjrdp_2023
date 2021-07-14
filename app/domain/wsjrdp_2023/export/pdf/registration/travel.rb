@@ -147,6 +147,8 @@ module Wsjrdp2023
         +' dem rdp, innerhalb von 14 Tagen nach der Erklärung über die Preiserhöhung'\
         +' bzw. der Änderung der Reiseleistung, schriftlich erklärt werden.'
 
+        text 'TODO Höhe und Raten generieren'
+
         pdf.move_down 3.mm
         text 'Rücktritt vom Vertrag', size: 12
         pdf.move_down 1.mm
