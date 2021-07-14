@@ -21,7 +21,8 @@ module Wsjrdp2023
       def list
         pdf.start_new_page
         text '10. Anfertigung von Bild- und Tonaufnahmen', size: 12
-
+        pdf.move_down 3.mm
+        text 'v0.1 vom 14.07.2021'
         pdf.move_down 3.mm
         text '10.1 Der rdp wird die Veranstaltung und die Vorbereitungstreffen mit Bild- und'\
         + ' Tonaufnahmen dokumentieren. Die Parteien vereinbaren in diesem Zusammenhang,'\
