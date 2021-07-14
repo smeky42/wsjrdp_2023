@@ -107,9 +107,9 @@ module Wsjrdp2023
 
         text 'Als Bestandteil dieser Anmeldung haben wir folgende Dokumente in der Anlage'\
           + ' zur Kenntnis genommen:'
-        text '- die Reisebedingungen des rdp (v1.0 vom 31.07)'
-        text '- die Datenschutzhinweise (v1.0 vom 31.07), insbesondere die Informationen zu TODO$'
-        text '- die Medienrichtlinie (v1.0 vom 31.07)'
+        text '- die Teilnahme- und Reisebedingungen des rdp (v0.1 vom 14.07.2021)'
+        text '- die Datenschutzhinweise (v0.1 vom 14.07.2021), insbesondere die Informationen zu TODO$'
+        text '- die Anfertigung von Bild- und Tonaufnahmen (v0.1 vom 14.07.2021)'
         text 'Die Dokumente sind auch unter TODO Downloadlink verfügbar.'
         pdf.move_down 3.mm
 
