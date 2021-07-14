@@ -82,7 +82,7 @@ class RegistrationController < ActionController::Base
   end
 
   def to_young(birthday)
-    if birthday > Date.new(2003, 10, 31)
+    if birthday > Date.new(2004, 4, 1)
       flash[:alert] = 'Als ' + params[:role] + ' musst du mindestens 18 Jahre alt sein.'
       return true
     end
