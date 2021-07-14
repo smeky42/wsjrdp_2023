@@ -20,31 +20,16 @@ module Wsjrdp2023
       # rubocop:disable AbcSize,MethodLength
       def list
         pdf.start_new_page
-        text 'Nutzung von Medien', size: 14
+        text '10. Anfertigung von Bild- und Tonaufnahmen', size: 12
+
         pdf.move_down 3.mm
-        text 'Nutzung von Fotografien und Filmen für die Berichterstattung'\
-        +' des Rings deutscher Pfadfinder*innen e.V. (rdp) und ihrer Mitgliedsverbände für'\
-        +' das World Scout Jamboree 2023', size: 12
-        pdf.move_down 1.mm
-        text 'Der*Die Teilnehmer*innen möchte an der oben genannten Veranstaltung teilnehmen. '\
-        +'Sie*Er will es dem rdp, im speziellen dem Deutschen Kontingent (Veranstalter) '\
-        +'ermöglichen, über das World Scout Jamboree zu berichten und dabei auch '\
-        +'Bildmaterial zu verwenden. Mit der vorliegenden Vereinbarung vereinbaren '\
-        +'die Vertragsparteien daher, dass während der Veranstaltung Fotograf*innen, '\
-        +'die von den Veranstaltern ausgewählt und beauftragt werden, Lichtbilder auch '\
-        +'vom Teilnehmenden aufnehmen dürfen und, dass die Veranstalter diese später nach '\
-        +'Maßgabe der folgenden Bestimmungen verwenden dürfen.'
-        pdf.move_down 1.mm
-        text 'Zwischen dem Ring deutscher Pfadfinder*innen e.V. (rdp) und dem Teilnehmenden'\
-        +' wird folgende Nutzungsvereinbarung für Fotografien und Videos getroffen:'
-        pdf.move_down 1.mm
-        text '1. Die Veranstalter sind berechtigt, aber nicht verpflichtet, von der o.g. '\
-        +'Person Aufnahmen zu erstellen und dem Kontingent und den Mitgliedsverbänden des '\
-        +'Ringes unentgeltlich zum Zwecke der Berichterstattung in Medien, zur Werbung und '\
-        +'zur Verwendung nach Ziffer 2 zur Verfügung zu stellen. '
-        pdf.move_down 1.mm
-        text '2. Für die Aufnahme und Nutzung wird keine inhaltliche, zeitliche oder '\
-        +'räumliche Beschränkung vereinbart. Die Nutzung ist für folgende Zwecke zulässig:'
+        text '10.1 Der rdp wird die Veranstaltung und die Vorbereitungstreffen mit Bild- und'\
+        + ' Tonaufnahmen dokumentieren. Die Parteien vereinbaren in diesem Zusammenhang,'\
+        + ' dass Fotografen, die vom Veranstalter ausgewählt und beauftragt werden,'\
+        + ' Lichtbilder des Teilnehmers aufnehmen dürfen.'
+        text '10.2 Für die Aufnahme und Nutzung wird keine inhaltliche, zeitliche oder'\
+        + ' räumliche Beschränkung vereinbart. Zulässig ist die Nutzung insbesondere für'\
+        + ' folgende Zwecke:'
         pdf.indent(10) do
           text '
            • Veröffentlichung in den Medien der Mitgliedsverbände (z.B. Zeitschrift, Newsletter)
@@ -55,25 +40,29 @@ module Wsjrdp2023
         +'(z.B. Flyer/Plakate)'
         end
         pdf.move_down 2.mm
-        text '3. Die Veranstalter sind berechtigt, die aufgenommenen Bilder, die Fotos und Filme '\
-        +'innerhalb von Fotomontagen unter Entfernung oder Ergänzung von Bildbestandteilen bzw. '\
-        +'für verfremdete Bilder (keine Entstellung) der Originalaufnahmen zu benutzen.'
+        text '10.3 Der rdp ist berechtigt, die Aufnahmen innerhalb von Fotomontagen unter'\
+        + ' Entfernung oder Ergänzung von Bildbestandteilen bzw. für verfremdete Bilder'\
+        + ' (keine Entstellung) der Originalaufnahmen zu benutzen'
         pdf.move_down 1.mm
-        text '4. Die Veranstalter verpflichten sich, Anfragen des Teilnehmenden zu Art und '\
-        +'Umfang der Bild-Nutzung unverzüglich zu beantworten.'
+        text '10.4 Der rdp ist berechtigt, aber nicht verpflichtet, die Aufnahmen den'\
+        + ' Mitgliedsverbänden unentgeltlich für die in 10.2 aufgezählten Zwecke zur'\
+        + ' Verfügung zu stellten.'
         pdf.move_down 1.mm
-        text '5. Die/der Fotografierte/Gefilmte überträgt dem Fotografen alle zur Ausübung '\
-        +'der Nutzung gem. Ziffer 2 notwendigen Rechte an den erstellten Fotografien und Filmen. '
+        text '10.5 Der Teilnehmer überträgt dem rdp alle Rechte, die zur Ausübung der in'\
+        + ' Ziff. 10.2 bis 10.4 aufgeführten Nutzungsrechte erforderlich sind. Die'\
+        + ' Übertragung erfolgt örtlich und zeitlich unbeschränkt, unwiderruflich'\
+        + ' und nicht ausschließlich. Eine gesonderte Vergütung erfolgt nicht.'
         pdf.move_down 1.mm
+        text '10.6 Sollte ein Teilnehmer nicht gefilmt oder fotografiert werden wollen, so'\
+        + ' soll er die jeweiligen Betreuer*innen hierauf jeweils vor Beginn der'\
+        + ' Veranstaltung hinweisen. Der*Die Betreuer*in wird sich in diesem Fall'\
+        + ' darum bemühen, die Fotografen darauf hinzuweisen, dass der Betroffene'\
+        + ' nicht abgebildet werden möchte. Ein Erfolg kann nicht garantiert werden'\
+        + ' und ist nicht geschuldet.'
         pdf.move_down 1.mm
-        text '6. Jegliche Änderung dieser Vereinbarung bedarf der Schriftform. Mündliche '\
-        +'Nebenabreden sind nicht getroffen.'
-        pdf.move_down 1.mm
-        text '7. Sollten einzelne Klauseln der vorliegenden Vereinbarung unzulässig oder '\
-        +'nichtig sein oder werden, so wird die Wirksamkeit der Vereinbarung und der übrigen '\
-        +'Klauseln hiervon nicht berührt. Die Vertragsparteien verpflichten sich, in diesem '\
-        +'Fall eine ähnliche Regelung zu treffen, die dem Ziel der betroffenen Klausel '\
-        +'möglichst nahe kommt.'
+        text '10.7 Bei Fragen zu der Anfertigung von Bild- und Tonaufnahmen und zu deren'\
+        + ' Verwendung kann sich der Teilnehmer an die Email-Adresse'\
+        + ' media-info@worldscoutjamboree.de wenden.'
         pdf.move_down 1.mm
         text 'Bei Fragen zu dieser Vereinbarung und zu den aufgenommenen Fotos und deren '\
         +' Verwendung steht unser Medienteam unter media@worldscoutjamboree.de zur Verfügung.'
