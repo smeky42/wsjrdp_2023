@@ -21,32 +21,29 @@ module Wsjrdp2023
       # rubocop:disable AbcSize,MethodLength
       def list
         pdf.start_new_page
-        text 'Teilnahme- und Reisebedingungen zur Teilnahme im Deutschen Kontingent zum 25. World '\
-        +'Scout Jamboree 2023 in Südkorea', size: 14
+        text 'Teilnahme- und Reisebedingungen für die Teilnahme im Deutschen Kontingent zum 25. '\
+        +'World Scout Jamboree 2023 in Südkorea', size: 14
 
         pdf.move_down 3.mm
-        text 'Ein paar Fakten im Überblick', size: 14
-        pdf.move_down 3.mm
-        text 'Veranstalter', size: 12
+        text '1. Veranstalter', size: 12
         pdf.move_down 1.mm
         text 'Ringe deutscher Pfadfinder*innenverbände e.V.(rdp),'
-        text 'Vertreten durch Joschka Hench, Sebastian Köngeter, Oliver Mahn, Naima Hartit'
+        text 'vertreten durch Joschka Hench, Sebastian Köngeter, Oliver Mahn, Naima Hartit'
         text 'Chausseestraße 128/129'
         text '10115 Berlin'
         text 'Telefonnummer Büro: +49 30 288 7895 35'
 
         pdf.move_down 3.mm
-        text 'Organisation / Kontakt', size: 12
+        text '1.1 Organisation / Kontakt', size: 10
         pdf.move_down 1.mm
         text 'Organisatorischer Ansprechpartner ist neben dem Veranstalter, die Kontingentsleitung'\
         +' zum World Scout Jamboree 2023. Die Kontingentsleitung ist wie folgt zu erreichen:'
         text 'Telefon: TODO Telefon?'
         text 'E-Mail: info@worldscoutjamboree.de'
-        text 'Weitere Kontaktdaten gibt es auf der Homepage: www.worldscoutjamboree.de'
-        text 'Verantwortlich ist ausschließlich der rdp.'
+        text 'Weitere Kontaktdaten finden sich auf der Homepage: www.worldscoutjamboree.de'
 
         pdf.move_down 3.mm
-        text 'Reisezeitraum', size: 12
+        text '2. Reisezeitraum', size: 12
         pdf.move_down 1.mm
         text 'Die Fahrt des rdp-Kontingents ist für den Zeitraum vom 20.07 bis 21.08.2023'\
         +' geplant. Der Reisezeitraum variiert je nach gewähltem Paket und Lage der'\
@@ -56,20 +53,17 @@ module Wsjrdp2023
         +' in der Anmeldung angegebenen Mailadressen über die Reisedaten informiert.'
 
         pdf.move_down 3.mm
-        text 'Reiseziel', size: 12
+        text '3. Reiseziel, Reiseform, Pakete', size: 12
         pdf.move_down 1.mm
-        text 'Das Reiseland ist die Republik Korea (Südkorea). Nach Abschluss der Planung'\
+        text '3.1 Das Reiseland ist die Republik Korea (Südkorea). Nach Abschluss der Planung'\
         +' werden genaue Reisedetails bekannt gegeben.'
-
-        pdf.move_down 3.mm
-        text 'Reiseform / Pakete', size: 12
         pdf.move_down 1.mm
-        text 'Die Teilnahme am World Scout Jamboree 2023 unterscheidet sich je nach Rolle im'\
-        +' Deutschen Kontingent. Es gibt jeweils Reisepakete für:'
+        text '3.2 Die Teilnahme am World Scout Jamboree 2023 unterscheidet sich je nach Rolle'\
+        +' des Teilnehmers im Deutschen Kontingent. Es gibt jeweils Reisepakete für:'
 
         pdf.move_down 3.mm
         pdf.indent(10) do
-          text 'Teilnehmende in Units (Unitleiter*innen und Teilnehmer*innen)', size: 10
+          text 'a) Teilnehmende in Units (Unitleiter*innen und Teilnehmer*innen)'
           pdf.move_down 1.mm
           pdf.indent(10) do
             text 'Die Reise von Teilnehmer*innen (TN) und Unitleiter*innen (UL) findet in ihren'\
@@ -83,7 +77,7 @@ module Wsjrdp2023
             +' Voraussetzung für die Teilnahme am Jamboree.'
           end
           pdf.move_down 3.mm
-          text 'Kontingentsteam (KT), Kontingentsleitung (KL + eKL) und International Service'\
+          text 'b) Kontingentsteam (KT), Kontingentsleitung (KL + eKL) und International Service'\
           +' Team (IST)', size: 10
           pdf.move_down 1.mm
           pdf.indent(10) do
@@ -100,13 +94,14 @@ module Wsjrdp2023
         end
 
         pdf.move_down 3.mm
-        text 'Teilnahmevoraussetzung & Vertragsschluss', size: 12
+        text '4. Teilnahmebedingungen', size: 12
         pdf.move_down 1.mm
-        text 'Teilnehmer*innen müssen zwischen dem 22.07.2005 - 31.07.2009 geboren sein.'\
-        +' Erwachsene können nur als Unit- oder Kontingentsleitung, als'\
+        text '4.1 Teilnehmer*innen müssen zwischen dem 22.07.2005 und dem 31.07.2009 geboren'\
+        +'  sein. Erwachsene können nur als Unit- oder Kontingentsleitung, als'\
         +' Kontingentsteammitglied oder als Mitglieder des International Service'\
-        +' Teams (IST) am Jamboree teilnehmen und die Durchführung unterstützen.'\
-        +' Eine aktive Mitgliedschaft in einem der folgenden Pfadfinder*innenverbände'\
+        +' Teams (IST) am Jamboree teilnehmen und damit die Durchführung unterstützen.'
+        pdf.move_down 1.mm
+        text '4.2 Eine aktive Mitgliedschaft in einem der folgenden Pfadfinder*innenverbände'\
         +' ist Voraussetzung für die Teilnahme:'
         pdf.move_down 1.mm
         text '- Bund der Pfadfinderinnen und Pfadfinder (BdP),
@@ -115,134 +110,162 @@ module Wsjrdp2023
         - Pfadfinderinnenschaft Sankt Georg (PSG),
         - Verband Christlicher Pfadfinderinnnen und Pfadfinder (VCP).'
         pdf.move_down 1.mm
-        text 'Die Anmeldung ist bis zum 31.09.2021 über die Homepage'\
-        +' anmeldung.worldscoutjamboree.de möglich. Während des Online-Anmeldeprozesses'\
-        +' wird eine schriftliche Anmeldung generiert. Diese ist mit allen'\
-        +' erforderlichen Unterschriften zu versehen und bis zum Anmeldeschluss am'\
-        +' 31.09.2021 über die Homepage hoch zu laden. Die Anmeldung im Orginal'\
-        +' (Papierform mit Unterschriften) muss spätestens zum 01.06.2022 bei den'\
-        +' entsprechenden Betreuer*innen (UL, IST-Betreuung, eKL) abgegeben werden.'
+        text '4.3 Die Teilnahme am Jamboree setzt voraus, dass der Teilnehmer an'\
+        +' mindestens zwei Vorbereitungstreffen teilnimmt. Die Daten zu den Vorbereitungstreffen'\
+        +' werden den Teilnehmer*innen von der jeweiligen Betreuung bekannt gegeben.'
         pdf.move_down 1.mm
+        text '4.4 Die*Der Teilnehmer*in ist selbst dafür verantwortlich, die erforderlichen'\
+        +' Reisedokumente und Einreisegenehmigungen zu beschaffen. Deutsche Staatsangehörige'\
+        +' benötigen für die Einreise einen für die Dauer des Aufenthaltes gültigen Reisepass'\
+        +' und die jeweilige Einreisegenehmigung (für Südkorea). Nicht deutsche Staatsbürger*innen'\
+        +' informieren sich bitte rechtzeitig, welche Dokumente sie benötigen.'
+        pdf.move_down 1.mm
+        text '4.5 Für die gesundheitliche Betreuung steht während des Jamborees das'\
+        +' Jamboree-Hospital (medizinische Erstversorgungseinrichtung) und nach Möglichkeit'\
+        +' zwei deutschsprachige Kontingentsärzt*innen als Ansprechpartner*innen zur Verfügung.'\
+        +' Außerplanmäßige Rückflüge sind aufgrund der großen Entfernung, außer bei ärztlich'\
+        +' diagnostizierten medizinischen Notfällen, nicht möglich.'
+
+        pdf.move_down 3.mm
+        text '5. Anmeldung und Vertragsschluss', size: 12
+        pdf.move_down 1.mm
+        text '5.1 Die Anmeldung ist bis zum 31.09.2021 über die Homepage'\
+        +' anmeldung.worldscoutjamboree.de möglich. Während des Online-Anmeldeprozesses wird'\
+        +' eine PDF-Dokument generiert, das die anmeldende Person lesen und akzeptieren muss.'\
+        +' Das Anmeldungsdokument muss unterschrieben werden und spätestens bis zum Anmeldeschluss'\
+        +' am 31.09.2021 über die Homepage hochgeladen werden. Die Anmeldung muss im Original'\
+        +' (Papierform mit Unterschriften) spätestens zum 01.06.2022 bei den entsprechenden'\
+        +'  Betreuer*innen (UL, IST-Betreuung, eKL) abgegeben werden.'
         text 'Bei Personen, die zum Zeitpunkt der Anmeldung das 18. Lebensjahr noch nicht'\
         +' vollendet haben, muss die Anmeldung durch alle gesetzlichen Vertreter*innen'\
         +' unterzeichnet sein.'
         pdf.move_down 1.mm
-        text 'Ein Vertrag über die Teilnahme kommt erst dann zustande, wenn der rdp die'\
+        text '5.2 Ein Vertrag über die Teilnahme kommt erst dann zustande, wenn der rdp die'\
         +' Anmeldung in Textform (z.B. E-Mail) bestätigt. Dies erfolgt erst nach Anmeldeschluss.'
 
         pdf.move_down 3.mm
-        text 'Teilnahmebeitrag / Preiserhöhungen', size: 12
+        text '6. Teilnahmebeitrag, Preiserhöhungen, Änderung der Reisebedingungen', size: 12
         pdf.move_down 1.mm
-        text 'Der Teilnahmebetrag richtet sich nach der gewählten Teilnahmevariante (mit'\
-        +' oder ohne Unit) und ggf. nach der Funktion im Kontingent. Für die Zahlungen'\
-        +' ist die Erteilung eines SEPA-Basis-Lastschriftmandates erforderlich.'
+        text '6.1 Der Teilnahmebetrag richtet sich nach der gewählten Teilnahmevariante'\
+        +' (s.o. Ziff. 3.2, Reiseform und Pakete) und ggf. nach der Funktion des Teilnehmers im'\
+        +' Kontingent. '
         pdf.move_down 1.mm
-        text 'Wenn sich nach Vertragsabschluss Beförderungskosten, Flughafengebühren, Steuern'\
-        +' oder Wechselkurse verändern oder Änderungen am Programm vorgenommen werden müssen,'\
-        +' behält sich der rdp vor, den Teilnahmebeitrag um den jeweiligen Erhöhungsbetrag'\
-        +' anzupassen. Eine Preiserhöhung ab dem 20. Tag vor Reiseantritt ist unwirksam.'\
-        +' Bei einer Preiserhöhung von mehr als 5%, ist der Teilnehmende berechtigt,'\
-        +' kostenfrei vom Vertrag zurückzutreten. Bereits erhaltene Leistungen'\
-        +' (z.B. Vortreffen) werden jedoch angerechnet. Der Rücktritt muss sodann gegenüber'\
-        +' dem rdp, innerhalb von 14 Tagen nach der Erklärung über die Preiserhöhung'\
-        +' bzw. der Änderung der Reiseleistung, schriftlich erklärt werden.'
-
-        text 'TODO Höhe und Raten generieren'
-
-        pdf.move_down 3.mm
-        text 'Rücktritt vom Vertrag', size: 12
+        text 'TODO Höhe und Raten einfügen '
         pdf.move_down 1.mm
-        text 'Der geschlossene Vertrag ist für beide Seiten bindend. Ein Rücktrittsrecht besteht'\
-        +' nur in den gesetzlich vorgesehenen Fällen.'
-        pdf.move_down 1.mm
-        text 'Tritt die*der Teilnehmer*in vom Vertrag zurück, ohne hierzu berechtigt zu sein'\
-        +' oder nimmt nicht an der Reise teil, steht dem rdp ein Schadenersatzanspruch zu.'\
-        +' Ein Rücktritt ist schriftlich an den rdp (Adresse s.o.) zu richten. Andere sind'\
-        +' nicht berechtigt, für den rdp den Rücktritt entgegenzunehmen. Dem rdp ist der'\
-        +' entstandene Schaden pauschal gemäß folgender Staffel zu ersetzen:'
-        pdf.move_down 1.mm
-        text '
-          bei Rücktritt bis zum 31.05.2022: 300,00 €,
-          bei Rücktritt bis zum 30.09.2022: 25% des Teilnahmebeitrags,
-          bei Rücktritt bis zum 31.12.2022: 50% des Teilnahmebeitrags,
-          bei Rücktritt bis zum 31.03.2023: 75% des Teilnahmebeitrags,
-          danach beträgt der Schaden 100% des Teilnahmebeitrags.'
-        pdf.move_down 1.mm
-        text 'Es steht der*dem Teilnehmer*in frei, einen geringeren oder keinen Schaden'\
-        +' nachzuweisen. Der rdp kann weitergehende Schäden ebenfalls geltend machen.'
-        pdf.move_down 1.mm
-        text 'Eine nicht erteilte Schulbefreiung oder fehlende Einreisedokumente berechtigen'\
-        +' nicht zum kostenfreien Reiserücktritt.'
-        pdf.move_down 1.mm
-        text 'Der rdp kann neben den gesetzlichen Gründen, wegen der Absage des "Jamborees"'\
-        +' durch den Jamboree-Veranstalter (TODO Veranstalter) und nach erheblichem'\
-        +' vertragswidrigen Verhalten der*des Teilnehmers*in vom Vertrag zurücktreten.'\
-        +' Vor dem verhaltensbedingtem Rücktritt ist durch den rdp eine Mahnung in Textform'\
-        +' (z.B. E-Mail) erforderlich. Daneben kann der rdp unter anderem bei folgenden'\
-        +' Sachverhalten zurücktreten:'
-        pdf.move_down 1.mm
-        text '
-          - wenn Lastschriften nicht eingelöst werden oder ihnen widersprochen wurde und'\
-        +' nach Aufforderung der fällige Teil des Teilnahmebeitrags nicht innerhalb von'\
-        +' zwei Wochen bezahlt wird
-          - wenn die*der Teilnehmer*in nicht an den Vorbereitungstreffen teilnimmt
-          - wenn die bei der Anmeldung abgefragten Daten zur Gesundheitsvorsorge nicht'\
-        +' wahrheitsgemäß dem rdp zur Verfügung gestellt wurden
-          - wenn die*der Teilnehmer*in gegen eine Satzung der Mitgliedsverbände (BdP, '\
-        +'BMPPD, DPSG, PSG oder VCP) verstößt
-          - wenn die*der Teilnehmer*in die Mitgliedschaft in seinem/ihrem Verband (BdP, '\
-        +'BMPPD, DPSG, PSG oder VCP) aufgibt oder verliert
-          - wenn andere wichtige Gründe (z.B. Reisebeschränkungen, Höhere Gewalt) es für '\
-        +'den rdp unzumutbar erscheinen lassen, am Vertrag festzuhalten.'
-        pdf.move_down 1.mm
-        text 'Tritt der rdp aus einem, im vorherigen Abschnitt genannten Grund von dem'\
-        +' Vertrag zurück, hat die*der Teilnehmer*in dem rdp den entstandenen Schaden'\
-        +' gemäß obiger Staffel zu ersetzen. Eventuelle Mehrkosten für die Rückbeförderung'\
-        +' muss die*der Teilnehmende selbst tragen. Es steht der*dem Teilnehmer*in'\
-        +' frei, einen geringeren oder keinen Schaden nachzuweisen. Der rdp kann weitergehende'\
-        +' Schäden ebenfalls geltend machen. TODO geht das so, weil zu undifferenziert'\
-        +' Übervorteilung für den rdp'
-        pdf.move_down 1.mm
-        text 'NICHT im Teilnahmebeitrag enthalten sind: (TODO Versichrung Pflichten als'\
-        +' Reiseanbieter wie haben wir das letztes mal gemacht?)'
+        text 'NICHT im Teilnahmebeitrag enthalten sind:'
         pdf.move_down 1.mm
         text '- Reiserücktrittversicherung
         - Gepäckversicherung
         - persönliche Ausgaben
         - Kosten für Einreisegenehmigungen nach Korea'
         pdf.move_down 1.mm
-        text 'Es bleibt dem Teilnehmenden überlassen, sich um die obenstehenden Posten zu kümmern.'\
-        +' Wir empfehlen dringend den Abschluss einer Reiserücktrittsversicherung.'
+        text 'Der Abschluss einer Reiserücktrittsversicherung wird dringend empfohlen.'
+        pdf.move_down 1.mm
+        text '6.2 Sollten sich nach Bestätigung der Anmeldung durch den rdp wesentliche Umstände'\
+        +' ändern, insbesondere Beförderungskosten, Flughafengebühren, Steuern oder'\
+        +' Wechselkurse, oder sollten sonstige Änderungen am Programm vorgenommen werden'\
+        +' müssen, behält sich der rdp vor, den Teilnahmebeitrag um den jeweiligen Erhöhungsbetrag'\
+        +' anzupassen. Ab dem 20. Tag vor Reiseantritt ist eine Preiserhöhung unzulässig.'\
+        +' Überschreitet der Erhöhungsbetrag 5 % des ursprünglich vereinbarten Preises,'\
+        +' ist der Teilnehmer nach Maßgabe von Ziff. 7.3 berechtigt, vom Vertrag zurückzutreten.'
+        pdf.move_down 1.mm
+        text '6.3 Der Beitrag kann nur durch SEPA-Lastschriften entrichtet werden. Hierfür ist'\
+        +' die Erteilung eines SEPA-Basis-Lastschriftmandates erforderlich.'
+        pdf.move_down 1.mm
 
         pdf.move_down 3.mm
-        text 'Weitere vertraglichen Pflichten', size: 12
+        text '7. Rücktritt des Teilnehmers vor Leistungsbeginn ', size: 12
         pdf.move_down 1.mm
-        text 'Die*Der Teilnehmer*in muss sich um gültige Reisedokumente und Einreisegenehmigungen'\
-        +' kümmern. Für deutsche Staatsangehörige heißt das, dass zur Einreise ein für die'\
-        +' Dauer des Aufenthaltes gültiger Reisepass und die jeweilige Einreisegenehmigung'\
-        +' (für Südkorea) erforderlich ist. Nicht deutsche Staatsbürger*innen informieren'\
-        +' sich bitte rechtzeitig, welche Dokumente benötigt werden.'
+        text '7.1 Der Teilnehmer kann jederzeit vor Beginn der Reise von dem Vertrag zurücktreten.'\
+        +' Der Rücktritt ist schriftlich gegenüber dem rdp zu erklären. '
         pdf.move_down 1.mm
-        text 'Die, bei der Anmeldung abgefragten Daten zur Gesundheitsvorsorge müssen'\
-        +' wahrheitsgemäß beantwortet werden. Für die gesundheitliche Betreuung steht'\
-        +' während des Jamborees das Jamboree-Hospital (medizinische Erstversorgungseinrichtung)'\
-        +' und nach Möglichkeit zwei deutschsprachige Kontingentsärzt*innen als'\
-        +' Ansprechpartner*innen zur Verfügung. Die Einreichung des Gesundheitsbogens'\
-        +' ist notwendig, da die medizinische Versorgung nur auf der Basis der vorliegenden'\
-        +' Informationen übernommen werden kann.'
+        text '7.2 Erklärt der Teilnehmer den Rücktritt, so verliert der rdp den Anspruch auf'\
+        +' Zahlung des Teilnehmerbeitrages. Stattdessen kann der rdp eine angemessene'\
+        +' Entschädigung verlangen, sofern der Rücktritt nicht von ihm zu vertreten'\
+        +' ist. Die Höhe der Entschädigung ist pauschaliert wie folgt:'
         pdf.move_down 1.mm
-        text 'Außerplanmäßige Rückflüge sind aufgrund der großen Entfernung, außer bei'\
-        +' ärztlich diagnostizierten medizinischen Notfällen, nicht möglich.'
+        text '
+          - bei Rücktritt bis zum 31.05.2022: 300,00 €,
+          - bei Rücktritt bis zum 30.09.2022: 25% des Teilnahmebeitrags,
+          - bei Rücktritt bis zum 31.12.2022: 50% des Teilnahmebeitrags,
+          - bei Rücktritt bis zum 31.03.2023: 75% des Teilnahmebeitrags,
+          - nach diesem Zeitpunkt in Höhe des vollen Teilnahmebeitrags'
+        pdf.move_down 1.mm
+        text 'Dem Teilnehmer bleibt der Nachweis unbenommen, dem rdp'\
+        +' sei durch den Rücktritt kein Schaden entstanden oder der Schaden sei wesentlich'\
+        +' geringer als die oben genannten Pauschalsätze.'
+        pdf.move_down 1.mm
+        text '7.3 Wenn der rdp von der ihm eingeräumten Möglichkeit Gebrauch macht, den'\
+        +' Teilnahmebeitrag um mehr als 5 % gegenüber dem ursprünglich geltenden Preis'\
+        +' zu erhöhen, und erklärt der Teilnehmer deshalb den Rücktritt, ist eine'\
+        +' Entschädigung nicht geschuldet; der Teilnehmer schuldet aber Ausgleich für'\
+        +' Teilleistungen, die er bis zum Rücktritt in Anspruch genommen hat. Das gleiche'\
+        +' gilt für den Fall, dass der Teilnehmer mit ergänzenden Bedingungen, die der'\
+        +' rdp aufgrund von Vorgaben des koreanischen Veranstalters weiterreichen muss,'\
+        +' nicht einverstanden ist.'
+        pdf.move_down 1.mm
+        text '7.4 Der rdp behält sich das Recht vor, anstelle der Entschädigung nach'\
+        +' Ziff. 7.2 Schadensersatz zu verlangen, soweit er nachweisen kann, dass'\
+        +' aufgrund des Rücktritts oder des Nichtantritts der Reise wesentlich'\
+        +' höhere Aufwendungen oder ein wesentlich höherer Schaden entstanden sind.'
 
         pdf.move_down 3.mm
-        text 'Allgemeines', size: 12
+        text '8. Kündigung und Rücktritt durch den rdp', size: 12
         pdf.move_down 1.mm
-        text 'Sonderabsprachen sind nur dann wirksam, wenn sie durch den rdp schriftlich'\
-        +' bestätigt wurden. Mündliche Absprachen haben keine Rechtsgeltung. Die'\
-        +' Unwirksamkeit einzelner Bestimmungen des Reisevertrags und der'\
-        +' Teilnahmebedingungen hat nicht die Unwirksamkeit des gesamten Reisevertrags /'\
-        +' Teilnahmebedingungen zur Folge. Unwirksame Bestimmungen werden durch solche'\
-        +' ersetzt, die den angestrebten wirtschaftlichen Zweck möglichst weitgehend erreichen.'
+        text '8.1 Der rdp ist berechtigt, den Vertrag ohne Einhaltung einer Frist'\
+        +' zu kündigen, wenn der Teilnehmer nachhaltig gegen seine im Reisevertrag'\
+        +' und diesen Reisebedingungen vereinbarten Pflichten verstößt oder sonst'\
+        +' durch sein Verhalten die Durchführung und den Erfolg der Veranstaltung'\
+        +' nachhaltig gefährdet. Das ist insbesondere der Fall,'
+        text '-	wenn der Teilnehmer entgegen TODO$ bei mehr als zwei Vorbereitungstreffen'\
+        +' unentschuldigt gefehlt hat, oder'
+        text '- wenn der Teilnehmer gegen die Satzung seines Mitgliedsverbandes '\
+        + ' TODO($$$) verstößt, die Mitgliedschaft aufgibt oder sie verliert '
+        text 'Die Kündigung ist nur zulässig, wenn der rdp den Teilnehmer zuvor in'\
+        +' Textform (z.B. durch eine Email) abgemahnt hat und der Teilnehmer sein'\
+        +' Fehlverhalten dennoch fortsetzt. Eine vorherige Abmahnung ist nicht'\
+        +' erforderlich in Fällen gröbsten Fehlverhaltens, in denen eine sofortige'\
+        +' Aufhebung des Vertrages auch unter Berücksichtigung der Interessen des'\
+        +' Teilnehmers gerechtfertigt ist.'
+        pdf.move_down 1.mm
+        text '8.2 Der rdp ist zur Kündigung des Vertrages weiter dann berechtigt,'\
+        +' wenn Lastschriften nicht eingelöst werden oder ihnen widersprochen wurde'\
+        +' und auch nach schriftlicher Mahnung der fällige Teil des Teilnahmebeitrags'\
+        +' nicht innerhalb von zwei Wochen bezahlt wird.'
+        pdf.move_down 1.mm
+        text '8.3 Im Falle der Kündigung nach Ziff. 8.1 und 8.2 behält der rdp den'\
+        +' Anspruch auf den Teilnahmebeitrag. Er muss sich jedoch den Wert ersparter'\
+        +' Aufwendungen sowie die Vorteile anrechnen lassen, die aus einer anderen'\
+        +' Verwendung nicht in Anspruch genommener Leistungen erlangt werden, einschließlich'\
+        +' evtl. erlangter Erstattungen durch Leistungsträger. Die Geltendmachung von weiterem'\
+        +' Schadensersatz bleibt vorbehalten; dies gilt insbesondere für Mehrkosten für die'\
+        +' Rückbeförderung des Teilnehmers.'
+        pdf.move_down 1.mm
+        text '8.4 Der rdp behält sich vor, in folgenden Fällen vom Vertrag zurückzutreten:'
+        text 'a) Absage des Jamborees durch den koreanischen Veranstalter (TODO Veranstalter)'
+        text 'b) höhere Gewalt; hierzu zählen auch Einreise- bzw. Ausreisebeschränkungen sowie'\
+        +' sonstige staatliche Anordnungen im Zusammenhang mit der Ausbreitung des Virus SARS-CoV-2'
+        text 'Im Falle des Rücktritts verliert der rdp den Anspruch auf den Teilnahmebeitrag.'\
+        +' Er kann jedoch vom Teilnehmer eine angemessene Entschädigung bis zur Höhe der ihm'\
+        +' bis zum Rücktritt entstandenen Kosten und Aufwendungen (z.B. für bereits erworbene'\
+        +' Flugtickets) verlangen.'
+
+
+        pdf.move_down 3.mm
+        text '9. Schlussbestimmungen', size: 12
+        pdf.move_down 1.mm
+        text '9.1 Die Vertragsdurchführung unterliegt ausschließlich deutschem Recht.'
+        pdf.move_down 1.mm
+        text '9.2 Änderungen des Vertrages bedürfen der Schriftform. Mündliche Nebenabreden'\
+        +' sind nicht getroffen.'
+        pdf.move_down 1.mm
+        text '9.3 Sollten einzelne Bestimmungen des Vertrages oder der vorliegenden'\
+        +' Reisebedingungen unwirksam oder nichtig sein oder werden, so wird die Wirksamkeit'\
+        +' des Vertrages und der übrigen Bedingungen hiervon nicht berührt. Die Parteien werden'\
+        +' in einem solchen Fall unter Berücksichtigung des Gesetzes eine Vereinbarung'\
+        +' treffen, die der unwirksamen oder nichtigen Klausel wirtschaftlich nahekommt.'\
+        +' Das gleiche soll für den Fall gelten, dass im Vertrag eine Regelungslücke'\
+        +' offenbar wird.'
         text ''
       end
       # rubocop:enable AbcSize,MethodLength
