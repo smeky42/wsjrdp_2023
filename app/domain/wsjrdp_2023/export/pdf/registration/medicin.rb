@@ -36,8 +36,8 @@ module Wsjrdp2023
                                        [{ content: @person.town + ' den ' \
                                          + Time.zone.today.strftime('%d.%m.%Y'), height: 30 }],
                                        %w(__________________________ __________________________),
-                                       [{ content: 'Sorgeberechtigte*r', height: 30 },\
-                                        + 'Sorgeberechtigte*r'],
+                                       [{ content: 'Personensorgeberechtigte*r', height: 30 },\
+                                        + 'Personensorgeberechtigte*r'],
                                        ['______________________________', ''],
                                        [{ content: @person.full_name, height: 30 }, '']
                                      ],
@@ -49,9 +49,17 @@ module Wsjrdp2023
         pdf.start_new_page
         text 'Gesundheitsfragebogen', size: 14
         text 'zu Teilnehmer: ' + @person.full_name
-        text 'Sorgeberechtigte: ' + ' TODO NAME 1 ' + ' TODO NAME 2'
+        text 'Personensorgeberechtigte: ' + ' TODO NAME 1 ' + ' TODO NAME 2'
         text 'im Notfall zu erreichen unter TODO Telefonnummer'
         pdf.move_down 3.mm
+
+        text 'Damit die Gesundheit der Teilnehmer auch bei medizinischen'\
+        + ' Notfällen gewährleistet werden kann, müssen die folgenden Fragen'\
+        + ' wahrheitsgemäß und vollständig beantwortet werden. Der rdp stellt'\
+        + ' durch technische und organisatorische Maßnahmen sicher, dass der'\
+        + ' Schutz der nachfolgend erhobenen Gesundheitsdaten gewährleistet'\
+        + ' wird. Weitere Informationen finden sich in den Datenschutzhinweisen,'\
+        + ' dort TODO $$$'
 
         text 'Grundsätzlich:', size: 12
         pdf.move_down 1.mm
@@ -183,11 +191,12 @@ module Wsjrdp2023
         pdf.move_down 1.mm
         text 'Mit dem Hausarzt ist abzuklären, ob für die bestehende Dauer- & Bedarfsmedikation'\
         + ' ein aktueller Medikamentenplan der Medikamente mitgeführt werden muss.'
-        pdf.move_down 1.mm
+
+        pdf.move_down 3.mm
         text 'Weiteres:', size: 12
         pdf.move_down 1.mm
-        text 'Bei meinem / unserem Kind ist auf Folgendes zu Achten (z.B. Einschränkungen, etc.):',
-             size: 10
+        text 'Bei meinem / unserem Kind ist auf Folgendes zu Achten (z.B. Besonderheiten,'\
+        + ' Einschränkungen, etc.):', size: 10
         text 'Please pay attention to the following for my / our child (restrictions'\
         + ' etc.): ', size: 6, style: :italic
         pdf.move_down 1.mm
