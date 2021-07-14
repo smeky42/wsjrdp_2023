@@ -88,7 +88,17 @@ de:
         rdp_association_sub_region: Bezirk, Region
         rdp_association_group: Stamm, Ortsgruppe
         rdp_association_number: Mitgliedsnummer
-        additional_information: Zusätzliche Angaben z.B Mit-Unitleiter*innen
+        additional_information: Zusätzliche Angaben
+        additional_contact_a_info: Personensorgeberechtigte*r 1
+        additional_contact_name_a: Vor- und Nachname 
+        additional_contact_adress_a: Adresse 
+        additional_contact_b_info: Personensorgeberechtigte*r 2
+        additional_contact_name_b: Vor- und Nachname 
+        additional_contact_adress_b: Adresse 
+        additional_contact_single: Es gibt nur eine Sorgeberechtigte Person
+        additional_contact_address_info: Sofern abweichend von Kontaktdaten Teilnehmer*in
+        additional_mail_info: Mit Versand gekennzeichnete Mails werden zusätzlich zur primären Mailadresse benachrichtigt 
+
         genders:
           m: männlich
           w: weiblich
@@ -99,6 +109,8 @@ de:
       registration_header: Für die Vorregistrierung zum Worldscoutjamboree als Unit Leitung hier registrieren
       map: Kontingentskarte 
       test_environment: Testumgebung, Daten können jederzeit gelöscht werden!
+      additional_contact_header: Notfallkontakte
+      additional_contact_header_participant: Sorgeberechtigte
 
     button:
       register: Registrieren
@@ -108,6 +120,9 @@ de:
       print_submit_hint: Sperrt bestimmte Felder für weitere bearbeitung
       print_review: Anmeldung einsehen
       print_review_hint: Dokument einsehen
+      edit: Bearbeiten
+      edit_hint: Zum Bearbeiten öffnen 
+      save: Speichern
 
     text:
       more_info: Die Anmeldungen für IST und Teilnehmende beginnt im Juli. Mehr Informationen findest du auf unserer
@@ -124,9 +139,14 @@ de:
   contactable:
     additional_email_fields:
       tooltip_mailings: Versände von E-Mails werden zusätzlich an alle hier markierten Adressen im CC verschickt.
-
+    association:
+      placeholder_value: Verbandszugehörigkeit
   people:
     tabs:
-      general: Kontaktdaten
       print: Anmeldung Drucken 
+      additional_contact: Weitere Kontaktdaten  
+    form_tabs:
+      general: Kontaktdaten Teilnehmer*in
+      additional_contact: Weitere Kontaktdaten
+      rdp_association: Verbandszugehörigkeit
   
