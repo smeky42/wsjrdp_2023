@@ -36,8 +36,8 @@ module Wsjrdp2023
                                        [{ content: @person.town + ' den ' \
                                          + Time.zone.today.strftime('%d.%m.%Y'), height: 30 }],
                                        %w(__________________________ __________________________),
-                                       [{ content: 'Sorgeberechtigte*r', height: 30 },\
-                                        + 'Sorgeberechtigte*r'],
+                                       [{ content: 'Personensorgeberechtigte*r', height: 30 },\
+                                        + 'Personensorgeberechtigte*r'],
                                        ['______________________________', ''],
                                        [{ content: @person.full_name, height: 30 }, '']
                                      ],
@@ -62,50 +62,65 @@ module Wsjrdp2023
         text ' für das deutsche Kontingent zum 25. World Scout Jamboree 2023 in Südkorea.'
 
         pdf.move_down 3.mm
-        text 'Die Teilnahme im Deutschen Kontingent kostet TODO Preis € und beinhaltet'\
+        text 'Die Teilnahme im deutschen Kontingent kostet TODO Preis € und beinhaltet'\
         + ' die Vor- und Nachbereitung in Deutschland,'\
         + ' die Teilnahme am 25. World Scout Jamboree in Südkorea,'\
         + ' die Reise nach Südkorea (nur Units)'\
-        + 'eine Vor oder Nachtour (nur Units).'
+        + ' eine Vor- oder Nachtour (nur Units).'
         text 'Die Reise ist für den Zeitraum vom 20.07 bis 21.08.2023'\
         +' geplant. Der Reisezeitraum variiert je nach gewähltem Paket und Lage der'\
         +' Sommerferien, Reisedauer sind 13 bis 25 Tage.'
 
         pdf.move_down 3.mm
-
         text 'Hiermit ' + (of_legal_age ? 'melde ich mich ' : 'melden wir unser Kind ') \
         + @person.full_name + ', geboren am ' + @person.birthday.strftime('%d.%m.%Y') \
         + ' verbindlich mit dem Paket ' + 'TODO paket' + ' zur Teilnahme im Deutschen Kontingent'\
-        + ' zum 25. World Scout Jamboree 2023 an. Mit '\
-        + (of_legal_age ? 'meiner Unterschrift bestätige ich' :
-          'unserer Unterschrift bestätigen wir')\
-        + ' die Kenntnis- und Annahme'\
-        + ' der Reisebedingungen des Veranstalters (rdp) in Version 1.0 vom 31.07'\
-        + ' (TODO Downloadlink).'
+        + ' zum 25. World Scout Jamboree 2023 an. Mit der Anmeldung '\
+        + (of_legal_age ? 'akzeptiere ich' : 'akzeptieren wir')\
+        + ' die Reisebedingungen, die vom rdp als Veranstalter vorgegeben werden.'\
+
+        pdf.move_down 3.mm
+        text 'Der rdp behält sich das Recht vor, angekündigte Programminhalte durch'\
+        +' andere zu ersetzen und notwendige Änderungen des Programms unter Wahrung'\
+        +' des Gesamtcharakters der Veranstaltung vorzunehmen.'
+
+        pdf.move_down 3.mm
+        text 'Es besteht die Möglichkeit, dass der Veranstalter des Jamboree in Korea'\
+        +' ergänzende Bedingungen für die Teilnahme stellt und/oder weitere Daten'\
+        +' abfragt. Der rdp muss diese ergänzenden Bedingungen an alle Teilnehmer'\
+        +' weitergeben, obwohl er auf den Inhalt keinen Einfluss hat, weil sonst'\
+        +' eine Teilnahme nicht möglich ist. Die Teilnehmer werden über diese Änderungen'\
+        +' in Textform unterrichtet. Sollte der Teilnehmer mit diesen ergänzenden Bedingungen'\
+        +' nicht einverstanden sein, kann er nach Maßgabe von TODO $$$ der Reisebedingungen zu'\
+        +' diesem Vertrag zurücktreten. '
+
+        pdf.move_down 3.mm
+        unless of_legal_age
+          text 'Für die Dauer der Reise übertragen wir die Ausübung der Aufsichtspflicht und das'\
+          + ' Aufenthaltsbestimmungsrecht über unser Kind dem Reiseveranstalter. Wir sind damit'\
+          + ' einverstanden, dass die Ausübung im erforderlichen Ausmaß auf volljährige'\
+          + ' Betreuer*innen übertragen wird.'
+          pdf.move_down 3.mm
+        end
 
         pdf.move_down 3.mm
 
-        text 'Anlagen zum Dokument sind die Datenschutzhinweise in Version 1.0 vom 31.07 '\
-        + ' (TODO Downloadlink) und die Medienrichtlinie (rdp) in Version 1.0 vom 31.07'\
-        + ' (TODO Downloadlink) im Anhang.'
-        text '' + (of_legal_age ? 'Ich bestätige' : 'Wir bestätigen') + ' die Dokumente'\
-        + ' zur Kenntnis genommen zu haben. Das gilt Insbesondere für die Hinweise zur'\
-        + ' Datenübtragung zum Veranstalter im nicht EU-Ausland, zu Bild und Tonaufnahmen'\
-        + ' und zur Erfassung und Weitergabe von Gesundheitsdaten.'
+        text 'Als Bestandteil dieser Anmeldung haben wir folgende Dokumente in der Anlage'\
+          + ' zur Kenntnis genommen:'
+        text '- die Reisebedingungen des rdp (v1.0 vom 31.07)'
+        text '- die Datenschutzhinweise (v1.0 vom 31.07), insbesondere die Informationen zu TODO$'
+        text '- die Medienrichtlinie (v1.0 vom 31.07)'
+        text 'Die Dokumente sind auch unter TODO Downloadlink verfügbar.'
         pdf.move_down 3.mm
 
         text 'Den Medizinbogen im Anhang haben wir gesondert unterschrieben.'
         pdf.move_down 3.mm
 
-        unless of_legal_age
-          text 'Für die Dauer der Reise übertragen wir die Ausübung der Aufsichtspflicht und das'\
-        + ' Aufenthaltsbestimmungsrecht über unser Kind dem Reiseveranstalter. Wir sind damit'\
-        + ' einverstanden, dass die Ausübung im erforderlichen Ausmaß auf volljährige'\
-        + ' Betreuer*innen übertragen wird.'
-          pdf.move_down 3.mm
-        end
+        pdf.move_down 3.mm
         signature.draw
-        pdf.stroke_horizontal_rule
+
+
+        pdf.start_new_page
         pdf.move_down 4.mm
 
         text 'SEPA Lastschriftverfahren', size: 12
