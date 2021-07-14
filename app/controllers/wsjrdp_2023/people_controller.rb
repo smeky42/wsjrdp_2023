@@ -16,7 +16,12 @@ module Wsjrdp2023
         :rdp_association_group,
         :rdp_association_number,
         :longitude,
-        :latitude
+        :latitude,
+        :additional_contact_name_a,
+        :additional_contact_adress_a,
+        :additional_contact_name_b,
+        :additional_contact_adress_b,
+        :additional_contact_address_info
       ]
 
       # Override crud_controller

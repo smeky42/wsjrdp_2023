@@ -1,0 +1,22 @@
+-#  Copyright (c) 2012-2021, German Contingent for the Worldscoutjamboree 2023. This file is part of
+-#  hitobito_wsjrdp_2023 and licensed under the Affero General Public License version 3
+-#  or later. See the COPYING file at the top-level directory or at
+-#  https://github.com/hitobito/hitobito_wsjrdp_2023.
+
+= field_set_tag do
+  %h4
+    = t('activerecord.attributes.person.additional_contact_a_info')
+  = f.labeled_input_field :additional_contact_name_a 
+  = f.labeled_input_field :additional_contact_adress_a, placeholder: t('activerecord.attributes.person.additional_contact_address_info')
+= field_set_tag do
+  %h4
+    = t('activerecord.attributes.person.additional_contact_b_info')
+  = f.labeled_input_field :additional_contact_name_b 
+  = f.labeled_input_field :additional_contact_adress_b, placeholder: t('activerecord.attributes.person.additional_contact_address_info')
+  = f.labeled_input_field :additional_contact_single
+= field_set_tag do
+  %h4
+    = t('activerecord.attributes.person.additional_mail_info')
+  = f.labeled_inline_fields_for :additional_emails, 'contactable/additional_email_fields'
+= field_set_tag do
+  = f.labeled_inline_fields_for :phone_numbers, 'contactable/phone_number_fields'

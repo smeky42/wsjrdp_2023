@@ -12,5 +12,9 @@ ThinkingSphinx::Index.define_partial :person do
           rdp_association_region,
           rdp_association_sub_region,
           rdp_association_group,
-          rdp_association_number
+          additional_contact_name_a,
+          additional_contact_adress_a,
+          additional_contact_name_b,
+          additional_contact_adress_b,
+          additional_contact_address_info
 end
