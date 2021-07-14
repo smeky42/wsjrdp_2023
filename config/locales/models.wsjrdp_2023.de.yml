@@ -102,6 +102,12 @@ de:
 
     button:
       register: Registrieren
+      print_preview: Vorschau anzeigen
+      print_preview_hint: Zur Kontrolle der Anmeldung
+      print_submit: Verbindlich drucken
+      print_submit_hint: Sperrt bestimmte Felder für weitere bearbeitung
+      print_review: Anmeldung einsehen
+      print_review_hint: Dokument einsehen
 
     text:
       more_info: Die Anmeldungen für IST und Teilnehmende beginnt im Juli. Mehr Informationen findest du auf unserer
@@ -118,3 +124,9 @@ de:
   contactable:
     additional_email_fields:
       tooltip_mailings: Versände von E-Mails werden zusätzlich an alle hier markierten Adressen im CC verschickt.
+
+  people:
+    tabs:
+      general: Kontaktdaten
+      print: Anmeldung Drucken 
+  

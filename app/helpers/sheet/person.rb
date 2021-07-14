@@ -14,11 +14,17 @@ module Sheet
         :group_person_path,
         if: :show
 
+
+    tab 'people.tabs.print',
+        :print_group_person_path,
+        if: :show
+
+
     if Settings.people.abos
       tab 'people.tabs.subscriptions',
           :group_person_subscriptions_path,
           # if: :show_details
-          if: (lambda do |view, group, person|
+          if: (lambda do |view, _group, _person|
             view.current_user.role?('Group::Root::Admin')
             # TODO: use view.can
           end)
@@ -36,7 +42,7 @@ module Sheet
         # if: (lambda do |view, _group, person|
         #   view.can?(:show_details, person) && person.roles.any?
         # end)
-        if: (lambda do |view, group, person|
+        if: (lambda do |view, _group, _person|
           view.current_user.role?('Group::Root::Admin')
           # TODO: use view.can
         end)
@@ -46,7 +52,7 @@ module Sheet
         # if: (lambda do |view, _group, person|
         #   view.can?(:history, person)
         # end)
-        if: (lambda do |view, group, person|
+        if: (lambda do |view, _group, _person|
           view.current_user.role?('Group::Root::Admin')
           # TODO: use view.can
         end)
@@ -56,7 +62,7 @@ module Sheet
         # if: (lambda do |view, _group, person|
         #   view.can?(:log, person)
         # end)
-        if: (lambda do |view, group, person|
+        if: (lambda do |view, _group, _person|
           view.current_user.role?('Group::Root::Admin')
           # TODO: use view.can
         end)
