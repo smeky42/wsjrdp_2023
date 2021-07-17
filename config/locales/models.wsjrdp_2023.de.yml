@@ -147,9 +147,12 @@ de:
   people:
     tabs:
       print: Anmeldung Drucken 
-      additional_contact: Weitere Kontaktdaten  
+      additional_contact: Weitere Kontaktdaten
     form_tabs:
       general: Kontaktdaten Teilnehmer*in
       additional_contact: Weitere Kontaktdaten
       rdp_association: Verbandszugehörigkeit
-  
+  global:
+    tabs:
+      info: Kontaktdaten
+
