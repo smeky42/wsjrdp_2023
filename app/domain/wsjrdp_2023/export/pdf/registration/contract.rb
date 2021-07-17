@@ -36,8 +36,8 @@ module Wsjrdp2023
                                        [{ content: @person.town + ' den ' \
                                          + Time.zone.today.strftime('%d.%m.%Y'), height: 30 }],
                                        %w(__________________________ __________________________),
-                                       [{ content: 'Personensorgeberechtigte*r', height: 30 },\
-                                        + 'Personensorgeberechtigte*r'],
+                                       [{ content: @person.additional_contact_name_a, height: 30 },\
+                                        + @person.additional_contact_name_b],
                                        ['______________________________', ''],
                                        [{ content: @person.full_name, height: 30 }, '']
                                      ],
@@ -49,7 +49,6 @@ module Wsjrdp2023
         text 'HowTo', size: 12
         text 'ToDo Erklärung welchen Weg das Dokument nimmt -> Hochladen erstes Unit Treffen'
         text 'ToDo QR Code für die Nachverfolgung'
-        text 'ToDo Alleinerziehend nur eine Unterschrift + Nachweis'
         pdf.stroke_horizontal_rule
         pdf.move_down 3.mm
 
@@ -61,14 +60,14 @@ module Wsjrdp2023
         + ' 10115 Berlin.'
         text ' für das deutsche Kontingent zum 25. World Scout Jamboree 2023 in Südkorea.'
 
-        pdf.move_down 3.mm # TODO: Preis generieren und Units ausblenden
+        pdf.move_down 3.mm # TODO: Preis generieren und nur Units ausblenden
         text 'Die Teilnahme, als Teilnehmer in einer Unit, '\
         + ' im deutschen Kontingent kostet 4100 € und beinhaltet'\
         + ' die Vor- und Nachbereitung in Deutschland,'\
-        + ' die Teilnahme an den Akklimatisierungstagen in Südkorea (nur Units),'\
+        + ' die Teilnahme an den Akklimatisierungstagen in Südkorea ,'\
         + ' die Teilnahme am 25. World Scout Jamboree in Südkorea,'\
-        + ' die Reise nach Südkorea (nur Units)'\
-        + ' eine Vor- oder Nachtour (nur Units).'
+        + ' die Reise nach Südkorea'\
+        + ' eine Vor- oder Nachtour .'
         text 'Die Reise ist für den Zeitraum vom 20.07 bis 21.08.2023'\
         +' geplant. Der Reisezeitraum variiert je nach gewähltem Paket und Lage der'\
         +' Sommerferien, Reisedauer sind 13 bis 25 Tage.'
@@ -110,16 +109,16 @@ module Wsjrdp2023
 
         text 'Als Bestandteil dieser Anmeldung haben wir folgende Dokumente in der Anlage'\
           + ' zur Kenntnis genommen:'
-        text '- die Teilnahme- und Reisebedingungen des rdp (v0.1 vom 14.07.2021)'
-        text '- die Datenschutzhinweise (v0.1 vom 14.07.2021)'\
-          + ', insbesondere die Informationen zu TODO'
+        text '- die Teilnahme- und Reisebedingungen des rdp (v0.2 vom 17.07.2021)'
+        text '- die Datenschutzhinweise (v0.2 vom 17.07.2021)'\
+          + ', insbesondere die Informationen zu TODO verweis wohin?'
         # TODO: Dokumente hochladen
-        text 'Die Dokumente sind auch unter www.worldscoutjamboree.de/downloads'\
-        +' Downloadlink verfügbar.'
+        text 'Die Dokumente stehen auch unter www.worldscoutjamboree.de/downloads'\
+        +' zur Verfügung.'
         pdf.move_down 3.mm
 
         text 'Den Medizinbogen und das SEPA Lastschriftverfahren im Anhang'\
-          + ' haben wir gesondert unterschrieben.'
+          + ' wurden gesondert unterschrieben.'
         pdf.move_down 3.mm
 
         pdf.move_down 3.mm
@@ -142,11 +141,11 @@ module Wsjrdp2023
         + 'Kreditinstitut vereinbarten Bedingungen.'
         pdf.move_down 2.mm
         attendee_data = pdf.make_table([
-                                         [{ content: 'IBAN:', width: 150 }, 'TODO @person.iban'],
+                                         [{ content: 'IBAN:', width: 150 }, @person.sepa_iban],
                                          ['Mandatsreferenz:', 'wsjrdp' + @person.id.to_s],
-                                         ['Gläubiger*innen-Identifikationsnummer:', 'TODO IBAN'],
-                                         ['Kontoinhaber*in:', @person.full_name]
-                                         # TODO: generate iban name
+                                         ['Gläubiger*innen-Identifikationsnummer:', 'TODO IBANrdp'],
+                                         ['Kontoinhaber*in:', @person.sepa_name],
+                                         ['Adresse:', @person.sepa_address]
                                        ],
                                        cell_style: { padding: 1, border_width: 0,
                                                      inline_format: true })
@@ -177,19 +176,20 @@ module Wsjrdp2023
         pdf.make_table([
                          [{ content: @person.town + ' den ' + Time.zone.today.strftime('%d.%m.%Y'),
                             height: 30 }],
-                         ['______________________________', ''], # TODO: Generate Name
-                         [{ content: @person.full_name, height: 30 }, '']
+                         ['______________________________', ''],
+                         [{ content: @person.sepa_name, height: 30 }, '']
                        ],
                        cell_style: { width: 240, padding: 1, border_width: 0,
                                      inline_format: true }).draw
-        pdf.move_down 3.mm
-        pdf.stroke_horizontal_rule
+        # TODO: AV
+        # pdf.move_down 3.mm
+        # pdf.stroke_horizontal_rule
 
 
-        pdf.move_down 3.mm
-        text 'AV Ü18', size: 12
-        text 'TODO AV Formulierung kommt noch'
-        signature.draw
+        # pdf.move_down 3.mm
+        # text 'AV Ü18', size: 12
+        # text 'TODO AV Formulierung kommt noch'
+        # signature.draw
 
         text ''
       end
