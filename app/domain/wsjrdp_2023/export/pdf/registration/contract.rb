@@ -61,9 +61,11 @@ module Wsjrdp2023
         + ' 10115 Berlin.'
         text ' für das deutsche Kontingent zum 25. World Scout Jamboree 2023 in Südkorea.'
 
-        pdf.move_down 3.mm
-        text 'Die Teilnahme im deutschen Kontingent kostet TODO Preis € und beinhaltet'\
+        pdf.move_down 3.mm # TODO: Preis generieren und Units ausblenden
+        text 'Die Teilnahme, als Teilnehmer in einer Unit, '\
+        + ' im deutschen Kontingent kostet 4100 € und beinhaltet'\
         + ' die Vor- und Nachbereitung in Deutschland,'\
+        + ' die Teilnahme an den Akklimatisierungstagen in Südkorea (nur Units),'\
         + ' die Teilnahme am 25. World Scout Jamboree in Südkorea,'\
         + ' die Reise nach Südkorea (nur Units)'\
         + ' eine Vor- oder Nachtour (nur Units).'
@@ -71,10 +73,11 @@ module Wsjrdp2023
         +' geplant. Der Reisezeitraum variiert je nach gewähltem Paket und Lage der'\
         +' Sommerferien, Reisedauer sind 13 bis 25 Tage.'
 
-        pdf.move_down 3.mm
+        pdf.move_down 3.mm # TODO: Paket generieren
         text 'Hiermit ' + (of_legal_age ? 'melde ich mich ' : 'melden wir unser Kind ') \
         + @person.full_name + ', geboren am ' + @person.birthday.strftime('%d.%m.%Y') \
-        + ' verbindlich mit dem Paket ' + 'TODO paket' + ' zur Teilnahme im Deutschen Kontingent'\
+        + ' verbindlich mit dem Paket ' + ' Teilnehmer in einer Unit' \
+        + ' zur Teilnahme im Deutschen Kontingent'\
         + ' zum 25. World Scout Jamboree 2023 an. Mit der Anmeldung '\
         + (of_legal_age ? 'akzeptiere ich' : 'akzeptieren wir')\
         + ' die Reisebedingungen, die vom rdp als Veranstalter vorgegeben werden.'\
@@ -91,7 +94,7 @@ module Wsjrdp2023
         +' weitergeben, obwohl er auf den Inhalt keinen Einfluss hat, weil sonst'\
         +' eine Teilnahme nicht möglich ist. Die Teilnehmer werden über diese Änderungen'\
         +' in Textform unterrichtet. Sollte der Teilnehmer mit diesen ergänzenden Bedingungen'\
-        +' nicht einverstanden sein, kann er nach Maßgabe von TODO $$$ der Reisebedingungen zu'\
+        +' nicht einverstanden sein, kann er nach Maßgabe von 8. der Reisebedingungen zu'\
         +' diesem Vertrag zurücktreten. '
 
         pdf.move_down 3.mm
@@ -110,7 +113,9 @@ module Wsjrdp2023
         text '- die Teilnahme- und Reisebedingungen des rdp (v0.1 vom 14.07.2021)'
         text '- die Datenschutzhinweise (v0.1 vom 14.07.2021)'\
           + ', insbesondere die Informationen zu TODO'
-        text 'Die Dokumente sind auch unter TODO Downloadlink verfügbar.'
+        # TODO: Dokumente hochladen
+        text 'Die Dokumente sind auch unter www.worldscoutjamboree.de/downloads'\
+        +' Downloadlink verfügbar.'
         pdf.move_down 3.mm
 
         text 'Den Medizinbogen und das SEPA Lastschriftverfahren im Anhang'\
@@ -140,7 +145,8 @@ module Wsjrdp2023
                                          [{ content: 'IBAN:', width: 150 }, 'TODO @person.iban'],
                                          ['Mandatsreferenz:', 'wsjrdp' + @person.id.to_s],
                                          ['Gläubiger*innen-Identifikationsnummer:', 'TODO IBAN'],
-                                         ['Kontoinhaber*in:', 'TODO @person.sepa_name']
+                                         ['Kontoinhaber*in:', @person.full_name]
+                                         # TODO: generate iban name
                                        ],
                                        cell_style: { padding: 1, border_width: 0,
                                                      inline_format: true })
@@ -153,16 +159,17 @@ module Wsjrdp2023
         text 'Lastschrifteinzug', size: 10
 
         pdf.move_down 3.mm
-        text 'Das SEPA Lastschriftverfahren wird nach folgendem Plan eingezogen.'\
+        text 'Das SEPA Lastschriftverfahren wird nach folgendem Plan,'\
+        +' für Teilnehmer in einer Unit, eingezogen.'\
         + ' Der Einzug erfolgt am 5. des jeweigen Monats bzw. am darauf folgenden Werktag.'
         pdf.move_down 3.mm
         # rubocop:disable LineLength
-        pdf.make_table([
+        pdf.make_table([ # TODO: autogenerate line by role
                          [' ', 'Beitrag', 'Dez 21', 'Jan 22', 'Feb 22', 'Mär 22', 'Apr 22', 'Mai 22', 'Jun 22', 'Jul 22', 'Aug 22', 'Sep 22', 'Okt 22', 'Nov 22', 'Dez 22', 'Jan 23', 'Feb 23', 'Mär 23', 'Apr 23', 'Mai 23'],
-                         ['TN ', ' 4.100 € ',  ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 300 € ', ' 300 € ', ' 300 € ', ' 300 € ', ' 300 € ', ' 300 € '],
-                         ['UL ', ' 3.250 € ',  ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 200 € ', ' 200 € ', ' 200 € ', ' 200 € ', ' 200 € ', ' 200 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' -   € '],
-                         ['IST ', ' 1.650 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 50 € ', ' -   € '],
-                         ['KT ', ' 1.300 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' -   € ', ' -   € ', ' -   € ', ' -   € ', ' -   € ']
+                         ['TN ', ' 4.100 € ',  ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 300 € ', ' 300 € ', ' 300 € ', ' 300 € ', ' 300 € ', ' 300 € ']
+                         # ['UL ', ' 3.250 € ',  ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 200 € ', ' 200 € ', ' 200 € ', ' 200 € ', ' 200 € ', ' 200 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' -   € '],
+                         # ['IST ', ' 1.650 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 50 € ', ' -   € '],
+                         # ['KT ', ' 1.300 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' -   € ', ' -   € ', ' -   € ', ' -   € ', ' -   € ']
                        ], cell_style: { padding: 1, border_width: 0,
                                         inline_format: true, size: 6 }).draw
         # rubocop:enable LineLength
@@ -170,8 +177,8 @@ module Wsjrdp2023
         pdf.make_table([
                          [{ content: @person.town + ' den ' + Time.zone.today.strftime('%d.%m.%Y'),
                             height: 30 }],
-                         ['______________________________', ''],
-                         [{ content: 'TODO @person.sepa_name', height: 30 }, '']
+                         ['______________________________', ''], # TODO: Generate Name
+                         [{ content: @person.full_name, height: 30 }, '']
                        ],
                        cell_style: { width: 240, padding: 1, border_width: 0,
                                      inline_format: true }).draw
