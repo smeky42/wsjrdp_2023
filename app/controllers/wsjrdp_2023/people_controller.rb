@@ -21,7 +21,13 @@ module Wsjrdp2023
         :additional_contact_adress_a,
         :additional_contact_name_b,
         :additional_contact_adress_b,
-        :additional_contact_address_info
+        :additional_contact_address_info,
+        :sepa_name,
+        :sepa_address,
+        :sepa_mail,
+        :sepa_iban,
+        :sepa_bic,
+        :sepa_status
       ]
 
       # Override crud_controller

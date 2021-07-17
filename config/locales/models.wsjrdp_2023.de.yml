@@ -98,6 +98,14 @@ de:
         additional_contact_single: Es gibt nur eine Sorgeberechtigte Person
         additional_contact_address_info: Sofern abweichend von Kontaktdaten Teilnehmer*in
         additional_mail_info: Mit Versand gekennzeichnete Mails werden zusätzlich zur primären Mailadresse benachrichtigt 
+        sepa_header: Kontaktdaten Kontoinhaber*in
+        sepa_info: werden für das SEPA Lastschriftmandat und bei Fragen rund um den Zahlungsverkehr verwendet 
+        sepa_name: Kontoinhaber*in
+        sepa_address: Adresse 
+        sepa_mail: Mailadresse
+        sepa_iban: IBAN
+        sepa_bic: BIC
+        sepa_status: Finanzstatus
 
         genders:
           m: männlich
@@ -152,6 +160,7 @@ de:
       general: Kontaktdaten Teilnehmer*in
       additional_contact: Weitere Kontaktdaten
       rdp_association: Verbandszugehörigkeit
+      finance: SEPA
   global:
     tabs:
       info: Kontaktdaten
