@@ -73,7 +73,7 @@ module Wsjrdp2023
         end
 
         def sections
-          [Contract, Medicin, Travel, Media, DataAgreement, DataProcessing]
+          [Contract, Medicin, Travel, DataAgreement, DataProcessing]
         end
       end
       mattr_accessor :runner
