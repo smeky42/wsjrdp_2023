@@ -14,19 +14,14 @@
 
   .tab-content
     #general.tab-pane.active
-      = field_set_tag do
-        = f.labeled_input_fields :first_name, :last_name, :nickname
-        = render 'contactable/address_fields', f: f
-      = render_extensions :address_fields, locals: { f: f }
-      = field_set_tag do
-        = render 'email_field', f: f
-      = field_set_tag do
-        = f.labeled_inline_fields_for :social_accounts, 'contactable/social_account_fields'
-            
+      = render 'contactable/contact_fields', f: f   
+    
     #additional_contact.tab-pane
-      = render 'contactable/additional_contact', f: f
+      = render 'contactable/additional_contact_fields', f: f
+    
     #association.tab-pane
       = field_set_tag do
-        = render 'contactable/association', f: f
+        = render 'contactable/association_fields', f: f
+  
   = form_buttons(f, submit_label: nil, cancel_url: group_invoice_config_path(parent))
 

@@ -141,6 +141,9 @@ de:
       tooltip_mailings: Versände von E-Mails werden zusätzlich an alle hier markierten Adressen im CC verschickt.
     association:
       placeholder_value: Verbandszugehörigkeit
+    contact: 
+      additional_data: Weitere Angaben
+      events: Events
   people:
     tabs:
       print: Anmeldung Drucken 
