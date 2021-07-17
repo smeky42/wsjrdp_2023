@@ -108,12 +108,13 @@ module Wsjrdp2023
         text 'Als Bestandteil dieser Anmeldung haben wir folgende Dokumente in der Anlage'\
           + ' zur Kenntnis genommen:'
         text '- die Teilnahme- und Reisebedingungen des rdp (v0.1 vom 14.07.2021)'
-        text '- die Datenschutzhinweise (v0.1 vom 14.07.2021), insbesondere die Informationen zu TODO$'
-        text '- die Anfertigung von Bild- und Tonaufnahmen (v0.1 vom 14.07.2021)'
+        text '- die Datenschutzhinweise (v0.1 vom 14.07.2021)'\
+          + ', insbesondere die Informationen zu TODO'
         text 'Die Dokumente sind auch unter TODO Downloadlink verfügbar.'
         pdf.move_down 3.mm
 
-        text 'Den Medizinbogen im Anhang haben wir gesondert unterschrieben.'
+        text 'Den Medizinbogen und das SEPA Lastschriftverfahren im Anhang'\
+          + ' haben wir gesondert unterschrieben.'
         pdf.move_down 3.mm
 
         pdf.move_down 3.mm
@@ -167,7 +168,7 @@ module Wsjrdp2023
         # rubocop:enable LineLength
         pdf.move_down 3.mm
         pdf.make_table([
-                         [{ content: @person.town + ' den ' + Date.today.strftime('%d.%m.%Y'),
+                         [{ content: @person.town + ' den ' + Time.zone.today.strftime('%d.%m.%Y'),
                             height: 30 }],
                          ['______________________________', ''],
                          [{ content: 'TODO @person.sepa_name', height: 30 }, '']

@@ -127,10 +127,56 @@ module Wsjrdp2023
         +' Außerplanmäßige Rückflüge sind aufgrund der großen Entfernung, außer bei ärztlich'\
         +' diagnostizierten medizinischen Notfällen, nicht möglich.'
 
+        text '5. Anfertigung von Bild- und Tonaufnahmen', size: 12
         pdf.move_down 3.mm
-        text '5. Anmeldung und Vertragsschluss', size: 12
+        text '5.1 Der rdp wird die Veranstaltung und die Vorbereitungstreffen mit Bild- und'\
+        + ' Tonaufnahmen dokumentieren. Die Parteien vereinbaren in diesem Zusammenhang,'\
+        + ' dass Fotografen, die vom Veranstalter ausgewählt und beauftragt werden,'\
+        + ' Lichtbilder des Teilnehmers aufnehmen dürfen.'
+        text '5.2 Für die Aufnahme und Nutzung wird keine inhaltliche, zeitliche oder'\
+        + ' räumliche Beschränkung vereinbart. Zulässig ist die Nutzung insbesondere für'\
+        + ' folgende Zwecke:'
+        pdf.indent(10) do
+          text '
+           • Veröffentlichung in den Medien der Mitgliedsverbände (z.B. Zeitschrift, Newsletter)
+           • Veröffentlichung in der Presse (z.B. Pressefotos)
+           • Veröffentlichung im Internet (z.B. auf den Homepages des Veranstalters oder eines '\
+        +'Mitgliedsverbands oder den jeweiligen Auftritten bei Facebook, Instagramm  etc.)
+           • Veröffentlichung in Werbemedien des Veranstalters oder eines Mitgliedsverbands '\
+        +'(z.B. Flyer/Plakate)'
+        end
+        pdf.move_down 2.mm
+        text '5.3 Der rdp ist berechtigt, die Aufnahmen innerhalb von Fotomontagen unter'\
+        + ' Entfernung oder Ergänzung von Bildbestandteilen bzw. für verfremdete Bilder'\
+        + ' (keine Entstellung) der Originalaufnahmen zu benutzen'
         pdf.move_down 1.mm
-        text '5.1 Die Anmeldung ist bis zum 31.09.2021 über die Homepage'\
+        text '5.4 Der rdp ist berechtigt, aber nicht verpflichtet, die Aufnahmen den'\
+        + ' Mitgliedsverbänden unentgeltlich für die in 5.2 aufgezählten Zwecke zur'\
+        + ' Verfügung zu stellten.'
+        pdf.move_down 1.mm
+        text '5.5 Der Teilnehmer überträgt dem rdp alle Rechte, die zur Ausübung der in'\
+        + ' Ziff. 5.2 bis 5.4 aufgeführten Nutzungsrechte erforderlich sind. Die'\
+        + ' Übertragung erfolgt örtlich und zeitlich unbeschränkt, unwiderruflich'\
+        + ' und nicht ausschließlich. Eine gesonderte Vergütung erfolgt nicht.'
+        pdf.move_down 1.mm
+        text '5.6 Sollte ein Teilnehmer nicht gefilmt oder fotografiert werden wollen, so'\
+        + ' soll er die jeweiligen Betreuer*innen hierauf jeweils vor Beginn der'\
+        + ' Veranstaltung hinweisen. Der*Die Betreuer*in wird sich in diesem Fall'\
+        + ' darum bemühen, die Fotografen darauf hinzuweisen, dass der Betroffene'\
+        + ' nicht abgebildet werden möchte. Ein Erfolg kann nicht garantiert werden'\
+        + ' und ist nicht geschuldet.'
+        pdf.move_down 1.mm
+        text '5.7 Bei Fragen zu der Anfertigung von Bild- und Tonaufnahmen und zu deren'\
+        + ' Verwendung kann sich der Teilnehmer an die Email-Adresse'\
+        + ' media-info@worldscoutjamboree.de wenden.'
+        pdf.move_down 1.mm
+        text 'Bei Fragen zu dieser Vereinbarung und zu den aufgenommenen Fotos und deren '\
+        +' Verwendung steht unser Medienteam unter media@worldscoutjamboree.de zur Verfügung.'
+
+        pdf.move_down 3.mm
+        text '6. Anmeldung und Vertragsschluss', size: 12
+        pdf.move_down 1.mm
+        text '6.1 Die Anmeldung ist bis zum 31.09.2021 über die Homepage'\
         +' anmeldung.worldscoutjamboree.de möglich. Während des Online-Anmeldeprozesses wird'\
         +' eine PDF-Dokument generiert, das die anmeldende Person lesen und akzeptieren muss.'\
         +' Das Anmeldungsdokument muss unterschrieben werden und spätestens bis zum Anmeldeschluss'\
@@ -141,13 +187,13 @@ module Wsjrdp2023
         +' vollendet haben, muss die Anmeldung durch alle gesetzlichen Vertreter*innen'\
         +' unterzeichnet sein.'
         pdf.move_down 1.mm
-        text '5.2 Ein Vertrag über die Teilnahme kommt erst dann zustande, wenn der rdp die'\
+        text '6.2 Ein Vertrag über die Teilnahme kommt erst dann zustande, wenn der rdp die'\
         +' Anmeldung in Textform (z.B. E-Mail) bestätigt. Dies erfolgt erst nach Anmeldeschluss.'
 
         pdf.move_down 3.mm
-        text '6. Teilnahmebeitrag, Preiserhöhungen, Änderung der Reisebedingungen', size: 12
+        text '7. Teilnahmebeitrag, Preiserhöhungen, Änderung der Reisebedingungen', size: 12
         pdf.move_down 1.mm
-        text '6.1 Der Teilnahmebetrag richtet sich nach der gewählten Teilnahmevariante'\
+        text '7.1 Der Teilnahmebetrag richtet sich nach der gewählten Teilnahmevariante'\
         +' (s.o. Ziff. 3.2, Reiseform und Pakete) und ggf. nach der Funktion des Teilnehmers im'\
         +' Kontingent. '
         pdf.move_down 1.mm
@@ -162,25 +208,25 @@ module Wsjrdp2023
         pdf.move_down 1.mm
         text 'Der Abschluss einer Reiserücktrittsversicherung wird dringend empfohlen.'
         pdf.move_down 1.mm
-        text '6.2 Sollten sich nach Bestätigung der Anmeldung durch den rdp wesentliche Umstände'\
+        text '7.2 Sollten sich nach Bestätigung der Anmeldung durch den rdp wesentliche Umstände'\
         +' ändern, insbesondere Beförderungskosten, Flughafengebühren, Steuern oder'\
         +' Wechselkurse, oder sollten sonstige Änderungen am Programm vorgenommen werden'\
         +' müssen, behält sich der rdp vor, den Teilnahmebeitrag um den jeweiligen Erhöhungsbetrag'\
         +' anzupassen. Ab dem 20. Tag vor Reiseantritt ist eine Preiserhöhung unzulässig.'\
         +' Überschreitet der Erhöhungsbetrag 5 % des ursprünglich vereinbarten Preises,'\
-        +' ist der Teilnehmer nach Maßgabe von Ziff. 7.3 berechtigt, vom Vertrag zurückzutreten.'
+        +' ist der Teilnehmer nach Maßgabe von Ziff. 8.3 berechtigt, vom Vertrag zurückzutreten.'
         pdf.move_down 1.mm
-        text '6.3 Der Beitrag kann nur durch SEPA-Lastschriften entrichtet werden. Hierfür ist'\
+        text '7.3 Der Beitrag kann nur durch SEPA-Lastschriften entrichtet werden. Hierfür ist'\
         +' die Erteilung eines SEPA-Basis-Lastschriftmandates erforderlich.'
         pdf.move_down 1.mm
 
         pdf.move_down 3.mm
-        text '7. Rücktritt des Teilnehmers vor Leistungsbeginn ', size: 12
+        text '8. Rücktritt des Teilnehmers vor Leistungsbeginn ', size: 12
         pdf.move_down 1.mm
-        text '7.1 Der Teilnehmer kann jederzeit vor Beginn der Reise von dem Vertrag zurücktreten.'\
+        text '8.1 Der Teilnehmer kann jederzeit vor Beginn der Reise von dem Vertrag zurücktreten.'\
         +' Der Rücktritt ist schriftlich gegenüber dem rdp zu erklären. '
         pdf.move_down 1.mm
-        text '7.2 Erklärt der Teilnehmer den Rücktritt, so verliert der rdp den Anspruch auf'\
+        text '8.2 Erklärt der Teilnehmer den Rücktritt, so verliert der rdp den Anspruch auf'\
         +' Zahlung des Teilnehmerbeitrages. Stattdessen kann der rdp eine angemessene'\
         +' Entschädigung verlangen, sofern der Rücktritt nicht von ihm zu vertreten'\
         +' ist. Die Höhe der Entschädigung ist pauschaliert wie folgt:'
@@ -196,7 +242,7 @@ module Wsjrdp2023
         +' sei durch den Rücktritt kein Schaden entstanden oder der Schaden sei wesentlich'\
         +' geringer als die oben genannten Pauschalsätze.'
         pdf.move_down 1.mm
-        text '7.3 Wenn der rdp von der ihm eingeräumten Möglichkeit Gebrauch macht, den'\
+        text '8.3 Wenn der rdp von der ihm eingeräumten Möglichkeit Gebrauch macht, den'\
         +' Teilnahmebeitrag um mehr als 5 % gegenüber dem ursprünglich geltenden Preis'\
         +' zu erhöhen, und erklärt der Teilnehmer deshalb den Rücktritt, ist eine'\
         +' Entschädigung nicht geschuldet; der Teilnehmer schuldet aber Ausgleich für'\
@@ -205,15 +251,15 @@ module Wsjrdp2023
         +' rdp aufgrund von Vorgaben des koreanischen Veranstalters weiterreichen muss,'\
         +' nicht einverstanden ist.'
         pdf.move_down 1.mm
-        text '7.4 Der rdp behält sich das Recht vor, anstelle der Entschädigung nach'\
-        +' Ziff. 7.2 Schadensersatz zu verlangen, soweit er nachweisen kann, dass'\
+        text '8.4 Der rdp behält sich das Recht vor, anstelle der Entschädigung nach'\
+        +' Ziff. 8.2 Schadensersatz zu verlangen, soweit er nachweisen kann, dass'\
         +' aufgrund des Rücktritts oder des Nichtantritts der Reise wesentlich'\
         +' höhere Aufwendungen oder ein wesentlich höherer Schaden entstanden sind.'
 
         pdf.move_down 3.mm
-        text '8. Kündigung und Rücktritt durch den rdp', size: 12
+        text '9. Kündigung und Rücktritt durch den rdp', size: 12
         pdf.move_down 1.mm
-        text '8.1 Der rdp ist berechtigt, den Vertrag ohne Einhaltung einer Frist'\
+        text '9.1 Der rdp ist berechtigt, den Vertrag ohne Einhaltung einer Frist'\
         +' zu kündigen, wenn der Teilnehmer nachhaltig gegen seine im Reisevertrag'\
         +' und diesen Reisebedingungen vereinbarten Pflichten verstößt oder sonst'\
         +' durch sein Verhalten die Durchführung und den Erfolg der Veranstaltung'\
@@ -229,12 +275,12 @@ module Wsjrdp2023
         +' Aufhebung des Vertrages auch unter Berücksichtigung der Interessen des'\
         +' Teilnehmers gerechtfertigt ist.'
         pdf.move_down 1.mm
-        text '8.2 Der rdp ist zur Kündigung des Vertrages weiter dann berechtigt,'\
+        text '9.2 Der rdp ist zur Kündigung des Vertrages weiter dann berechtigt,'\
         +' wenn Lastschriften nicht eingelöst werden oder ihnen widersprochen wurde'\
         +' und auch nach schriftlicher Mahnung der fällige Teil des Teilnahmebeitrags'\
         +' nicht innerhalb von zwei Wochen bezahlt wird.'
         pdf.move_down 1.mm
-        text '8.3 Im Falle der Kündigung nach Ziff. 8.1 und 8.2 behält der rdp den'\
+        text '9.3 Im Falle der Kündigung nach Ziff. 9.1 und 9.2 behält der rdp den'\
         +' Anspruch auf den Teilnahmebeitrag. Er muss sich jedoch den Wert ersparter'\
         +' Aufwendungen sowie die Vorteile anrechnen lassen, die aus einer anderen'\
         +' Verwendung nicht in Anspruch genommener Leistungen erlangt werden, einschließlich'\
@@ -242,7 +288,7 @@ module Wsjrdp2023
         +' Schadensersatz bleibt vorbehalten; dies gilt insbesondere für Mehrkosten für die'\
         +' Rückbeförderung des Teilnehmers.'
         pdf.move_down 1.mm
-        text '8.4 Der rdp behält sich vor, in folgenden Fällen vom Vertrag zurückzutreten:'
+        text '9.4 Der rdp behält sich vor, in folgenden Fällen vom Vertrag zurückzutreten:'
         text 'a) Absage des Jamborees durch den koreanischen Veranstalter (TODO Veranstalter)'
         text 'b) höhere Gewalt; hierzu zählen auch Einreise- bzw. Ausreisebeschränkungen sowie'\
         +' sonstige staatliche Anordnungen im Zusammenhang mit der Ausbreitung des Virus SARS-CoV-2'
@@ -253,14 +299,14 @@ module Wsjrdp2023
 
 
         pdf.move_down 3.mm
-        text '9. Schlussbestimmungen', size: 12
+        text '10. Schlussbestimmungen', size: 12
         pdf.move_down 1.mm
-        text '9.1 Die Vertragsdurchführung unterliegt ausschließlich deutschem Recht.'
+        text '10.1 Die Vertragsdurchführung unterliegt ausschließlich deutschem Recht.'
         pdf.move_down 1.mm
-        text '9.2 Änderungen des Vertrages bedürfen der Schriftform. Mündliche Nebenabreden'\
+        text '10.2 Änderungen des Vertrages bedürfen der Schriftform. Mündliche Nebenabreden'\
         +' sind nicht getroffen.'
         pdf.move_down 1.mm
-        text '9.3 Sollten einzelne Bestimmungen des Vertrages oder der vorliegenden'\
+        text '10.3 Sollten einzelne Bestimmungen des Vertrages oder der vorliegenden'\
         +' Reisebedingungen unwirksam oder nichtig sein oder werden, so wird die Wirksamkeit'\
         +' des Vertrages und der übrigen Bedingungen hiervon nicht berührt. Die Parteien werden'\
         +' in einem solchen Fall unter Berücksichtigung des Gesetzes eine Vereinbarung'\
