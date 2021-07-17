@@ -23,5 +23,8 @@
       = field_set_tag do
         = render 'contactable/association_fields', f: f
   
+    #finance.tab-pane
+      = render 'contactable/finance_fields', f: f
+  
   = form_buttons(f, submit_label: nil, cancel_url: group_invoice_config_path(parent))
 
