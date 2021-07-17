@@ -24,7 +24,7 @@ module Wsjrdp2023
         text 'Teilnahme- und Reisebedingungen für die Teilnahme im Deutschen Kontingent zum 25. '\
         +'World Scout Jamboree 2023 in Südkorea', size: 14
         pdf.move_down 3.mm
-        text 'v0.1 vom 14.07.2021'
+        text 'v0.2 vom 17.07.2021'
         pdf.move_down 3.mm
         text '1. Veranstalter', size: 12
         pdf.move_down 1.mm
@@ -39,7 +39,7 @@ module Wsjrdp2023
         pdf.move_down 1.mm
         text 'Organisatorischer Ansprechpartner ist neben dem Veranstalter, die Kontingentsleitung'\
         +' zum World Scout Jamboree 2023. Die Kontingentsleitung ist wie folgt zu erreichen:'
-        text 'Telefon: TODO Telefon?'
+        # text 'Telefon: TODO Telefon?'
         text 'E-Mail: info@worldscoutjamboree.de'
         text 'Weitere Kontaktdaten finden sich auf der Homepage: www.worldscoutjamboree.de'
 
@@ -176,11 +176,11 @@ module Wsjrdp2023
         pdf.move_down 3.mm
         text '6. Anmeldung und Vertragsschluss', size: 12
         pdf.move_down 1.mm
-        text '6.1 Die Anmeldung ist bis zum 31.09.2021 über die Homepage'\
+        text '6.1 Die Anmeldung ist bis zum 01.10.2021 über die Homepage'\
         +' anmeldung.worldscoutjamboree.de möglich. Während des Online-Anmeldeprozesses wird'\
         +' eine PDF-Dokument generiert, das die anmeldende Person lesen und akzeptieren muss.'\
         +' Das Anmeldungsdokument muss unterschrieben werden und spätestens bis zum Anmeldeschluss'\
-        +' am 31.09.2021 über die Homepage hochgeladen werden. Die Anmeldung muss im Original'\
+        +' am 01.10.2021 über die Homepage hochgeladen werden. Die Anmeldung muss im Original'\
         +' (Papierform mit Unterschriften) spätestens zum 01.06.2022 bei den entsprechenden'\
         +'  Betreuer*innen (UL, IST-Betreuung, eKL) abgegeben werden.'
         text 'Bei Personen, die zum Zeitpunkt der Anmeldung das 18. Lebensjahr noch nicht'\
@@ -197,7 +197,19 @@ module Wsjrdp2023
         +' (s.o. Ziff. 3.2, Reiseform und Pakete) und ggf. nach der Funktion des Teilnehmers im'\
         +' Kontingent. '
         pdf.move_down 1.mm
-        text 'TODO Höhe und Raten einfügen '
+        # rubocop:disable LineLength
+        pdf.make_table([
+                         [' ', 'Beitrag', 'Dez 21', 'Jan 22', 'Feb 22', 'Mär 22', 'Apr 22', 'Mai 22', 'Jun 22', 'Jul 22', 'Aug 22', 'Sep 22', 'Okt 22', 'Nov 22', 'Dez 22', 'Jan 23', 'Feb 23', 'Mär 23', 'Apr 23', 'Mai 23'],
+                         ['TN ', ' 4.100 € ',  ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 300 € ', ' 300 € ', ' 300 € ', ' 300 € ', ' 300 € ', ' 300 € '],
+                         ['UL ', ' 3.250 € ',  ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 200 € ', ' 200 € ', ' 200 € ', ' 200 € ', ' 200 € ', ' 200 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' -   € '],
+                         ['IST ', ' 1.650 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 50 € ', ' -   € '],
+                         ['KT ', ' 1.300 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' -   € ', ' -   € ', ' -   € ', ' -   € ', ' -   € ']
+                       ], cell_style: { padding: 1, border_width: 0,
+                                        inline_format: true, size: 6 }).draw
+        # rubocop:enable LineLength
+        pdf.move_down 3.mm
+        text 'Das SEPA Lastschriftverfahren wird nach folgendem Plan eingezogen.'\
+       + ' Der Einzug erfolgt am 5. des jeweigen Monats bzw. am darauf folgenden Werktag.'
         pdf.move_down 1.mm
         text 'NICHT im Teilnahmebeitrag enthalten sind:'
         pdf.move_down 1.mm
@@ -264,10 +276,10 @@ module Wsjrdp2023
         +' und diesen Reisebedingungen vereinbarten Pflichten verstößt oder sonst'\
         +' durch sein Verhalten die Durchführung und den Erfolg der Veranstaltung'\
         +' nachhaltig gefährdet. Das ist insbesondere der Fall,'
-        text '-	wenn der Teilnehmer entgegen TODO$ bei mehr als zwei Vorbereitungstreffen'\
+        text '-	wenn der Teilnehmer entgegen 4.3 bei mehr als zwei Vorbereitungstreffen'\
         +' unentschuldigt gefehlt hat, oder'
         text '- wenn der Teilnehmer gegen die Satzung seines Mitgliedsverbandes '\
-        + ' TODO($$$) verstößt, die Mitgliedschaft aufgibt oder sie verliert '
+        + ' 4.2 verstößt, die Mitgliedschaft aufgibt oder sie verliert '
         text 'Die Kündigung ist nur zulässig, wenn der rdp den Teilnehmer zuvor in'\
         +' Textform (z.B. durch eine Email) abgemahnt hat und der Teilnehmer sein'\
         +' Fehlverhalten dennoch fortsetzt. Eine vorherige Abmahnung ist nicht'\

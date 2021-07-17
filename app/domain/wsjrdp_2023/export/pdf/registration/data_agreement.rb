@@ -25,7 +25,7 @@ module Wsjrdp2023
         text 'Diese Datenschutzhinweise gelten für die Verarbeitung personenbezogener Daten der'\
         + ' Teilnehmer*innen am 25. World Jamboree 2023 durch den rdp.'
         pdf.move_down 3.mm
-        text 'v0.1 vom 14.07.2021'
+        text 'v0.2 vom 17.07.2021'
         pdf.move_down 3.mm
 
         pdf.move_down 3.mm
