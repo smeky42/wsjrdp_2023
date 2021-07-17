@@ -1,0 +1,13 @@
+-#  Copyright (c) 2012-2021, German Contingent for the Worldscoutjamboree 2023. This file is part of
+-#  hitobito_wsjrdp_2023 and licensed under the Affero General Public License version 3
+-#  or later. See the COPYING file at the top-level directory or at
+-#  https://github.com/hitobito/hitobito_wsjrdp_2023.
+
+= field_set_tag do
+  = f.labeled_input_fields :first_name, :last_name, :nickname
+  = render 'contactable/address_fields', f: f
+= render_extensions :address_fields, locals: { f: f }
+= field_set_tag do
+  = render 'email_field', f: f
+= field_set_tag do
+  = f.labeled_inline_fields_for :social_accounts, 'contactable/social_account_fields'

@@ -1,0 +1,39 @@
+-#  Copyright (c) 2012-2021, German Contingent for the Worldscoutjamboree 2023. This file is part of
+-#  hitobito_wsjrdp_2023 and licensed under the Affero General Public License version 3
+-#  or later. See the COPYING file at the top-level directory or at
+-#  https://github.com/hitobito/hitobito_wsjrdp_2023.
+
+%article.col-lg
+  = render 'contact_data', person: entry, only_public: cannot?(:show_details, entry)
+  - if can?(:show_details, entry)
+    %h2= t('.additional_data')
+    %div
+      = render_attrs(entry, :birthday, :gender)
+
+      = render_extensions :details, locals: { show_full: can?(:show_full, entry) }
+
+      = render_attrs(entry, :created_info, :updated_info)
+
+      = render 'people_relations'
+
+    - if entry.additional_information?
+      %h2= Person.human_attribute_name(:additional_information)
+      = auto_link(simple_format(entry.additional_information))
+
+  = render_extensions :show_left
+
+  - if can?(:index_notes, entry)
+    = render 'notes/section', create_path: group_person_notes_path(@group, entry)
+
+  - if can?(:show_full, entry)
+    = render 'tags'
+    = render 'roles'
+    = render 'add_requests'
+    = render 'event_aside', title: Event::Application.model_name.human(count: 2), collection: entry.pending_applications
+    = render 'event_aside', title: upcoming_events_title, collection: entry.upcoming_events
+
+    = render_extensions :show_event
+
+    = render 'qualifications', show_buttons: true
+
+    = render_extensions :show_right
