@@ -26,5 +26,8 @@
     #finance.tab-pane
       = render 'contactable/finance_fields', f: f
   
+    #medicine.tab-pane
+      = render 'contactable/medicine_fields', f: f
+  
   = form_buttons(f, submit_label: nil, cancel_url: group_invoice_config_path(parent))
 
