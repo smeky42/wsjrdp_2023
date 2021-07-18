@@ -3,6 +3,11 @@
 -#  or later. See the COPYING file at the top-level directory or at
 -#  https://github.com/hitobito/hitobito_wsjrdp_2023.
 
+%h4
+  = t('activerecord.attributes.person.medicine_header') 
+= t('activerecord.attributes.person.medicine_info')
+%br 
+
 = render_attrs(entry,
                       :medicine_vaccination,
                       :medicine_stiko_vaccination,
