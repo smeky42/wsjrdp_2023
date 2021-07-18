@@ -27,7 +27,22 @@ module Wsjrdp2023
         :sepa_mail,
         :sepa_iban,
         :sepa_bic,
-        :sepa_status
+        :sepa_status,
+        :medicine_vaccination,
+        :medicine_stiko_vaccination,
+        :medicine_preexisting_conditions,
+        :medicine_abnormalities,
+        :medicine_allergies,
+        :medicine_eating_disorders,
+        :medicine_mobility_needs,
+        :medicine_infectious_diseases,
+        :medicine_medical_treatment_contact,
+        :medicine_continous_medication,
+        :medicine_needs_medication,
+        :medicine_medications_self_treatment,
+        :medicine_other,
+        :medicine_important,
+        :medicine_support
       ]
 
       # Override crud_controller
