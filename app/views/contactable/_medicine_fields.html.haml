@@ -6,20 +6,29 @@
 %h4
   = t('activerecord.attributes.person.medicine_header') 
 = t('activerecord.attributes.person.medicine_info')
-%br 
-%br 
-= f.labeled_input_fields  :medicine_vaccination,
-                          :medicine_stiko_vaccination,
-                          :medicine_preexisting_conditions,
-                          :medicine_abnormalities,
-                          :medicine_allergies,
-                          :medicine_eating_disorders,
-                          :medicine_mobility_needs,
-                          :medicine_infectious_diseases,
-                          :medicine_medical_treatment_contact,
-                          :medicine_continous_medication,
-                          :medicine_needs_medication,
-                          :medicine_medications_self_treatment, 
-                          :medicine_other, 
-                          :medicine_important, 
-                          :medicine_support 
+%br/ 
+%br/
+= f.labeled_input_field :medicine_vaccination, placeholder: t('activerecord.attributes.person.medicine_vaccination_info')
+= f.labeled_input_field :medicine_stiko_vaccination
+= t('activerecord.attributes.person.medicine_vaccination_help')
+%br/
+%br/
+= f.labeled_input_field :medicine_abnormalities, placeholder: t('activerecord.attributes.person.medicine_abnormalities_info')
+= f.labeled_input_field :medicine_preexisting_conditions
+= f.labeled_input_field :medicine_allergies, placeholder: t('activerecord.attributes.person.medicine_allergies_info')
+= f.labeled_input_field :medicine_eating_disorders
+= f.labeled_input_field :medicine_mobility_needs
+= f.labeled_input_field :medicine_infectious_diseases
+= f.labeled_input_field :medicine_medical_treatment_contact, placeholder: t('activerecord.attributes.person.medicine_medical_treatment_contact_info')
+= t('activerecord.attributes.person.medicine_medical_treatment_contact_help')
+%br/
+%br/
+= f.labeled_input_field :medicine_continous_medication, placeholder: t('activerecord.attributes.person.medicine_continous_medication_info')
+= f.labeled_input_field :medicine_needs_medication, placeholder: t('activerecord.attributes.person.medicine_needs_medication_info')
+= t('activerecord.attributes.person.medicine_medication_help')
+%br/
+%br/
+= f.labeled_input_field :medicine_medications_self_treatment
+= f.labeled_input_field :medicine_other, placeholder: t('activerecord.attributes.person.medicine_other_info')
+= f.labeled_input_field :medicine_important
+= f.labeled_input_field :medicine_support, placeholder: t('activerecord.attributes.person.medicine_support_info')

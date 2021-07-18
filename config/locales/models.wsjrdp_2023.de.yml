@@ -106,29 +106,38 @@ de:
         sepa_iban: IBAN
         sepa_bic: BIC
         sepa_status: Finanzstatus
-        medicine_header: Gesundheitsbogen
-        medicine_info: Damit die Gesundheit der Teilnehmer auch bei medizinischen Notfällen gewährleistet werden kann, müssen die folgenden Fragenwahrheitsgemäß und vollständig beantwortet werden. Der rdp stellt durch technische und organisatorische Maßnahmen sicher, dass derSchutz der nachfolgend erhobenen Gesundheitsdaten gewährleistet wird.
+        medicine_header: Gesundheitsfragebogen
+        medicine_info: Damit die Gesundheit der Teilnehmer auch bei medizinischen Notfällen gewährleistet werden kann, müssen die folgenden Fragen wahrheitsgemäß und vollständig beantwortet werden. Der rdp stellt durch technische und organisatorische Maßnahmen sicher, dass der Schutz der nachfolgend erhobenen Gesundheitsdaten gewährleistet wird. Weitere Informationen finden sich in den Hinweisen zur Datenverarbeitung unter 4.4.
         medicine_vaccination: Schutzimpfungen
-        medicine_vaccination_info: Nur im Impfausweis dokumentierte Impfungen gelten als durchgeführt.
-        medicine_vaccination_recommendation: 'Folgende Impfungen/Grundimmunisierung werden unsererseits empfohlen: Hepatitis A & B.Außerdem werden reisemedizinisch für Touristen für Südkorea (Stand 31.07.2021) weitere Impfungen empfohlen: Typhus, FSME, JapEnzephaltitis, Meningokokken.'
+        medicine_vaccination_info: '(z.B. 12/2016 Prorix Mumps Masern Röteln, 04/2019 boostrix Hepatitis B, 05/2019 FSME)' 
+        medicine_vaccination_help: Nur im Impfausweis dokumentierte Impfungen gelten als durchgeführt.
+        medicine_vaccination_recommendation: 'Folgende Impfungen/Grundimmunisierung werden unsererseits empfohlen: Hepatitis A & B. Außerdem werden reisemedizinisch für Touristen für Südkorea (Stand 31.07.2021) weitere Impfungen empfohlen: Typhus, FSME, JapEnzephaltitis, Meningokokken.'
         medicine_stiko_vaccination: Mein Kind hat die von der STIKO empfohlenen Schutzimpfungen
         medicine_stiko_info: Mein Kind hat die von der STIKO empfohlenen Schutzimpfungen
         medicine_preexisting_conditions: Bekannte Vorerkrankungen / Operationen / Kinderkrankheiten
-        medicine_abnormalities: Folgende Auffälligkeiten / Erkrankungen sind bekannt (z.B. Asthma, Reisekrankheit,Epilepsie, Angststörung,AD(H)S, erhöhter Betreuungsaufwand, etc.)
-        medicine_allergies: Es bestehen folgende Allergien (z.B. gegen Medikamente, nachgewiesene Lebensmittelallergien,Heuschnupfen, etc.) mit folgenden Symptomen
+        medicine_abnormalities: Folgende Auffälligkeiten / Erkrankungen sind bekannt 
+        medicine_abnormalities_info: (z.B. Asthma, Reisekrankheit,Epilepsie, Angststörung,AD(H)S, erhöhter Betreuungsaufwand, etc.)
+        medicine_allergies: Es bestehen folgende Allergien 
+        medicine_allergies_info: (z.B. gegen Medikamente, nachgewiesene Lebensmittelallergien,Heuschnupfen, etc.) mit folgenden Symptomen
         medicine_eating_disorders: Es bestehen folgende Essensbesonderheiten mit folgenden Symptomen
         medicine_mobility_needs: Es bestehen folgende Mobilitätsbedürfnisse auf Grund von
         medicine_infectious_diseases: Es besteht zur Zeit eine infektiöse Erkrankung, wenn ja welche
-        medicine_medical_treatment_contact: Mein / Unser Kind befindet sich zur Zeit in ärztlicher Behandlung (behandelnder Arzt Facharzt - Name,Kontaktdaten). Es wird bei Bedarf gestattet, dass sich das ärztliche Team der Kontingentsleitung mit demgennannten med. Fachpersonal in Kontakt setzten darf, um Gesundheitsdaten / Informationen auzutauschen(Schweigepflichtsentbindung)
-        medicine_medical_treatment_info: Mit dem Hausarzt ist abzuklären, ob für die bestehende Dauer- & Bedarfsmedikation ein aktueller Medikamentenplan der Medikamentemitgeführt werden muss
-        medicine_continous_medication: Dauermedikation (Dosierung / Einnahmeschema / Einnahmegrund)
-        medicine_needs_medication: Bedarfsmedikation (Dosierung / Tageshöchstmenge / Einnahmegrund)
+        medicine_medical_treatment_contact: Mein / Unser Kind befindet sich zur Zeit in ärztlicher Behandlung 
+        medicine_medical_treatment_contact_info: (behandelnder Arzt Facharzt - Name, Kontaktdaten) 
+        medicine_medical_treatment_contact_help: Es wird bei Bedarf gestattet, dass sich das ärztliche Team der Kontingentsleitung mit demgennannten med. Fachpersonal in Kontakt setzten darf, um Gesundheitsdaten / Informationen auzutauschen (Schweigepflichtsentbindung).
+        medicine_continous_medication: Dauermedikation 
+        medicine_continous_medication_info: (Dosierung / Einnahmeschema / Einnahmegrund)
+        medicine_needs_medication: Bedarfsmedikation 
+        medicine_needs_medication_info: (Dosierung / Tageshöchstmenge / Einnahmegrund)
+        medicine_medication_help: Mit dem Hausarzt ist abzuklären, ob für die bestehende Dauer- & Bedarfsmedikation ein aktueller Medikamentenplan der Medikamente mitgeführt werden muss.
         medicine_medications_self_treatment: Unser Kind nimmt die Medikamente selbst ein
-        medicine_other: Bei meinem / unserem Kind ist auf Folgendes zu Achten (z.B. Besonderheiten, Einschränkungen, etc.)
+        medicine_other: Bei meinem / unserem Kind ist auf Folgendes zu Achten 
+        medicine_other_info: (z.B. Besonderheiten, Einschränkungen, etc.)
         medicine_important: Das ist uns noch wichtig
         medicine_case: Im Falle einer Erkrankung oder eines Unfalles, bei denen durch eine Behandlung oder vorläufige Nicht-Behandlung in der Regel keinebleibenden Schäden zu erwarten sind (Bagatellerkrankungen-, verletzungen, Zecke/Splitter entfernen,...) darf unser Kind eigenständigüber Behandlungen entscheiden und in medizinische Eingriffe einwilligen, da es die für eine solche Entscheidung notwendigepersönliche geistige und körperliche Reife aufweist. Die Versorgung darf auch von Seiten der Betreuung erfolgen.
         medicine_case_doctor: Bei lebensbedrohlichen Erkrankungen / Unfällen entscheidet der behandelnde Arzt vor Ort.
-        medicine_support: Wie kann man Dich in Belastungsphasen unterstützen? (Schokolade, Musik, Liebings-Song, etc) 
+        medicine_support: Wie kann man Dich in Belastungsphasen unterstützen? 
+        medicine_support_info: (Schokolade, Musik, Liebings-Song, etc) 
 
         genders:
           m: männlich
