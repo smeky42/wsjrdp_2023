@@ -169,9 +169,6 @@ module Wsjrdp2023
         text '5.7 Bei Fragen zu der Anfertigung von Bild- und Tonaufnahmen und zu deren'\
         + ' Verwendung kann sich der Teilnehmer an die Email-Adresse'\
         + ' media-info@worldscoutjamboree.de wenden.'
-        pdf.move_down 1.mm
-        text 'Bei Fragen zu dieser Vereinbarung und zu den aufgenommenen Fotos und deren '\
-        +' Verwendung steht unser Medienteam unter media@worldscoutjamboree.de zur Verfügung.'
 
         pdf.move_down 3.mm
         text '6. Anmeldung und Vertragsschluss', size: 12
