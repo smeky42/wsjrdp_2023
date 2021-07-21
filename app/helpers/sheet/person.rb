@@ -19,6 +19,10 @@ module Sheet
         :print_group_person_path,
         if: :show
 
+    tab 'people.tabs.check',
+        :check_group_person_path,
+        if: :show
+
 
     if Settings.people.abos
       tab 'people.tabs.subscriptions',

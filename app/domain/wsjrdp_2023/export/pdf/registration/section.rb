@@ -70,8 +70,8 @@ module Wsjrdp2023
         pdf.move_down(line)
       end
 
-      def heading
-        font_size(11) { yield }
+      def heading(&block)
+        font_size(11, &block)
       end
 
       def labeled_attr(model, attr)
@@ -99,6 +99,10 @@ module Wsjrdp2023
 
       def human_attribute_name(attr, model)
         model.class.human_attribute_name(attr)
+      end
+
+      def document_id
+        Base64.encode64(@person.id.to_s + Time.zone.today.strftime('%d.%m.%Y'))
       end
 
       def event_with_kind?
