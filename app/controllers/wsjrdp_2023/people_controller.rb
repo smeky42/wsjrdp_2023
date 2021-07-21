@@ -42,7 +42,12 @@ module Wsjrdp2023
         :medicine_medications_self_treatment,
         :medicine_other,
         :medicine_important,
-        :medicine_support
+        :medicine_support,
+        :upload_passport_pdf,
+        :upload_registration_pdf,
+        :upload_sepa_pdf,
+        :upload_recommondation_pdf,
+        :upload_good_conduct_pdf
       ]
 
       # Override crud_controller

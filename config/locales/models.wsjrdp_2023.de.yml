@@ -137,7 +137,12 @@ de:
         medicine_case: Im Falle einer Erkrankung oder eines Unfalles, bei denen durch eine Behandlung oder vorläufige Nicht-Behandlung in der Regel keinebleibenden Schäden zu erwarten sind (Bagatellerkrankungen-, verletzungen, Zecke/Splitter entfernen,...) darf unser Kind eigenständigüber Behandlungen entscheiden und in medizinische Eingriffe einwilligen, da es die für eine solche Entscheidung notwendigepersönliche geistige und körperliche Reife aufweist. Die Versorgung darf auch von Seiten der Betreuung erfolgen.
         medicine_case_doctor: Bei lebensbedrohlichen Erkrankungen / Unfällen entscheidet der behandelnde Arzt vor Ort.
         medicine_support: Wie kann man Dich in Belastungsphasen unterstützen? 
-        medicine_support_info: (Schokolade, Musik, Liebings-Song, etc) 
+        medicine_support_info: (Schokolade, Musik, Liebings-Song, etc)
+        upload_passport_pdf: Reisepass
+        upload_registration_pdf: Anmeldung
+        upload_sepa_pdf: SEPA
+        upload_recommondation_pdf: Empfehlung
+        upload_good_conduct_pdf: Nachweis Führungszeugnis
 
         genders:
           m: männlich
@@ -189,6 +194,7 @@ de:
       print: Anmeldung Drucken 
       additional_contact: Weitere Kontaktdaten
       check: Teilnehmerdaten überprüfen
+      upload: Upload
     form_tabs:
       general: Kontaktdaten Teilnehmer*in
       additional_contact: Weitere Kontaktdaten
