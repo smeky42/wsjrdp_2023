@@ -4,12 +4,18 @@
 #  hitobito_wsjrdp_2023 and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_wsjrdp_2023.
+require 'prawn/qrcode'
+require 'digest'
 
 module Wsjrdp2023
   module Export::Pdf::Registration
     class Contract < Section
 
       def render
+        pdf.bounding_box [pdf.bounds.left, pdf.bounds.top], width: pdf.bounds.width do
+          qrcode = RQRCode::QRCode.new(qrcode_content, level: :h, size: 10)
+          pdf.render_qr_code(qrcode, dot: 1.5)
+        end
         pdf.y = bounds.height - 60
         bounding_box([0, 230.mm], width: bounds.width, height: bounds.height - 200) do
           font_size(8) do
@@ -18,7 +24,7 @@ module Wsjrdp2023
         end
       end
 
-      # rubocop:disable AbcSize,MethodLength
+      # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
       def list
         of_legal_age = false # @person.years.to_i >= 18
 
@@ -49,6 +55,10 @@ module Wsjrdp2023
         text 'HowTo', size: 12
         text 'ToDo Erklärung welchen Weg das Dokument nimmt -> Hochladen erstes Unit Treffen'
         text 'ToDo QR Code für die Nachverfolgung'
+        if Rails.env.development?
+          text qrcode_content
+        end
+
         pdf.stroke_horizontal_rule
         pdf.move_down 3.mm
 
@@ -162,7 +172,7 @@ module Wsjrdp2023
         +' für Teilnehmer in einer Unit, eingezogen.'\
         + ' Der Einzug erfolgt am 5. des jeweigen Monats bzw. am darauf folgenden Werktag.'
         pdf.move_down 3.mm
-        # rubocop:disable LineLength
+        # rubocop:disable Layout/LineLength
         pdf.make_table([ # TODO: autogenerate line by role
                          [' ', 'Beitrag', 'Dez 21', 'Jan 22', 'Feb 22', 'Mär 22', 'Apr 22', 'Mai 22', 'Jun 22', 'Jul 22', 'Aug 22', 'Sep 22', 'Okt 22', 'Nov 22', 'Dez 22', 'Jan 23', 'Feb 23', 'Mär 23', 'Apr 23', 'Mai 23'],
                          ['TN ', ' 4.100 € ',  ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 300 € ', ' 300 € ', ' 300 € ', ' 300 € ', ' 300 € ', ' 300 € ']
@@ -171,7 +181,7 @@ module Wsjrdp2023
                          # ['KT ', ' 1.300 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' -   € ', ' -   € ', ' -   € ', ' -   € ', ' -   € ']
                        ], cell_style: { padding: 1, border_width: 0,
                                         inline_format: true, size: 6 }).draw
-        # rubocop:enable LineLength
+        # rubocop:enable Layout/LineLength
         pdf.move_down 3.mm
         pdf.make_table([
                          [{ content: @person.town + ' den ' + Time.zone.today.strftime('%d.%m.%Y'),
@@ -193,7 +203,14 @@ module Wsjrdp2023
 
         text ''
       end
-      # rubocop:enable AbcSize,MethodLength
+
+      # rubocop:enable Metrics/AbcSize,Metrics/MethodLength
+      def qrcode_content
+        qrcode_content = 'http://' + ENV['RAILS_HOST_NAME'] + '/groups/' + @person.primary_group_id.to_s +
+          '/people/' + @person.id.to_s + '/check/' + document_id
+      end
     end
+
+
   end
 end

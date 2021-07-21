@@ -27,6 +27,8 @@ Rails.application.routes.draw do
           put 'print' => 'person/print#index'
           get 'print/preview' => 'person/print#preview'
           get 'print/submit' => 'person/print#submit'
+          get 'check' => 'person/check#index'
+          get 'check/:qrcode' => 'person/check#index'
 
         end 
       end 

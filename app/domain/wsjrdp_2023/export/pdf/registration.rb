@@ -13,8 +13,8 @@ module Wsjrdp2023
           new_pdf(person, pdf_preview).render
         end
 
-        # rubocop:disable AbcSize
-        # rubocop:disable MethodLength
+        # rubocop:disable Metrics/AbcSize
+        # rubocop:disable Metrics/MethodLength
         def new_pdf(person, pdf_preview)
           pdf = Prawn::Document.new(page_size: 'A4',
                                     page_layout: :portrait,
@@ -31,10 +31,12 @@ module Wsjrdp2023
           pdf.repeat :all do
             # define header
             if pdf_preview
-              pdf.bounding_box [0, 750], width: pdf.bounds.width, height: 200 do
+              pdf.bounding_box [150, 750], width: pdf.bounds.width, height: 200 do
                 pdf.transparent(0.5) do
                   pdf.text 'Vorschau:', size: 24
-                  pdf.text 'Nicht zum Versand gedacht!', size: 24
+                  pdf.text 'Nicht zum upload gedacht!', size: 12
+                  pdf.text 'Bitte nutz Anmeldung unter', size: 12
+                  pdf.text '"Verbindlich drucken".', size: 12
                 end
               end
             end
@@ -64,8 +66,8 @@ module Wsjrdp2023
 
           pdf
         end
-        # rubocop:enable AbcSize
-        # rubocop:enable MethodLength
+        # rubocop:enable Metrics/AbcSize
+        # rubocop:enable Metrics/MethodLength
 
         def customize(pdf)
           pdf.font_size 9
@@ -86,6 +88,8 @@ module Wsjrdp2023
       def self.new_pdf(person, pdf_preview)
         runner.new.new_pdf(person, pdf_preview)
       end
+
+
     end
   end
 end
