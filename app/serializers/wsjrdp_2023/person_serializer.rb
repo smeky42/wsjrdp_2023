@@ -25,7 +25,11 @@ module Wsjrdp2023::PersonSerializer
                      :sepa_mail,
                      :sepa_iban,
                      :sepa_bic,
-                     :sepa_status
+                     :sepa_status,
+                     :passport_nationality,
+                     :passport_number,
+                     :passport_germany,
+                     :passport_valid
     end
   end
 end
