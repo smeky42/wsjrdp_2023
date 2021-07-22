@@ -47,7 +47,11 @@ module Wsjrdp2023
         :upload_registration_pdf,
         :upload_sepa_pdf,
         :upload_recommondation_pdf,
-        :upload_good_conduct_pdf
+        :upload_good_conduct_pdf,
+        :passport_nationality,
+        :passport_number,
+        :passport_germany,
+        :passport_valid
       ]
 
       # Override crud_controller

@@ -4,24 +4,31 @@
 -#  https://github.com/hitobito/hitobito_wsjrdp_2023.
 
 %article.col-lg
-  = render 'contact_data', person: entry, only_public: cannot?(:show_details, entry)
-  - if can?(:show_details, entry)
-    %h2= t('.additional_data')
-    %div
-      = render_attrs(entry, :birthday, :gender)
+  %article.span5
+    = render 'contact_data', person: entry, only_public: cannot?(:show_details, entry)
+    =render_attrs(entry, :passport_nationality,
+                          :passport_number,
+                          :passport_germany,
+                          :passport_valid)
+  %aside.span4.offset1
+    - if can?(:show_details, entry)
+      %div
+        = render_attrs(entry, :birthday, :gender)
 
-      = render_extensions :details, locals: { show_full: can?(:show_full, entry) }
+        = render_extensions :details, locals: { show_full: can?(:show_full, entry) }
 
-      = render_attrs(entry, :created_info, :updated_info)
+        = render_attrs(entry, :created_info, :updated_info)
+    
 
-      = render 'people_relations'
-
+    = render 'people_relations'
     - if entry.additional_information?
       %h2= Person.human_attribute_name(:additional_information)
       = auto_link(simple_format(entry.additional_information))
 
-  = render_extensions :show_left
+    = render_extensions :show_left
 
+    
+%article.col-lg
   - if can?(:index_notes, entry)
     = render 'notes/section', create_path: group_person_notes_path(@group, entry)
 
