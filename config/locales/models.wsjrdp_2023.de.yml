@@ -229,3 +229,6 @@ de:
     tabs:
       info: Kontaktdaten
 
+  errors:
+    print: In der Anmeldung fehlen noch korrekte Angaben für folgende Daten, damit du drucken kannst 
+

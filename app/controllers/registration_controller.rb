@@ -58,6 +58,7 @@ class RegistrationController < ActionController::Base
     check_age
   end
 
+  # ToDo duplicated code in print_controller
   def check_age
     birthday = params[:birthday].to_date
     role = params[:role]
