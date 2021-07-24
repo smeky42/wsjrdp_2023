@@ -153,6 +153,14 @@ de:
         status: Status der Anmeldung
         unit_keys: Unit Tag
         role_wish: Wunschrolle im Kontingent
+        motivation: Motivation
+        motivation_info: Ich möchte aufs Jamboree fahren weil ... 
+        languages_spoken: Ich spreche folgende Sprachen
+        languages_spoken_info: z.B. Deutsch (Muttersprache), Englisch (5 Jahre Schule) 
+        shirt_size: T-Shirt Größe
+        shirt_size_info: z.B. M
+        uniform_size: Tracht- bzw. Klufthemdgröße
+        uniform_size_info: z.B. 64 
 
         genders:
           m: männlich
@@ -200,6 +208,9 @@ de:
       additional_data: Weitere Angaben
       events: Events
   people:
+    email_field: 
+      used_as_login: Wird als Login verwendet. Weitere Adressen (z.B. die deiner Personensorgeberechtigten bzw. Notfallkontakte) können unter "Weitere Kontaktdaten" eingetragen werden. 
+
     tabs:
       print: Anmeldung Drucken 
       additional_contact: Weitere Kontaktdaten
