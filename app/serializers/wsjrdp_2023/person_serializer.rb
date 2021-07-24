@@ -32,7 +32,11 @@ module Wsjrdp2023::PersonSerializer
                      :passport_valid,
                      :status,
                      :unit_keys,
-                     :role_wish
+                     :role_wish,
+                     :motivation,
+                     :languages_spoken,
+                     :shirt_size,
+                     :uniform_size
     end
   end
 end
