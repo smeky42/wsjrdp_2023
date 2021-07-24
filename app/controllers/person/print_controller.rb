@@ -37,14 +37,32 @@ class Person::PrintController < ApplicationController
 
   def not_printable_reason
     reason = ''
-    @person.first_name.present? ? '' : reason += "\n - " \
-     + (I18n.t 'activerecord.attributes.person.first_name')
-    @person.last_name.present? ? '' : reason += "\n - "\
-     + (I18n.t 'activerecord.attributes.person.last_name')
-    @person.birthday.present? ? '' : reason += "\n - "\
-     + (I18n.t 'activerecord.attributes.person.birthday')
-    @person.email.present? ? '' : reason += "\n - "\
-     + (I18n.t 'activerecord.attributes.person.email')
+    @person.first_name.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.first_name')
+    @person.last_name.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.last_name')
+    @person.email.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.email')
+    @person.address.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.address')
+    @person.zip_code.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.zip_code')
+    @person.town.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.town')
+    @person.country.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.country')
+    @person.gender.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.gender')
+    @person.birthday.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.birthday')
+    @person.rdp_association_number.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.rdp_association_number')
+    @person.additional_contact_name_a.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.additional_contact_name_a')
+    @person.additional_contact_adress_a.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.additional_contact_adress_a')
+    @person.additional_contact_name_b.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.additional_contact_name_b')
+    @person.additional_contact_adress_b.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.additional_contact_adress_b')
+    @person.sepa_name.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.sepa_name')
+    @person.sepa_address.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.sepa_address')
+    @person.sepa_mail.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.sepa_mail')
+    @person.sepa_iban.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.sepa_iban')
+    @person.sepa_bic.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.sepa_bic')
+    @person.role_wish.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.role_wish')
+    @person.shirt_size.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.shirt_size')
+    @person.uniform_size.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.uniform_size')
+
+    reason += to_old(@person.birthday, @person.role_wish)
+    reason += to_young(@person.birthday, @person.role_wish)
+
     reason
   end
 
@@ -62,4 +80,26 @@ class Person::PrintController < ApplicationController
     authorize!(:edit, entry)
   end
 
+  # TODO: Duplicated Code in Print Controller
+  def to_old(birthday, role)
+    if (role == 'Teilnehmende*r') && (birthday < Date.new(2005, 7, 22))
+      return 'Du bist leider zu alt für diese Rolle.'
+    elsif birthday < Date.new(1920, 1, 1)
+      return 'Bitte gib deinen richtigen Geburtstag an.'
+    end
+
+    ''
+  end
+
+  def to_young(birthday, role)
+    if (role == 'Teilnehmende*r') && (birthday > Date.new(2009, 7, 31))
+      return 'Du bist leider zu jung für die Teilname am Jamboree.'
+    elsif (role == 'Unit Leitung') && birthday > Date.new(2004, 4, 1)
+      return "Als #{params[:role]} musst du mindestens 18 Jahre alt sein."
+    elsif (role == 'IST') && birthday >= Date.new(2005, 7, 22)
+      return "Als #{params[:role]} musst du am Jamboree mindestens 18 Jahre alt sein."
+    end
+
+    ''
+  end
 end
