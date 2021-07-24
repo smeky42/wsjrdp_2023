@@ -13,7 +13,8 @@ class RegisterPerson < PersonSeeder
     Rails.logger.debug('== Initially Seed Person: ' + mail + ' ' + first_name + ' ' + last_name \
                       + ' ' + role_wish.to_s)
 
-    attrs = { email: mail, first_name: first_name, last_name: last_name, birthday: birthday }
+    attrs = { email: mail, first_name: first_name, last_name: last_name, birthday: birthday,
+              role_wish: role_wish }
 
     Person.seed_once(:email, attrs)
     person = Person.find_by(email: attrs[:email])
@@ -35,8 +36,12 @@ class RegisterPerson < PersonSeeder
 
   def get_role(role_wish)
     case role_wish
+    when 'Teilnehmende*r'
+      Group::Unit::UnassignedMember
     when 'Unit Leitung'
       Group::Unit::UnassignedLeader
+    when 'IST'
+      Group::Ist::Unassigned
     when 'Kontingentsteam'
       Group::Root::Unassigned
     end
@@ -44,8 +49,12 @@ class RegisterPerson < PersonSeeder
 
   def get_group(role_wish)
     case role_wish
+    when 'Teilnehmende*r'
+      Group.find_by(name: 'Ohne Unit')
     when 'Unit Leitung'
       Group.find_by(name: 'Ohne Unit')
+    when 'IST'
+      Group.find_by(name: 'IST')
     when 'Kontingentsteam'
       Group.find_by(name: 'Kontingent')
     end
