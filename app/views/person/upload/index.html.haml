@@ -7,11 +7,13 @@
     %br
     = f.labeled(:upload_registration_pdf, 'Anmeldung hochladen ') do
       = f.file_field(:upload_registration_pdf)
-    %br
-    = f.labeled(:upload_recommondation_pdf, 'Empfehlung hochladen ') do
-      = f.file_field(:upload_recommondation_pdf)
-    %br
-    = f.labeled(:upload_good_conduct_pdf, 'Bestätigung Führungszeugnis hochladen ') do
-      = f.file_field(:upload_good_conduct_pdf)
-    = form_buttons(f, submit_label: 'Dokumente hochladen', cancel_url: person_path(@person))
+    -if(@person.role_wish == "Unit Leitung")
+      %br
+      = f.labeled(:upload_recommondation_pdf, 'Empfehlung hochladen ') do
+        = f.file_field(:upload_recommondation_pdf)
+    -if(@person.role_wish != "Teilnehmende*r")
+      %br
+      = f.labeled(:upload_good_conduct_pdf, 'Bestätigung Führungszeugnis hochladen ') do
+        = f.file_field(:upload_good_conduct_pdf)
+      = form_buttons(f, submit_label: 'Dokumente hochladen', cancel_url: person_path(@person))
 

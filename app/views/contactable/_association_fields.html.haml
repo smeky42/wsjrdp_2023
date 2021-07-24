@@ -4,7 +4,9 @@
 -#  https://github.com/hitobito/hitobito_wsjrdp_2023.
 
 = f.labeled_input_fields :rdp_association, :rdp_association_region, :rdp_association_sub_region
-= f.labeled_input_fields :rdp_association_group, :rdp_association_number, :unit_keys
+= f.labeled_input_fields :rdp_association_group, :rdp_association_number 
+- if @person.role_wish == 'Teilnehmende*r'
+  = f.labeled_input_field :unit_keys
 
 %link{:rel => :stylesheet, :type => :"text/css", :href => "https://rawgithub.com/indrimuska/jquery-editable-select/master/dist/jquery-editable-select.min.css"}
 :javascript
