@@ -8,12 +8,12 @@
 
 class WelcomeMailer < JamboreeMailer
   def welcome_email(person)
-    Rails.logger.debug('== Send Mail Welcome Mail to' + person.email)
+    Rails.logger.debug("== Send Mail Welcome Mail to #{person.email}")
     @mail = person.email
     @url = 'https://worldscoutjamboree.de/anmeldung'
     @resource = person
     @token = person.generate_reset_password_token!
-    mail(to: person.email, subject:   'Willkommen bei der Vorregistrierung für Unit Leitungen'\
+    mail(to: person.email, subject:   'Willkommen bei der Anmeldung'\
                                       ' zum World Scout Jamboree 2023')
   end
 end

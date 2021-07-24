@@ -169,7 +169,7 @@ de:
           _nil: unbekannt
 
     header:
-      registration_header: Für die Vorregistrierung zum Worldscoutjamboree als Unit Leitung hier registrieren
+      registration_header: Für die Anmeldung zum Worldscoutjamboree hier registrieren
       map: Kontingentskarte 
       test_environment: Testumgebung, Daten können jederzeit gelöscht werden!
       additional_contact_header: Notfallkontakte
@@ -188,7 +188,7 @@ de:
       save: Speichern
 
     text:
-      more_info: Die Anmeldungen für IST und Teilnehmende beginnt im Juli. Mehr Informationen findest du auf unserer
+      more_info: Die Anmeldungen endet am 31.10. mehr Informationen findest du auf unserer
       homepage: Homepage
       homepage_link: https://www.worldscoutjamboree.de/
       invalid_adress: Personen mit ungültiger Adresse

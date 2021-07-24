@@ -13,11 +13,9 @@ class RegistrationController < ActionController::Base
   def index
     @possible_roles = Settings.person.roles
 
-    if request.post?
-      if check_mail && check_name && check_birthday
-        person = register_person
-        send_registration_mail(person)
-      end
+    if request.post? && (check_mail && check_name && check_birthday)
+      person = register_person
+      send_registration_mail(person)
     end
   end
 
@@ -62,8 +60,9 @@ class RegistrationController < ActionController::Base
 
   def check_age
     birthday = params[:birthday].to_date
-    if params[:role] == 'Kontingentsteam' || params[:role] == 'Unit Leitung'
-      if to_old(birthday) || to_young(birthday)
+    role = params[:role]
+    if ['Unit Leitung', 'Teilnehmende*r', 'IST', 'Kontingentsteam'].include?(role)
+      if to_old(birthday, role) || to_young(birthday, role)
         return false
       end
 
@@ -73,35 +72,46 @@ class RegistrationController < ActionController::Base
     false
   end
 
-  def to_old(birthday)
-    if birthday < Date.new(1920, 1, 1)
+  def to_old(birthday, role)
+    if (role == 'Teilnehmende*r') && (birthday < Date.new(2005, 7, 22))
+      flash[:alert] = 'Du bist leider zu alt für diese Rolle.'
+      return true
+    elsif birthday < Date.new(1920, 1, 1)
       flash[:alert] = 'Bitte gib deinen richtigen Geburtstag an.'
       return true
     end
     false
   end
 
-  def to_young(birthday)
-    if birthday > Date.new(2004, 4, 1)
-      flash[:alert] = 'Als ' + params[:role] + ' musst du mindestens 18 Jahre alt sein.'
+  # rubocop:disable Metrics/CyclomaticComplexity, Metrics/MethodLength
+  def to_young(birthday, role)
+    if (role == 'Teilnehmende*r') && (birthday > Date.new(2009, 7, 31))
+      flash[:alert] = 'Du bist leider zu jung für die Teilname am Jamboree.'
+      return true
+    elsif (role == 'Unit Leitung') && birthday > Date.new(2004, 4, 1)
+      flash[:alert] = "Als #{params[:role]} musst du mindestens 18 Jahre alt sein."
+      return true
+    elsif (role == 'IST') && birthday >= Date.new(2005, 7, 22)
+      flash[:alert] = "Als #{params[:role]} musst du am Jamboree mindestens 18 Jahre alt sein."
       return true
     end
     false
   end
+  # rubocop:enable Metrics/CyclomaticComplexity, Metrics/MethodLength
+
 
   def register_person
     register_person = RegisterPerson.new
-    person = register_person.seed_person(params[:mail],
-                                         params[:first_name],
-                                         params[:last_name],
-                                         params[:role],
-                                         params[:birthday])
-    person
+    register_person.seed_person(params[:mail],
+                                params[:first_name],
+                                params[:last_name],
+                                params[:role],
+                                params[:birthday])
   end
 
   def send_registration_mail(person)
     WelcomeMailer.welcome_email(person).deliver_now
-    flash[:notice] = 'Eine Mail mit deinen Login Daten wurde an ' + params[:mail] + ' versandt!'
+    flash[:notice] = "Eine Mail mit deinen Login Daten wurde an #{params[:mail]} versandt!"
   end
 
 end

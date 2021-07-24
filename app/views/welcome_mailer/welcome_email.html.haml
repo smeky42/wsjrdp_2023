@@ -1,13 +1,17 @@
 %p Hallo #{@resource.first_name},
 
-%p du hast den ersten Schritt zur Vorregistrierung als Unitleitung für das deutsche Kontingent zum World Scout Jamboree 2023 in Korea gemacht.
+%p du hast den ersten Schritt zur Anmeldung als #{@resource.role_wish} für das deutsche Kontingent zum World Scout Jamboree 2023 in Korea gemacht.
 
-%p Für deine Vorregistrierung benötigen wir nur ein paar Daten, dafür musst du in der Registrierung unter Info auf "Bearbeiten" klicken und alle Felder ausfüllen. 
+%p Für deine Anmeldung benötigen wir noch ein paar mehr Daten, dafür musst du in der Registrierung unter Kontaktdaten auf "Bearbeiten" klicken und alle Felder ausfüllen. 
+Nachdem du alle Daten sorgfältig ausgefüllt hast, kannst du unter "Anmeldung Drucken" ein PDF generieren und für die Unterschriften ausdrucken. 
+Um deine Anmeldung abzuschließen, musst du die unterschriebenen Seiten unter "Upload" wieder hochladen. 
 
-Bitte lege zuerst dein Passwort fest und stelle danach deine Vorregistrierung hier fertig: #{link_to "Passwort initial setzen.", edit_password_url(@resource, reset_password_token: @token)}
+%p Eine genaue Anleitung findest du unter #{link_to "HowTo Anmeldung", "https://www.worldscoutjamboree.de/howto-anmeldung/"}.
 
-%p Alle weiteren Mails von uns wirst du an #{@resource.email} geschickt bekommen. Dies ist auch deine Mailadresse für das #{link_to "Registrierungsportal", "https://anmeldung.worldscoutjamboree.de"}.
-%p Mehr Informationen zum Jamboree findest du auf unserer #{link_to "Homepage", "https://worldscoutjamboree.de"}. 
+%p Bitte lege zuerst dein Passwort fest und stelle danach deine Anmeldung hier fertig: #{link_to "Passwort initial setzen.", edit_password_url(@resource, reset_password_token: @token)}
+
+%p Alle weiteren Mails von uns wirst du an #{@resource.email} geschickt bekommen. Dies ist auch deine Mailadresse für das #{link_to "Anmeldeportal", "https://anmeldung.worldscoutjamboree.de"}.
+Mehr Informationen zum Jamboree findest du auf unserer #{link_to "Homepage", "https://worldscoutjamboree.de"}. 
 
 %p Wir freuen uns auf dich!
 %p Deine Kontingentsleitung
