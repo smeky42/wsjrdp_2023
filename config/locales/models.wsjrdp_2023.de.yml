@@ -164,6 +164,7 @@ de:
         shirt_size_info: z.B. M
         uniform_size: Tracht- bzw. Klufthemdgröße
         uniform_size_info: z.B. 64 
+        can_swim: Ich kann schwimmen 
 
         genders:
           m: männlich

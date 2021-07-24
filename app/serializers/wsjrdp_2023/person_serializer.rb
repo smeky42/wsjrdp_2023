@@ -36,7 +36,8 @@ module Wsjrdp2023::PersonSerializer
                      :motivation,
                      :languages_spoken,
                      :shirt_size,
-                     :uniform_size
+                     :uniform_size,
+                     :can_swim
     end
   end
 end

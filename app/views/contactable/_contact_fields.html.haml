@@ -27,6 +27,9 @@
   = f.labeled_inline_fields_for :social_accounts, 'contactable/social_account_fields'
 
 = field_set_tag do
+  = f.labeled_input_field :can_swim
+
+= field_set_tag do
   = f.labeled_input_field :motivation, placeholder: t('activerecord.attributes.person.motivation_info')
   = f.labeled_input_field :additional_information
 
