@@ -25,6 +25,10 @@
       %h2= Person.human_attribute_name(:additional_information)
       = auto_link(simple_format(entry.additional_information))
 
+    = render_attrs(entry, :status,
+                          :unit_keys,
+                          :role_wish,
+                          :sepa_status)
     = render_extensions :show_left
 
     
