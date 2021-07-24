@@ -11,5 +11,6 @@ class AddPeopleAttrsExtended < ActiveRecord::Migration[4.2]
       add_column :people, :languages_spoken, :string
       add_column :people, :shirt_size, :string
       add_column :people, :uniform_size, :string
+      add_column :people, :can_swim, :boolean
     end
 end
