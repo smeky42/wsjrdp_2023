@@ -3,15 +3,14 @@
 -#  or later. See the COPYING file at the top-level directory or at
 -#  https://github.com/hitobito/hitobito.
 
-#main.row
-= standard_form(entry, url: [parent, :invoice_config]) do |f|
+= standard_form(entry, url: [entry]) do |f|
   = f.error_messages
   = render 'form_tabs'
   
   .tab-content
     #general.tab-pane.active
       =render 'contactable/contact', f: f
-      
+    
     #additional_contact.tab-pane
       = render 'contactable/additional_contact', f: f
 
