@@ -150,6 +150,9 @@ de:
         passport_germany: Ich besitzte einen gültigen deutschen Reisepass
         passport_valid: Verfallsdatum Reisepass
         passport_valid_help: Für die Einreise nach Südkorea benötigst du einen Reisepass, der zum Zeitpunkt der Einreise noch mindestens drei Monate gültig ist
+        status: Status der Anmeldung
+        unit_keys: Unit Tag
+        role_wish: Wunschrolle im Kontingent
 
         genders:
           m: männlich

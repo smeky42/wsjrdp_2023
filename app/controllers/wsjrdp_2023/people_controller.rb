@@ -51,7 +51,10 @@ module Wsjrdp2023
         :passport_nationality,
         :passport_number,
         :passport_germany,
-        :passport_valid
+        :passport_valid,
+        :status,
+        :unit_keys,
+        :role_wish
       ]
 
       # Override crud_controller

@@ -29,7 +29,10 @@ module Wsjrdp2023::PersonSerializer
                      :passport_nationality,
                      :passport_number,
                      :passport_germany,
-                     :passport_valid
+                     :passport_valid,
+                     :status,
+                     :unit_keys,
+                     :role_wish
     end
   end
 end
