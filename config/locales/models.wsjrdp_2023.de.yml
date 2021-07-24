@@ -90,14 +90,17 @@ de:
         rdp_association_number: Mitgliedsnummer
         additional_information: Weitere Infos zu mir
         additional_contact_a_info: Personensorgeberechtigte*r 1
+        additional_contact_a_info_adult: Primärer Notfallkontakt
         additional_contact_name_a: Vor- und Nachname 
         additional_contact_adress_a: Adresse 
         additional_contact_b_info: Personensorgeberechtigte*r 2
+        additional_contact_b_info_adult: Sekundärer Notfallkontakt
         additional_contact_name_b: Vor- und Nachname 
         additional_contact_adress_b: Adresse 
         additional_contact_single: Es gibt nur eine Sorgeberechtigte Person
         additional_contact_address_info: Sofern abweichend von Kontaktdaten Teilnehmer*in
-        additional_mail_info: Mit Versand gekennzeichnete Mails werden zusätzlich zur primären Mailadresse benachrichtigt 
+        additional_mail_info: Weitere E-Mail-Adressen und Telefonummern um bei Fragen, zur Information oder auch bei Notfällen Kontakt aufzunehmen
+        additional_mail_help: Mit Versand gekennzeichnete Mails werden zusätzlich zur primären Mailadresse benachrichtigt
         sepa_header: Kontaktdaten Kontoinhaber*in
         sepa_info: werden für das SEPA Lastschriftmandat und bei Fragen rund um den Zahlungsverkehr verwendet 
         sepa_name: Kontoinhaber*in
@@ -112,8 +115,8 @@ de:
         medicine_vaccination_info: '(z.B. 12/2016 Prorix Mumps Masern Röteln, 04/2019 boostrix Hepatitis B, 05/2019 FSME)' 
         medicine_vaccination_help: Nur im Impfausweis dokumentierte Impfungen gelten als durchgeführt.
         medicine_vaccination_recommendation: 'Folgende Impfungen/Grundimmunisierung werden unsererseits empfohlen: Hepatitis A & B. Außerdem werden reisemedizinisch für Touristen für Südkorea (Stand 31.07.2021) weitere Impfungen empfohlen: Typhus, FSME, JapEnzephaltitis, Meningokokken.'
-        medicine_stiko_vaccination: Mein Kind hat die von der STIKO empfohlenen Schutzimpfungen
-        medicine_stiko_info: Mein Kind hat die von der STIKO empfohlenen Schutzimpfungen
+        medicine_stiko_vaccination: Die von der STIKO empfohlenen Schutzimpfungen wurden geimpft
+        medicine_stiko_info: Die von der STIKO empfohlenen Schutzimpfungen wurden geimpft
         medicine_preexisting_conditions: Bekannte Vorerkrankungen / Operationen / Kinderkrankheiten
         medicine_abnormalities: Folgende Auffälligkeiten / Erkrankungen sind bekannt 
         medicine_abnormalities_info: (z.B. Asthma, Reisekrankheit,Epilepsie, Angststörung,AD(H)S, erhöhter Betreuungsaufwand, etc.)
@@ -122,7 +125,7 @@ de:
         medicine_eating_disorders: Es bestehen folgende Essensbesonderheiten mit folgenden Symptomen
         medicine_mobility_needs: Es bestehen folgende Mobilitätsbedürfnisse auf Grund von
         medicine_infectious_diseases: Es besteht zur Zeit eine infektiöse Erkrankung, wenn ja welche
-        medicine_medical_treatment_contact: Mein / Unser Kind befindet sich zur Zeit in ärztlicher Behandlung 
+        medicine_medical_treatment_contact: Zur Zeit in ärztlicher Behandlung bei
         medicine_medical_treatment_contact_info: (behandelnder Arzt Facharzt - Name, Kontaktdaten) 
         medicine_medical_treatment_contact_help: Es wird bei Bedarf gestattet, dass sich das ärztliche Team der Kontingentsleitung mit demgennannten med. Fachpersonal in Kontakt setzten darf, um Gesundheitsdaten / Informationen auzutauschen (Schweigepflichtsentbindung).
         medicine_continous_medication: Dauermedikation 
@@ -130,13 +133,13 @@ de:
         medicine_needs_medication: Bedarfsmedikation 
         medicine_needs_medication_info: (Dosierung / Tageshöchstmenge / Einnahmegrund)
         medicine_medication_help: Mit dem Hausarzt ist abzuklären, ob für die bestehende Dauer- & Bedarfsmedikation ein aktueller Medikamentenplan der Medikamente mitgeführt werden muss.
-        medicine_medications_self_treatment: Unser Kind nimmt die Medikamente selbst ein
-        medicine_other: Bei meinem / unserem Kind ist auf Folgendes zu Achten 
+        medicine_medications_self_treatment: Die Medikamente werden selbstständig eingenommen
+        medicine_other: Es ist auf Folgendes zu Achten 
         medicine_other_info: (z.B. Besonderheiten, Einschränkungen, etc.)
-        medicine_important: Das ist uns noch wichtig
+        medicine_important: Das ist noch wichtig
         medicine_case: Im Falle einer Erkrankung oder eines Unfalles, bei denen durch eine Behandlung oder vorläufige Nicht-Behandlung in der Regel keinebleibenden Schäden zu erwarten sind (Bagatellerkrankungen-, verletzungen, Zecke/Splitter entfernen,...) darf unser Kind eigenständigüber Behandlungen entscheiden und in medizinische Eingriffe einwilligen, da es die für eine solche Entscheidung notwendigepersönliche geistige und körperliche Reife aufweist. Die Versorgung darf auch von Seiten der Betreuung erfolgen.
         medicine_case_doctor: Bei lebensbedrohlichen Erkrankungen / Unfällen entscheidet der behandelnde Arzt vor Ort.
-        medicine_support: Wie kann man Dich in Belastungsphasen unterstützen? 
+        medicine_support: Wie kann in Belastungsphasen unterstützt werden? 
         medicine_support_info: (Schokolade, Musik, Liebings-Song, etc)
         upload_passport_pdf: Reisepass
         upload_registration_pdf: Anmeldung

@@ -56,6 +56,8 @@ phone_number:
     - Personensorgeberechtigte*r 2 (Mobil)
     - Personensorgeberechtigte*r 1 (Festnetz)
     - Personensorgeberechtigte*r 2 (Festnetz)
+    - Primärer Notfallkontakt
+    - Sekundärer Notfallkontakt
     - Arbeit
     - Fax
     - Andere
@@ -77,5 +79,7 @@ additional_email:
     - Teilnehmende*r
     - Personensorgeberechtigte*r 1
     - Personensorgeberechtigte*r 2
+    - Primärer Notfallkontakt
+    - Sekundärer Notfallkontakt
     - Arbeit
     - Andere
