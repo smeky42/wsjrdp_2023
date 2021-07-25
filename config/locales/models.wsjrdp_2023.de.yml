@@ -142,6 +142,7 @@ de:
         medicine_support: Wie kann in Belastungsphasen unterstützt werden? 
         medicine_support_info: (Schokolade, Musik, Liebings-Song, etc)
         upload_info: Um die Anmeldung abzuschließen, musst du noch folgende Dokumente als PDF hochladen.  
+        upload_info_ready: Vielen Dank für den Upload, wir überprüfen die hochgeladenen PDFs und geben dir dann Bescheid.
         upload_passport_pdf: Reisepass
         upload_registration_pdf: Anmeldung
         upload_sepa_pdf: SEPA
