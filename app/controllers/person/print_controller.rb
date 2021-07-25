@@ -26,7 +26,8 @@ class Person::PrintController < ApplicationController
     if printable && (@person.status == 'registriert')
       pdf = Wsjrdp2023::Export::Pdf::Registration.render(@person, true)
 
-      send_data pdf, type: :pdf, disposition: 'inline', filename: 'Anmeldung-WSJ-Vorschau.pdf'
+      send_data pdf, type: :pdf, disposition: 'attachment',
+                     filename: 'Anmeldung-WSJ-Vorschau-Nicht-Hochladen.pdf'
     end
   end
 
@@ -45,7 +46,7 @@ class Person::PrintController < ApplicationController
       @person.upload_registration_pdf = full_name
       @person.save
 
-      send_data File.read(full_name), type: :pdf, disposition: 'inline', filename: name
+      send_data File.read(full_name), type: :pdf, disposition: 'attachment', filename: name
     end
   end
 
