@@ -141,6 +141,7 @@ de:
         medicine_case_doctor: Bei lebensbedrohlichen Erkrankungen / Unfällen entscheidet der behandelnde Arzt vor Ort.
         medicine_support: Wie kann in Belastungsphasen unterstützt werden? 
         medicine_support_info: (Schokolade, Musik, Liebings-Song, etc)
+        upload_info: Um die Anmeldung abzuschließen, musst du noch folgende Dokumente als PDF hochladen.  
         upload_passport_pdf: Reisepass
         upload_registration_pdf: Anmeldung
         upload_sepa_pdf: SEPA
@@ -188,8 +189,12 @@ de:
       print_preview_hint: Zur Kontrolle der Anmeldung
       print_submit: Verbindlich drucken
       print_submit_hint: Sperrt bestimmte Felder für weitere bearbeitung
-      print_review: Anmeldung einsehen
-      print_review_hint: Dokument einsehen
+      show_registration: Anmeldung einsehen
+      show_passport: Ausweis einsehen
+      show_recommondation: Empfehlung einsehen
+      show_sepa: Sepa einsehen
+      show_good_conduct: Nachweis Führungszeugnis einsehen
+      review_hint: Dokument einsehen
       edit: Bearbeiten
       edit_hint: Zum Bearbeiten öffnen 
       save: Speichern

@@ -4,6 +4,7 @@
 -#  https://github.com/hitobito/hitobito_wsjrdp_2023.
 
 = field_set_tag do
+  -# = f.labeled_input_field :status
   -if (@person.status == 'registriert')
     = f.labeled_collection_select(:role_wish, Settings.person.roles, :to_s, :to_s, {}, class: 'span2') 
     = f.labeled_input_fields :first_name, :last_name, :birthday

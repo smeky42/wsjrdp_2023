@@ -12,12 +12,31 @@ class Person::UploadController < ApplicationController
   def index
     @group ||= Group.find(params[:group_id])
     @person ||= group.people.find(params[:id])
-    flash[:alert] = "Upload #{Rails.root}"
     if request.put?
-      flash[:notice] = 'Uploaded: '
       upload_files
     end
   end
+
+  def show_registration
+    download_file(@person.upload_registration_pdf)
+  end
+
+  def show_sepa
+    download_file(@person.upload_sepa_pdf)
+  end
+
+  def show_passport
+    download_file(@person.upload_passport_pdf)
+  end
+
+  def show_recommondation
+    download_file(@person.upload_recommondation_pdf)
+  end
+
+  def show_good_conduct
+    download_file(@person.upload_sepa_pdf)
+  end
+
 
   private
 
@@ -29,8 +48,20 @@ class Person::UploadController < ApplicationController
     authorize!(:edit, entry)
   end
 
+  def download_file(file)
+    if file.present? && can?(:edit, @person)
+      file_name = File.basename(file)
+      File.open(file, 'r') do |f|
+        send_data f.read.force_encoding('BINARY'), filename: file_name,
+                                                   type: 'application/pdf',
+                                                   disposition: 'attachment'
+      end
+    end
+  end
+
   def upload_files
     upload_file(params[:person][:upload_passport_pdf], 'upload_passport_pdf')
+    upload_file(params[:person][:upload_sepa_pdf], 'upload_sepa_pdf')
     upload_file(params[:person][:upload_registration_pdf], 'upload_registration_pdf')
     upload_file(params[:person][:upload_sepa_pdf], 'upload_sepa_pdf')
     upload_file(params[:person][:upload_recommondation_pdf], 'upload_recommondation_pdf')
@@ -38,17 +69,23 @@ class Person::UploadController < ApplicationController
   end
 
   def upload_file(file_param, file_name)
-    if !file_param.nil? && (file_param.content_type == 'application/pdf')
+    if file_param.nil?
+      return
+    end
+
+    if file_param.content_type == 'application/pdf'
       file_path = file_path(file_name)
       FileUtils.mkdir_p(File.dirname(file_path)) unless File.directory?(File.dirname(file_path))
 
       File.open(file_path, 'wb') do |file|
         file.write(file_param.read)
       end
+
       @person[file_name] = file_path
       @person.save
 
-      flash[:notice] += "#{file_path}, "
+    else
+      flash[:alert] = 'Du kannst nur PDF Files hochladen.'
     end
   end
 
