@@ -61,7 +61,6 @@ class Person::UploadController < ApplicationController
 
   def upload_files
     upload_file(params[:person][:upload_passport_pdf], 'upload_passport_pdf')
-    upload_file(params[:person][:upload_sepa_pdf], 'upload_sepa_pdf')
     upload_file(params[:person][:upload_registration_pdf], 'upload_registration_pdf')
     upload_file(params[:person][:upload_sepa_pdf], 'upload_sepa_pdf')
     upload_file(params[:person][:upload_recommondation_pdf], 'upload_recommondation_pdf')
