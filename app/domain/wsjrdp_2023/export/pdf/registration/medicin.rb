@@ -7,7 +7,7 @@
 
 module Wsjrdp2023
   module Export::Pdf::Registration
-    # rubocop:disable ClassLength
+    # rubocop:disable Metrics/ClassLength
     class Medicin < Section
       def render
         pdf.y = bounds.height - 60
@@ -18,15 +18,25 @@ module Wsjrdp2023
         end
       end
 
-      # rubocop:disable AbcSize,MethodLength,MultilineTernaryOperator,CyclomaticComplexity,PerceivedComplexity
+      # rubocop:disable Metrics/AbcSize,Metrics/MethodLength,Style/MultilineTernaryOperator,Metrics/CyclomaticComplexity,Metrics/PerceivedComplexity
       def list
-        of_legal_age = false # @person.years.to_i >= 18
+        of_legal_age = @person.years.to_i >= 18
         if of_legal_age
           signature = pdf.make_table([
                                        [{ content: @person.town + ' den ' \
                                         + Time.zone.today.strftime('%d.%m.%Y'), height: 30 }],
                                        ['______________________________', ''],
                                        [{ content: @person.full_name, height: 30 }, '']
+                                     ],
+                                     cell_style: { width: 240, padding: 1, border_width: 0,
+                                                   inline_format: true })
+        elsif @person.additional_contact_single
+          signature = pdf.make_table([
+                                       [{ content: @person.town + ' den ' \
+                                         + Time.zone.today.strftime('%d.%m.%Y'), height: 30 }],
+                                       %w(__________________________ __________________________),
+                                       [{ content: @person.additional_contact_name_a, height: 30 },\
+                                        + @person.full_name]
                                      ],
                                      cell_style: { width: 240, padding: 1, border_width: 0,
                                                    inline_format: true })
@@ -47,14 +57,34 @@ module Wsjrdp2023
 
 
         pdf.start_new_page
+        text 'Was muss ich mit dem Medizinbogen machen?', size: 12
+        text 'Der Medizinbogen muss'
+        text '1. vollständig unterschrieben werden'
+        text '2. am ersten Treffen der entsprechenden Betreuungsperson im Orginal überreicht werden'
+
+        pdf.stroke_horizontal_rule
+        pdf.move_down 3.mm
         text I18n.t('activerecord.attributes.person.medicine_header'), size: 14
         text 'zu ' + @person.full_name
-        text 'Ansprechpartner im Notfall: ' + @person.additional_contact_name_a + ' und '\
-        + @person.additional_contact_name_b
+        text 'Ansprechpartner im Notfall: '
+        text @person.additional_contact_name_a
+        text @person.additional_contact_name_b
+        text 'Telefonnummern: '
+        # text @person.all_phone_numbers
+
+        phone_numbers = PhoneNumber.select([:contactable_id, :number,
+                                            :label]).where(contactable_id: 2)
+
+        phone_numbers.each do |number|
+          text "#{number.label}: #{number.number}"
+        end
+
+
         pdf.move_down 3.mm
 
         text I18n.t('activerecord.attributes.person.medicine_info')
 
+        pdf.move_down 3.mm
         text 'Grundsätzlich', size: 12
         pdf.move_down 1.mm
         text 'Änderungen müssen bis zum Antritt der Reise unverzüglich dem Veranstalter/dem '\
@@ -214,7 +244,7 @@ module Wsjrdp2023
         pdf.move_down 1.mm
         text I18n.t('activerecord.attributes.person.medicine_case')
         pdf.move_down 1.mm
-        text I18n.t('activerecord.attributes.medicine_case_doctor')
+        text I18n.t('activerecord.attributes.person.medicine_case_doctor')
 
         pdf.move_down 3.mm
         text I18n.t('activerecord.attributes.person.medicine_support'), size: 10
@@ -243,7 +273,7 @@ module Wsjrdp2023
         text ''
       end
     end
-    # rubocop:enable AbcSize,MethodLength,MultilineTernaryOperator,CyclomaticComplexity,PerceivedComplexity
+    # rubocop:enable Metrics/AbcSize,Metrics/MethodLength,Style/MultilineTernaryOperator,Metrics/CyclomaticComplexity,Metrics/PerceivedComplexity
   end
-  # rubocop:enable ClassLength
+  # rubocop:enable Metrics/ClassLength
 end
