@@ -14,7 +14,7 @@ class RegisterPerson < PersonSeeder
                       + ' ' + role_wish.to_s)
 
     attrs = { email: mail, first_name: first_name, last_name: last_name, birthday: birthday,
-              role_wish: role_wish }
+              role_wish: role_wish, status: 'registriert' }
 
     Person.seed_once(:email, attrs)
     person = Person.find_by(email: attrs[:email])
@@ -30,8 +30,7 @@ class RegisterPerson < PersonSeeder
     role = get_role(role_wish)
     group = get_group(role_wish)
 
-    role_attrs = { person_id: person.id, group_id: group.id, type: role.sti_name,
-                   status: 'registriert' }
+    role_attrs = { person_id: person.id, group_id: group.id, type: role.sti_name }
     Role.seed_once(*role_attrs.keys, role_attrs)
   end
 
