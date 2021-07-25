@@ -104,8 +104,8 @@ de:
         sepa_header: Kontaktdaten Kontoinhaber*in
         sepa_info: werden für das SEPA Lastschriftmandat und bei Fragen rund um den Zahlungsverkehr verwendet 
         sepa_name: Kontoinhaber*in
-        sepa_address: Adresse 
-        sepa_mail: Mailadresse
+        sepa_address: Adresse Kontoinhaber*in
+        sepa_mail: Mailadresse Kontoinhaber*in
         sepa_iban: IBAN
         sepa_bic: BIC
         sepa_status: Finanzstatus
@@ -202,6 +202,10 @@ de:
       mail: Bitte gib deine korrekte Mailadresse ein.
       already_registered: Es existiert schon ein Account mit dieser e-Mail Adresse. Du kannst dein Passwort über "Passwort vergessen?" zurücksetzen.
       map_access: Du hast nicht die Rolle um diese Informationen zu sehen
+      iban: Deine IBAN ist Fehlerhaft, bitte überprüfe diese noch einmal!
+      sepa_mail: Deine Mailadrese für das SEPA Verfahren ist Fehlerhaft, bitte überprüfe diese noch einmal!
+      print: Leider kannst du noch nicht drucken. Unter Kontaktdaten fehlen noch korrekte Angaben für folgende Felder
+
       
   contactable:
     additional_email_fields:
@@ -230,6 +234,4 @@ de:
     tabs:
       info: Kontaktdaten
 
-  errors:
-    print: In der Anmeldung fehlen noch korrekte Angaben für folgende Daten, damit du drucken kannst 
 
