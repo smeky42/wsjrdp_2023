@@ -19,7 +19,8 @@
       = t('activerecord.attributes.person.additional_contact_b_info')
   = f.labeled_input_field :additional_contact_name_b 
   = f.labeled_input_field :additional_contact_adress_b, placeholder: t('activerecord.attributes.person.additional_contact_address_info')
-  = f.labeled_input_field :additional_contact_single
+  - if (@person.years.to_i < 18)
+    = f.labeled_input_field :additional_contact_single
 = field_set_tag do
   %h4
     = t('activerecord.attributes.person.additional_mail_info')
