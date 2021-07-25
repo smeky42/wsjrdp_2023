@@ -24,12 +24,12 @@
       = t('activerecord.attributes.person.print_info') 
   - else 
     - if can?(:edit, @person)
-      = action_button(t('activerecord.button.print_review'),
+      = action_button(t('activerecord.button.show_registration'),
                       '/groups/' + params[:group_id] + '/people/'+ params[:id] + '/upload/show_registration',
                       :envelope,
                       remote: false,
                       method: :get,
                       rel: :tooltip,
-                      title: t('activerecord.button.print_review_hint'))
+                      title: t('activerecord.button.review_hint'))
         
     

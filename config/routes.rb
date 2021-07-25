@@ -31,6 +31,11 @@ Rails.application.routes.draw do
           get 'check/:qrcode' => 'person/check#index'
           get 'upload' => 'person/upload#index'
           put 'upload' => 'person/upload#index'
+          get 'upload/show_passport' => 'person/upload#show_passport'
+          get 'upload/show_registration' => 'person/upload#show_registration'
+          get 'upload/show_recommondation' => 'person/upload#show_recommondation'
+          get 'upload/show_good_conduct' => 'person/upload#show_good_conduct'
+          get 'upload/show_sepa' => 'person/upload#show_sepa'
 
         end 
       end 
