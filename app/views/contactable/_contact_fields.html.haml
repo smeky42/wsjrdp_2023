@@ -4,7 +4,12 @@
 -#  https://github.com/hitobito/hitobito_wsjrdp_2023.
 
 = field_set_tag do
-  = f.labeled_input_fields :first_name, :last_name, :nickname
+  -if (@person.status == 'registriert')
+    = f.labeled_input_fields :first_name, :last_name, :birthday
+  -else 
+    = render_attrs(entry,  :first_name, :last_name, :birthday)
+
+  = f.labeled_input_field :nickname
   = render 'contactable/address_fields', f: f
 = render_extensions :address_fields, locals: { f: f }
 = field_set_tag do

@@ -4,12 +4,19 @@
 -#  https://github.com/hitobito/hitobito_wsjrdp_2023.
 
 %h4
-    = t('activerecord.attributes.person.sepa_header') 
+  = t('activerecord.attributes.person.sepa_header') 
 = t('activerecord.attributes.person.sepa_info')
 %br 
 %br
-= f.labeled_input_fields :sepa_name,
-                     :sepa_address,
-                     :sepa_mail,
-                     :sepa_iban,
-                     :sepa_bic
+-if (@person.status == 'registriert')
+  = f.labeled_input_fields :sepa_name,
+                    :sepa_address,
+                    :sepa_mail,
+                    :sepa_iban,
+                    :sepa_bic
+-else 
+  = render_attrs(entry,  :sepa_name,
+                    :sepa_address,
+                    :sepa_mail,
+                    :sepa_iban,
+                    :sepa_bic)
