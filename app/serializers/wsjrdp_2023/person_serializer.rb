@@ -20,6 +20,7 @@ module Wsjrdp2023::PersonSerializer
                      :additional_contact_name_b,
                      :additional_contact_adress_b,
                      :additional_contact_address_info,
+                     :additional_contact_single,
                      :sepa_name,
                      :sepa_address,
                      :sepa_mail,
