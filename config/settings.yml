@@ -33,6 +33,15 @@ person:
     - IST
     - Kontingentsteam
 
+  status:
+    - registriert
+    - gedruckt
+    - in bearbeitung
+    - vollständig
+    - hat gruppe 
+    - bestätigt
+    - abgemeldet
+
 
 addresses:
   imported_countries:
