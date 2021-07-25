@@ -10,7 +10,9 @@ require 'digest'
 module Wsjrdp2023
   module Export::Pdf::Registration
     class Contract < Section
+      include FinanceHelper
 
+      # rubocop:disable Metrics/AbcSize,Metrics/MethodLength,Metrics/CyclomaticComplexity
       def render
         pdf.bounding_box [pdf.bounds.left, pdf.bounds.top], width: pdf.bounds.width do
           qrcode = RQRCode::QRCode.new(qrcode_content, level: :h, size: 10)
@@ -24,9 +26,8 @@ module Wsjrdp2023
         end
       end
 
-      # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
       def list
-        of_legal_age = false # @person.years.to_i >= 18
+        of_legal_age = @person.years.to_i >= 18
 
         if of_legal_age
           signature = pdf.make_table([
@@ -34,6 +35,16 @@ module Wsjrdp2023
                                         + Time.zone.today.strftime('%d.%m.%Y'), height: 30 }],
                                        ['______________________________', ''],
                                        [{ content: @person.full_name, height: 30 }, '']
+                                     ],
+                                     cell_style: { width: 240, padding: 1, border_width: 0,
+                                                   inline_format: true })
+        elsif @person.additional_contact_single
+          signature = pdf.make_table([
+                                       [{ content: @person.town + ' den ' \
+                                         + Time.zone.today.strftime('%d.%m.%Y'), height: 30 }],
+                                       %w(__________________________ __________________________),
+                                       [{ content: @person.additional_contact_name_a, height: 30 },\
+                                        + @person.full_name]
                                      ],
                                      cell_style: { width: 240, padding: 1, border_width: 0,
                                                    inline_format: true })
@@ -51,17 +62,20 @@ module Wsjrdp2023
                                                    inline_format: true })
         end
 
-
-        text 'HowTo', size: 12
-        text 'ToDo Erklärung welchen Weg das Dokument nimmt -> Hochladen erstes Unit Treffen'
-        text 'ToDo QR Code für die Nachverfolgung'
         if Rails.env.development?
           text qrcode_content
         end
 
-        pdf.stroke_horizontal_rule
         pdf.move_down 3.mm
+        text 'Was muss ich mit dieser Anmeldung machen?', size: 12
+        text 'Die Anmeldung und das SEPA Lastschriftmandat müssen'
+        text '1. vollständig unterschrieben werden'
+        text '2. auf anmeldung.worldscoutjamboree.de unter "Upload>Anmeldung hochladen" hochgeladen werden'
+        text '3. am ersten Treffen der entsprechenden Betreuungsperson im Orginal überreicht werden'
 
+        pdf.stroke_horizontal_rule
+
+        pdf.move_down 3.mm
         text 'Anmeldung', size: 12
 
         text 'von ' + @person.full_name + ', geboren am ' + @person.birthday.strftime('%d.%m.%Y') \
@@ -70,22 +84,18 @@ module Wsjrdp2023
         + ' 10115 Berlin.'
         text ' für das deutsche Kontingent zum 25. World Scout Jamboree 2023 in Südkorea.'
 
-        pdf.move_down 3.mm # TODO: Preis generieren und nur Units ausblenden
-        text 'Die Teilnahme, als Teilnehmer in einer Unit, '\
-        + ' im deutschen Kontingent kostet 4100 € und beinhaltet'\
-        + ' die Vor- und Nachbereitung in Deutschland,'\
-        + ' die Teilnahme an den Akklimatisierungstagen in Südkorea ,'\
-        + ' die Teilnahme am 25. World Scout Jamboree in Südkorea,'\
-        + ' die Reise nach Südkorea'\
-        + ' eine Vor- oder Nachtour .'
+        pdf.move_down 3.mm
+        text "Die Teilnahme, als #{role_full_name(@person.role_wish)}, "\
+        + " im deutschen Kontingent kostet #{payment_value(@person.role_wish)} und"\
+        " beinhaltet #{package(@person.role_wish)}."
         text 'Die Reise ist für den Zeitraum vom 20.07 bis 21.08.2023'\
         +' geplant. Der Reisezeitraum variiert je nach gewähltem Paket und Lage der'\
-        +' Sommerferien, Reisedauer sind 13 bis 25 Tage.'
+        +" Sommerferien, Reisedauer sind #{package_time(@person.role_wish)}."
 
-        pdf.move_down 3.mm # TODO: Paket generieren
+        pdf.move_down 3.mm
         text 'Hiermit ' + (of_legal_age ? 'melde ich mich ' : 'melden wir unser Kind ') \
         + @person.full_name + ', geboren am ' + @person.birthday.strftime('%d.%m.%Y') \
-        + ' verbindlich mit dem Paket ' + ' Teilnehmer in einer Unit' \
+        + " verbindlich mit dem Paket #{role_full_name(@person.role_wish)}" \
         + ' zur Teilnahme im Deutschen Kontingent'\
         + ' zum 25. World Scout Jamboree 2023 an. Mit der Anmeldung '\
         + (of_legal_age ? 'akzeptiere ich' : 'akzeptieren wir')\
@@ -169,19 +179,13 @@ module Wsjrdp2023
 
         pdf.move_down 3.mm
         text 'Das SEPA Lastschriftverfahren wird nach folgendem Plan,'\
-        +' für Teilnehmer in einer Unit, eingezogen.'\
+        +" für #{role_full_name(@person.role_wish)}, eingezogen."\
         + ' Der Einzug erfolgt am 5. des jeweigen Monats bzw. am darauf folgenden Werktag.'
         pdf.move_down 3.mm
-        # rubocop:disable Layout/LineLength
-        pdf.make_table([ # TODO: autogenerate line by role
-                         [' ', 'Beitrag', 'Dez 21', 'Jan 22', 'Feb 22', 'Mär 22', 'Apr 22', 'Mai 22', 'Jun 22', 'Jul 22', 'Aug 22', 'Sep 22', 'Okt 22', 'Nov 22', 'Dez 22', 'Jan 23', 'Feb 23', 'Mär 23', 'Apr 23', 'Mai 23'],
-                         ['TN ', ' 4.100 € ',  ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 300 € ', ' 300 € ', ' 300 € ', ' 300 € ', ' 300 € ', ' 300 € ']
-                         # ['UL ', ' 3.250 € ',  ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 200 € ', ' 200 € ', ' 200 € ', ' 200 € ', ' 200 € ', ' 200 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' 250 € ', ' -   € '],
-                         # ['IST ', ' 1.650 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 50 € ', ' -   € '],
-                         # ['KT ', ' 1.300 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' 100 € ', ' -   € ', ' -   € ', ' -   € ', ' -   € ', ' -   € ']
-                       ], cell_style: { padding: 1, border_width: 0,
-                                        inline_format: true, size: 6 }).draw
-        # rubocop:enable Layout/LineLength
+        pdf.make_table(payment_array_by(@person.role_wish), cell_style: { padding: 1,
+                                                                          border_width: 0,
+                                                                          inline_format: true,
+                                                                          size: 6 }).draw
         pdf.move_down 3.mm
         pdf.make_table([
                          [{ content: @person.town + ' den ' + Time.zone.today.strftime('%d.%m.%Y'),
@@ -204,12 +208,12 @@ module Wsjrdp2023
         text ''
       end
 
-      # rubocop:enable Metrics/AbcSize,Metrics/MethodLength
       def qrcode_content
-        qrcode_content = 'http://' + ENV['RAILS_HOST_NAME'] + '/groups/' + @person.primary_group_id.to_s +
+        'http://' + ENV['RAILS_HOST_NAME'] + '/groups/' + @person.primary_group_id.to_s +
           '/people/' + @person.id.to_s + '/check/' + document_id
       end
     end
+    # rubocop:enable Metrics/AbcSize,Metrics/MethodLength,Metrics/CyclomaticComplexity
 
 
   end

@@ -35,7 +35,7 @@ module Wsjrdp2023
                 pdf.transparent(0.5) do
                   pdf.text 'Vorschau:', size: 24
                   pdf.text 'Nicht zum upload gedacht!', size: 12
-                  pdf.text 'Bitte nutz Anmeldung unter', size: 12
+                  pdf.text 'Bitte nutze die Anmeldung unter', size: 12
                   pdf.text '"Verbindlich drucken".', size: 12
                 end
               end
