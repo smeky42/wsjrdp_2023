@@ -49,7 +49,9 @@ class Person::PrintController < ApplicationController
     @person.rdp_association_number.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.rdp_association_number')
     if @person.years.to_i < 18
       @person.additional_contact_name_a.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.additional_contact_name_a')
-      @person.additional_contact_name_b.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.additional_contact_name_b')
+      unless @person.additional_contact_single
+        @person.additional_contact_name_b.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.additional_contact_name_b')
+      end
     end
     @person.sepa_name.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.sepa_name')
     @person.sepa_address.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.sepa_address')
