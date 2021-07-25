@@ -25,7 +25,14 @@ module Sheet
 
     tab 'people.tabs.check',
         :check_group_person_path,
-        if: :show
+        if: (lambda do |view, _group, _person|
+               view.current_user.role?('Group::Root::Admin') ||
+               view.current_user.role?('Group::Root::Leader') ||
+               view.current_user.role?('Group::UnitSupport::Leader') ||
+               view.current_user.role?('Group::UnitSupport::Member') ||
+               view.current_user.role?('Group::Ist::Leader')
+               # TODO: use view.can
+             end)
 
 
     if Settings.people.abos
@@ -67,13 +74,14 @@ module Sheet
 
     tab 'people.tabs.log',
         :log_group_person_path,
-        # if: (lambda do |view, _group, person|
-        #   view.can?(:log, person)
-        # end)
         if: (lambda do |view, _group, _person|
-          view.current_user.role?('Group::Root::Admin')
-          # TODO: use view.can
-        end)
+               view.current_user.role?('Group::Root::Admin') ||
+               view.current_user.role?('Group::Root::Leader') ||
+               view.current_user.role?('Group::UnitSupport::Leader') ||
+               view.current_user.role?('Group::UnitSupport::Member') ||
+               view.current_user.role?('Group::Ist::Leader')
+               # TODO: use view.can
+             end)
 
     tab 'people.tabs.colleagues',
         :colleagues_group_person_path,
