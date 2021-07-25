@@ -3,13 +3,21 @@
 -#  or later. See the COPYING file at the top-level directory or at
 -#  https://github.com/hitobito/hitobito_wsjrdp_2023.
 
+%article.col-lg
+  %article.span5
+    = render_attrs(entry,
+                      :additional_contact_name_a, 
+                      :additional_contact_adress_a)
 
-= render_attrs(entry,
-                  :additional_contact_name_a, 
-                  :additional_contact_adress_a)
+    = render_attrs(entry,
+                      :additional_contact_name_b, 
+                      :additional_contact_adress_b)
 
-= render_attrs(entry,
-                  :additional_contact_name_b, 
-                  :additional_contact_adress_b)
+    - if (@person.years.to_i < 18)
+      = render_attrs(entry, :additional_contact_single)
 
-= render_attrs(entry, :additional_contact_single)
+
+  %aside.span4.offset1
+    = @person.all_additional_emails()
+    = @person.all_phone_numbers()
+
