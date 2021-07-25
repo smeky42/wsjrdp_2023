@@ -80,7 +80,9 @@ class Person::PrintController < ApplicationController
     reason += to_young(@person.birthday, @person.role_wish)
 
     IBANTools::IBAN.valid?(@person.sepa_iban) ? '' : reason += "\n - " + (I18n.t 'activerecord.alert.iban')
-    Truemail.valid?(@person.sepa_mail) ? '' : reason += "\n - " + (I18n.t 'activerecord.alert.sepa_mail')
+    if @person.sepa_mail.blank? || !Truemail.valid?(@person.sepa_mail)
+      reason += "\n - " + (I18n.t 'activerecord.alert.sepa_mail')
+    end
 
 
     reason
