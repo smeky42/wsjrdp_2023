@@ -16,10 +16,14 @@ class Person::PrintController < ApplicationController
     unless printable
       flash[:alert] = (I18n.t 'activerecord.alert.print') + ': ' + not_printable_reason
     end
+
+    unless @person.status == 'registriert'
+      flash[:info] = (I18n.t 'activerecord.text.print')
+    end
   end
 
   def preview
-    if printable
+    if printable && (@person.status == 'registriert')
       pdf = Wsjrdp2023::Export::Pdf::Registration.render(@person, true)
 
       send_data pdf, type: :pdf, disposition: 'inline', filename: 'Anmeldung-WSJ-Vorschau.pdf'
@@ -27,11 +31,21 @@ class Person::PrintController < ApplicationController
   end
 
   def submit
-    if printable
-      pdf = Wsjrdp2023::Export::Pdf::Registration.render(@person, false)
+    if printable && (@person.status == 'registriert')
+      pdf = Wsjrdp2023::Export::Pdf::Registration.new_pdf(@person, false)
 
-      send_data pdf, type: :pdf, disposition: 'inline', filename: person.id.to_s +
-       '-Anmeldung-WSJ-' + Time.zone.today.to_s + '.pdf'
+      folder = file_folder
+      name = file_name
+      full_name = folder + name
+      FileUtils.mkdir_p(folder) unless File.directory?(folder)
+
+      pdf.render_file full_name
+
+      @person.status = 'gedruckt'
+      @person.upload_registration_pdf = full_name
+      @person.save
+
+      send_data File.read(full_name), type: :pdf, disposition: 'inline', filename: name
     end
   end
 
@@ -109,4 +123,14 @@ class Person::PrintController < ApplicationController
 
     ''
   end
+
+  def file_name
+    date = Time.zone.now.strftime('%Y-%m-%d-%H-%M-%S')
+    "#{date}--#{@person.id}-registration-generated.pdf"
+  end
+
+  def file_folder
+    "#{Rails.root}/private/uploads/person/pdf/#{@person.id}/"
+  end
+
 end

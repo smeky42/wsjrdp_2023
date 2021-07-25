@@ -165,6 +165,9 @@ de:
         uniform_size: Tracht- bzw. Klufthemdgröße
         uniform_size_info: z.B. 64 
         can_swim: Ich kann schwimmen 
+        preview_info: Hier kannst du dir ein Vorschau-PDF genererieren, ohne die Anmeldung zu sperren. Dieses bitte nicht zum Upload verwenden. 
+        print_info: Hier kannst du dein Anmeldung verbindlich drucken. Nach dem Drucken, werden einige Felder zur Bearbeitung gesperrt. Dieses PDF bitte unterschreiben und bei Upload hochladen.
+
 
         genders:
           m: männlich
@@ -196,6 +199,7 @@ de:
       homepage: Homepage
       homepage_link: https://www.worldscoutjamboree.de/
       invalid_adress: Personen mit ungültiger Adresse
+      print: Deine Anmeldung wurde schon gedruckt
     
     alert: 
       name: Bitte gib deinen vollständigen Vor- und Nachnamen ein.
