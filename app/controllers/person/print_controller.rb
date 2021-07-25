@@ -14,7 +14,7 @@ class Person::PrintController < ApplicationController
     @person ||= group.people.find(params[:id])
     @printable = printable
     unless printable
-      flash[:alert] = (I18n.t 'errors.print') + ': ' + not_printable_reason
+      flash[:alert] = (I18n.t 'activerecord.alert.print') + ': ' + not_printable_reason
     end
   end
 
@@ -47,21 +47,24 @@ class Person::PrintController < ApplicationController
     @person.gender.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.gender')
     @person.birthday.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.birthday')
     @person.rdp_association_number.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.rdp_association_number')
-    @person.additional_contact_name_a.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.additional_contact_name_a')
-    @person.additional_contact_adress_a.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.additional_contact_adress_a')
-    @person.additional_contact_name_b.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.additional_contact_name_b')
-    @person.additional_contact_adress_b.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.additional_contact_adress_b')
+    if @person.years.to_i < 18
+      @person.additional_contact_name_a.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.additional_contact_name_a')
+      @person.additional_contact_name_b.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.additional_contact_name_b')
+    end
     @person.sepa_name.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.sepa_name')
     @person.sepa_address.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.sepa_address')
     @person.sepa_mail.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.sepa_mail')
     @person.sepa_iban.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.sepa_iban')
-    @person.sepa_bic.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.sepa_bic')
     @person.role_wish.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.role_wish')
     @person.shirt_size.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.shirt_size')
     @person.uniform_size.present? ? '' : reason += "\n - " + (I18n.t 'activerecord.attributes.person.uniform_size')
 
     reason += to_old(@person.birthday, @person.role_wish)
     reason += to_young(@person.birthday, @person.role_wish)
+
+    IBANTools::IBAN.valid?(@person.sepa_iban) ? '' : reason += "\n - " + (I18n.t 'activerecord.alert.iban')
+    Truemail.valid?(@person.sepa_mail) ? '' : reason += "\n - " + (I18n.t 'activerecord.alert.sepa_mail')
+
 
     reason
   end
@@ -83,9 +86,9 @@ class Person::PrintController < ApplicationController
   # TODO: Duplicated Code in Print Controller
   def to_old(birthday, role)
     if (role == 'Teilnehmende*r') && (birthday < Date.new(2005, 7, 22))
-      return 'Du bist leider zu alt für diese Rolle.'
+      return "\n - Du bist leider zu alt für die Teilnahme als #{role} "
     elsif birthday < Date.new(1920, 1, 1)
-      return 'Bitte gib deinen richtigen Geburtstag an.'
+      return "\n - Bitte gib deinen richtigen Geburtstag an."
     end
 
     ''
@@ -93,11 +96,13 @@ class Person::PrintController < ApplicationController
 
   def to_young(birthday, role)
     if (role == 'Teilnehmende*r') && (birthday > Date.new(2009, 7, 31))
-      return 'Du bist leider zu jung für die Teilname am Jamboree.'
+      return "\n - Du bist leider zu jung für die Teilname am Jamboree."
     elsif (role == 'Unit Leitung') && birthday > Date.new(2004, 4, 1)
-      return "Als #{params[:role]} musst du mindestens 18 Jahre alt sein."
+      return "\n - Als #{role} musst du mindestens 18 Jahre alt sein."
     elsif (role == 'IST') && birthday >= Date.new(2005, 7, 22)
-      return "Als #{params[:role]} musst du am Jamboree mindestens 18 Jahre alt sein."
+      return "\n - Als #{role} musst du am Jamboree mindestens 18 Jahre alt sein."
+    elsif (role == 'Kontingentsteam') && @person.years.to_i < 18
+      return "\n - Für das #{role} musst du mindestens 18 Jahre alt sein."
     end
 
     ''
