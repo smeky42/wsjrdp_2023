@@ -17,7 +17,7 @@ module Wsjrdp2023
         end
       end
 
-      # rubocop:disable AbcSize,MethodLength
+      # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
       def list
         pdf.start_new_page
         text 'Hinweise zur Datenverarbeitung', size: 14
@@ -25,7 +25,7 @@ module Wsjrdp2023
         text 'Diese Datenschutzhinweise gelten für die Verarbeitung personenbezogener Daten der'\
         + ' Teilnehmer*innen am 25. World Jamboree 2023 durch den rdp.'
         pdf.move_down 3.mm
-        text 'v0.2 vom 17.07.2021'
+        text 'v0.3 vom 28.07.2021'
         pdf.move_down 3.mm
 
         pdf.move_down 3.mm
@@ -41,7 +41,7 @@ module Wsjrdp2023
             E-Mail: info@rdp-pfadfinden.de.'
         pdf.move_down 1.mm
         text '1.2 Der Datenschutzbeauftragte des rdp ist erreichbar unter'\
-        + ' TODO datenschutzbeauftragter@rdp.de oder schriftlich unter der'\
+        + ' datenschutz@psg-aachen.de oder schriftlich unter der'\
         + ' Anschrift des Verantwortlichen mit dem Zusatz „Der Datenschutzbeauftragte“.'
 
         pdf.move_down 3.mm
@@ -70,19 +70,30 @@ module Wsjrdp2023
         + ' ) erhalten je nach Inhalt ihrer Tätigkeit Zugriff'\
         + ' auf personenbezogene Daten der Teilnehmer, soweit dies für die Erfüllung der'\
         + ' ihnen übertragenen Aufgaben erforderlich ist. Rechtsgrundlage ist Art. 6 Abs.'\
-        + ' 1 lit. b DSGVO. Mit den Empfängern sind Auftragsverarbeitungsvereinbarungen'\
+        + ' 1 lit. b DSGVO. Mit den Empfängern ist eine Vertraulichkeitsvereinbarung'\
         + ' abgeschlossen.'
         pdf.move_down 1.mm
-        text '4.2 Einzelne personenbezogene Daten werden an Unternehmen übertragen, deren'\
+        text '4.2 Einzelne personenbezogene Daten werden an Unternehmen und Organisationen'\
+        + 'übertragen, deren'\
         + ' Dienste der Veranstalter in Anspruch nimmt, um seine Pflichten aus dem'\
-        + ' Reisevertrag zu erfüllen (im besonderen'\
-        + ' consense travel gmbh Solmsstraße / 60486 Frankfurt am Main).'\
+        + ' Reisevertrag zu erfüllen (im besonderen:'\
+        + ' consense travel gmbh / Solmsstraße in 60486 Frankfurt am Main,'\
+        + ' Bund der Pfadfinderinnen und Pfadfinder e.V. (BdP) /'\
+        + ' Kesselhaken 23 34376 Immenhausen,'\
+        + ' Deutsche Pfadfinderschaft Sankt Georg /'\
+        + ' Martinstraße 2 in 41472 Neuss (Holzheim),'\
+        + ' Verband Christlicher Pfadfinderinnen und Pfadfinder / '\
+        + ' VCP BundeszentraleWichernweg 3 in 34121 Kassel'\
+        + ' ).'\
         + ' Hierzu zählen insbesondere Name, Anschrift, Geburtsdatum, Telefonnummern,'\
-        + ' Emailadresse und Details zu den Reisedokumenten. Rechtsgrundlage ist'\
+        + ' Emailadresse, Mitgliedsnummer und Details zu den Reisedokumenten. '\
+        + ' Rechtsgrundlage ist'\
         + ' Art. 6 Abs. 1 lit. b DSGVO.'
         pdf.move_down 1.mm
         text '4.3 Einzelne personenbezogene Daten werden an den Veranstalter des'\
-        + ' Jamboree (TODO Namentlich benennen) übermittelt. Dieser hat'\
+        + ' Jamboree (The Organizing Committee for the 25th World Scout Jamboree - '\
+        + ' 2023 SaeManGeum, 301, 28 Saemunan-ro 5ga-gil, Jongno-gu, Seoul,'\
+        + ' Republic of Korea) übermittelt. Dieser hat'\
         + ' seinen Sitz in der Republik Korea und damit außerhalb des Geltungsbereiches'\
         + ' der DSGVO und des BDSG. Der Veranstalter hat rechtliche und technische'\
         + ' Vorkehrungen getroffen, damit die Datensicherheit und der Datenschutz der'\
@@ -95,11 +106,13 @@ module Wsjrdp2023
         + ' Aufsichtspersonen; die Ärztinnen und Ärzte, soweit im Einzelfall eine medizinische'\
         + ' Betreuung oder Behandlung des Teilnehmers erforderlich wird; die'\
         + ' Systemadministratoren des Deutschen Kontingents. Rechtsgrundlage sind'\
-        + ' Art. 6 Abs. 1 lit. b und d DSGVO. Mit den Empfängern sind'\
-        + ' Auftragsverarbeitungsvereinbarungen abgeschlossen.'
+        + ' Art. 6 Abs. 1 lit. b und d DSGVO. Mit den Empfängern'\
+        + ' ist eine Vertraulichkeitsvereinbarung abgeschlossen.'
         pdf.move_down 1.mm
-        text '4.5 Soweit gesundheitsbezogene Daten einzelner Teilnehmer an den (koreanischen'\
-        + ' Veranstalter namentlich benennen) übertragen werden, geschieht dies auf der'\
+        text '4.5 Soweit gesundheitsbezogene Daten einzelner Teilnehmer an den (The Organizing'\
+        + ' Committee for the 25th World Scout Jamboree - '\
+        + ' 2023 SaeManGeum, 301, 28 Saemunan-ro 5ga-gil, Jongno-gu, Seoul,'\
+        + ' Republic of Korea) übertragen werden, geschieht dies auf der'\
         + ' Grundlage von Art. 6 Abs. 1 lit. b und d DSGVO. '
         pdf.move_down 1.mm
         text '4.6 Bild- und Tonaufnahmen dürfen vom rdp an Dritte weitergegeben werden,'\
@@ -161,7 +174,7 @@ module Wsjrdp2023
         text 'Stand dieser Hinweise: Juli 2021.'
         text ''
       end
-      # rubocop:enable AbcSize,MethodLength
+      # rubocop:enable Metrics/AbcSize,Metrics/MethodLength
     end
 
   end

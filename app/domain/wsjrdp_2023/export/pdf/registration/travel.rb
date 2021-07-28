@@ -26,12 +26,13 @@ module Wsjrdp2023
         text 'Teilnahme- und Reisebedingungen für die Teilnahme im Deutschen Kontingent zum 25. '\
         +'World Scout Jamboree 2023 in Südkorea', size: 14
         pdf.move_down 3.mm
-        text 'v0.2 vom 17.07.2021'
+        text 'v0.3 vom 28.07.2021'
         pdf.move_down 3.mm
         text '1. Veranstalter', size: 12
         pdf.move_down 1.mm
         text 'Ringe deutscher Pfadfinder*innenverbände e.V.(rdp),'
-        text 'vertreten durch Joschka Hench, Sebastian Köngeter, Oliver Mahn, Naima Hartit'
+        text 'vertreten durch Joschka Hench, Sebastian Köngeter, Oliver Mahn, Naima Hartit '\
+        +'und Susanne Rüber'
         text 'Chausseestraße 128/129'
         text '10115 Berlin'
         text 'Telefonnummer Büro: +49 30 288 7895 35'
@@ -101,7 +102,7 @@ module Wsjrdp2023
         pdf.move_down 1.mm
         text '4.1 Teilnehmer*innen müssen zwischen dem 22.07.2005 und dem 31.07.2009 geboren'\
         +'  sein. Erwachsene können nur als Unit- oder Kontingentsleitung, als'\
-        +' Kontingentsteammitglied oder als Mitglieder des International Service'\
+        +' Kontingentsteammitglied oder als Mitglied des International Service'\
         +' Teams (IST) am Jamboree teilnehmen und damit die Durchführung unterstützen.'
         pdf.move_down 1.mm
         text '4.2 Eine aktive Mitgliedschaft in einem der folgenden Pfadfinder*innenverbände'\
@@ -175,7 +176,7 @@ module Wsjrdp2023
         pdf.move_down 3.mm
         text '6. Anmeldung und Vertragsschluss', size: 12
         pdf.move_down 1.mm
-        text '6.1 Die Anmeldung ist bis zum 01.10.2021 über die Homepage'\
+        text '6.1 Die Anmeldung ist bis zum 01.11.2021 über die Homepage'\
         +' anmeldung.worldscoutjamboree.de möglich. Während des Online-Anmeldeprozesses wird'\
         +' eine PDF-Dokument generiert, das die anmeldende Person lesen und akzeptieren muss.'\
         +' Das Anmeldungsdokument muss unterschrieben werden und spätestens bis zum Anmeldeschluss'\
@@ -292,7 +293,9 @@ module Wsjrdp2023
         +' Rückbeförderung des Teilnehmers.'
         pdf.move_down 1.mm
         text '9.4 Der rdp behält sich vor, in folgenden Fällen vom Vertrag zurückzutreten:'
-        text 'a) Absage des Jamborees durch den koreanischen Veranstalter (TODO Veranstalter)'
+        text 'a) Absage des Jamborees durch den koreanischen Veranstalter (The Organizing'\
+        +' Committee for the 25th World Scout Jamboree - 2023 SaeManGeum,'\
+        +' 301, 28 Saemunan-ro 5ga-gil, Jongno-gu, Seoul, Republic of Korea)'
         text 'b) höhere Gewalt; hierzu zählen auch Einreise- bzw. Ausreisebeschränkungen sowie'\
         +' sonstige staatliche Anordnungen im Zusammenhang mit der Ausbreitung des Virus SARS-CoV-2'
         text 'Im Falle des Rücktritts verliert der rdp den Anspruch auf den Teilnahmebeitrag.'\
