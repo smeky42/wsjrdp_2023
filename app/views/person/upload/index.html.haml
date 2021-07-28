@@ -10,60 +10,25 @@
       %br
       = f.labeled(:upload_passport_pdf, t('activerecord.attributes.person.upload_passport_pdf')) do
         = f.file_field(:upload_passport_pdf)
-        - if @person.upload_passport_pdf.present?
-          = action_button(t('activerecord.button.show_passport'),
-                          '/groups/' + params[:group_id] + '/people/'+ params[:id] + '/upload/show_passport',
-                          :envelope,
-                          remote: false,
-                          method: :get,
-                          rel: :tooltip,
-                          title: t('activerecord.button.review_hint'))
+        = render 'person/upload/button_passport'
       %br
       = f.labeled(:upload_registration_pdf, t('activerecord.attributes.person.upload_registration_pdf')) do
         = f.file_field(:upload_registration_pdf)
-        - if @person.upload_registration_pdf.present?
-          = action_button(t('activerecord.button.show_registration'),
-                          '/groups/' + params[:group_id] + '/people/'+ params[:id] + '/upload/show_registration',
-                          :envelope,
-                          remote: false,
-                          method: :get,
-                          rel: :tooltip,
-                          title: t('activerecord.button.review_hint'))
+        = render 'person/upload/button_registration'
       %br
       = f.labeled(:upload_sepa_pdf, t('activerecord.attributes.person.upload_sepa_pdf')) do
         = f.file_field(:upload_sepa_pdf)
-        - if @person.upload_sepa_pdf.present?
-          = action_button(t('activerecord.button.show_sepa'),
-                          '/groups/' + params[:group_id] + '/people/'+ params[:id] + '/upload/show_sepa',
-                          :envelope,
-                          remote: false,
-                          method: :get,
-                          rel: :tooltip,
-                          title: t('activerecord.button.review_hint'))
+        = render 'person/upload/button_sepa'
       -if(@person.role_wish == "Unit Leitung")
         %br
         = f.labeled(:upload_recommondation_pdf, t('activerecord.attributes.person.upload_recommondation_pdf')) do
           = f.file_field(:upload_recommondation_pdf)
-          - if @person.upload_recommondation_pdf.present?
-            = action_button(t('activerecord.button.show_recommondation'),
-                            '/groups/' + params[:group_id] + '/people/'+ params[:id] + '/upload/show_recommondation',
-                            :envelope,
-                            remote: false,
-                            method: :get,
-                            rel: :tooltip,
-                            title: t('activerecord.button.review_hint'))
+          = render 'person/upload/button_recommondation'
       -if(@person.role_wish != "Teilnehmende*r")
         %br
         = f.labeled(:upload_good_conduct_pdf, t('activerecord.attributes.person.upload_good_conduct_pdf')) do
           = f.file_field(:upload_good_conduct_pdf)
-          - if @person.upload_good_conduct_pdf.present?
-            = action_button(t('activerecord.button.show_good_conduct'),
-                            '/groups/' + params[:group_id] + '/people/'+ params[:id] + '/upload/show_good_conduct',
-                            :envelope,
-                            remote: false,
-                            method: :get,
-                            rel: :tooltip,
-                            title: t('activerecord.button.review_hint'))
+          = render 'person/upload/button_good_conduct'
       %br
       = form_buttons(f, submit_label: 'Dokumente hochladen', cancel_url: person_path(@person))
 

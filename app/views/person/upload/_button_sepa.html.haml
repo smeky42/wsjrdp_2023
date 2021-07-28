@@ -1,0 +1,8 @@
+- if @person.upload_sepa_pdf.present?
+  = action_button(t('activerecord.button.show_sepa'),
+                  '/groups/' + params[:group_id] + '/people/'+ params[:id] + '/upload/show_sepa',
+                  :envelope,
+                  remote: false,
+                  method: :get,
+                  rel: :tooltip,
+                  title: t('activerecord.button.review_hint'))

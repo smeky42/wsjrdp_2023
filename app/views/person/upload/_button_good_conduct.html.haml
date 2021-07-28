@@ -1,0 +1,8 @@
+- if @person.upload_good_conduct_pdf.present?
+  = action_button(t('activerecord.button.show_good_conduct'),
+                  '/groups/' + params[:group_id] + '/people/'+ params[:id] + '/upload/show_good_conduct',
+                  :envelope,
+                  remote: false,
+                  method: :get,
+                  rel: :tooltip,
+                  title: t('activerecord.button.review_hint'))
