@@ -1,0 +1,7 @@
+= action_button(t('activerecord.button.cmt_review'),
+                '/groups/' + params[:group_id] + '/people/'+ params[:id] + '/check/cmt_review',
+                :envelope,
+                remote: false,
+                method: :get,
+                rel: :tooltip,
+                title: t('activerecord.button.status_hint'))

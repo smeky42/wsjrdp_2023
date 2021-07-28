@@ -1,8 +1,26 @@
 #main.row-fluid
   - if can?(:edit, @person)
-    %br 
     - if @manage
       -# = f.error_messages
+      %h4
+        = t('activerecord.attributes.person.check_document_info')
+      = standard_form(@person, {url: check_group_person_path,  method: :put}) do |f|
+        = render 'person/upload/button_passport', f: f  
+        = render 'person/upload/button_registration', f: f  
+        = render 'person/upload/button_sepa', f: f
+        = render 'person/upload/button_recommondation', f: f 
+        = render 'person/upload/button_good_conduct', f: f
+      %h4
+        = t('activerecord.attributes.person.check_next_status_info')
+      = standard_form(@person, {url: check_group_person_path,  method: :put}) do |f|
+        - if ['registriert','gedruckt'].include?(@person.status)
+          = t('activerecord.attributes.person.check_next_state_participant_info')
+        - if 'Upload vollständig' == @person.status
+          = render 'person/check/button_cmt_review', f: f
+        - if 'in Überprüfung durch KT' == @person.status
+          = render 'person/check/button_cmt_documents', f: f   
+        - if 'Dokumente vollständig überprüft' == @person.status
+          = t('activerecord.attributes.person.check_next_state_unit_info')
       %h4
         = t('activerecord.attributes.person.check_contact_info')
       = standard_form(@person, {url: check_group_person_path,  method: :put}) do |f|
