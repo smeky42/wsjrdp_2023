@@ -6,13 +6,12 @@
 = field_set_tag do
   -# = f.labeled_input_field :status
   -if (@person.status == 'registriert')
-    = f.labeled_collection_select(:role_wish, Settings.person.roles, :to_s, :to_s, {}, class: 'span2') 
     = f.labeled_input_fields :first_name, :last_name, :birthday
     = f.labeled(:gender) do
       - (Person::GENDERS + ['']).each do |key|
         = f.inline_radio_button(:gender, key, entry.gender_label(key))
   -else 
-    = render_attrs(entry, :role_wish, :first_name, :last_name, :birthday, :gender)
+    = render_attrs(entry, :first_name, :last_name, :birthday, :gender)
 
   = f.labeled_input_field :nickname
   = render 'contactable/address_fields', f: f
