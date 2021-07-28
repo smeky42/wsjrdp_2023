@@ -145,6 +145,7 @@ de:
         upload_info_ready: Vielen Dank für den Upload, wir überprüfen die hochgeladenen PDFs und geben dir dann Bescheid.
         upload_passport_pdf: Reisepass
         upload_registration_pdf: Anmeldung
+        generated_registration_pdf: Generierte Anmeldung
         upload_sepa_pdf: SEPA
         upload_recommondation_pdf: Empfehlung
         upload_good_conduct_pdf: Nachweis Führungszeugnis
@@ -200,6 +201,7 @@ de:
       print_submit: Verbindlich drucken
       print_submit_hint: Sperrt bestimmte Felder für weitere bearbeitung
       show_registration: Anmeldung einsehen
+      show_registration_generated: Generierte Anmeldung herunterladen
       show_passport: Ausweis einsehen
       show_recommondation: Empfehlung einsehen
       show_sepa: Sepa einsehen

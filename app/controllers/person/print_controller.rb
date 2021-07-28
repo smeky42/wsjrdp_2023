@@ -43,7 +43,7 @@ class Person::PrintController < ApplicationController
       pdf.render_file full_name
 
       @person.status = 'gedruckt'
-      @person.upload_registration_pdf = full_name
+      @person.generated_registration_pdf = full_name
       @person.save
 
       send_data File.read(full_name), type: :pdf, disposition: 'attachment', filename: name
