@@ -1,6 +1,6 @@
 #main.row-fluid
   - if can?(:edit, @person)
-    - if (@person.upload_registration_pdf.present? && @person.upload_passport_pdf.present? && @person.upload_sepa_pdf.present?)
+    - if (@person.status == 'Upload vollständig')
       = t('activerecord.attributes.person.upload_info_ready')
     - else 
       = t('activerecord.attributes.person.upload_info')
@@ -25,6 +25,7 @@
           = f.file_field(:upload_recommondation_pdf)
           = render 'person/upload/button_recommondation'
         %br
+      -if(@person.role_wish == "Unit Leitung" || @person.role_wish == "Kontingentsteam")
         = f.labeled(:upload_data_processing_pdf, t('activerecord.attributes.person.upload_data_processing_pdf')) do
           = f.file_field(:upload_data_processing_pdf)
           = render 'person/upload/button_data_processing'
