@@ -1,35 +1,2438 @@
 development:
+  BMPPD:
+    Keine Landesebene:
+      Keine Bezirksebene:
+        Bergisch Gladbach:
+        Dortmund:
+        Duisburg/Essen:
+        Hamburg:
+        Hanau:
+        Mainz:
+        Monheim am Rhein:
+        Rüsselsheim:
+        Wiesbaden:
+  BdP:
+    Baden-Württemberg:
+      Keine Bezirksebene:
+        Adler:
+        Armer Konrad:
+        Beowulf:
+        Bergwolf:
+        Bundschuh:
+        Burg Karlsruhe:
+        Bärengrund:
+        Diadochen:
+        Draconis:
+        Drágan:
+        Einhorn:
+        Feuerreiter:
+        Filderfüchse:
+        Grenzland:
+        Mammut:
+        Nibelgau:
+        Schwarze Wölfe:
+        Schwarzer Panter:
+        Silberreiher:
+        St. Jörg:
+        Sternfahrer:
+        Stettenfels:
+        Sueben:
+        Taquena:
+        Ulrich v. Hutten:
+        Weiße Rotte:
+        Yanktonai:
+        der Elche:
+        der Raben:
+    Bayern:
+      Keine Bezirksebene:
+        Adler:
+        Albatros:
+        Alemannen:
+        Artus:
+        Asgard:
+        Barrakuda:
+        Berglöwen:
+        Burgund:
+        Bussard:
+        Bären:
+        Castellum ad Luofi:
+        Cebolon:
+        Colmberg:
+        Cosuaneten:
+        Don Bosco:
+        Eisvogel:
+        Eulen:
+        Excalibur:
+        Faber:
+        Fafnir:
+        Goldene Horde:
+        Goten:
+        Graf Gebhard:
+        Jakob Fugger:
+        Jean Monnet:
+        Kelten:
+        Kim:
+        Leones Oeni:
+        Löwe von Meissen:
+        Marco Polo:
+        Merlin:
+        Nacanapah:
+        Outpost:
+        Pegasus:
+        Phönix:
+        Robin Hood:
+        Schwarzer Haufen:
+        Schwarzer Mustang:
+        Seeadler Bamberg:
+        Seeadler Kirchheim:
+        Seeschwalben:
+        Seewölfe Lindau:
+        Shir Khan:
+        Sigena:
+        Sir Francis Drake:
+        Skythen:
+        Stamm 42:
+        Staufen:
+        Steinadler:
+        Steinadler Erlangen:
+        Thor Heyerdahl:
+        Truchseß:
+        Waräger:
+        Weiße Wölfe:
+        Wittelsbach:
+    Berlin/Brandenburg:
+      Keine Bezirksebene:
+        Alanen:
+        Askanier:
+        Burgund:
+        Grabowski:
+        Heveller:
+        Kelten:
+        Kimbern:
+        Normannen:
+        Plejaden:
+        Stamm der Hunnen:
+        Teutonen:
+        Waringar:
+    Bremen:
+      Keine Bezirksebene:
+        Goten:
+        Hanseaten:
+        Lesmona:
+        Phönix:
+        Rainbow:
+        Schevemoor:
+        Wilhelm Olbers:
+        de Poppenspeeler:
+    Hessen:
+      Keine Bezirksebene:
+        Arnsburg:
+        Artus:
+        Berglöwe:
+        Burgheldon:
+        Chatten:
+        Christophorus:
+        Deutschritter:
+        Eisvogel:
+        Excalibur:
+        Feuerreiter:
+        Fischreiher:
+        Graue Adler:
+        Graue Biber:
+        Graue Bären:
+        Graue Drachen:
+        Graue Wölfe:
+        Greif:
+        Greutungen:
+        Hagen von Tronje:
+        Hattstein:
+        Konradstein:
+        Luchs:
+        Löwenherz:
+        Merlin:
+        Pioniere Darmstadt:
+        Plejaden:
+        Roter Milan:
+        Schinderhannes:
+        Seeadler:
+        Steinadler:
+        Turtle:
+        Wikinger:
+        Wildwasser:
+        Wilhelm Busch:
+        Wisent:
+        Wüstenfüchse:
+        Zugvögel:
+        der Vaganten:
+    Niedersachsen:
+      Keine Bezirksebene:
+        Adler:
+        Aldenburg:
+        Altai Maral:
+        Amelungen:
+        Askanier:
+        Ata Ulf:
+        Birkhahn:
+        Eiche:
+        Eisvogel:
+        Germanen:
+        Graf Walo:
+        Großer Jäger:
+        Hasko:
+        Helmburgis:
+        Horse:
+        Ikarus:
+        Leviatan:
+        Likedeeler:
+        Lunen:
+        Manninga:
+        Nujakin:
+        Oestringen:
+        Ordensritter:
+        Parzival:
+        Rotmilan:
+        Sankt Hubertus:
+        Sturmvogel:
+        Vaganten:
+        Voortrekker:
+        Weiße Rose:
+        Wikinger:
+        Wildgänse:
+    Nordrhein-Westfalen:
+      Keine Bezirksebene:
+        Bergluchse (Bergneustadt):
+        Camelot:
+        Eisvogel Heljens:
+        Erdenburg:
+        Folke Bernadotte:
+        Gegenwind:
+        Hubertus:
+        Janusz Korczak:
+        Jupiter:
+        Korsaren:
+        Kürten:
+        Langenberg:
+        Martin Luther King:
+        Molinero:
+        Nebelkrähen:
+        Nordlicht:
+        Oberon:
+        Orion:
+        Phönix:
+        Ritter vom Loe zum Loe:
+        Roter Löwe:
+        Saint Josef:
+        Sirius:
+        Skoten:
+        Vagabunden:
+        Weiße Möwen:
+        Weiße Rose:
+        Wichmarinchusen:
+        Wildkatzen:
+        Winrich von Kniprode:
+        totila:
+    Rheinland-Pfalz/Saar:
+      Keine Bezirksebene:
+        Albert Schweitzer:
+        Bundschuh:
+        Ciconia:
+        Drache:
+        Falke:
+        Franz von Sickingen:
+        Goten:
+        Graf von Sponheim:
+        Idar-Oberstein:
+        Kurpfalz:
+        Luchs:
+        Pilgrim Falkoni:
+        Raugrafen:
+        Robin Hood:
+        Schwarzer Milan:
+        Sturmvogel:
+        Tscherkessen:
+        Vogt von Hunolstein:
+        der Piraten:
+        von Helfenstein:
+    Sachsen:
+      Keine Bezirksebene:
+        Ancalagon:
+        Feuerland:
+        Goldener Reiter:
+        LEO:
+        Wildkatzen:
+        der Jötnar:
+    Sachsen-Anhalt:
+      Keine Bezirksebene:
+        Brizanen:
+        Peißnitz:
+    Schleswig-Holstein/Hamburg:
+      Keine Bezirksebene:
+        Albatros:
+        Carsten Niebuhr:
+        Domzoo:
+        Duburg:
+        Fealoce:
+        Geisterburg:
+        Inka:
+        Janus:
+        Kolibri:
+        Möwe:
+        Norwing:
+        Nydam:
+        Radwersdorp:
+        Reinholdsburg:
+        Sachsenwald:
+        St. Jürgen:
+        Störtebeker:
+        Torona:
+        Uhlenhorst:
+        Waldreiter:
+      Thüringen:
+        Arnstadt:
+        Bussarde vom Burgberg:
+        Columbus:
+        Falken vom Greifenstein:
+  DPSG:
+    Aachen:
+      Bezirk Aachen-Land:
+        Alsdorf-Mariadorf, St. Marien:
+        Dürwiss, St. Bonifatius:
+        Eschweiler-Roehe, Deutschritter:
+        Eschweiler-Röthgen, Hohensteiner:
+        Herzogenrath, Kämpchen-Bank:
+        Kohlscheid I:
+        Stolberg:
+        Stolberg-Breinig/Dorff:
+        Stolberg-Schevenh., Wehebachthaler:
+        Wuerselen, St. Pius X:
+        Würselen, Bardenberg:
+      Bezirk Aachen-Stadt:
+        Aachen, Forster-Linde:
+        Aachen-Brand, Kornelimünster:
+        Aachen-Eilendorf:
+        Aachen-Laurensberg, Funkenflug:
+        Grenzlandfalken:
+        Stamm Heilig Kreuz:
+        Stamm Jakobiner:
+      Bezirk Düren:
+        Düren, Wildgänse St. Anna:
+        Düren-Arnoldsweiler, St. Arnold:
+        Jülich, Franz von Sales:
+        Langerwehe:
+        Linnich:
+        Merzenich, St. Laurentius:
+        Siersdorf, Kreuzritter:
+      Bezirk Eifel:
+        Blankenheim-Bl.dorf, St. Peter und Paul, Burgfalk.:
+        Blankenheim-Rohr:
+        Hellenthal:
+        Hürtgenwald-Vossenack:
+        Kall / Eifel:
+        Simmerath-Lammersd., Maximilian Kolbe:
+      Bezirk Grenzland:
+        Dülken:
+        Grefrath, Dorenburg, St. Laurentius:
+        Grefrath-Oedt, St. Vitus:
+        Hinsbeck, St. Peter:
+        Kaldenkirchen, St. Clemens:
+        Kempen:
+        Kempen, St. Hubert:
+        Nettetal-Lobberich, St. Sebastian:
+        Schiefbahn, St. Hubertus:
+        St. Lambertus Breyell:
+        Tönisvorst, St. Tönis:
+        Viersen, St. Remigius:
+        Willich-Wekeln, St. Katharina:
+      Bezirk Heinsberg:
+        Erkelenz-Mitte, St. Lambertus:
+        Gangelt, St. Nikolaus:
+        Heinsberg-Schafhausen:
+        Hückelhoven-Doveren, Kreuzherren:
+        Wegberg, Beeck:
+        Wegberg, Titus Brandsma:
+        Wegberg-Dalheim:
+      Bezirk Mönchengladbach:
+        Jüchen-Bedburdyck, St. Martinus:
+        Mönchengladbach, Bettrath-Neuwerk:
+        Mönchengladbach, Giesenkirchen:
+        Mönchengladbach, Kreuzfahrer:
+        Mönchengladbach, Rabenhorst:
+        Mönchengladbach, Scheuburg:
+        Mönchengladbach, Windberg:
+        Mönchengladbach-Rheydt, Cityscouts:
+      Krefeld-Hüls, Raubritter:
+        Krefeld, Kreuz-Ritter:
+        Krefeld-Oppum, Zu den Hl. Schutzengeln, Die Brücke:
+      Mönchengladbach-Holt, Martin-Luther-King:
+        Hochneukirch:
+        Mönchengladbach-Eicken, Trotzenburg:
+        Mönchengladbach-Rheydt, Fabula:
+        Stamm Otzenrath:
+        Stamm Salier Meerkamp eV:
+      Rheinbezirk:
+        Krefeld, Inrath:
+        Krefeld, Linn:
+        Krefeld, St. Norbertus:
+        Krefeld-Cracau, St. Elisabeth:
+        Krefeld-Forstwald:
+        Krefeld-Lindenthal, Michael:
+        Krefeld-Uerdingen/Ostgoten:
+        Meerbusch-Lank-Latum, Lank Rheinfranken:
+      Stamm Westwind:
+        Aachen-Innenstadt, St. Adalbert:
+        Aachen-Oberforst., Vennfüssler:
+    Augsburg:
+      Augsburg, St. Ulrich & Afra:
+        Augsburg-Haunst., Weiße Rose:
+        Friedberg, Konradin:
+        Kissing, Guy de Larigaudie:
+        Neusäß:
+      Bezirk Allgäu:
+        Buxheim, Don Bosco:
+        Kaufbeuren, St. Martin:
+        Kempten, Sankt Anton:
+        Lindenberg, Tilia Monte:
+        Marktoberdorf, Cassiopeia:
+        Ottobeuren, Gaugraf Silach:
+      Bezirk Augsburg:
+        Aichach, Otto von Wittelsbach:
+        Augsburg, Livingstone:
+        Augsburg, St. Konrad:
+        Augsburg-Hochzoll, St. Exupéry:
+        Augsburg-Universitätsviertel, Salomon-Idler:
+      Bezirk Donau-Ries:
+        Dillingen, St. Ulrich:
+        Donauwörth, Mangold v. Wörth:
+        Gundelfingen, Kaspar v. Westernach:
+        Neuburg a.d.Donau:
+        Nördlingen, Nordilo:
+        Wallerstein, Wikinger:
+      Bezirk Iller:
+        Burgau, Tilly:
+        Holzheim, Las Casas:
+        Ichenhausen:
+        Krumbach, St. Michael:
+        Neu-Ulm, Pater Delp:
+        Oberelchingen:
+        Obergessertshausen, St. Peter:
+        Vöhringen, Don Bosco:
+        Weißenhorn, St. Franziskus:
+      Bezirk Rochus Spiecker:
+        Kaufering, Roncalli:
+        Landsberg, M. Himmelfahrt:
+    Bamberg:
+      Bezirk 2:
+        Bamberg, Bischof Otto:
+        Bamberg, St. Josef:
+        Hirschaid, St. Vitus:
+        Höchstadt-Hohestete:
+        Neustadt a.d.Aisch, St. Johannis:
+        Uffenheim, Herz Jesu:
+      Bezirk Nürnberg/Fürth:
+        Fürth - Mannhof, Sophie Magdalena Scholl:
+        Nürnberg, Maximilian Kolbe:
+        Nürnberg, St.Josef - Allerheiligen:
+        Nürnberg-Laufamholz, St. Otto:
+        Nürnberg-Sebald, zu Unserer Lieben Frau:
+        St. Ludwig Nürnberg:
+      Bezirk Obermain:
+        Altenkunstadt, St. Kilian:
+        Bad Staffelstein, Andechs-Rothenau:
+        Bayreuth, Hl. Kreuz:
+        Burgkunstadt, St. Nepomuk:
+        Kronach-Friesen, St. Georg:
+        Lichtenfels, Andechs-Meran:
+      Bezirk Schwabachgrund:
+        Aurachtal - Herzogenaurach:
+        Bubenreuth:
+        Erlangen, Hl. Kreuz:
+        Erlangen, St. Bonifaz:
+        Erlangen-Bruck, St. Marien:
+        Erlangen-Sieglitzhof, St. Theresia:
+        Stamm Tennenlohe:
+        Uttenreuth, St. Kunigunde:
+    Berlin:
+      Keine Bezirksebene:
+        Berlin, St. Bonifatius:
+        Berlin, St. Lambertus:
+        Berlin-Charlottenburg, Heilig Geist:
+        Berlin-Charlottenburg, St. Ludwig, Phoenix:
+        Berlin-Lankwitz, Don Bosco:
+        Berlin-Moabit, St. Paulus:
+        Berlin-Neukölln (Gropiusstadt), Dominicus:
+        Berlin-Spandau, Anselm v. Havelberg:
+        Berlin-Spandau, St. Markus:
+        Berlin-Zehlendorf, St. Otto:
+        Greifswald, Boddenkieker:
+        Michendorf, Impeesa:
+        Potsdam, Sanssouci:
+    Eichstätt:
+      Keine Bezirksebene:
+        Eichstätt, Dom:
+        Gunzenhausen:
+        Ingolstadt, Münsterritter:
+        Ingolstadt, St. Pius:
+        Neumarkt, Pfalzgraf Johann:
+        Petersaurach:
+        Pleinfeld, St. Michael:
+        Roßtal, Horsadal:
+        Schwanstetten-Rednitzhembach:
+        Spalt, St. Emmeram:
+        Treuchtlingen:
+        Weißenburg, Deutschritter:
+        Wendelstein, St. Nikolaus:
+    Erfurt:
+      Keine Bezirksebene:
+        Erfurt, St. Elisabeth:
+        Heiligenstadt, St. Aegidien:
+        Jena, St. Michael:
+        Niederorschel, St. Marien:
+        Uder, St. Jakobus:
+        Weimar, Marcel Callo:
+    Essen:
+      Bezirk Bochum & Wattenscheid:
+        Bochum, Heilig Kreuz:
+        Bochum, Maximilian Kolbe:
+        Bochum, Meinolphus:
+        Bochum-Altenbochum, Liebfrauen:
+        Bochum-Dahlhausen, St. Engelbert:
+        Bochum-Eppendorf, St. Theresia:
+        Bochum-Gerthe, St. Elisabeth:
+        Bochum-Langendreer, Canchanabury:
+        St. Johannes Bochum-Wiemelhausen:
+      Bezirk Borbeck Frohnhausen:
+        Essen-Beding., St. Franziskus:
+        Essen-Borbeck, Anne Frank:
+        Essen-Borbeck, Don Bosco / St. Dionysius:
+        Essen-Frintrop, St. Josef:
+        Essen-Frohnhausen, Dom Helder Camara:
+        Essen-Frohnhausen, St. Augustinus:
+        Essen-Schönebeck, St. Ant. Abbas:
+      Bezirk Bottrop/Gladbeck:
+        Bottrop, Herz Jesu, St. Barbara:
+        Bottrop, St. Peter:
+        Bottrop-Eigen, St. Pius / Philippo Neri:
+        Gladbeck-Mitte, St. Lamberti:
+        Gladbeck-Zweckel, Herz Jesu:
+      Bezirk Duisburg:
+        Duisburg-Buchh., Jud. Th./K.Martin:
+        Duisburg-Großenbaum, St. Franziskus:
+        Duisburg-Huckin.,Marc.Callo/St. Peter und Paul:
+        Duisburg-Serm,  Herz Jesu:
+      Bezirk Ennepe-Ruhr:
+        Ennepetal, Herz Jesu:
+        Gevelsberg, St. Engelbert:
+        Hattingen-Bredenscheid, St. Mariä Empfängnis:
+        Hattingen-Mitte, Peter und Paul:
+        Schwelm, St. Marien:
+        Sprockhövel, St. Januarius:
+        Sprockhövel-Hasslinghausen, Sankt Josef:
+        Wetter-Volmst., Augustinus und Monika:
+        Witten-Buchholz, St. Antonius:
+      Bezirk Essen Mitte-Nord-Ost:
+        Essen-Huttrop und Kray/Leithe, St. Bonifatius & Barbarossa:
+        Essen-Schonnebeck, St. Elisabeth:
+        Essen-Steele-Freisenbruch, Sankt Altfrid:
+        Essen-Stoppenberg, St. Nikolaus:
+      Bezirk Essen-Süd:
+        Essen-Burgaltendorf, Vereinigte Ruhrhalbinsel:
+        Essen-Haarzopf, Tommes Rusticus:
+        Essen-Heisingen, St. Georg:
+        Essen-Horst, St. Joseph, Philipp Neri:
+        Essen-Marg., Hl. Familie:
+        Essen-Relling., St. Lambertus:
+        Essen-Stadtwald, St. Theresia, Sachsen:
+        Essen-Überr., Ch. de Foucauld:
+      Bezirk Gelsenkirchen:
+        Gelsenkirchen, Herz Jesu, Angelo Giuseppe Roncalli:
+        Gelsenkirchen, Rochus Spiecker:
+        Gelsenkirchen, St. Urbanus/ O. A. Romero:
+        Gelsenkirchen-Buer, Don Bosco:
+        Gelsenkirchen-Feldmark, Kreuzritter:
+        Gelsenkirchen-Heßler, Elis. v. Thüringen:
+        Gelsenkirchen-Horst, Albino Luciani:
+        Gelsenkirchen-Rotth-Düppel, St. Barbara:
+        Gelsenkirchen-Schalke,Graf v.Galen:
+        Gelsenkirchen-Sutum, St. Clemens Maria Hofbauer:
+        Gelsenkirchen-Ückendorf, St. Josef, Weiße Rose:
+        Gelsenkirchen-Ückendorf, Thomas Morus:
+        Stamm Exodus:
+      Bezirk Mülheim / Ruhr:
+        Mülheim a. d. R., St. Michael:
+        Mülheim, St. Barbara:
+        Mülheim, St. M. Rosenkranz:
+        Mülheim/Ruhr, St. Joseph:
+      Bezirk Oberhausen:
+        Oberhausen, Heinrich Seuse:
+        Oberhausen, St. Antonius:
+        Oberhausen, St. Katharina:
+        Oberhausen, St. Theresia:
+        Oberhausen, Sterkrade-Mitte, St. Clemens:
+        Oberhausen, U.L.F.:
+      Bezirk Sauerland:
+        Breckerfeld, St. Jakobus:
+        Dahl/Rummenohl, Don Bosco:
+        Halver-Schalksmühle, Don Bosco:
+        Lüdenscheid, St. Medardus:
+        Neuenrade, Steve Biko:
+        Plettenberg, Alavanyo:
+        Werdohl, St. Michael:
+      Duisburg-Buchholz, Hl. Geist:
+        Duisburg, Abtei Hamborn:
+        Duisburg-Buchholz, St. Nikolaus:
+        Duisburg-Fahrn, St. Georg:
+        Duisburg-Hamborn, St. Peter Marxloh:
+        Duisburg-Rahm, St. Hubertus:
+      Gladbeck-Rentfort, St. Josef:
+        Bottrop, Impeesa:
+        Gladbeck-Ellinghorst, Elisabeth:
+      Hattingen-Niederbonsfeld, Isenburg:
+        DPSG Janusz Korczak Wetter-Wengern:
+        Hattingen - Winz-Baak, Heilig Geist:
+        Hattingen-Niederwenigern, Die Wennischen:
+      St. Johannes der Täufer Wattenscheid-Leithe:
+        Bochum-Harpen, A. Frank & M.-L. King:
+        Bochum-Hiltrop, Geschwister Scholl:
+        Bochum-Querenb, St. Augustinus:
+        Bochum-Weitmar, Kardinal von Galen:
+        Bochum-Weitmar, Vierzehnheiligen:
+    Freiburg:
+      Bezirk Baar:
+        Bad Dürrheim, Johanniter:
+        Bräunlingen, B. v. Baden:
+        Hattingen/Baden., Maximilian Kolbe:
+        Villingen, Ulrich v. Augs.:
+        Villingen-Schwenningen; Der Wolf, der nie schläft:
+      Bezirk Bodensee:
+        Mühlhausen-Ehingen, Peter und Paul:
+        Radolfzell, Impeesa:
+        Singen, St. Pankratius:
+        Steißlingen, St. Remigius:
+        Überlingen, Paul VI.:
+      Bezirk Breisgau:
+        Bad Krozingen, David:
+        Breisach, Graf Bernadotte:
+        Freiburg, St. Albert:
+        Freiburg, Tilly:
+        Freiburg-Littenweiler, Berthold II. von Zähringen:
+        Freiburg-Mitte, Guy de Larigaudie:
+        Freiburg-Opfingen, St. Nikolaus:
+        Freiburg-St. Georgen, Betty Clay:
+        Freiburg-Vauban, Kassiopeia:
+        Freiburg-Weing.,  Albino Luciani:
+        Gundelfingen, Rochus Spiecker:
+        Kirchzarten, St. Exupery:
+        Staufen, St. Martin:
+      Bezirk Bruchsal:
+        Bad Schönborn-Langenbrücken:
+        Bretten, Askola:
+        Bruchsal, St. Christophorus:
+        DPSG Stamm Rheinsheim:
+        Oberhausen, Hohe Flamme:
+        Stutensee, Pater Kolbe:
+        Waghäusel-Wiesental, St. Jodokus:
+      Bezirk Emmendingen:
+        Emmendingen, Markgraf Bernhard von Baden:
+        Emmendingen, Petter Moen:
+        Endingen, St. Franziskus:
+        Glottertal:
+        Gutach, St. Michael:
+        Waldkirch, Konrad von Schwarzenberg:
+      Bezirk Hohenzollern:
+        Bingen, Martin-Luther-King:
+        Fischingen, Dom H. Camara:
+        Haigerloch, Leonardo da Vinci:
+        Hechingen, St. Martin:
+        Melchingen:
+        Ostrachtal, Rainbow:
+        Pfullendorf, St. Jakobus:
+        Rosenfeld-H-Zimmern, Adenauer:
+        Salmendingen:
+        Sigmaringen, St. Fidelis:
+      Bezirk Karlsruhe:
+        Baden-Baden, Hohenbaden:
+        Gaggenau-Bad Rotenfels, Laurentius:
+        Karlsruhe, von Galen:
+        Karlsruhe-Daxlanden, Guy de Larigaudie:
+        Karlsruhe-Neureut, Antoine de Saint Exupery:
+        Kuppenheim, St. Sebastian:
+      Bezirk Kurpfalz:
+        Angelbachtal, Mahatma Gandhi:
+        Bammental, Karl Leisner:
+        Heidelberg, St. Bonifatius:
+        Heidelberg-Kirchheim, St. Peter:
+        Heidelberg-Wiebl., St. Bartholom.:
+        Ketsch, Don Bosco:
+        Neckarsteinach, St. Stephan:
+        Nussloch, St. Laurentius:
+        Plankstadt, St. Nikolaus:
+        Sandhausen, Dreifaltigkeit:
+        Sinsheim-Rohrbach/Reihen, Dom Helder Camara:
+        Stamm Sr. Felicitas Heidelberg-Ziegelhausen:
+        Waibstadt:
+      Bezirk Mannheim-Bergstraße:
+        Hemsbach, Johanniter:
+        Hirschberg-Leutershausen, St. Johannes:
+        Laudenbach, Cherusker:
+        Mannheim, St. Bernhard:
+        Mannheim-Friedrichsfeld, St. Bonifatius:
+        Mannheim-Neckarau, Thomas Morus:
+        Mannheim-Waldhof, St. Lioba:
+        Weinheim-Sulzbach, Guy de Larigaudie:
+      Bezirk Odenwald-Tauber:
+        Adelsheim, Stephanus:
+        Don Bosco, Neckarelz-Diedesheim:
+        Haßmersheim, St. Benedikt:
+        Mosbach, Bernhard von Baden:
+        Mosbach-Waldstadt, Maximilian Kolbe:
+      Bezirk Ortenau-Kinzigtal:
+        Bühl, St. Peter und Paul:
+        Hausach, St. Mauritius:
+        Offenburg, Albert Schweitzer:
+        Offenburg, Konradin:
+        Rheinmünster:
+        Sasbachwalden, Lupus:
+        Urloffen, St. Martin:
+        Willstätt, Merlin:
+      Bezirk Pforzheim:
+        Pforzheim, Arnulf:
+        Pforzheim, St. Franziskus:
+        Remchingen, Eisingen:
+      Bezirk Wiesental-Hochrhein:
+        Dogern, St. Clemens:
+        Grenzach-Wyhlen, St. Michael:
+        Kandern, Sankt Katharina:
+        Lörrach-Brombach, St. Josef:
+        Lörrach-Stetten, St. Fridolin:
+        Wehr, St. Bernhard:
+        Weil am Rhein, St. Sebastian:
+      Daisendorf, St. Martin:
+        Hilzingen, Alfred Delp:
+        Höri, Rainbow:
+        Konstanz, Bruder Klaus:
+        Markdorf, St. Nikolaus:
+    Fulda:
+      Keine Bezirksebene:
+        Bachrain, Maria Hilf:
+        Bad Orb, St. Martin:
+        Bad Soden-Salmünster-Ahl, Hl. Kreuz:
+        Biebergemünd-Wirtheim, St. Jakobus:
+        Fulda-Johannesberg, Mirjam:
+        Fulda-Neuenberg, St. Andreas:
+        Grossauheim, St. Paul:
+        Hanau, Speerflug:
+        Hünfeld, St. Jakobus:
+        Kassel-Vellmar, Folke Bernadotte:
+        Maintal, Südwind:
+        Marburg, St. Michael:
+        Melsungen, Mariä Himmelfahrt:
+        Nidderau-Windecken, Wartbaum:
+        Niederdorfelden:
+        Rodenbach, Barbarossa:
+        Stamm Shalom Bruchköbel:
+        Witzenhausen, Witta:
+        Wolfhagen, Heimerad, St. Maria:
+        Wächtersbach, St. Bonifatius:
+    Hamburg:
+      Keine Bezirksebene:
+        Ahrensburg, Camilo Torres:
+        Bargteheide, Nepomuk:
+        Halstenbek, Nelson Mandela:
+        Hamburg-Altona, Große Freiheit:
+        Hamburg-Blankenese, Jacques Marquette:
+        Hamburg-Eidelstedt, Santa Lucia:
+        Hamburg-Farmsen, St. Ansgar:
+        Hamburg-Hamm, Charles de Foucauld:
+        Hamburg-Harburg, Kardinal Graf  v. Galen:
+        Hamburg-Neugraben, Störtebeker:
+        Hamburg-Poppenbüttel, Don Bosco:
+        Hamburg-Rahlstedt, Mutter Teresa:
+        Hamburg-Volksdorf, St. Martin:
+        Itzehoe, Geschwister Scholl:
+        Lübeck, Johannes Prassek:
+        Norderstedt, St. Hedwig:
+        Quickborn, Digna Ochoa:
+        Rendsburg, Stern des Nordens:
+        Uetersen, Heilig Geist, Marcel Callo:
+    Hildesheim:
+      Bezirk Elm:
+        Celle, St. Ludwig:
+        Helmstedt, St. Ludgeri:
+        Wendeburg-Vechelde, Pastor Theo Derks:
+      Bezirk Hannover:
+        Hameln, St. Franziskus:
+        Neustadt, St. Peter & Paul:
+        Wedemark, Arche Noah:
+        Wunstorf, St. Bonifatius:
+      Bezirk Harz:
+        Duderstadt, St. Cyriakus:
+        Gieboldehausen, St. Laurentius:
+        Göttingen:
+        Herzberg, Sankt Josef:
+        Northeim, St. Marien:
+        Osterode am Harz, St. Barbara:
+        Seesen-Harz, Maria Königin:
+      Bezirk Ludwig:
+        Delligsen, Franz von Assisi:
+        Diekholzen, St. Jakobus:
+        Elze, St. Petrus:
+        Emmerke, St. Martinus:
+        Harsum, St. Caecilia:
+        Hildesheim-Drispenst., Impeesa:
+        Hohenhameln:
+        Peine, Giovanni Don Bosco:
+      Bezirk Nord:
+        Seevetal-Hittfeld, Thomas Morus:
+        Zeven, Christ König:
+      Braunschweig, Martin Luther King:
+        Braunschweig, St. Martin:
+        Gifhorn, Fred Joseph:
+        Veltheim, Hl. Kreuz:
+      Bremen-Walle, St. Marien:
+        Bremen, Nordlicht:
+        Buchholz, St. Petrus, Hallimasch:
+        Lilienthal b. Bremen, Franziskus:
+        St. Paulus, Oyten:
+        Stade, Klara und Franz von Assisi:
+      Hannover-Kirchrode, Hl. Engel:
+        Hannover-Mühlenberg, St. Maximilian Kolbe:
+        Lehrte, Maximilian Kolbe:
+    Köln:
+      Bezirk Bergisch Land:
+        Remscheid-Lennep:
+        Solingen, Gravenrode:
+        Solingen-Löhdorf, Tenkterer:
+        Solingen-Mangenberg, Gandalf:
+        Solingen-Ohligs, von Berg:
+        Solingen-Wald, Silva:
+        Solingen-Weeg,Sugambrer:
+        Wuppertal, Gallier:
+      Bezirk Bonn:
+        Bonn-Bad Godesb., Graf Galen:
+        Bonn-Beuel, Sugambrer:
+        Bonn-Hardtberg, St.Rochus:
+        Bonn-Stadtmitte, Phönix:
+      Bezirk Düsseldorf:
+        Düsseldorf, Lörick:
+        Düsseldorf-Bilk, Hohenstaufen:
+        Düsseldorf-Gerresheim, Gerrich Margar:
+        Düsseldorf-Vennhausen:
+        Hochdahl, Franz v. Assisi:
+        Langenfeld, Castanea:
+        Langenfeld-Richr., St. Martin:
+      Bezirk Erft:
+        Brühl, Kurfürst:
+        Horrem, von Merode:
+        Königsdorf, Hildebold:
+        Neubottenbroich, Glückauf:
+        Pulheim, Sankt Barbara:
+        Pulheim-Brauweiler, Bernhard von Clairvaux:
+        Reuschenberg Elsdorf:
+      Bezirk Köln Linksrheinisch:
+        Köln-Blumenberg, St. Katharina:
+        Köln-Kriel, Helder Camara:
+        Köln-Sülz, Edith Stein:
+        Köln-Worringen, Gilwell:
+        Rochus Spiecker Brühl - Schwadorf:
+        Stamm St. Walburga, Bornheim-Walberberg:
+      Bezirk Niederberg:
+        Heiligenhaus:
+        Lintorf:
+        Mettmann:
+        Ratingen - West, Kizito:
+        Velbert, Johannes Bosco:
+        Velbert-Neviges, Hardenberg:
+        Wülfrath, Franken:
+      Bezirk Rhein - Erft:
+        Dormagen-Delrath, Greifen:
+        Grevenbroich, St. Josef:
+        Grevenbroich-Gustorf, Deutschritter:
+        Neuss, Malteser:
+        Neuss-Weckhoven, Alfred Delp:
+      Bezirk Rhein-Berg:
+        Bensberg, Ommerborn:
+        Bergisch Gladbach-Refr., Widukind:
+        Köln-Brück, Ostgoten:
+        Köln-Ensen, St. Laurentius:
+        Köln-Kalk, Hohenstaufen:
+        Köln-Neubrück, St. Adelheid:
+        Köln-Porz:
+        Köln-Rath/Heumar, Johannes Bosco:
+        Köln-Stammheim, Gilwell:
+      Bezirk Siebengebirge:
+        Hennef-Warth, Sugambrer:
+        Königswinter, Heisterbacherrott:
+        Königswinter-Ittenbach, Idubag:
+        Königswinter-Oberpleis:
+        Königswinter-Stieldorf, Romero:
+        Rheinbreitbach, Terra Nova:
+        Ruppichterroth:
+        Stamm Isenburg, Schürdt-Oberlahr:
+        Winterscheid:
+      Bezirk Sieg:
+        Lohmar, St. Johannes:
+        Niederkassel, Roncalli:
+        Niederkassel-Lülsdorf/Ranzel, St. Franziskus:
+        Siegburg - Kaldauen, eXodus:
+        Siegburg, St. Anno:
+        St. Augustin-Menden:
+        Troisdorf-Sieglar, St. Johannes:
+      Bezirk Voreifel:
+      Bornheim-Hersel+Widdig, St. Franziskus:
+        Köln-Ehrenfeld, Helios:
+        Köln-Heimersdorf, St. Markus:
+        Köln-Junkersdorf / Müngersdorf, St.Pankr.:
+        Köln-Rondorf:
+        Philipp Neri:
+      Düsseldorf, Stamm Anton:
+        Düsseldorf-Bilk, Winfried:
+        Düsseldorf-Unterrath, St. Bruno:
+        Erkrath:
+      Essen-Kettwig, Kattwiga:
+      Leverkusen-Steinbüchel, Woodstock:
+        Höhenberg-Vingst, Elisodor:
+        Leichlingen, Wippera, St. Johannes Baptist:
+        Leverkusen-Schlebusch, Gezelin:
+        Wipperfürth:
+      Lohmar, Ichtys-Neuhonrath:
+        Gummersbach, St. Felizitas:
+      Neunk.-Seelscheid, Edelweiss:
+        Eitorf, Shamrock:
+        Waldbröl, St. Georg:
+      Sinnersdorf, Maximilian Kolbe:
+        Eisvögel:
+        Erftstadt-Liblar, St. Barbara, Las Casas:
+        Kerpen-Mödrath, St. Quirinus:
+    Limburg:
+      Keine Bezirksebene:
+        Aarbergen, Paloma:
+        Bad Schwalbach, Don Quijote:
+        Eschborn, Regenbogen:
+        Frankfurt Nord / Stamm Marcel Callo:
+        Frankfurt, Oberrad:
+        Frankfurt-Bornheim, St. Josef:
+        Frankfurt-Fechenheim, Normannen:
+        Frankfurt-Heddernheim, Wikinger:
+        Frankfurt-Niederrad, Ch. de Foucauld:
+        Frankfurt-Rödelheim, Damian de Veuster:
+        Frankfurt-Sachsenhausen, St. Bonifatius:
+        Frankfurt-Schwanheim, Don Bosco:
+        Frankfurt-Unterliederbach, Cherusker:
+        Hofheim, St. Bonifatius:
+        Idstein, St. Martin:
+        Kelkheim, Johannes Bosco:
+        Königstein:
+        Langenhain-Lorsbach, St. Franziskus:
+        Normannen Eltville:
+        Wiesbaden, Mutter Teresa:
+        Wiesbaden-Schierstein, Thomas Morus:
+      Schloßborn, Taunus-Wölfe:
+        Dornburg Westerw.-Frickhofen, St. Blasius:
+        Eisenbach:
+        Eitelborn, Weiße Rose:
+        Hundsangen, St. Goar:
+        Lahnstein, Lubentius:
+        Lahnstein-Oberlahnstein, St. Martin:
+        Lahntal (Dietkirchen + Dehrn):
+        Limburg-Dom:
+        Limburg-Lindenholzhausen:
+        Montabaur:
+        Stamm St. Rochus Simmern:
+        Weilburg, Rochus Spiecker:
+        Wetzlar/Dom, Barbarossa:
+        Wirges, Katharina Kasper:
+    Magdeburg:
+      Keine Bezirksebene:
+        Badersleben, Sankt Martin e.V.:
+        Blankenburg, St. Josef:
+        Burgenlandfalken Weißenfels:
+        Dresden-Löbtau, Drachentöter:
+        Halle (Saale), Phönix:
+        Leipzig, Tilia:
+        Magdeburg, Unser lieben Frauen:
+        Sangerhausen-Altstadt, St. Jutta:
+    Mainz:
+      Bezirk Heldon:
+        Breuberg-Höchst, Hl. Karl Borromäus:
+        Bürstadt, Bruder Feuer:
+        Darmstadt-Arheilgen, Arheilgen:
+        Dieburg:
+        Gross-Zimmern, St. Bartholomäus:
+        Heppenheim, St. Peter:
+        Lorsch, St. Nazarius:
+        Michelstadt / Odenwald, St. Christophorus:
+        Münster, St. Michael:
+        Pfungstadt, St. Antonius:
+        Seeheim-Jugenheim, Bonifatius:
+        Seeheim-Jugenheim, Ulrich von Münzenberg:
+        Viernheim, Folke Bernadotte:
+        Weiterstadt, St. Johannes:
+      Bezirk Oberhessen:
+        DPSG St. Andreas Altenstadt e.V.:
+        Friedberg, St. Leonhard:
+        Gießen, Franz von Assisi:
+        Langgöns, St. Josef:
+        Lauterbach/Schlitz, St. Michael:
+        Nidderau-Heldenbergen, Sankt Bonifatius:
+        Rosbach, St. Johannes:
+        Sankt Marien Großen-Buseck:
+      Bezirk Rhein-Main-Hessen:
+        Budenheim, Don Bosco:
+        Ingelheim, Nikolaus von Flüe:
+        Klein-Winternheim:
+        Mainz-Gonsenheim, St. Stephan:
+        Rüsselsheim, Partner Erde:
+        Schwabenheim, Greifenklau:
+      Guy de Larigaudie Lampertheim:
+        Abtsteinach, Franz von Assisi:
+        Darmstadt, Liebfrauen:
+        Einhausen:
+      Mainz-Finthen, Bruder Franz:
+        Dietzenbach, St. Martin:
+        Mainz, Don Greif:
+        Rödermark-Urberach, Gralsritter:
+      Wöllstein, St. Franziskus-Rheinhessische Schweiz:
+    München und Freising:
+      Bezirk Ebersberg:
+        Anzing/Poing, Windrose:
+        Grafing, St. Sebastian:
+        Hohenlinden, Impeesa:
+        Kirchseeon, St. Joseph:
+        Rott am Inn, Marinus:
+      Bezirk Freising:
+        Freising, St. Georg:
+        Langenbach, Wolfsspur:
+        Moosburg, St. Kastulus:
+      Bezirk München - Ost:
+        Camilo Torres, Hohenbrunn:
+        München-Perlach, St. Michael:
+        München-Riem, Galileo Galilei:
+        München-Waldtrudering, Condor:
+        Neukeferloh, Columbus:
+        Ottobrunn:
+        Putzbrunn, Arche Noah:
+        Unterhaching, St. Birgitta:
+      Bezirk München-Isar:
+        Forstenried, Hl. Kreuz:
+        Garching, St. Severin:
+        Pullach, Maximilian Kolbe:
+        München-Au, Stamm Mariahilf:
+        München-Giesing, Hl. Engel:
+        München-Großhadern, St. Canisius:
+        München-Lehel, St. Anna:
+        München-Olympiadorf, Frieden Christi:
+        München-Schwabing, Pater Rupert Mayer:
+        München-Schwabing, Swapingo:
+        München-Solln, St. Ansgar:
+      Bezirk Oberland:
+        Bad Tölz:
+        Benediktbeuren, Dominikus Savio:
+        Baierbrunn und Schäftlarn, Ägypten:
+        Holzkirchen:
+        Schliersee, St. Sixtus:
+        Iffeldorf-Seeshaupt, St. Vitus:
+      Bezirk Rosenheim:
+        Aschau, Mountain Scouts:
+        Bad Aibling, St. Franziskus:
+        Degerndorf / Brannenburg, Christkönig:
+        Feldkirchen-Westerham, Phoenix:
+        Grosskarolinenfeld, St. Christophorus:
+        Kiefersfelden, Adler:
+        Kolbermoor, St. Franziskus:
+        Prutting:
+        Rosenheim, St. Michael:
+        Rosenheim-Fürstätt, St. Quirinus:
+        Rosenheim-Oberwöhr, St. Josef der Arbeiter:
+      Bezirk Ruperti - Mühldorf:
+        Freilassing, St. Rupert:
+        Mühldorf, Tilly:
+        Mitterfelden, St. Christopherus:
+        Laufen, Mariä Himmelfahrt:
+        Polling, Don Bosco:
+        Surberg, Stoabock Surberg:
+        Talkessel Berchtesgaden:
+      Bezirk Würm - Amper:
+        Fürstenfeldbruck, St. Magdalena:
+        Germering, Parsbergstamm:
+        Gröbenzell, St. Johann Baptist:
+        Karlsfeld, Anjo II:
+        Markt-Indersdorf, St. Marold - evtl. Neugründung:
+        München-Laim, St. Willibald:
+        München-Neuhadern, Oscar A. Romero:
+        München-Pasing, St. Hildeg./M.Schutz:
+        München-Westend, St. Rupert:
+        Olching, St. Peter und Paul:
+        Puchheim, Bison:
+    Münster:
+      Beckum, St. Stephanus:
+        Drensteinfurt-Rinkerode, St. Pankratius:
+        Ennigerloh, Enniger:
+        Hamm-Bockum-Hövel, Impeesa-HeiligGeist:
+        Sendenhorst, St. Martinus:
+      Bezirk Borken:
+        Bocholt, Herz-Jesu:
+        Bocholt, Hl. Kreuz:
+        Bocholt, St. Josef:
+        Bocholt, St. Norbert:
+        Borken, St. Remigius:
+        Epe, St. Antonius:
+        Rhede:
+        Velen-Ramsdorf:
+      Bezirk Coesfeld:
+        Buldern, St. Pankratius:
+        Dülmen, Heilig Kreuz:
+        Lette, St. Johannes:
+        Lüdinghausen:
+        Nordkirchen:
+        Nottuln, St. Martin:
+        Selm, St. Josef:
+      Bezirk Münster:
+        DPSG St. Liutger:
+        Münster, Gremmendorf:
+        Münster, Herz Jesu:
+        Münster, St. Franziskus:
+        Münster-Gievenbeck, St. Michael:
+        Münster-Handorf, St. Petronilla:
+        Münster-Hiltrup, Rochus Spiecker:
+        Münster-Wolbeck, Don Bosco:
+        St. Anna Mecklenbeck, Münster:
+      Bezirk Niederrhein-Nord:
+        Alpen, St. Ulrich:
+        Emmerich, Janusz Korczak:
+        Geldern-Hartefeld:
+        Goch- Gaesdonck, St. Augustinus:
+        Hamminkeln, St. Maria Himmelfahrt:
+        Kalkar, St. Benedikt:
+        Kleve-Materborn, St. Georg:
+        Schermbeck, St. Ludgerus:
+        Sonsbeck, St.Maria Magdalena:
+        Weeze, St. Cyriakus:
+        Wesel, z. d. Hl. Engeln:
+        Wesel-Feldmark, Herz Jesu:
+        Wesel-Flüren:
+        Xanten, St. Viktor:
+      Bezirk Niederrhein-Süd:
+        Dinslaken, St. Vincentius:
+        Duisburg, St. Ludger:
+        Duisburg-Homberg, Hochheide:
+        Duisburg-Homberg, St. Peter:
+        Duisburg-Rheinhausen, Christkönig:
+        Friedrichsfeld, St. Elisabeth:
+        Kamp-Lintfort, St. Marien:
+        Moers-Repelen, Martinus:
+        Moers-Wesel, St. Josef:
+        Rheinberg, St. Anna, Phönix:
+        Voerde-Spellen, Sankt Peter Spellen:
+      Bezirk Oldenburg:
+        Bakum, St. Johannes:
+        Barssel, St. Franziskus:
+        Damme, Benedikt:
+        Dinklage, von Galen:
+        Goldenstedt-Ellenstedt, St. Heinrich:
+        Lindern, Philipp Neri:
+        Lohne, St. Gertrud:
+        Oldenburg, Widukind:
+        Steinfeld, v. Schagen:
+        Varel, Stella Maris:
+        Vechta, Füchtel:
+        Vechta, St. Georg:
+        Wilhelmshaven, Christus König:
+        Wilhelmshaven, St. Peter, Niels Stensen:
+      Bezirk Recklinghausen:
+        DPSG Hillerheide:
+        Dorsten, St. Agatha:
+        Dorsten, St. Johannes:
+        Dorsten-Wulfen-Barkenberg, St. Barbara:
+        Marl- Lenkerbeck, St. Marien:
+        Marl-Sickingmühle, Christ König:
+        Marl-Sinsen, Vasco da Gama:
+        Oer-Erkenschwick:
+        Recklinghausen, Liebfrauen-Ost:
+        Recklinghausen-Hochlar:
+        Recklinghausen-Nord, St. Elisabeth:
+      Bezirk Steinfurt:
+        Burgsteinfurt, St.Johannes Nepomuk:
+        Emsdetten, St. Pankratius:
+        Mettingen, Tüöttenstamm:
+        Nordwalde, St. Dionysius:
+        Saerbeck, St. Georg:
+        Wettringen, St. Petronilla:
+      Bezirk Warendorf:
+        Ahlen/Westf.:
+        Drensteinfurt:
+        Oelde, Der kleine Bach:
+        Ostbevern, St. Ambrosius:
+        Warendorf:
+      Bottrop-Grafenwald, Hl. Familie:
+        Dorsten, St. Bonifatius:
+        Waltrop:
+      Geldern-Veert, St. Martin:
+        Geldern, St. Maria Magdalena:
+        Geldern-Kapellen:
+        Hamminkeln, Wertherbruch:
+        Rheurdt, St. Nikolaus:
+        Uedem:
+      Goch, Edelweiß:
+      Greven, St. Josef:
+        Altenberge, St. Johannes:
+        Greven-Reckenfeld:
+        Hörstel, St. Antonius:
+        Ladbergen:
+        Tecklenburg, St. Michael:
+      Isselburg:
+        Ahaus, St. Marien:
+        Gescher, St. Pankratius:
+        Schöppingen:
+        Stadtlohn:
+      Senden:
+        Coesfeld:
+        Olfen, St. Vitus:
+    Osnabrück:
+      Keine Bezirksebene:
+        Emden, Regenbogen:
+        Haren, Franziskus:
+        Haren, Nordlicht Altharen:
+        Haselüne-Lehrte, St. Vincentius:
+        Holzhausen-Ohrbeck:
+        Lathen, Polarstern:
+        Lingen, St. Bonifatius:
+        Melle-Gesmold, Horizonte:
+        Nordhorn, St. Marien:
+        Oesede, Hl. Geist:
+        Osnabrück, Rosenkranz:
+        Papenburg:
+        Wallenhorst, St. Alexander:
+      Neuenkirchen, St. Laurentius:
+        Stamm Maximilian Kolbe Rulle:
+    Paderborn:
+      Bezirk Corvey:
+        Brenkhausen, St. Johannes:
+        Höxter-Ottbergen:
+        Höxter-Stadtmitte, St. Ansgar:
+        Lüchtringen, St. Johannes:
+        Stahle, St. Anna:
+      Bezirk Dortmund:
+        DPSG St. Remigius Dortmund-Mengede:
+        Dortmund-Husen:
+        Dortmund-Lütgendortmund:
+        Dortmund-Mitte, St. Franziskus:
+        Dortmund-Obereving, St. Marien:
+        Dortmund-Soelde, St. Marien:
+        Dortmund-Wambel, St. Meinolfus:
+      Bezirk Herne-Castrop Rauxel:
+        Castrop-Rauxel, St. Lambertus:
+        Herne, Amelungen:
+        Herne-Eickel, Franziskus:
+      Bezirk Hochsauerland:
+        Arnsberg, Liebfrauen:
+        Arnsberg-Hüsten, Stamm Sankt Ludgerus:
+        Arnsberg-Neheim, St. Christopher:
+        Brilon, Propstei:
+        Eslohe-Wenholthausen, St. Cäcilia:
+        Herdringen, St. Antonius:
+        Meschede, St. Walburga:
+        Meschede-Eversberg, St. Ever.:
+        Stamm Kückelheim:
+        Sundern, Salamun:
+      Bezirk Paderborn:
+        Bielefeld, Liebfrauen:
+        Gütersloh-Spexard:
+        Herford, St. Johannes Baptist:
+        Nordborchen:
+        Paderborn, Auf der Lieth, St. Hedwig:
+        Paderborn, St. Meinolf:
+        Paderborn-Schloß Neuhaus, St. Heinrich:
+      Bezirk Ruhr-Sauerland:
+        DPSG St. Urban Ende-Syburg (Stamm):
+        Fröndenberg-Warmen:
+        Hagen, St. Elisabeth:
+        Hagen-Boele, St. Joh. Baptist:
+        Herdecke, Marcel Callo:
+        Hohenlimburg:
+        Iserlohn-Nussberg, Arche:
+        Schwerte-Ost, St. Marien:
+        Unna, Goten:
+        Witten, St. Franziskus:
+        Witten, St. Marien:
+        Witten-Bommern, Herz Jesu:
+      Bezirk Siegerland-Südsauerland:
+        Attendorn-Ennest, St. Margaretha:
+        Netphen, St. Martini:
+        Netphen-Dreis-Tiefenbach:
+        Olpe, Vinzenz Pallotti:
+        Siegen, St. Michael:
+        Siegen, St. Peter und Paul:
+        Siegen-Hüttental:
+      Bezirk Soest-Hamm:
+        Bad-Westernk., Franz v. Assisi:
+        Geseke, Marco Polo:
+        Graf-Folke-Bernadotte Rüthen:
+        Hamm-Berge:
+        Hamm-Norden:
+        Hamm-Süden:
+        Heessen-Dasbeck, Don Bosco:
+        Lippetal, Lippborg:
+        Lippetal, Oestinghausen:
+        Lippstadt, Albatros Cappel:
+        Möhnesee-Körbecke, St. Pankratius:
+        Soest:
+        Warstein, St. Petrus:
+        Warstein-Belecke, St. Pankratius:
+        Welver, Maximilian Kolbe:
+      Dortmund-Huckarde, St. Urbanus:
+        DPSG Dortmund-Barop (FRAXA):
+        Dortmund-Aplerbeck, St. Ewaldi:
+        Dortmund-Berghofen:
+        Dortmund-Brünninghausen, Hl. Familie:
+        Dortmund-Hörde, Marcel Callo:
+        Dortmund-Kirchlinde, St. Josef:
+        Dortmund-Lanstrop, St. Michael:
+        Dortmund-Lichtendorf/Sölderholz, Bonifaten 80:
+        Dortmund-Scharnhorst, St. Franziskus:
+        St. Liborius - Dortmund-Körne:
+      Lemgo:
+        Detmold, Hl. Kreuz:
+        Paderborn-Elsen, St. Dionysius Elsen:
+      Wilnsdorf-Rudersdorf, St. Laurentius:
+        Freudenberg, St. Marien:
+        Siegen, Dautenbach:
+        Wenden-Gerlingen/ Abt.  Anton.:
+    Passau:
+      Keine Bezirksebene:
+        DPSG Fürstenstein-Nammering:
+        Frauenau:
+        Freyung, St. Gunther:
+        Fürstenzell:
+        Grafenau:
+        Hauzenberg:
+        Hengersberg:
+        Kirchdorf:
+        Neuötting:
+        Passau-Grubweg, St. Michael:
+        Passau-Neustift:
+        Pfarrkirchen:
+        Pocking:
+        Rotthalmünster, St. Sebastian:
+        Salzweg, Sophie Scholl:
+        Tittling:
+        Untergriesbach:
+        Vilshofen:
+        Winhöring:
+    Regensburg:
+      Bezirk Dom:
+        Hainsacker, Geschwister Scholl:
+        Obertraubling, Trubilo:
+        Pettendorf:
+        Regensburg, Herz Marien:
+        Regensburg, St. Anton:
+        Regensburg, St. Konrad:
+        Regensburg-Burgweinting:
+        Regensburg-Kupfmühl, St. Wolfgang:
+        Regensburg-Schwabelweis:
+        Regensburg-Steinweg, Hl. Dreifaltigkeit:
+        Regensburg-Ziegetsdorf:
+        Sinzing:
+        Wenzenbach:
+      Bezirk Niederbayern:
+        Hohenthann:
+        Landshut, Angelo Roncalli:
+        Landshut, St. Pius:
+        Landshut, St. Wolfgang:
+        Puchhausen-Hüttenkofen:
+        Straubing, St. Jakob:
+        Straßkirchen, Impeesa:
+        Viechtach:
+        Vilsbiburg:
+      Burgenbezirk:
+        Eschenbach:
+        Neuhaus, Don Bosco:
+        Weiden, Thomas Morus:
+        Windischeschenbach, St. Georg:
+      Fichtelbezirk:
+        Kulmain:
+        Marktredwitz:
+        Mitterteich:
+        Speichersdorf, Kirchenlaibach:
+        Tirschenreuth:
+      Hüttenbezirk:
+        Amberg, St. Georg:
+        Ammersricht, St. Konrad:
+        Ensdorf:
+        Poppenricht-Michaelspoppenricht:
+        Schnaittenbach:
+        Sulzbach-Rosenberg:
+      Jurabezirk:
+        Abensberg-Offenstetten:
+        Kelheim,:
+        Parsberg:
+        Saal, Christ König:
+        Stamm Teugn:
+    Rottenburg-Stutt.:
+      Bezirk Hohenlohe:
+        Bad Mergentheim, Hoch- und Deutschmeister:
+        Bretzfeld:
+        Ingelfingen:
+        Künzelsau:
+        Santiago Schrozberg:
+        Öhringen, Abenteuer:
+      Bezirk Hohenstaufen:
+        Donzdorf, St. Martin:
+        Donzdorf-Winzingen, St. Bernhard:
+        Eislingen:
+        Göppingen, St. Maria:
+        Salach, St. Margaretha:
+        Stamm Hl. Kreuz Deggingen:
+        Uhingen:
+      Bezirk Neckar:
+        Eningen:
+        Herrenberg, St. Josef:
+        Holzgerlingen:
+        Reutlingen-Nord/Orschel-Hagen:
+        Tübingen:
+      Bezirk Neckar/Filder:
+        Esslingen, Wikinger:
+        Neuhausen, Petrus & Paulus:
+        Nürtingen:
+        Plochingen:
+        Wernau/Neckar:
+      Bezirk Oberland:
+        Biberach, Weiße Rose:
+        Carpe Diem Ehingen:
+        Ennetach:
+        Friedrichshafen, Buchhorn:
+        Laupheim, Kon - Tiki:
+        Mengen, St. Martin:
+        Ravensburg, Impeesa:
+        Schelklingen-Hütten, Guter Hirte:
+        Sinningen, St. Michael:
+        Weingarten, Welfen:
+        Wolfegg, Loreto:
+      Bezirk Ostalb:
+        Aalen, Salvator:
+        Bopfingen, St. Josef:
+        Ellwangen, St. Veit:
+        Giengen, St. Michael:
+        Herbrechtingen, Romero:
+        Heubach, St. Bernhard:
+        Rammingen:
+        Saint-Exupéry Ulm:
+        Schwäbisch Gmünd-Hussh, Leonhard:
+        Ulm-Nord:
+        Ulm-Söflingen:
+      Bezirk Schwarzwald-Donau:
+        Balingen, Hl. Geist:
+        Rottweil, J. F. Kennedy:
+        Schramberg:
+        Tuttlingen, Tutilo:
+        Weigheim, St. Otmar:
+      Bezirk Stuttgart:
+        Leonberg, St. Johannes d. T.:
+        Oeffingen, Chico Mendes:
+        Stuttgart-Hofen:
+        Stuttgart-Möhringen, St. Hedwig:
+        Stuttgart-Neugereut:
+        Stuttgart-Obertürkheim, St. Franziskus:
+        Stuttgart-Zuffenhausen:
+      Bezirk Unterland:
+        Bad Wimpfen:
+        Bietigheim-Bissingen:
+        Brackenheim, Theodor Heuss:
+        Erlenbach, St. Martinus:
+        Heilbronn - Über dem Salzgrund:
+        Heilbronn, Mahatma Ghandi:
+        Heilbronn-Böcklingen, St. Kilian:
+        Kornwestheim, St. Martin:
+        Ludwigsburg, Silberschwäne:
+        Ludwigsburg-Poppenweiler, Falke:
+        Mühlacker, Herz-Jesu:
+        Oedheim:
+        St. Dionys Neckarsulm:
+      Frommern, St. Paulus:
+        Böblingen:
+        Reutlingen Süd:
+        Reutlingen-Mitte:
+        St. Peter & Paul Weil der Stadt:
+      Gingen/Fils:
+        Schwäbisch-Gmünd, Hl. Kreuz:
+      Kiebingen, Heilig Geist:
+        Ammerbuch-Entringen:
+    Speyer:
+      Bezirk Haardt:
+        Edenkoben/Hainfeld, Hedin:
+        Herxheim, Amundsen:
+        Landau, St. Albert:
+        Neustadt, Guy de Larigaudie:
+        Neustadt-Lachen, Franz von Assisi:
+        Rülzheim, St. Diethardt:
+        Winden, Marco Polo:
+      Bezirk Ludwigshafen:
+        Altrip, Rheingold:
+        Bobenheim, St. Laurentius:
+        Dannstadt-Schauernh., St. Michael:
+        Frankenthal, St. Jakobus-Pilgerpfad:
+        Ludwigshafen, Herz Jesu:
+        Ludwigshafen, St. Gallus:
+        Ludwigshafen-Friesenheim, St. Josef:
+        Ludwigshafen-Gartenstadt, Phoenix:
+        Ludwigshafen-Oggersh., Christ König:
+        Ludwigshafen-Pfingstweide, St. Albert:
+        Maxdorf/Birkenheide, Impeesa:
+        Otterstadt:
+      Bezirk Saarpfalz:
+        Homburg-Jägersb., St. Josef:
+        Mandelbachtal/Heckendalh., St. Josef:
+        St. Ingbert, Hassel:
+        St. Ingbert-Mitte:
+        St. Ingbert-Rohrbach:
+      Bezirk Trifels:
+        Hauenstein, Christkönig:
+        Kaiserslautern, Fridtjof Nansen:
+        Ludwigswinkel:
+        Pirmasens-Winzeln, Christ König - St. Anton:
+        Rodalben, Sel. Bernhard:
+        Rodalben, St. Josef:
+        Waldfischbach-Burgalben:
+      Homburg, Johanneum:
+        Camino Homburg:
+        Niederwürzbach:
+        St. Ingbert, Eulenspiegel:
+      Lambrecht:
+        Speyer, Dompfarrei:
+        Speyer, St. Konrad:
+      Zweibrücken Stamm Heilige Elisabeth:
+    Trier:
+      Bezirk Eifel / Ahr:
+        Andernach, Am Nastberg Eich:
+        Saffig Pellenzbande:
+      Bezirk Koblenz:
+        Kaltenengers:
+        Koblenz-Castell-Niederberg:
+        Koblenz-Goldgrube, St. Franziskus:
+        Koblenz-Südliche Vorstadt, St. Josef:
+        Urmitz:
+      Bezirk Mittelmosel:
+        Bernkastel-Kues, Moselfranken:
+        Bernkastel-Kues, Westgoten:
+        Kaisersesch:
+        Rachtig, Deutschherren:
+        Wittlich, St. Rochus:
+      Bezirk Rhein-Hunsrück-Nahe:
+        Bad Kreuznach, Franziskus:
+        Kirn-Sulzbach, St. Michael:
+        Rheinböllen, Soonwald:
+        Sohren:
+        St. Rupertus Bingerbrück:
+        Stamm Shalom Windesheim:
+        Waldalgesheim, Alagastesheim:
+      Bezirk Rhein-Wied:
+        Bad Hönningen:
+        Kurtscheid:
+        Neuwied City:
+        Neuwied-Feldkirchen, St. Michael:
+        Neuwied-Oberbieber, St. Bonifatius:
+        Rheinbrohl:
+      Bezirk Saar-Hochwald:
+        DPSG Roden, Stamm Graf Folke Bernadotte Saarlouis-Roden:
+        DPSG Saarlouis Stamm Beaumarais:
+        Hülzweiler, St. Laurentius:
+        Perl, St. Gervasius & Protasius:
+        Rehlingen-Siersburg, St. Nikolaus:
+      Bezirk Saarbrücken:
+        Dudweiler, St. Bonifatius:
+        Friedrichsthal, Wikinger:
+        Klarenthal, St. Bartholomäus:
+        Köllerbach, Herz Jesu:
+        Ludweiler, Warndt-Scouts:
+        Saarbrücken, Brebach-Fechingen:
+        Spellenstein-Rentrisch:
+      Bezirk Schaumberg-Blies:
+        Hasborn:
+        Illingen, St. Stephan, Die Adler:
+        Neunkirchen, St. Pius:
+      Bezirk Sieg:
+        Betzdorf, St. Ignatius:
+        Kirchen, St. Michael:
+        Niederfischbach:
+        Niederschelderhütte/Birken:
+      Bezirk Trier:
+        Saarburg-Beurig, St. Franziskus:
+        Trier-Euren, Helena/Tempelherren:
+        Trier-Pfalzel, Pankratius:
+        Trier-Tarforst, Centarburs:
+      Koblenz-Güls, Seepfadfinder:
+        Bassenheim, St. Martin:
+        Koblenz-Asterstein:
+        Münstermaifeld, Maifeld-Scouts:
+        Rhens, St. Theresia:
+      Peterslahr:
+        Leutesdorf, Marcel Callo:
+        Neuwied, Heimbach-Weis:
+        Neuwied-Engers, St. Martin:
+        Neuwied-Gladbach:
+      Trier-Heiligkreuz, Santa Cruz:
+        Föhren, Don Bosco:
+    Würzburg:
+      Albstadt:
+        Alzenau:
+        Elsenfeld, Germania:
+        Großostheim:
+        Mönchberg, Aubachtal:
+      Bezirk Genesis Nord:
+        Bad Kissingen, Henneberg:
+        Euerbach, St. Michael:
+        Gerolzhofen, Gralsritter:
+        Haßfurt, Lichtenstein:
+        Mellrichstadt, Martin Pollich:
+        Münnerstadt, Kreuzritter:
+        Niederwerrn, von Münster:
+        Nordheim/Rhön:
+        Oberelsbach, Buchonia:
+        Ostheim:
+        Rödelmaier:
+        Schweinfurt, Tokwon:
+        Stockheim:
+      Bezirk Main-Spessart:
+        DPSG Stamm Roncalli Partenstein:
+        Lohr-Sackenbach, Bonifatius:
+        Lohr-Sendelbach, St. Josef:
+      Bezirk Mainfranken:
+        Eisingen, St. Nikolaus:
+        Leinach, Kardinal Döpfner:
+        Volkach, St. Bartholomäus:
+        Wertheim:
+      Bezirk St. Kilian/Würzburg:
+        Würzburg, Tilly:
+        Würzburg-Frauenland, Greiffenclau:
+        Würzburg-Lengfeld, St. Burkard:
+        Würzburg-Rottenbauer, Wolfskeel:
+        Würzburg-Sanderau, Fred Joseph:
+      Bezirk Untermain:
+        Aschaffenburg-Gailbach, Guy de Larigaudie e.V.:
+        Aschaffenburg-Innenstadt, Johannisburg:
+        Aschaffenburg/Schweinheim:
+        Großwallstadt, Impeesa:
+        Heimbuchenthal, Schwarzkittel:
+        Mainaschaff, Ascapha:
+        Stockstadt, Mauritius:
+      Würzburg, St. Johannes:
+  PSG:
+    Aachen:
+      Keine Bezirksebene:
+        Aachen Kornelimünster:
+        Aachen-Burtscheid:
+        Aachen-Hörn:
+        Aachen-Verlautenheide:
+        Don Bosco Oberbruch:
+        Graf Gerhard - Wassenberg:
+        Immerath:
+        Krefeld:
+        Krefeld Traar:
+        Roetgen:
+        Roetgen-Rott:
+        Schwalmtal:
+        Venwegen olé olé:
+    Augsburg:
+      Keine Bezirksebene:
+        Augsburg-Oberhausen:
+        Augsburg-Stadtmitte:
+        Donauwörth:
+        Friedberg:
+        Hiltenfingen:
+        Kaufbeuren:
+        Krumbach:
+        Langerringen:
+        Lauchdorf:
+        Markt Rettenbach:
+        Mindelheim:
+        Oberegg:
+        Schwabegg:
+        Wulfertshausen:
+    Bamberg:
+      Keine Bezirksebene:
+        Bamberg -Kunigund-:
+        Nürnberg:
+        Siedlung Neuendettelsau:
+        Siedlung Schwaig:
+    Dresden-Meissen:
+      Keine Bezirksebene:
+        Keine Stammesebene:
+    Essen:
+      Keine Bezirksebene:
+        Bochum:
+        Bochum-Shenandoa:
+        Essen -PTA-:
+        Gelsenkirchen:
+        Mülheim/Ruhr:
+        Schwelm:
+    Freiburg:
+      Achern:
+      Betty Clay:
+      Bruchsal:
+      Dogern:
+      Freiburg:
+      Gengenbach:
+      Karlsruhe-Süd:
+      Keine Bezirksebene:
+      Menina:
+      Siedlung Dreisamblau - Freiburg Mitte:
+      Singen:
+    Hamburg:
+      Keine Bezirksebene:
+        Bützower Schwäne:
+    Hildesheim:
+      Keine Bezirksebene:
+        Keine Stammesebene:
+    Köln:
+      Keine Bezirksebene:
+        Düsseldorf-Eller:
+        Düsseldorf-Hamm:
+        Euskirchen:
+        Siegburg Deichhaus:
+    Mainz:
+      Keine Bezirksebene:
+        Budenheim:
+        Lorsch:
+        Mainz - PTA:
+        Mainz-Bretzenheim:
+    München:
+      Keine Bezirksebene:
+        Bichl:
+        Bruckmühl:
+        Giesing:
+        Hörlkofen:
+        München - Neuhausen:
+        Olching:
+        Ruhpolding:
+        Schulstamm München:
+        Traunstein:
+    Münster:
+      Keine Bezirksebene:
+        Dülmen Hlg. Kreuz:
+        Dülmen St. Josef:
+        Gronau:
+        Mettingen:
+        Rheine:
+        Senden-Ottmarsbocholt:
+        Sendenhorst:
+        Stadtlohn:
+        Xanten:
+    Osnabrück:
+      Keine Bezirksebene:
+        Eutin-Amazona Sol:
+    Paderborn:
+      Keine Bezirksebene:
+        Dortmund:
+        Dortmund-Kratzbürste:
+        JaM:
+        Olave - Dortmund:
+    Regensburg:
+      Keine Bezirksebene:
+        Amberg:
+        Großberg:
+        Maxhütte-Haidhof:
+        Passau:
+        Regensburg - St. Paul:
+        Regensburg - St.Josef:
+        Regensburg - St.Wolfgang:
+        Weiden:
+    Rottenburg-Stuttgart:
+      Keine Bezirksebene:
+        Allmersbach:
+        Enzberg:
+        Fellbach-Oeffingen:
+        Ostfildern-Nellingen:
+        Schulstamm Rottenburg:
+        Stuttgart-Hofen:
+        Wernau:
+    Speyer:
+      Keine Bezirksebene:
+        Keine Stammesebene:
+    Trier:
+      Keine Bezirksebene:
+        Waldalgesheim:
+        Weiler:
+        Wiesbach-Eppelborn:
+    Wiesbaden:
+      Keine Bezirksebene:
+        Wiesbaden:
+    Würzburg:
+      Keine Bezirksebene:
+        Aschaffenburg:
+        Aschaffenburg Schule:
+        Greußenheim:
+        Niedernberg:
+        Reichenberg - Hattenhausen:
+        Siedlung St. Elisabeth - Aschaffenburg:
+        Stockstadt:
+        Würzburg:
+  VCP:
+    Baden:
+      Bodensee:
+        Florian Geyer:
+        Jan Hus:
+        Kon Tiki:
+        Regenbogenbaum:
+        Stamm Kirneck Unterkirnach:
+      Breisgau:
+        Albert Schweitzer:
+        Alemannen:
+        Arche Noah:
+        Friedensgemeinde Freiburg:
+        Globetrotter:
+        Jesus Sirach:
+      Franken:
+        CVJM Waldheim:
+        Chiricahua:
+        Francesco:
+        Geschwister Scholl:
+        Häuptling Geronimo:
+        John Rabe:
+        Kleiner Prinz:
+        Landstreicher:
+        Olave St. Clair:
+        Paul Gerhardt:
+        Toyohiko Kagawa:
+      Grenzland:
+        Die Brücke:
+        Konrad von Rötteln:
+        Martin Luther:
+      Kurpfalz:
+        Alfons Beil:
+        Badisch Sibirien:
+        Birger Forell:
+        Dietrich Bonhoeffer:
+        Dunedain Waldläufer:
+        Häuptling Seattle - jetzt 801008 - frei:
+        VCP Weinheim - Stamm Zwei Burgen:
+      Ortenau:
+        Martin Bucer:
+        Regenbogen:
+    Bayern:
+      Allgäu:
+        VCP Füssen/Stamm Waldläufer:
+        VCP Sonthofen/Stamm Alemannen:
+      Donau:
+        VCP Hemau/Stamm Falken:
+        VCP Neutraubling/Stamm Fridtjof Nansen:
+        VCP Passau/Stamm Kelten:
+      Fichtelgebirge:
+        VCP Bayreuth/Stamm Dietrich Bonhoeffer:
+        VCP Coburg/Stamm Albatros:
+        VCP Himmelkron/Stamm Graf Otto von Orlamünde:
+        VCP Hof/Stamm Heinrich von Plauen:
+        VCP Kulmbach/Stamm Johann Eck:
+        VCP Rehau Zugvögel:
+        VCP Trebgast:
+        VCP Weiden/Stamm Markomannen:
+        VCP Wüstenselbitz/Stamm Markgraf Georg:
+      Frankenjura:
+        VCP Bamberg:
+        VCP Eckental:
+        VCP Erlangen/Stamm Florian Geyer:
+        VCP Erlangen/Stamm Johann Hinrich Wichern:
+        VCP Forchheim/Stamm Weiße Rose:
+        VCP Gräfenberg:
+        VCP Hallstadt/Stamm Nordstamm:
+        VCP Hemhofen:
+        VCP Höchstadt/Stamm Ritter von Spix:
+        VCP Kalchreuth/Stamm Jakob von Haller:
+        VCP Nürnberg-Ziegelstein/Stamm Philipp Schwarzert:
+        VCP Pegnitz:
+        VCP Streitberg:
+        VCP Uttenreuth/Stamm Johann Friedrich Esper:
+        VCP Vestenbergsgreuth:
+      Isar:
+        Thor Heyerdahl Erding:
+        VCP Allershausen/Stamm Graf v. Moltke:
+        VCP Berg/Stamm Franz Kreis:
+        VCP Ehekirchen:
+        VCP Fürstenfeldbruck/Stamm Claus Graf Schenk von Stauffenberg:
+        VCP Hörlkofen/Stamm Nemeta:
+        VCP Ingolstadt/Stamm Martin von Tours - Spitalhof:
+        VCP Karlshuld/Stamm Totila:
+        VCP Landsberg/Stamm Dominikus Zimmermann:
+        VCP Landshut/Stamm Wilhelm Löhe:
+        VCP Lechrain:
+        VCP München-Harlaching/Stamm Heinrich der Löwe:
+        VCP München-Moosach/Stamm Monseñor Óscar Arnulfo Romero:
+        VCP Sendling:
+        VCP Söcking:
+        VCP Tutzing/Stamm Druiden:
+      Mainfranken:
+        VCP Haibach:
+        VCP Karlstadt:
+        VCP Königsberg/Stamm Regiomontanus:
+        VCP Mainstockheim:
+        VCP Niederwerrn:
+        VCP Rieneck:
+        VCP Würzburg/Stamm Walther von der Vogelweide:
+        VCP Zeitlofs:
+        VCP Zell/Stamm Friedrich Emmert:
+      Mitte:
+        VCP Bruckberg/Stamm Bruckberger Heime:
+        VCP Diespeck/Stamm Veit vom Berg:
+        VCP Fürth/Stamm Franken:
+        VCP Heideck:
+        VCP Lichtenau Impessa:
+        VCP MTA62:
+        VCP Marktbergel/Stamm St. KIlian:
+        VCP Neumarkt Taizé:
+        VCP Nürnberg-Katzwang/Stamm Geusen:
+        VCP Oberferrieden/Stamm Martin Luther King:
+        VCP Roth-Eckersmühlen:
+        VCP Röthenbach bei St. Wolfgang:
+        VCP Schwabach/Stamm Astrid Lindgren:
+        VCP Schwaig/Stamm St. Lorenz:
+      Schwaben:
+        Stamm Mering:
+        VCP Augsburg/Stamm Augusta Vindelicum:
+        VCP Höchstädt an der Donau:
+        VCP Nördlingen/Stamm Dietrich Bonhoeffer:
+        VCP Senden/Stamm Hägar der Schreckliche:
+    Berlin-Brandenburg:
+      Berlin:
+        Alexander von Humboldt:
+        Askanier:
+        Berlin Mitte:
+        Kreuzberg:
+        Nikolassee:
+        Otto Witte:
+        Stephanus:
+        Theodor Fontane:
+        Thomas Müntzer:
+        VCP Siemensstadt:
+        Weiße Rose-Mariendorf:
+      Brandenburg:
+        Aboriginees:
+        Blankenfelde:
+        Dietrich-Bonhoeffer:
+        Friedenstauben:
+        Groß Kreutz/Stamm Krusevica:
+        Johannesstift:
+        Neugründung:
+        Prenzlau:
+        Red Ants-Zossen:
+        Rheinsberg:
+        Saarmund:
+        Spreewölfe:
+        Strausberg:
+    Hamburg:
+      Alster-Bille:
+        Astrid Lindgren:
+        Bapu:
+        Charlotte Paulsen:
+        Dietrich Bonhoeffer:
+        Graf Rantzau:
+        Hohenstaufen:
+        Martin Luther King:
+      Harburg:
+        Bischof Ansgar Sinstorf:
+        Klaus Störtebeker Finkenwerder:
+        Matthias Claudius:
+        Ulrich von Hutten:
+      West:
+        Elbe:
+        Graf Adolf von Schauenburg:
+        Johannes Bugenhagen:
+        Sankt Rafael:
+        Simon von Utrecht:
+        St. Paulus:
+        Weiße Rose:
+    Hessen:
+      Kurhessen:
+        Diemelfüchse:
+        Elisabeth v. Thüringen:
+        Goten:
+        Gottfried v. Ebersberg:
+        Graf Folke Bernadotte:
+        Marco Polo:
+        Martin Luther Lumdatal:
+        Martin von Tours:
+        Mückenstürmer:
+        St. Georg:
+        VCP Niestetal:
+        Weiße Rose:
+        Weiße Taube:
+      Main-Kinzig:
+        Abe Lincoln:
+        Adlerauge:
+        Barbarossa:
+        Die Sterne:
+        Hohenburg:
+        Schwarzer Panther:
+        Ulrich von Hutten:
+        VCP Eschersheim:
+      Rhein-Main:
+        Ansgar:
+        Dietrich von Bern:
+        Franken:
+        Johann Friedrich Oberlin:
+        Johannes Opilio de Elss:
+        Ottheinrich v. d. Pfalz:
+        Parzival:
+        Robin Hood:
+        Schinderhannes:
+        Sophie Scholl:
+        Totila:
+        Ulrich von Hutten:
+      Starkenburg:
+        Christopherus:
+        Densiwiniwasitu:
+        Duborn:
+        Eldar:
+        Hermann von Salza:
+        Martin Luther King:
+        Massila Messel:
+        Neugründung:
+        Staufen:
+        VCP Ginsheim:
+        Weiße Rose:
+        Wikinger:
+        Zugvögel:
+        von Falkenstein:
+      Wetterau:
+        Dietrich Bonhoeffer:
+        Johann Textor:
+        Kojoten:
+        Krähenhorst:
+        VCP Bad Nauheim:
+        VCP Friedberg:
+        Zecke:
+    Mecklenburg-Vorpommern:
+      Biestower Braunbären:
+      Dargun + Stamm Levin/Zarnekow:
+      Die Luchse:
+      Die spähenden Falken:
+      Dierkower Erdmännchen:
+      Eric der Entdecker:
+      Groß Kleiner Elstern:
+      Lichtenhäger Wüstenfüchse:
+      Rövershäger Eichhörnchen:
+      Scouven Güstrow:
+      Seeadler:
+      St. Georg:
+      St. Jakobus Kavelstorf:
+      Stamm Heinrich der Löwe:
+      Stamm Luzin:
+      Stamm Rügen:
+      Stamm Vineta:
+      Stamm Waldkauz:
+      Stamm Weitenhagen:
+      Turmfalken Remplin:
+      Vellahner Pfauen:
+      Wanderfalken:
+      Warnemünder Wölfe:
+      Wittenburg:
+    Mitteldeutschland:
+      Sachsen-Anhalt:
+        Cracau Citz:
+        Die Schweden:
+        Die fuchsschlauen Wölfe:
+        Dietrich Bonhoeffer:
+        Franziskus von Assisi:
+        Fratres Tiliae:
+        Harzer Luchse:
+        Roter Milan:
+        Saale-Wiesel:
+        Stamm Jakobus:
+        Stamm St. Georg:
+        Stamm Surf:
+        Tom Bombadil:
+        VCP Schkopau Alexandra von Trotha:
+        VCP Werben:
+        Wilde Kreaturen:
+      Thüringen:
+        Die Wölfe:
+        Hainleite:
+        Siedlung Arnstadt:
+        Siedlung Erfurt:
+        Stamm Am Gottlob:
+        Stamm Drei Gleichen:
+        Thüringer Wanderfalken:
+        VCP Rastenberger Orgelpfeifen:
+    Niedersachsen:
+      Bremen:
+        Bonifatius:
+        Daniel von Büren:
+        Querflieger Werschenrege:
+        Siedlung St. Petri:
+      Elm:
+        Braunschweig Stadt:
+        Janusz Korczak:
+        Johann Hinrich Wichern:
+        Philipp Spitta:
+        St. Thomas:
+      Ems:
+        Eberhard von Danckelmann:
+        Wassergeusen:
+      Friesen:
+        Friesen:
+      Hannover:
+        Altwarmbüchen:
+        Buchholz-Kleefeld:
+        Hannover Süd:
+        Mechthild von Lona:
+        Paulus:
+        Raoul Wallenberg:
+        Stephanus:
+        VCP Wettbergen:
+      Harz:
+        Aragon:
+        Eomir:
+        Nikolaus von Amstorf:
+        Walkenried:
+      Heide:
+        Astrid Lindgren:
+        Buchholz:
+        Florian Geyer:
+        Heinrich der Löwe:
+        Hermann Billung:
+        Julius Neuendorff:
+        Langobarden:
+        Ritter von Soltowe:
+        Stamm Elvert:
+      Homburg:
+        Deutschritter:
+        Martin Luther King:
+        Stamm Hullersen:
+        Stamm Northeim:
+        Stamm Salzderhelden:
+        Stamm Silberkranich:
+        VCP Alfeld:
+        VCP Hehlen:
+        VCP Laurentius:
+      Oldenburg:
+        Boreas:
+        Die Brückenbiber:
+        Franziskus:
+        Jadeburg:
+        Kranich:
+        Likedeeler:
+        Stamm Assini Essen:
+        Tjalken:
+        Wildgänse:
+        Wilke Steding:
+        de butjenter Friesen:
+      Osning:
+        Die Arche:
+        Siedlung Hermann Bonnus:
+        Stamm Ichthys:
+      Ostfalen:
+        St. Andreas:
+        VCP Hildesheim:
+        Wipshausen:
+      Paul Schneider:
+        Dietrich Bonhoeffer:
+        Maria von Maltzan:
+        Paul Schneider ohne Stammeszugehörigkeit:
+      Süntel:
+        Aboriginals:
+        Bilche:
+        Chico Mendes:
+        Eversteiner Löwen:
+        Florian Geyer:
+        Grafen von Hallermundt:
+        Gruppe Tönebön (Kein Stamm):
+        Kreuzfähnlein:
+        VCP Beusterburg:
+        VCP Hämelschenburg:
+      Teufelsmoor:
+        J.C. Findorff:
+        Jan Torf:
+      Wasserkante:
+        Christopherus:
+        Kleiner Prinz:
+        VCP Cadenberge:
+        VCP Stamm Adiko Hammah:
+      Wilhelm Busch:
+        Akropolis:
+        Dietrich Bonhoeffer:
+        Diogenes:
+        VCP Mariensee:
+    Nordrhein:
+      Aachen:
+        Stamm Minas Anor:
+        VCP Hückelhoven Die Tauben:
+        VCP Merode Chico Mendes:
+        VCP Roetgen Stamm Rott:
+      Düsseldorf-West:
+        Dietrich Bonhoeffer:
+        Schwalmtal:
+        Stamm Dormagen:
+        Stamm Langenfeld:
+        Stamm Meister Ponzelar:
+        Stamm Mönchengladbach:
+        Stamm de Arfa:
+      Kaarst:
+        VCP Kaarst:
+      Köln-Bonn:
+        Hermann von Wied:
+        Thor Heyerdahl:
+      Monheim:
+        Janusz Korczak Monheim:
+      Remscheid:
+        Stamm Remscheid:
+      Ruhr-Wupper:
+        Dag Hammarskjöld:
+        Stamm Eberhard Wittgen:
+        Stamm Essen-Holsterhausen:
+        Stamm Legolas:
+        Weiße Rose:
+      Wesel:
+        Dompfadfinder Wesel:
+      Wuppertal:
+        VCP Wuppertal Eiserner Drachen:
+    Rheinland-Pfalz/Saar:
+      Alt-Burgund:
+        Cassiopeia:
+        Colugo:
+        Dietrich Bonhoeffer:
+        Grafen von Eberstein:
+        Leiningen:
+        Lohengrin:
+        Lutra:
+        Nibelungen:
+        Parzival:
+        Siedlung Johannes Gutenberg:
+        Siedlung Sindilo:
+      Hammersteiner Ring:
+        Otto von Hammerstein:
+        Philipp Melanchthon:
+        Reichenstein:
+      Nassau-Oranienburg:
+        Albert Schweitzer:
+        Brandan:
+        Erwachsenenrunde Dampf 90:
+        Franz von Sickingen:
+        Heinrich von Plauen:
+        Kleiner Prinz:
+        Siedlung Yakima:
+        Ulrich von Hutten:
+        Vasqua:
+      Neu-Burgund:
+        Franz von Sickingen:
+        Hasalaha:
+        Hohenstaufen:
+        Hunnen:
+        Ritter von Dalberg:
+        Salier:
+        Siedlung Freinsheim:
+        Siedlung Heinrich Lützel:
+        St. Nikolaus:
+      Pfälzer-Wald:
+        Albert Schweitzer:
+        Dagobert:
+        Franz von Sickingen:
+        Siedlung Schloß Dhaun:
+      Rheinfranken:
+        Albert Schweitzer:
+        Franz von Assisi:
+        John-F.-Kennedy:
+        Martin Luther King:
+        Nelson Mandela:
+        Nikolaus Graf von Zinzendorf:
+        Wangari Maathai:
+      Saar:
+        Römer:
+        Sankt Georg:
+        Scheidterhaufen:
+        Siedlung Löwe von Juda:
+      Tomburger Schar:
+        Bad Münstereifel:
+        Herigar:
+        Pfalzgraf Ezzo:
+        Richeza:
+      Tronje:
+        Die Spartaner:
+        Perceval:
+        Siedlung Richard Löwenherz:
+        Stamm Daun under:
+    Sachsen:
+      Bad Lausick:
+      Drachentiere:
+      Einsiedel Syhra:
+      Heinrich Zille:
+      Heinrich von Berlepsch:
+      Johannes der Täufer:
+      Karl May:
+      King Jesus friends:
+      Neuostra - Heiliger Born:
+      Pilgrim:
+      Pingtrosse:
+      Rotfuchs:
+      Salomo:
+      Schildbürger:
+      Schleiereulen Radeberg:
+      Schwarzkiefer:
+      St. Jakobus:
+      Stamm Eisvogel:
+      Stamm Gebirgsfalken:
+      Stamm Morgenstern:
+      Stamm Räuberhauptmann Karasek:
+      Stamm Steinadler:
+      Stamm de Auenwaldräuber:
+      Sturmkrähen - Siedlung Zittau:
+      Trachenschlucht:
+      Turmfalken:
+      VCP Limbach/Vogtland:
+      VCP Moritzburg:
+      VCP Oberlungwitz:
+      Wenceslai:
+    Schleswig-Holstein:
+      11 oben:
+      Alderaan:
+      Ansgar:
+      Aspasia:
+      Aver Liekers:
+      Cartoons:
+      Cassiopeia:
+      Die Falken:
+      Dunedain:
+      Kopernikus:
+      Likedeeler:
+      Markus Löwen:
+      Martje Flor:
+      Mori:
+      Nimrod:
+      Normannen:
+      Ritter von Barmstede:
+      Siedlung Lüneborg:
+      St. Georg:
+      St. Michael:
+      Stamm Briganten:
+      Stamm Gosharde:
+      Stamm Heide:
+      Steve Biko:
+      Swentana:
+      Vicelin:
+      Wikinger:
+      Wisent:
+      nordFlues:
+      von Acken:
+    Westfalen:
+      Abraham Jacobi:
+      Albert Schweitzer:
+      Arbalo:
+      Asgard:
+      Bonhoeffer:
+      Cherusker:
+      Hagen-Emst:
+      Junker Jörg:
+      Nodan:
+      Pankratius:
+      Paul Gerhardt:
+      Schwelm:
+      Stamm Bega:
+      Stamm David:
+      Stamm Elijah:
+      Stamm Hucriti:
+      Stamm Humbold:
+      Stamm Johannes:
+      Stamm Schmallenberg:
+      Stamm Thingslinde:
+      Ulrich von Hutten:
+      VCP Bochum:
+      VCP Bochum-Melanchthon:
+      VCP Hattingen:
+      VCP Löhne:
+      VCP Marl-Hamm:
+      VCP Wattenscheid:
+      Wildpferde:
+      Wittekind:
+      Zone Bethel:
+    Württemberg:
+      CVJM-Esslingen:
+        CVJM-Esslingen:
+      Gau Achalm:
+        Burladingen:
+        Greenhorns:
+        Jizchak Schwersenz:
+        St. Martin Ebingen:
+        Stamm Tübingen:
+        Sueben:
+      Gau Alb-Donau:
+        Albrecht Ludwig Berblinger:
+        Beimerstetten:
+        Leintal:
+        Ulrich von Hutten:
+      Gau Hohenlohe:
+        Die beinharten Gallier:
+        Israel Landauer:
+        Jona:
+        Limestor:
+        Ritter des schwarzen Kreuzes:
+        Siedlung Lichteneck:
+        Stamm Rosenberger Pfadfinder:
+      Gau Oberland:
+        Graf Montfort:
+        Heinrich der Löwe:
+        Stamm Altshausen:
+      Gau Rems-Murr:
+        Albrecht von Limpurg:
+        Heinrich von Waldau:
+        Hiltisnot von Roth:
+        Rudgerus de Herlekoven:
+        St. Georg:
+        Stamm Spraitbach:
+        Stamm Steinbach:
+        VCP Hohnweiler:
+      Gau Schwarzwald:
+        Stamm Adalbert von Zollern:
+        Stamm Hopfau:
+        Stamm Königsboten:
+        Stamm Luthersche Jugend:
+        Stamm Mettstett:
+        Stamm Schwenningen:
+        Stamm Trichtingen:
+        Weiße Rose:
+      Gau Strohgäu:
+        Arche Noah:
+        Friedrich Schiller:
+        Henri Arnaud:
+        Kreuzfahrer:
+        Stamm Aldingen:
+        Stamm Ludwigsburg:
+        Stamm Neckargröningen:
+      Gau Stuttgart:
+        Dietrich von Bern:
+        St. Michael:
+        Stamm Kreuzfahrer:
+        Stamm Kreuzritter:
+        Stamm Stuttgart-Gänsheide:
+      Gau Teck:
+        Alemannen:
+        Francesco Petrarca:
+        Friedrich v. Bodelschwingh:
+        Kreuzfahrer:
+        Martin Luther King:
+        Ritter vom Ordenskreuz:
+        Ritter von Lichteneck:
+        St. Michael:
+        Stamm Geislingen:
+      Gau Unterland:
+        Albert Schweitzer:
+        Albrecht von Lichtenberg:
+        Avalon:
+        Blauer Turm:
+        Geronimo:
+        Gustav Adolf:
+        Götz von Berlichingen:
+        Hans Riesser:
+        Martin Luther:
+        Paul Schneider:
+        Römer:
+        Stamm Passat:
+        Stamm Wildeck:
+        Vulkan:
+        Weiße Rose:
+        Wolf:
+        Älterenschaft:
+      Schönbuch-Würm:
+        Abt Johann:
+        Christoph Kolumbus:
+        Schönbuchtrapper:
+        Seattle:
 
-  Verband1:
-    Land D1:
-      RegionD1:
-        Stamm1:
-        Stamm2:
-        Stamm4:
-      RegionD2:
-        Stamm5:
-        Stamm6:
-        Stamm7:
-    Land D2:
-      RegionD3:
-        Stamm10:
-        Stamm8:
-        Stamm9:
-  Verband2:
-    Land D3:
-      RegionD3:
-        Stamm1:
-        Stamm2:
-        Stamm4:
-      RegionD4:
-        Stamm5:
-        Stamm6:
-        Stamm7:
-    Land D4:
-      RegionD3:
-        Stamm10:
-        Stamm8:
-        Stamm9:
 
 production:
 
