@@ -21,6 +21,8 @@ module Wsjrdp2023
                                     margin: 2.cm,
                                     bottom_margin: 1.cm)
 
+          @person = person
+
           sections.each { |section| section.new(pdf, person).render }
 
           # define header & footer variables
@@ -75,7 +77,14 @@ module Wsjrdp2023
         end
 
         def sections
-          [Contract, Medicin, Travel, DataAgreement] # , DataProcessing]
+          if @person.role_wish == 'Unit Leitung'
+            return [Contract, Medicin, DataProcessing, Recommondation, Travel, DataAgreement]
+          end
+          if @person.role_wish == 'Kontingentsteam'
+            return [Contract, Medicin, DataProcessing, Travel, DataAgreement]
+          end
+
+          [Contract, Medicin, Travel, DataAgreement]
         end
       end
       mattr_accessor :runner

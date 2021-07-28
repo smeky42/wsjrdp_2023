@@ -67,12 +67,12 @@ module Wsjrdp2023
         end
 
         pdf.move_down 3.mm
-        text 'Was muss ich mit dieser Anmeldung machen?', size: 12
-        text 'Die Anmeldung und das SEPA Lastschriftmandat müssen'
+        text 'Was muss ich mit der Anmeldung machen?', size: 12
+        text 'Die Anmeldung muss'
         text '1. vollständig unterschrieben werden'
-        text '2. auf anmeldung.worldscoutjamboree.de unter "Upload>Anmeldung hochladen" hochgeladen werden'
+        text '2. auf anmeldung.worldscoutjamboree.de unter '\
+        + '"Upload>Anmeldung hochladen" hochgeladen werden'
         text '3. am ersten Treffen der entsprechenden Betreuungsperson im Orginal überreicht werden'
-
         pdf.stroke_horizontal_rule
 
         pdf.move_down 3.mm
@@ -129,9 +129,9 @@ module Wsjrdp2023
 
         text 'Als Bestandteil dieser Anmeldung haben wir folgende Dokumente in der Anlage'\
           + ' zur Kenntnis genommen:'
-        text '- die Teilnahme- und Reisebedingungen des rdp (v0.2 vom 17.07.2021)'
-        text '- die Datenschutzhinweise (v0.2 vom 17.07.2021)'\
-          + ', insbesondere die Informationen zu TODO verweis wohin?'
+        text '- die Teilnahme- und Reisebedingungen des rdp (v0.3 vom 28.07.2021)'
+        text '- die Datenschutzhinweise (v0.3 vom 28.07.2021)' # \
+        # + ', insbesondere die Informationen zu TODO verweis wohin?'
         # TODO: Dokumente hochladen
         text 'Die Dokumente stehen auch unter www.worldscoutjamboree.de/downloads'\
         +' zur Verfügung.'
@@ -146,7 +146,15 @@ module Wsjrdp2023
 
 
         pdf.start_new_page
-        pdf.move_down 4.mm
+        pdf.move_down 3.mm
+        text 'Was muss ich mit dem SEPA Lastschriftverfahren machen?', size: 12
+        text 'Das SEPA Lastschriftverfahren muss'
+        text '1. vollständig unterschrieben werden'
+        text '2. auf anmeldung.worldscoutjamboree.de unter "Upload>SEPA hochladen" hochgeladen'\
+        + ' werden'
+        text '3. am ersten Treffen der entsprechenden Betreuungsperson im Orginal überreicht werden'
+        pdf.stroke_horizontal_rule
+        pdf.move_down 3.mm
 
         text 'SEPA Lastschriftverfahren', size: 12
         text 'Die Raten zur Teilnahme am Jamboree werden mittels SEPA-Basislastschrift eingezogen:'
@@ -163,7 +171,8 @@ module Wsjrdp2023
         attendee_data = pdf.make_table([
                                          [{ content: 'IBAN:', width: 150 }, @person.sepa_iban],
                                          ['Mandatsreferenz:', 'wsjrdp' + @person.id.to_s],
-                                         ['Gläubiger*innen-Identifikationsnummer:', 'TODO IBANrdp'],
+                                         ['Gläubiger*innen-Identifikationsnummer:',
+                                          'DE81 WSJ 0000 2017 275'], # Todo
                                          ['Kontoinhaber*in:', @person.sepa_name],
                                          ['Adresse:', @person.sepa_address]
                                        ],

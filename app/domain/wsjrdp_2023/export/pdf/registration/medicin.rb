@@ -269,7 +269,7 @@ module Wsjrdp2023
 
 
         text 'Für Rückfragen stehen die Ärzte im Kontingentsteam unter '\
-        + 'medizin@worldscoutjamboree.de zur Verfügung.'
+        + 'medizin-info@worldscoutjamboree.de zur Verfügung.'
         text ''
       end
     end
