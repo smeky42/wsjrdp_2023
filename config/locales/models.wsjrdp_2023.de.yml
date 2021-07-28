@@ -97,10 +97,10 @@ de:
         additional_contact_b_info_adult: Sekundärer Notfallkontakt
         additional_contact_name_b: Vor- und Nachname 
         additional_contact_adress_b: Adresse 
-        additional_contact_single: Es gibt nur eine Sorgeberechtigte Person
+        additional_contact_single: Es gibt nur eine sorgeberechtigte Person
         additional_contact_address_info: Sofern abweichend von Kontaktdaten Teilnehmer*in
-        additional_mail_info: Weitere E-Mail-Adressen und Telefonummern um bei Fragen, zur Information oder auch bei Notfällen Kontakt aufzunehmen
-        additional_mail_help: Mit Versand gekennzeichnete Mails werden zusätzlich zur primären Mailadresse benachrichtigt
+        additional_mail_info: Weitere E-Mail-Adressen und Telefonummern, um bei Fragen, zur Information oder auch bei Notfällen Kontakt aufzunehmen
+        additional_mail_help: Mit "Versand" gekennzeichnete Mails werden zusätzlich zur primären Mailadresse benachrichtigt
         sepa_header: Kontaktdaten Kontoinhaber*in
         sepa_info: werden für das SEPA Lastschriftmandat und bei Fragen rund um den Zahlungsverkehr verwendet 
         sepa_name: Kontoinhaber*in
@@ -110,7 +110,7 @@ de:
         sepa_bic: BIC
         sepa_status: Finanzstatus
         medicine_header: Gesundheitsfragebogen
-        medicine_info: Damit die Gesundheit der Teilnehmer auch bei medizinischen Notfällen gewährleistet werden kann, müssen die folgenden Fragen wahrheitsgemäß und vollständig beantwortet werden. Der rdp stellt durch technische und organisatorische Maßnahmen sicher, dass der Schutz der nachfolgend erhobenen Gesundheitsdaten gewährleistet wird. Weitere Informationen finden sich in den Hinweisen zur Datenverarbeitung unter 4.4.
+        medicine_info: Damit die Gesundheit der Teilnehmer*innen auch bei medizinischen Notfällen gewährleistet werden kann, müssen die folgenden Fragen wahrheitsgemäß und vollständig beantwortet werden. Der rdp stellt durch technische und organisatorische Maßnahmen sicher, dass der Schutz der nachfolgend erhobenen Gesundheitsdaten gewährleistet wird. Weitere Informationen finden sich in den Hinweisen zur Datenverarbeitung unter 4.4.
         medicine_vaccination: Schutzimpfungen
         medicine_vaccination_info: '(z.B. 12/2016 Prorix Mumps Masern Röteln, 04/2019 boostrix Hepatitis B, 05/2019 FSME)' 
         medicine_vaccination_help: Nur im Impfausweis dokumentierte Impfungen gelten als durchgeführt.
@@ -121,13 +121,13 @@ de:
         medicine_abnormalities: Folgende Auffälligkeiten / Erkrankungen sind bekannt 
         medicine_abnormalities_info: (z.B. Asthma, Reisekrankheit,Epilepsie, Angststörung,AD(H)S, erhöhter Betreuungsaufwand, etc.)
         medicine_allergies: Es bestehen folgende Allergien 
-        medicine_allergies_info: (z.B. gegen Medikamente, nachgewiesene Lebensmittelallergien,Heuschnupfen, etc.) mit folgenden Symptomen
-        medicine_eating_disorders: Es bestehen folgende Essensbesonderheiten mit folgenden Symptomen
+        medicine_allergies_info: (z.B. gegen Medikamente, nachgewiesene Lebensmittelallergien, Heuschnupfen, etc.) mit folgenden Symptomen
+        medicine_eating_disorders: Es bestehen folgende Essensbesonderheiten (ggf. mit folgenden Symptomen)
         medicine_mobility_needs: Es bestehen folgende Mobilitätsbedürfnisse auf Grund von
         medicine_infectious_diseases: Es besteht zur Zeit eine infektiöse Erkrankung, wenn ja welche
         medicine_medical_treatment_contact: Zur Zeit in ärztlicher Behandlung bei
         medicine_medical_treatment_contact_info: (behandelnder Arzt Facharzt - Name, Kontaktdaten) 
-        medicine_medical_treatment_contact_help: Es wird bei Bedarf gestattet, dass sich das ärztliche Team der Kontingentsleitung mit demgennannten med. Fachpersonal in Kontakt setzten darf, um Gesundheitsdaten / Informationen auzutauschen (Schweigepflichtsentbindung).
+        medicine_medical_treatment_contact_help: Es wird bei Bedarf gestattet, dass sich das ärztliche Team der Kontingentsleitung mit dem gennannten med. Fachpersonal in Kontakt setzt, um Gesundheitsdaten / Informationen auzutauschen (Schweigepflichtsentbindung).
         medicine_continous_medication: Dauermedikation 
         medicine_continous_medication_info: (Dosierung / Einnahmeschema / Einnahmegrund)
         medicine_needs_medication: Bedarfsmedikation 
@@ -137,11 +137,11 @@ de:
         medicine_other: Es ist auf Folgendes zu Achten 
         medicine_other_info: (z.B. Besonderheiten, Einschränkungen, etc.)
         medicine_important: Das ist noch wichtig
-        medicine_case: Im Falle einer Erkrankung oder eines Unfalles, bei denen durch eine Behandlung oder vorläufige Nicht-Behandlung in der Regel keinebleibenden Schäden zu erwarten sind (Bagatellerkrankungen-, verletzungen, Zecke/Splitter entfernen,...) darf unser Kind eigenständigüber Behandlungen entscheiden und in medizinische Eingriffe einwilligen, da es die für eine solche Entscheidung notwendigepersönliche geistige und körperliche Reife aufweist. Die Versorgung darf auch von Seiten der Betreuung erfolgen.
+        medicine_case: Im Falle einer Erkrankung oder eines Unfalles, bei denen durch eine Behandlung oder vorläufige Nicht-Behandlung in der Regel keine bleibenden Schäden zu erwarten sind (Bagatellerkrankungen/-verletzungen, Zecke/Splitter entfernen,...) darf unser Kind eigenständig über Behandlungen entscheiden und in medizinische Eingriffe einwilligen, da es die für eine solche Entscheidung notwendige persönliche geistige und körperliche Reife aufweist. Die Versorgung darf auch von Seiten der Betreuung erfolgen.
         medicine_case_doctor: Bei lebensbedrohlichen Erkrankungen / Unfällen entscheidet der behandelnde Arzt vor Ort.
-        medicine_support: Wie kann in Belastungsphasen unterstützt werden? 
+        medicine_support: Wie kannst du in Belastungsphasen unterstützt werden? 
         medicine_support_info: (Schokolade, Musik, Liebings-Song, etc)
-        upload_info_ready: Vielen Dank für den Upload, wir überprüfen die hochgeladenen PDFs und geben dir dann Bescheid.
+        upload_info_ready: Vielen Dank für den Upload. Wir überprüfen die hochgeladenen PDFs und geben dir dann Bescheid.
         upload_passport_pdf: Reisepass
         upload_data_processing_pdf: Vereinbarung
         upload_registration_pdf: Anmeldung
@@ -153,24 +153,24 @@ de:
         passport_nationality_info: z.B. Deutsch 
         passport_number: Reisepassnummer
         passport_number_info: z.B. C01X00T47
-        passport_germany: Ich besitzte einen gültigen deutschen Reisepass
-        passport_valid: Verfallsdatum Reisepass
-        passport_valid_help: Für die Einreise nach Südkorea benötigst du einen Reisepass, der zum Zeitpunkt der Einreise noch mindestens drei Monate gültig ist
+        passport_germany: Ich besitze einen gültigen deutschen Reisepass
+        passport_valid: Ablaufdatum Reisepass
+        passport_valid_help: Für die Einreise nach Südkorea benötigst du einen Reisepass, der zum Zeitpunkt der Einreise noch mindestens drei Monate gültig ist.
         status: Status der Anmeldung
         unit_keys: Unit Tag
         role_wish: Wunschrolle im Kontingent
         motivation: Motivation
-        motivation_info: Ich möchte aufs Jamboree fahren weil ... 
+        motivation_info: Ich möchte aufs Jamboree fahren, weil ... 
         languages_spoken: Ich spreche folgende Sprachen
         languages_spoken_info: z.B. Deutsch (Muttersprache), Englisch (5 Jahre Schule) 
         shirt_size: T-Shirt Größe
         shirt_size_info: z.B. M
         uniform_size: Tracht- bzw. Klufthemdgröße
-        uniform_size_info: z.B. 64 
+        uniform_size_info: z.B. 38 
         can_swim: Ich kann schwimmen 
         preview_info: Hier kannst du dir ein Vorschau-PDF genererieren, ohne die Anmeldung zu sperren. Dieses bitte nicht zum Upload verwenden. 
-        print_info: Hier kannst du dein Anmeldung verbindlich drucken. Nach dem Drucken, werden einige Felder zur Bearbeitung gesperrt. Dieses PDF bitte unterschreiben und bei Upload hochladen.
-        printed_info: Du hast deine Anmeldung erfolgreich gedruckt, hier kannst du sie dir noch einmal herunterladen. Im nächsten Schritt musst du die Anmeldung und weitere Dokumente bei 'Upload' hochladen.
+        print_info: Hier kannst du deine Anmeldung verbindlich drucken. Nach dem Drucken, werden einige Felder zur Bearbeitung gesperrt. Dieses PDF bitte unterschreiben und bei 'Upload' hochladen.
+        printed_info: Du hast deine Anmeldung erfolgreich gedruckt. Hier kannst du sie dir noch einmal herunterladen. Im nächsten Schritt musst du die Anmeldung und weitere Dokumente bei 'Upload' hochladen.
         check_contact_info: Wenn du die Kontaktinformationen änderst, muss der Teilnehmende eine neue Anmeldung hochgeladen haben! Diese muss auch in Papierform eingereicht werden.
         check_finance_info: Wenn du die Finanzdaten änderst, muss der Teilnehmende ein neues Lastschriftmandat hochgeladen haben!
         check_status_info: Den Status nur händisch setzten, wenn der Teilnehmende nicht automatisch benachrichtigt werden soll.
@@ -179,11 +179,11 @@ de:
         check_next_state_participant_info: Anmeldung wird gerade von Teilnehmer*in überarbeitet
         check_next_state_unit_info: Die Anmeldung ist vollständig und kontrolliert. Dies wurde dem Teilnehmer bereits bestätigt.
         upload_info: Um die Anmeldung abzuschließen, musst du noch folgende Dokumente als PDF hochladen. Bitte achte darauf, dass sie gut lesbar und mit allen Unterschriften versehen sind.
-        upload_passport_info: Wenn du keinen Reisepass hast, kannst du auch deinen Perso hochladen. Wir benötigen deinen Ausweis um Name und Geburtsdatum zu überprüfen. Alle anderen Daten kannst du verdecken.
+        upload_passport_info: Wenn du keinen Reisepass hast, kannst du auch ein PDF von deinem Personalausweis oder Kinderausweis hochladen. Wir benötigen deinen Ausweis um Name und Geburtsdatum zu überprüfen. Alle anderen Daten kannst du verdecken.
         upload_registration_info: Die Anmeldung ist die erste Seite deines PDFs.
         upload_sepa_info: Das SEPA Lastschriftmandat ist die zweite Seite deines PDFs.
         upload_recommondation_info: Als Unit Leitung brauchst du eine unterschriebene Empfehlung deines Landesverbands, deiner Diözese.
-        upload_data_processing_info: Du wirst später Teil der Personen sein, die Zugriff auf Daten anderer haben. Daher musst du die Verschweigenheitsvereinbarung unterschreiben.
+        upload_data_processing_info: Du wirst später Teil der Personen sein, die Zugriff auf Daten anderer haben. Daher musst du die Verschwiegenheitsvereinbarung unterschreiben.
         upload_good_conduct_info: Nicht das Führungszeugnis hochladen! Nur den Nachweis deines Verbandes, diesen erhältst du über dein Bundesbüro.
 
 
@@ -205,12 +205,12 @@ de:
       print_preview: Vorschau anzeigen
       print_preview_hint: Zur Kontrolle der Anmeldung
       print_submit: Verbindlich drucken
-      print_submit_hint: Sperrt bestimmte Felder für weitere bearbeitung
+      print_submit_hint: Sperrt bestimmte Felder für weitere Bearbeitung
       show_registration: Anmeldung einsehen
       show_registration_generated: Generierte Anmeldung herunterladen
       show_passport: Ausweis einsehen
       show_recommondation: Empfehlung einsehen
-      show_sepa: Sepa einsehen
+      show_sepa: SEPA einsehen
       show_data_processing: Verschwiegenheitsvereinbarung einsehen
       show_good_conduct: Nachweis Führungszeugnis einsehen
       review_hint: Dokument einsehen
@@ -219,7 +219,7 @@ de:
       save: Speichern
       status_hint: In den nächsten Status schalten
       cmt_review: Überprüfung der Teilnehmer*in beginnen 
-      cmt_documents: Dokumente sind vollständig Unterschrieben und inhaltlich korrekt
+      cmt_documents: Dokumente sind vollständig unterschrieben und inhaltlich korrekt
 
     text:
       more_info: Die Anmeldungen endet am 31.10. mehr Informationen findest du auf unserer
@@ -232,15 +232,15 @@ de:
       name: Bitte gib deinen vollständigen Vor- und Nachnamen ein.
       mail: Bitte gib deine korrekte Mailadresse ein.
       already_registered: Es existiert schon ein Account mit dieser e-Mail Adresse. Du kannst dein Passwort über "Passwort vergessen?" zurücksetzen.
-      map_access: Du hast nicht die Rolle um diese Informationen zu sehen
-      iban: Deine IBAN ist Fehlerhaft, bitte überprüfe diese noch einmal!
-      sepa_mail: Deine Mailadrese für das SEPA Verfahren ist Fehlerhaft, bitte überprüfe diese noch einmal!
+      map_access: Du hast nicht die Rolle, um diese Informationen zu sehen
+      iban: Deine IBAN ist fehlerhaft, bitte überprüfe diese noch einmal!
+      sepa_mail: Deine Mailadrese für das SEPA Verfahren ist fehlerhaft, bitte überprüfe diese noch einmal!
       print: Leider kannst du noch nicht drucken. Unter Kontaktdaten fehlen noch korrekte Angaben für folgende Felder
 
       
   contactable:
     additional_email_fields:
-      tooltip_mailings: Versände von E-Mails werden zusätzlich an alle hier markierten Adressen im CC verschickt.
+      tooltip_mailings: Beim Versand von E-Mails wird zusätzlich an alle hier markierten Adressen im CC verschickt.
     association:
       placeholder_value: Verbandszugehörigkeit
     contact: 
