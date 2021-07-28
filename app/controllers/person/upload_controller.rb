@@ -69,6 +69,7 @@ class Person::UploadController < ApplicationController
     end
   end
 
+  # rubocop:disable Metrics/AbcSize
   def upload_files
     upload_file(params[:person][:upload_passport_pdf], 'upload_passport_pdf')
     upload_file(params[:person][:upload_registration_pdf], 'upload_registration_pdf')
@@ -77,7 +78,9 @@ class Person::UploadController < ApplicationController
     upload_file(params[:person][:upload_good_conduct_pdf], 'upload_good_conduct_pdf')
     upload_file(params[:person][:upload_data_processing_pdf], 'upload_data_processing_pdf')
   end
+  # rubocop:enable Metrics/AbcSize
 
+  # rubocop:disable Metrics/MethodLength
   def upload_file(file_param, file_name)
     if file_param.nil?
       return
@@ -98,6 +101,8 @@ class Person::UploadController < ApplicationController
       flash[:alert] = 'Du kannst nur PDF Files hochladen.'
     end
   end
+  # rubocop:enable Metrics/MethodLength
+
 
   def file_path(file_name)
     date = Time.zone.now.strftime('%Y-%m-%d-%H-%M-%S')
@@ -110,51 +115,63 @@ class Person::UploadController < ApplicationController
   end
 
   def check_status
-    if @person.role_wish == 'Unit Leitung' &&
+    if unit_leader_complete ||
+      cmt_complete ||
+      ist_complete ||
+      participant_complete
+
+      upload_complete
+    end
+  end
+
+  def upload_complete
+    if @person.status == 'gedruckt'
+      @person.status = 'Upload vollständig'
+      send_upload_mail(@person)
+      @person.save
+    end
+  end
+
+  def standard_documents_complete
     @person.upload_passport_pdf.present? &&
     @person.upload_registration_pdf.present? &&
-    @person.upload_sepa_pdf.present? &&
+    @person.upload_sepa_pdf.present?
+  end
+
+  def participant_complete
+    @person.role_wish == 'Teilnehmer*in' &&
+    standard_documents_complete &&
+    @person.status == 'gedruckt'
+  end
+
+  def unit_leader_complete
+    @person.role_wish == 'Unit Leitung' &&
+    standard_documents_complete
     @person.upload_recommondation_pdf.present? &&
     @person.upload_good_conduct_pdf.present? &&
     @person.upload_data_processing_pdf.present? &&
     @person.status == 'gedruckt'
+  end
 
-      @person.status = 'Upload vollständig'
-      @person.save
-    end
-
-    if @person.role_wish == 'Kontingentsteam' &&
-    @person.upload_passport_pdf.present? &&
-    @person.upload_registration_pdf.present? &&
-    @person.upload_sepa_pdf.present? &&
+  def cmt_complete
+    @person.role_wish == 'Kontingentsteam' &&
+    standard_documents_complete &&
     @person.upload_good_conduct_pdf.present? &&
     @person.upload_data_processing_pdf.present? &&
     @person.status == 'gedruckt'
+  end
 
-      @person.status = 'Upload vollständig'
-      @person.save
-    end
-
-    if @person.role_wish == 'IST' &&
-    @person.upload_passport_pdf.present? &&
-    @person.upload_registration_pdf.present? &&
-    @person.upload_sepa_pdf.present? &&
+  def ist_complete
+    @person.role_wish == 'IST' &&
+    standard_documents_complete &&
     @person.upload_good_conduct_pdf.present? &&
     @person.status == 'gedruckt'
+  end
 
-      @person.status = 'Upload vollständig'
-      @person.save
-    end
-
-    if @person.role_wish == 'IST' &&
-    @person.upload_passport_pdf.present? &&
-    @person.upload_registration_pdf.present? &&
-    @person.upload_sepa_pdf.present? &&
-    @person.status == 'gedruckt'
-
-      @person.status = 'Upload vollständig'
-      @person.save
-    end
+  def send_upload_mail(person)
+    ReviewMailer.upload_mail(person).deliver_now
+    flash[:notice] =
+      "Eine Mail zur Bestätigung der Vollständigen Anmeldung wurde an #{params[:mail]} versandt!"
   end
 
 end
