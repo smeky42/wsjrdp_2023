@@ -141,10 +141,9 @@ de:
         medicine_case_doctor: Bei lebensbedrohlichen Erkrankungen / Unfällen entscheidet der behandelnde Arzt vor Ort.
         medicine_support: Wie kann in Belastungsphasen unterstützt werden? 
         medicine_support_info: (Schokolade, Musik, Liebings-Song, etc)
-        upload_info: Um die Anmeldung abzuschließen, musst du noch folgende Dokumente als PDF hochladen.  
         upload_info_ready: Vielen Dank für den Upload, wir überprüfen die hochgeladenen PDFs und geben dir dann Bescheid.
         upload_passport_pdf: Reisepass
-        upload_data_processing_pdf: Verschwiegenheitsvereinbarung
+        upload_data_processing_pdf: Vereinbarung
         upload_registration_pdf: Anmeldung
         generated_registration_pdf: Generierte Anmeldung
         upload_sepa_pdf: SEPA
@@ -179,7 +178,13 @@ de:
         check_next_status_info: Teilnehmer in den nächsten Status übernehmen
         check_next_state_participant_info: Anmeldung wird gerade von Teilnehmer*in überarbeitet
         check_next_state_unit_info: Die Anmeldung ist vollständig und kontrolliert. Dies wurde dem Teilnehmer bereits bestätigt.
-
+        upload_info: Um die Anmeldung abzuschließen, musst du noch folgende Dokumente als PDF hochladen. Bitte achte darauf, dass sie gut lesbar und mit allen Unterschriften versehen sind.
+        upload_passport_info: Wenn du keinen Reisepass hast, kannst du auch deinen Perso hochladen. Wir benötigen deinen Ausweis um Name und Geburtsdatum zu überprüfen. Alle anderen Daten kannst du verdecken.
+        upload_registration_info: Die Anmeldung ist die erste Seite deines PDFs.
+        upload_sepa_info: Das SEPA Lastschriftmandat ist die zweite Seite deines PDFs.
+        upload_recommondation_info: Als Unit Leitung brauchst du eine unterschriebene Empfehlung deines Landesverbands, deiner Diözese.
+        upload_data_processing_info: Du wirst später Teil der Personen sein, die Zugriff auf Daten anderer haben. Daher musst du die Verschweigenheitsvereinbarung unterschreiben.
+        upload_good_conduct_info: Nicht das Führungszeugnis hochladen! Nur den Nachweis deines Verbandes, diesen erhältst du über dein Bundesbüro.
 
 
         genders:

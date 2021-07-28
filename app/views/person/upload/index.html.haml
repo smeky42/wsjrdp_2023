@@ -8,28 +8,45 @@
     = standard_form(@person, {url: upload_group_person_path,  method: :put}) do |f|
       = f.error_messages
       %br
+      %br
+      = t('activerecord.attributes.person.upload_passport_info')
+      %br
       = f.labeled(:upload_passport_pdf, t('activerecord.attributes.person.upload_passport_pdf')) do
         = f.file_field(:upload_passport_pdf)
         = render 'person/upload/button_passport'
       %br
+      %br
+      = t('activerecord.attributes.person.upload_registration_info')
       = f.labeled(:upload_registration_pdf, t('activerecord.attributes.person.upload_registration_pdf')) do
         = f.file_field(:upload_registration_pdf)
         = render 'person/upload/button_registration'
       %br
+      %br
+      = t('activerecord.attributes.person.upload_sepa_info')
+      %br
       = f.labeled(:upload_sepa_pdf, t('activerecord.attributes.person.upload_sepa_pdf')) do
         = f.file_field(:upload_sepa_pdf)
         = render 'person/upload/button_sepa'
+        %br
+        %br
       -if(@person.role_wish == "Unit Leitung")
+        = t('activerecord.attributes.person.upload_recommondation_info')
         %br
         = f.labeled(:upload_recommondation_pdf, t('activerecord.attributes.person.upload_recommondation_pdf')) do
           = f.file_field(:upload_recommondation_pdf)
           = render 'person/upload/button_recommondation'
         %br
+        %br
       -if(@person.role_wish == "Unit Leitung" || @person.role_wish == "Kontingentsteam")
+        = t('activerecord.attributes.person.upload_data_processing_info')
+        %br
         = f.labeled(:upload_data_processing_pdf, t('activerecord.attributes.person.upload_data_processing_pdf')) do
           = f.file_field(:upload_data_processing_pdf)
           = render 'person/upload/button_data_processing'
+        %br
+        %br
       -if(@person.role_wish != "Teilnehmende*r")
+        = t('activerecord.attributes.person.upload_good_conduct_info')
         %br
         = f.labeled(:upload_good_conduct_pdf, t('activerecord.attributes.person.upload_good_conduct_pdf')) do
           = f.file_field(:upload_good_conduct_pdf)
