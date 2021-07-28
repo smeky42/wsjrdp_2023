@@ -44,6 +44,7 @@ class Person::CheckController < ApplicationController
         @person.status = 'in Überprüfung durch KT'
       end
       if params[:url] == 'cmt_documents'
+        send_review_mail(@person)
         @person.status = 'Dokumente vollständig überprüft'
       end
       @person.save
@@ -71,5 +72,12 @@ class Person::CheckController < ApplicationController
     end
   end
   # rubocop:enable Metrics/CyclomaticComplexity,Metrics/PerceivedComplexity,Metrics/MethodLength,Metrics/AbcSize
+
+
+  def send_review_mail(person)
+    ReviewMailer.review_mail(person).deliver_now
+    flash[:notice] =
+      "Eine Mail zur Überprüfung der Anmeldung wurde an #{params[:mail]} versandt!"
+  end
 
 end
