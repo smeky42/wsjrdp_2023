@@ -10,6 +10,7 @@
         = render 'person/upload/button_sepa', f: f
         = render 'person/upload/button_recommondation', f: f 
         = render 'person/upload/button_good_conduct', f: f
+        = render 'person/upload/button_data_processing', f: f
       %h4
         = t('activerecord.attributes.person.check_next_status_info')
       = standard_form(@person, {url: check_group_person_path,  method: :put}) do |f|

@@ -15,6 +15,8 @@ class Person::UploadController < ApplicationController
     if request.put?
       upload_files
     end
+
+    check_status
   end
 
   def show_registration
@@ -105,6 +107,54 @@ class Person::UploadController < ApplicationController
 
   def generate_file_path
     "#{Rails.root}/private/uploads/person/pdf/#{@person.id}/"
+  end
+
+  def check_status
+    if @person.role_wish == 'Unit Leitung' &&
+    @person.upload_passport_pdf.present? &&
+    @person.upload_registration_pdf.present? &&
+    @person.upload_sepa_pdf.present? &&
+    @person.upload_recommondation_pdf.present? &&
+    @person.upload_good_conduct_pdf.present? &&
+    @person.upload_data_processing_pdf.present? &&
+    @person.status == 'gedruckt'
+
+      @person.status = 'Upload vollständig'
+      @person.save
+    end
+
+    if @person.role_wish == 'Kontingentsteam' &&
+    @person.upload_passport_pdf.present? &&
+    @person.upload_registration_pdf.present? &&
+    @person.upload_sepa_pdf.present? &&
+    @person.upload_good_conduct_pdf.present? &&
+    @person.upload_data_processing_pdf.present? &&
+    @person.status == 'gedruckt'
+
+      @person.status = 'Upload vollständig'
+      @person.save
+    end
+
+    if @person.role_wish == 'IST' &&
+    @person.upload_passport_pdf.present? &&
+    @person.upload_registration_pdf.present? &&
+    @person.upload_sepa_pdf.present? &&
+    @person.upload_good_conduct_pdf.present? &&
+    @person.status == 'gedruckt'
+
+      @person.status = 'Upload vollständig'
+      @person.save
+    end
+
+    if @person.role_wish == 'IST' &&
+    @person.upload_passport_pdf.present? &&
+    @person.upload_registration_pdf.present? &&
+    @person.upload_sepa_pdf.present? &&
+    @person.status == 'gedruckt'
+
+      @person.status = 'Upload vollständig'
+      @person.save
+    end
   end
 
 end
