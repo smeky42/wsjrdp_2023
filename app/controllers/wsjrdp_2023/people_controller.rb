@@ -46,6 +46,7 @@ module Wsjrdp2023
         :medicine_support,
         :upload_passport_pdf,
         :upload_registration_pdf,
+        :upload_data_processing_pdf,
         :generated_registration_pdf,
         :upload_sepa_pdf,
         :upload_recommondation_pdf,

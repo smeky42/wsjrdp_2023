@@ -144,6 +144,7 @@ de:
         upload_info: Um die Anmeldung abzuschließen, musst du noch folgende Dokumente als PDF hochladen.  
         upload_info_ready: Vielen Dank für den Upload, wir überprüfen die hochgeladenen PDFs und geben dir dann Bescheid.
         upload_passport_pdf: Reisepass
+        upload_data_processing_pdf: Verschwiegenheitsvereinbarung
         upload_registration_pdf: Anmeldung
         generated_registration_pdf: Generierte Anmeldung
         upload_sepa_pdf: SEPA
@@ -205,6 +206,7 @@ de:
       show_passport: Ausweis einsehen
       show_recommondation: Empfehlung einsehen
       show_sepa: Sepa einsehen
+      show_data_processing: Verschwiegenheitsvereinbarung einsehen
       show_good_conduct: Nachweis Führungszeugnis einsehen
       review_hint: Dokument einsehen
       edit: Bearbeiten
