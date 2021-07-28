@@ -1,0 +1,8 @@
+- if @person.upload_passport_pdf.present?
+    = action_button(t('activerecord.button.show_passport'),
+                    '/groups/' + params[:group_id] + '/people/'+ params[:id] + '/upload/show_passport',
+                    :envelope,
+                    remote: false,
+                    method: :get,
+                    rel: :tooltip,
+                    title: t('activerecord.button.review_hint'))

@@ -1,0 +1,8 @@
+- if @person.upload_recommondation_pdf.present?
+  = action_button(t('activerecord.button.show_recommondation'),
+                  '/groups/' + params[:group_id] + '/people/'+ params[:id] + '/upload/show_recommondation',
+                  :envelope,
+                  remote: false,
+                  method: :get,
+                  rel: :tooltip,
+                  title: t('activerecord.button.review_hint'))
