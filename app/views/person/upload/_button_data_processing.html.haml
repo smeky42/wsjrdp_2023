@@ -1,0 +1,8 @@
+- if @person.upload_data_processing_pdf.present?
+    = action_button(t('activerecord.button.show_data_processing'),
+                    '/groups/' + params[:group_id] + '/people/'+ params[:id] + '/upload/show_data_processing',
+                    :envelope,
+                    remote: false,
+                    method: :get,
+                    rel: :tooltip,
+                    title: t('activerecord.button.review_hint'))

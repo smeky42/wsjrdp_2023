@@ -41,6 +41,10 @@ class Person::UploadController < ApplicationController
     download_file(@person.upload_sepa_pdf)
   end
 
+  def show_data_processing
+    download_file(@person.upload_data_processing_pdf)
+  end
+
 
   private
 
@@ -69,6 +73,7 @@ class Person::UploadController < ApplicationController
     upload_file(params[:person][:upload_sepa_pdf], 'upload_sepa_pdf')
     upload_file(params[:person][:upload_recommondation_pdf], 'upload_recommondation_pdf')
     upload_file(params[:person][:upload_good_conduct_pdf], 'upload_good_conduct_pdf')
+    upload_file(params[:person][:upload_data_processing_pdf], 'upload_data_processing_pdf')
   end
 
   def upload_file(file_param, file_name)
