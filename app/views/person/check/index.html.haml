@@ -1,0 +1,30 @@
+#main.row-fluid
+  - if can?(:edit, @person)
+    %br 
+    - if @manage
+      -# = f.error_messages
+      %h4
+        = t('activerecord.attributes.person.check_contact_info')
+      = standard_form(@person, {url: check_group_person_path,  method: :put}) do |f|
+        = f.labeled_collection_select(:role_wish, Settings.person.roles, :to_s, :to_s, {}, class: 'span2') 
+        = f.labeled_input_fields :first_name, :last_name
+        = render_attrs(@person, :birthday)
+        = f.labeled_input_field :birthday
+        = f.labeled(:gender) do
+          - (Person::GENDERS + ['']).each do |key|
+            = f.inline_radio_button(:gender, key, @person.gender_label(key))
+        = form_buttons(f, submit_label: 'Kontaktdaten Ändern ändern')
+      %h4
+        = t('activerecord.attributes.person.check_finance_info')
+      = standard_form(@person, {url: check_group_person_path,  method: :put}) do |f|
+        = f.labeled_input_fields :sepa_name,
+                    :sepa_address,
+                    :sepa_mail,
+                    :sepa_iban,
+                    :sepa_bic
+        = form_buttons(f, submit_label: 'gesperrte Felder ändern')
+      %h4
+        = t('activerecord.attributes.person.check_status_info')
+      = standard_form(@person, {url: check_group_person_path,  method: :put}) do |f|
+        = f.labeled_collection_select(:status, Settings.person.status, :to_s, :to_s, {}, class: 'span2') 
+        = form_buttons(f, submit_label: 'Status ändern')

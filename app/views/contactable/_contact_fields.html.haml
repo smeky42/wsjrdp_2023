@@ -12,7 +12,7 @@
       - (Person::GENDERS + ['']).each do |key|
         = f.inline_radio_button(:gender, key, entry.gender_label(key))
   -else 
-    = render_attrs(entry, :role_wish, :first_name, :last_name, :birthday)
+    = render_attrs(entry, :role_wish, :first_name, :last_name, :birthday, :gender)
 
   = f.labeled_input_field :nickname
   = render 'contactable/address_fields', f: f
