@@ -23,13 +23,12 @@
       %br
       = t('activerecord.attributes.person.print_info') 
   - else 
-    - if can?(:edit, @person)
-      = action_button(t('activerecord.button.show_registration'),
-                      '/groups/' + params[:group_id] + '/people/'+ params[:id] + '/upload/show_registration',
-                      :envelope,
-                      remote: false,
-                      method: :get,
-                      rel: :tooltip,
-                      title: t('activerecord.button.review_hint'))
+    - if can?(:edit, @person) 
+      -if @person.status != 'registriert'
+        = t('activerecord.attributes.person.printed_info')
+        %br
+        %br
+        = standard_form(@person, {url: print_group_person_path,  method: :put}) do |f|
+          = render 'person/upload/button_registration', f: f
         
     

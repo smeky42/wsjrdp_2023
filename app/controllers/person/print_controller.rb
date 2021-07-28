@@ -84,7 +84,6 @@ class Person::PrintController < ApplicationController
       reason += "\n - " + (I18n.t 'activerecord.alert.sepa_mail')
     end
 
-
     reason
   end
 

@@ -169,6 +169,7 @@ de:
         can_swim: Ich kann schwimmen 
         preview_info: Hier kannst du dir ein Vorschau-PDF genererieren, ohne die Anmeldung zu sperren. Dieses bitte nicht zum Upload verwenden. 
         print_info: Hier kannst du dein Anmeldung verbindlich drucken. Nach dem Drucken, werden einige Felder zur Bearbeitung gesperrt. Dieses PDF bitte unterschreiben und bei Upload hochladen.
+        printed_info: Du hast deine Anmeldung erfolgreich gedruckt, hier kannst du sie dir noch einmal herunterladen. Im nächsten Schritt musst du die Anmeldung und weitere Dokumente bei 'Upload' hochladen.
         check_contact_info: Wenn du die Kontaktinformationen änderst, muss der Teilnehmende eine neue Anmeldung hochgeladen haben! Diese muss auch in Papierform eingereicht werden.
         check_finance_info: Wenn du die Finanzdaten änderst, muss der Teilnehmende ein neues Lastschriftmandat hochgeladen haben!
         check_status_info: Den Status nur händisch setzten, wenn der Teilnehmende nicht automatisch benachrichtigt werden soll.
