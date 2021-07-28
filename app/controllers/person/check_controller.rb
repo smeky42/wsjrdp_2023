@@ -14,8 +14,9 @@ class Person::CheckController < ApplicationController
     @person ||= group.people.find(params[:id])
     @manage = manage
 
-    flash[:alert] = params[:qrcode]
+    # flash[:alert] = params[:url]
 
+    status_button
     save_put
   end
 
@@ -35,6 +36,18 @@ class Person::CheckController < ApplicationController
 
   def authorize_action
     authorize!(:edit, entry)
+  end
+
+  def status_button
+    if @manage && request.get?
+      if params[:url] == 'cmt_review'
+        @person.status = 'in Überprüfung durch KT'
+      end
+      if params[:url] == 'cmt_documents'
+        @person.status = 'Dokumente vollständig überprüft'
+      end
+      @person.save
+    end
   end
 
   # rubocop:disable Metrics/CyclomaticComplexity,Metrics/PerceivedComplexity,Metrics/MethodLength,Metrics/AbcSize

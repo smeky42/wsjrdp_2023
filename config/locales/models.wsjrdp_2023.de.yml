@@ -172,6 +172,11 @@ de:
         check_contact_info: Wenn du die Kontaktinformationen änderst, muss der Teilnehmende eine neue Anmeldung hochgeladen haben! Diese muss auch in Papierform eingereicht werden.
         check_finance_info: Wenn du die Finanzdaten änderst, muss der Teilnehmende ein neues Lastschriftmandat hochgeladen haben!
         check_status_info: Den Status nur händisch setzten, wenn der Teilnehmende nicht automatisch benachrichtigt werden soll.
+        check_document_info: Hochgeladene Dokumente einsehen
+        check_next_status_info: Teilnehmer in den nächsten Status übernehmen
+        check_next_state_participant_info: Anmeldung wird gerade von Teilnehmer*in überarbeitet
+        check_next_state_unit_info: Die Anmeldung ist vollständig und kontrolliert. Dies wurde dem Teilnehmer bereits bestätigt.
+
 
 
         genders:
@@ -202,6 +207,9 @@ de:
       edit: Bearbeiten
       edit_hint: Zum Bearbeiten öffnen 
       save: Speichern
+      status_hint: In den nächsten Status schalten
+      cmt_review: Überprüfung der Teilnehmer*in beginnen 
+      cmt_documents: Dokumente sind vollständig Unterschrieben und inhaltlich korrekt
 
     text:
       more_info: Die Anmeldungen endet am 31.10. mehr Informationen findest du auf unserer
