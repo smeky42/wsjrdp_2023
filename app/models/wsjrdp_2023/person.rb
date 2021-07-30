@@ -31,4 +31,14 @@ module Wsjrdp2023::Person
     false
   end
 
+  def mail_name
+    clean_nickname = nickname.gsub(/\s+/, '')
+
+    if clean_nickname.length < 3
+      return first_name
+    end
+
+    clean_nickname || first_name
+  end
+
 end

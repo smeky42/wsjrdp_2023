@@ -13,7 +13,7 @@
   -else 
     = render_attrs(entry, :first_name, :last_name, :birthday, :gender)
 
-  = f.labeled_input_field :nickname
+  = f.labeled_input_field :nickname, help_inline: t('activerecord.attributes.person.nickname_info')
   = render 'contactable/address_fields', f: f
 = render_extensions :address_fields, locals: { f: f }
 = field_set_tag do
