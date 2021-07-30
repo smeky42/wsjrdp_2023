@@ -76,13 +76,14 @@ de:
     
     attributes:
       person:
-        role: Wunschrolle
+        role: Ich möchte mitfahren als
         first_name_dummy: Robert
         last_name_dummy: Baden-Powell
         email_dummy: robert.baden-powell@worldscoutjamboree.de
         birthday_info: Geburtstag (dd.mm.yyyy)
         birthday_dummy: 22.02.1857
         nickname: Spitzname / Fahrtenname
+        nickname_info: Falls du hier einen Namen einträgst, werden wir diesen für Namensschilder und als Ansprache in Mails verwenden
         rdp_association: Verband
         rdp_association_region: Landesebene, Diözese
         rdp_association_sub_region: Bezirk, Region
@@ -113,7 +114,7 @@ de:
         medicine_info: Damit die Gesundheit der Teilnehmer*innen auch bei medizinischen Notfällen gewährleistet werden kann, müssen die folgenden Fragen wahrheitsgemäß und vollständig beantwortet werden. Der rdp stellt durch technische und organisatorische Maßnahmen sicher, dass der Schutz der nachfolgend erhobenen Gesundheitsdaten gewährleistet wird. Weitere Informationen finden sich in den Hinweisen zur Datenverarbeitung unter 4.4.
         medicine_vaccination: Schutzimpfungen
         medicine_vaccination_info: '(z.B. 12/2016 Prorix Mumps Masern Röteln, 04/2019 boostrix Hepatitis B, 05/2019 FSME)' 
-        medicine_vaccination_help: Nur im Impfausweis dokumentierte Impfungen gelten als durchgeführt.
+        medicine_vaccination_help: Nur im Impfausweis dokumentierte Impfungen gelten als durchgeführt. Die impfliste der STIKO findest du unter 
         medicine_vaccination_recommendation: 'Folgende Impfungen/Grundimmunisierung werden unsererseits empfohlen: Hepatitis A & B. Außerdem werden reisemedizinisch für Touristen für Südkorea (Stand 31.07.2021) weitere Impfungen empfohlen: Typhus, FSME, JapEnzephaltitis, Meningokokken.'
         medicine_stiko_vaccination: Die von der STIKO empfohlenen Schutzimpfungen wurden geimpft
         medicine_stiko_info: Die von der STIKO empfohlenen Schutzimpfungen wurden geimpft
@@ -127,20 +128,20 @@ de:
         medicine_infectious_diseases: Es besteht zur Zeit eine infektiöse Erkrankung, wenn ja welche
         medicine_medical_treatment_contact: Zur Zeit in ärztlicher Behandlung bei
         medicine_medical_treatment_contact_info: (behandelnder Arzt Facharzt - Name, Kontaktdaten) 
-        medicine_medical_treatment_contact_help: Es wird bei Bedarf gestattet, dass sich das ärztliche Team der Kontingentsleitung mit dem gennannten med. Fachpersonal in Kontakt setzt, um Gesundheitsdaten / Informationen auzutauschen (Schweigepflichtsentbindung).
+        medicine_medical_treatment_contact_help: Es wird bei Bedarf gestattet, dass sich das ärztliche Team der Kontingentsleitung mit dem genannten med. Fachpersonal in Kontakt setzt, um Gesundheitsdaten / Informationen auzutauschen (Schweigepflichtsentbindung).
         medicine_continous_medication: Dauermedikation 
         medicine_continous_medication_info: (Dosierung / Einnahmeschema / Einnahmegrund)
         medicine_needs_medication: Bedarfsmedikation 
         medicine_needs_medication_info: (Dosierung / Tageshöchstmenge / Einnahmegrund)
         medicine_medication_help: Mit dem Hausarzt ist abzuklären, ob für die bestehende Dauer- & Bedarfsmedikation ein aktueller Medikamentenplan der Medikamente mitgeführt werden muss.
         medicine_medications_self_treatment: Die Medikamente werden selbstständig eingenommen
-        medicine_other: Es ist auf Folgendes zu Achten 
+        medicine_other: Es ist auf Folgendes zu achten 
         medicine_other_info: (z.B. Besonderheiten, Einschränkungen, etc.)
         medicine_important: Das ist noch wichtig
         medicine_case: Im Falle einer Erkrankung oder eines Unfalles, bei denen durch eine Behandlung oder vorläufige Nicht-Behandlung in der Regel keine bleibenden Schäden zu erwarten sind (Bagatellerkrankungen/-verletzungen, Zecke/Splitter entfernen,...) darf unser Kind eigenständig über Behandlungen entscheiden und in medizinische Eingriffe einwilligen, da es die für eine solche Entscheidung notwendige persönliche geistige und körperliche Reife aufweist. Die Versorgung darf auch von Seiten der Betreuung erfolgen.
         medicine_case_doctor: Bei lebensbedrohlichen Erkrankungen / Unfällen entscheidet der behandelnde Arzt vor Ort.
         medicine_support: Wie kannst du in Belastungsphasen unterstützt werden? 
-        medicine_support_info: (Schokolade, Musik, Liebings-Song, etc)
+        medicine_support_info: (Schokolade, Musik, Lieblings-Song, etc)
         upload_info_ready: Vielen Dank für den Upload. Wir überprüfen die hochgeladenen PDFs und geben dir dann Bescheid.
         upload_passport_pdf: Reisepass
         upload_data_processing_pdf: Vereinbarung
@@ -158,7 +159,7 @@ de:
         passport_valid_help: Für die Einreise nach Südkorea benötigst du einen Reisepass, der zum Zeitpunkt der Einreise noch mindestens drei Monate gültig ist.
         status: Status der Anmeldung
         unit_keys: Unit Tag
-        role_wish: Wunschrolle im Kontingent
+        role_wish: Ich möchte mitfahren als 
         motivation: Motivation
         motivation_info: Ich möchte aufs Jamboree fahren, weil ... 
         languages_spoken: Ich spreche folgende Sprachen
@@ -179,7 +180,7 @@ de:
         check_next_state_participant_info: Anmeldung wird gerade von Teilnehmer*in überarbeitet
         check_next_state_unit_info: Die Anmeldung ist vollständig und kontrolliert. Dies wurde dem Teilnehmer bereits bestätigt.
         upload_info: Um die Anmeldung abzuschließen, musst du noch folgende Dokumente als PDF hochladen. Bitte achte darauf, dass sie gut lesbar und mit allen Unterschriften versehen sind.
-        upload_passport_info: Wenn du keinen Reisepass hast, kannst du auch ein PDF von deinem Personalausweis oder Kinderausweis hochladen. Wir benötigen deinen Ausweis um Name und Geburtsdatum zu überprüfen. Alle anderen Daten kannst du verdecken.
+        upload_passport_info: Wenn du keinen Reisepass hast, kannst du auch ein PDF von deinem Personalausweis oder Kinderausweis hochladen. Wir benötigen deinen Ausweis, um Name und Geburtsdatum zu überprüfen. Alle anderen Daten kannst du verdecken.
         upload_registration_info: Die Anmeldung ist die erste Seite deines PDFs.
         upload_sepa_info: Das SEPA Lastschriftmandat ist die zweite Seite deines PDFs.
         upload_recommondation_info: Als Unit Leitung brauchst du eine unterschriebene Empfehlung deines Landesverbands, deiner Diözese.
@@ -222,7 +223,7 @@ de:
       cmt_documents: Dokumente sind vollständig unterschrieben und inhaltlich korrekt
 
     text:
-      more_info: Die Anmeldungen endet am 31.10. mehr Informationen findest du auf unserer
+      more_info: Die Anmeldung endet am 31.10. mehr Informationen findest du auf unserer
       homepage: Homepage
       homepage_link: https://www.worldscoutjamboree.de/
       invalid_adress: Personen mit ungültiger Adresse
