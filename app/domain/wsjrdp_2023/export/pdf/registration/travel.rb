@@ -114,7 +114,7 @@ module Wsjrdp2023
         - Pfadfinderinnenschaft Sankt Georg (PSG),
         - Verband Christlicher Pfadfinderinnnen und Pfadfinder (VCP).'
         pdf.move_down 1.mm
-        text '4.3 Die Teilnahme am Jamboree setzt voraus, dass der Teilnehmer an'\
+        text '4.3 Die Teilnahme am Jamboree setzt voraus, dass der*die Teilnehmer*in an'\
         +' mindestens zwei Vorbereitungstreffen teilnimmt. Die Daten zu den Vorbereitungstreffen'\
         +' werden den Teilnehmer*innen von der jeweiligen Betreuung bekannt gegeben.'
         pdf.move_down 1.mm
@@ -157,12 +157,12 @@ module Wsjrdp2023
         + ' Mitgliedsverbänden unentgeltlich für die in 5.2 aufgezählten Zwecke zur'\
         + ' Verfügung zu stellten.'
         pdf.move_down 1.mm
-        text '5.5 Der Teilnehmer überträgt dem rdp alle Rechte, die zur Ausübung der in'\
+        text '5.5 Der*Die Teilnehmer*in überträgt dem rdp alle Rechte, die zur Ausübung der in'\
         + ' Ziff. 5.2 bis 5.4 aufgeführten Nutzungsrechte erforderlich sind. Die'\
         + ' Übertragung erfolgt örtlich und zeitlich unbeschränkt, unwiderruflich'\
         + ' und nicht ausschließlich. Eine gesonderte Vergütung erfolgt nicht.'
         pdf.move_down 1.mm
-        text '5.6 Sollte ein Teilnehmer nicht gefilmt oder fotografiert werden wollen, so'\
+        text '5.6 Sollte ein* Teilnehmer*in nicht gefilmt oder fotografiert werden wollen, so'\
         + ' soll er die jeweiligen Betreuer*innen hierauf jeweils vor Beginn der'\
         + ' Veranstaltung hinweisen. Der*Die Betreuer*in wird sich in diesem Fall'\
         + ' darum bemühen, die Fotografen darauf hinzuweisen, dass der Betroffene'\
@@ -170,7 +170,7 @@ module Wsjrdp2023
         + ' und ist nicht geschuldet.'
         pdf.move_down 1.mm
         text '5.7 Bei Fragen zu der Anfertigung von Bild- und Tonaufnahmen und zu deren'\
-        + ' Verwendung kann sich der Teilnehmer an die Email-Adresse'\
+        + ' Verwendung kann sich der*die Teilnehmer*in an die Email-Adresse'\
         + ' media-info@worldscoutjamboree.de wenden.'
 
         pdf.move_down 3.mm
@@ -220,19 +220,19 @@ module Wsjrdp2023
         +' müssen, behält sich der rdp vor, den Teilnahmebeitrag um den jeweiligen Erhöhungsbetrag'\
         +' anzupassen. Ab dem 20. Tag vor Reiseantritt ist eine Preiserhöhung unzulässig.'\
         +' Überschreitet der Erhöhungsbetrag 5 % des ursprünglich vereinbarten Preises,'\
-        +' ist der Teilnehmer nach Maßgabe von Ziff. 8.3 berechtigt, vom Vertrag zurückzutreten.'
+        +' ist der*die Teilnehmer*in nach Maßgabe von Ziff. 8.3 berechtigt, vom Vertrag zurückzutreten.'
         pdf.move_down 1.mm
         text '7.3 Der Beitrag kann nur durch SEPA-Lastschriften entrichtet werden. Hierfür ist'\
         +' die Erteilung eines SEPA-Basis-Lastschriftmandates erforderlich.'
         pdf.move_down 1.mm
 
         pdf.move_down 3.mm
-        text '8. Rücktritt des Teilnehmers vor Leistungsbeginn ', size: 12
+        text '8. Rücktritt des*der Teilnehmers*in vor Leistungsbeginn ', size: 12
         pdf.move_down 1.mm
-        text '8.1 Der Teilnehmer kann jederzeit vor Beginn der Reise von dem Vertrag zurücktreten.'\
+        text '8.1 Der*Die Teilnehmer*in kann jederzeit vor Beginn der Reise von dem Vertrag zurücktreten.'\
         +' Der Rücktritt ist schriftlich gegenüber dem rdp zu erklären. '
         pdf.move_down 1.mm
-        text '8.2 Erklärt der Teilnehmer den Rücktritt, so verliert der rdp den Anspruch auf'\
+        text '8.2 Erklärt der*die Teilnehmer*in den Rücktritt, so verliert der rdp den Anspruch auf'\
         +' Zahlung des Teilnehmerbeitrages. Stattdessen kann der rdp eine angemessene'\
         +' Entschädigung verlangen, sofern der Rücktritt nicht von ihm zu vertreten'\
         +' ist. Die Höhe der Entschädigung ist pauschaliert wie folgt:'
@@ -244,16 +244,16 @@ module Wsjrdp2023
           - bei Rücktritt bis zum 31.03.2023: 75% des Teilnahmebeitrags,
           - nach diesem Zeitpunkt in Höhe des vollen Teilnahmebeitrags'
         pdf.move_down 1.mm
-        text 'Dem Teilnehmer bleibt der Nachweis unbenommen, dem rdp'\
+        text 'Dem*Der Teilnehmer*in bleibt der Nachweis unbenommen, dem rdp'\
         +' sei durch den Rücktritt kein Schaden entstanden oder der Schaden sei wesentlich'\
         +' geringer als die oben genannten Pauschalsätze.'
         pdf.move_down 1.mm
         text '8.3 Wenn der rdp von der ihm eingeräumten Möglichkeit Gebrauch macht, den'\
         +' Teilnahmebeitrag um mehr als 5 % gegenüber dem ursprünglich geltenden Preis'\
-        +' zu erhöhen, und erklärt der Teilnehmer deshalb den Rücktritt, ist eine'\
-        +' Entschädigung nicht geschuldet; der Teilnehmer schuldet aber Ausgleich für'\
+        +' zu erhöhen, und erklärt der*die Teilnehmer*in deshalb den Rücktritt, ist eine'\
+        +' Entschädigung nicht geschuldet; der*die Teilnehmer*in schuldet aber Ausgleich für'\
         +' Teilleistungen, die er bis zum Rücktritt in Anspruch genommen hat. Das gleiche'\
-        +' gilt für den Fall, dass der Teilnehmer mit ergänzenden Bedingungen, die der'\
+        +' gilt für den Fall, dass der*die Teilnehmer*in mit ergänzenden Bedingungen, die der'\
         +' rdp aufgrund von Vorgaben des koreanischen Veranstalters weiterreichen muss,'\
         +' nicht einverstanden ist.'
         pdf.move_down 1.mm
@@ -266,16 +266,16 @@ module Wsjrdp2023
         text '9. Kündigung und Rücktritt durch den rdp', size: 12
         pdf.move_down 1.mm
         text '9.1 Der rdp ist berechtigt, den Vertrag ohne Einhaltung einer Frist'\
-        +' zu kündigen, wenn der Teilnehmer nachhaltig gegen seine im Reisevertrag'\
+        +' zu kündigen, wenn der*die Teilnehmer*in nachhaltig gegen seine im Reisevertrag'\
         +' und diesen Reisebedingungen vereinbarten Pflichten verstößt oder sonst'\
         +' durch sein Verhalten die Durchführung und den Erfolg der Veranstaltung'\
         +' nachhaltig gefährdet. Das ist insbesondere der Fall,'
-        text '-	wenn der Teilnehmer entgegen 4.3 bei mehr als zwei Vorbereitungstreffen'\
+        text '-	wenn der*die Teilnehmer*in entgegen 4.3 bei mehr als zwei Vorbereitungstreffen'\
         +' unentschuldigt gefehlt hat, oder'
-        text '- wenn der Teilnehmer gegen die Satzung seines Mitgliedsverbandes '\
+        text '- wenn der*die Teilnehmer*in gegen die Satzung seines Mitgliedsverbandes '\
         + ' 4.2 verstößt, die Mitgliedschaft aufgibt oder sie verliert '
-        text 'Die Kündigung ist nur zulässig, wenn der rdp den Teilnehmer zuvor in'\
-        +' Textform (z.B. durch eine Email) abgemahnt hat und der Teilnehmer sein'\
+        text 'Die Kündigung ist nur zulässig, wenn der rdp den*die Teilnehmer*in zuvor in'\
+        +' Textform (z.B. durch eine Email) abgemahnt hat und der*die Teilnehmer*in sein'\
         +' Fehlverhalten dennoch fortsetzt. Eine vorherige Abmahnung ist nicht'\
         +' erforderlich in Fällen gröbsten Fehlverhaltens, in denen eine sofortige'\
         +' Aufhebung des Vertrages auch unter Berücksichtigung der Interessen des'\
@@ -301,7 +301,7 @@ module Wsjrdp2023
         text 'b) höhere Gewalt; hierzu zählen auch Einreise- bzw. Ausreisebeschränkungen sowie'\
         +' sonstige staatliche Anordnungen im Zusammenhang mit der Ausbreitung des Virus SARS-CoV-2'
         text 'Im Falle des Rücktritts verliert der rdp den Anspruch auf den Teilnahmebeitrag.'\
-        +' Er kann jedoch vom Teilnehmer eine angemessene Entschädigung bis zur Höhe der ihm'\
+        +' Er kann jedoch vom Teilnehmenden eine angemessene Entschädigung bis zur Höhe der ihm'\
         +' bis zum Rücktritt entstandenen Kosten und Aufwendungen (z.B. für bereits erworbene'\
         +' Flugtickets) verlangen.'
 

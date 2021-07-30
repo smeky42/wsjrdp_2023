@@ -176,9 +176,9 @@ de:
         check_finance_info: Wenn du die Finanzdaten änderst, muss der Teilnehmende ein neues Lastschriftmandat hochgeladen haben!
         check_status_info: Den Status nur händisch setzten, wenn der Teilnehmende nicht automatisch benachrichtigt werden soll.
         check_document_info: Hochgeladene Dokumente einsehen
-        check_next_status_info: Teilnehmer in den nächsten Status übernehmen
+        check_next_status_info: Teilnehmer*in in den nächsten Status übernehmen
         check_next_state_participant_info: Anmeldung wird gerade von Teilnehmer*in überarbeitet
-        check_next_state_unit_info: Die Anmeldung ist vollständig und kontrolliert. Dies wurde dem Teilnehmer bereits bestätigt.
+        check_next_state_unit_info: Die Anmeldung ist vollständig und kontrolliert. Dies wurde dem*der Teilnehmenden bereits bestätigt.
         upload_info: Um die Anmeldung abzuschließen, musst du noch folgende Dokumente als PDF hochladen. Bitte achte darauf, dass sie gut lesbar und mit allen Unterschriften versehen sind.
         upload_passport_info: Wenn du keinen Reisepass hast, kannst du auch ein PDF von deinem Personalausweis oder Kinderausweis hochladen. Wir benötigen deinen Ausweis, um Name und Geburtsdatum zu überprüfen. Alle anderen Daten kannst du verdecken.
         upload_registration_info: Die Anmeldung ist die erste Seite deines PDFs.

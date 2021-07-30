@@ -62,6 +62,7 @@ module Wsjrdp2023
         text '1. vollständig unterschrieben werden'
         text '2. am ersten Treffen der entsprechenden Betreuungsperson im Orginal überreicht werden'
 
+        pdf.move_down 3.mm
         pdf.stroke_horizontal_rule
         pdf.move_down 3.mm
         text I18n.t('activerecord.attributes.person.medicine_header'), size: 14

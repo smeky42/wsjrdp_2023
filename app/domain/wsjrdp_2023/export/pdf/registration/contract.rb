@@ -73,6 +73,7 @@ module Wsjrdp2023
         text '2. auf anmeldung.worldscoutjamboree.de unter '\
         + '"Upload>Anmeldung hochladen" hochgeladen werden'
         text '3. am ersten Treffen der entsprechenden Betreuungsperson im Orginal überreicht werden'
+        pdf.move_down 3.mm
         pdf.stroke_horizontal_rule
 
         pdf.move_down 3.mm
@@ -109,10 +110,10 @@ module Wsjrdp2023
         pdf.move_down 3.mm
         text 'Es besteht die Möglichkeit, dass der Veranstalter des Jamboree in Korea'\
         +' ergänzende Bedingungen für die Teilnahme stellt und/oder weitere Daten'\
-        +' abfragt. Der rdp muss diese ergänzenden Bedingungen an alle Teilnehmer'\
+        +' abfragt. Der rdp muss diese ergänzenden Bedingungen an alle Teilnehmer*innen'\
         +' weitergeben, obwohl er auf den Inhalt keinen Einfluss hat, weil sonst'\
-        +' eine Teilnahme nicht möglich ist. Die Teilnehmer werden über diese Änderungen'\
-        +' in Textform unterrichtet. Sollte der Teilnehmer mit diesen ergänzenden Bedingungen'\
+        +' eine Teilnahme nicht möglich ist. Die Teilnehmer*innen werden über diese Änderungen'\
+        +' in Textform unterrichtet. Sollte der Teilnehmer*innen mit diesen ergänzenden Bedingungen'\
         +' nicht einverstanden sein, kann er nach Maßgabe von 8. der Reisebedingungen zu'\
         +' diesem Vertrag zurücktreten. '
 
@@ -151,6 +152,7 @@ module Wsjrdp2023
         text '2. auf anmeldung.worldscoutjamboree.de unter "Upload>SEPA hochladen" hochgeladen'\
         + ' werden'
         text '3. am ersten Treffen der entsprechenden Betreuungsperson im Orginal überreicht werden'
+        pdf.move_down 3.mm
         pdf.stroke_horizontal_rule
         pdf.move_down 3.mm
 

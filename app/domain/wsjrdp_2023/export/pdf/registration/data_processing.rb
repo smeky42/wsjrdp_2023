@@ -26,6 +26,7 @@ module Wsjrdp2023
         text '1. vollständig unterschrieben werden'
         text '2. auf anmeldung.worldscoutjamboree.de unter'\
         + ' "Upload>Vertraulichkeitsvereinbarung hochladen" hochgeladen werden'
+        pdf.move_down 3.mm
         pdf.stroke_horizontal_rule
 
         pdf.move_down 3.mm
