@@ -130,15 +130,13 @@ module Wsjrdp2023
         text 'Als Bestandteil dieser Anmeldung haben wir folgende Dokumente in der Anlage'\
           + ' zur Kenntnis genommen:'
         text '- die Teilnahme- und Reisebedingungen des rdp (v0.3 vom 28.07.2021)'
-        text '- die Datenschutzhinweise (v0.3 vom 28.07.2021)' # \
-        # + ', insbesondere die Informationen zu TODO verweis wohin?'
-        # TODO: Dokumente hochladen
+        text '- die Datenschutzhinweise (v0.3 vom 28.07.2021)'
         text 'Die Dokumente stehen auch unter www.worldscoutjamboree.de/downloads'\
         +' zur Verfügung.'
         pdf.move_down 3.mm
 
-        text 'Den Medizinbogen und das SEPA Lastschriftverfahren im Anhang'\
-          + ' wurden gesondert unterschrieben.'
+        text 'Den Medizinbogen und das SEPA-Mandat im Anhang'\
+          + (of_legal_age ? ' habe ich ' : ' haben wir ') + 'gesondert unterschrieben.'
         pdf.move_down 3.mm
 
         pdf.move_down 3.mm
@@ -147,8 +145,8 @@ module Wsjrdp2023
 
         pdf.start_new_page
         pdf.move_down 3.mm
-        text 'Was muss ich mit dem SEPA Lastschriftverfahren machen?', size: 12
-        text 'Das SEPA Lastschriftverfahren muss'
+        text 'Was muss ich mit dem SEPA-Mandat machen?', size: 12
+        text 'Das SEPA-Mandat muss'
         text '1. vollständig unterschrieben werden'
         text '2. auf anmeldung.worldscoutjamboree.de unter "Upload>SEPA hochladen" hochgeladen'\
         + ' werden'
@@ -156,7 +154,7 @@ module Wsjrdp2023
         pdf.stroke_horizontal_rule
         pdf.move_down 3.mm
 
-        text 'SEPA Lastschriftverfahren', size: 12
+        text 'SEPA-Mandat', size: 12
         text 'Die Raten zur Teilnahme am Jamboree werden mittels SEPA-Basislastschrift eingezogen:'
         pdf.move_down 2.mm
         text 'Ich ermächtige den Ring deutscher Pfadfinder*innenverbände e.V., die Zahlungen '\
@@ -187,7 +185,7 @@ module Wsjrdp2023
         text 'Lastschrifteinzug', size: 10
 
         pdf.move_down 3.mm
-        text 'Das SEPA Lastschriftverfahren wird nach folgendem Plan,'\
+        text 'Das SEPA-Mandat wird nach folgendem Plan,'\
         +" für #{role_full_name(@person.role_wish)}, eingezogen."\
         + ' Der Einzug erfolgt am 5. des jeweigen Monats bzw. am darauf folgenden Werktag.'
         pdf.move_down 3.mm

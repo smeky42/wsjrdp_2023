@@ -1,10 +1,19 @@
+# frozen_string_literal: true
+
+#  Copyright (c) 2012-2021, German Contingent for the Worldscoutjamboree 2023. This file is part of
+#  hitobito_wsjrdp_2023 and licensed under the Affero General Public License version 3
+#  or later. See the COPYING file at the top-level directory or at
+#  https://github.com/hitobito/hitobito_wsjrdp_2023.
+
+
 module FinanceHelper
   extend ActiveSupport::Concern
 
   included do
+    # rubocop:disable Metrics/MethodLength
     def payment_array
       [
-        [' ', 'Beitrag', 'Dez 21', 'Jan 22', 'Feb 22', 'Mär 22', 'Apr 22', 'Mai 22', 'Jun 22',
+        [' ', 'Gesamtbeitrag', 'Dez 21', 'Jan 22', 'Feb 22', 'Mär 22', 'Apr 22', 'Mai 22', 'Jun 22',
          'Jul 22', 'Aug 22', 'Sep 22', 'Okt 22', 'Nov 22', 'Dez 22', 'Jan 23', 'Feb 23', 'Mär 23',
          'Apr 23', 'Mai 23'],
         ['Teilnehmende*r', ' 4.100 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ', ' 150 € ',
@@ -21,6 +30,7 @@ module FinanceHelper
          ' -   € ', ' -   € ', ' -   € ', ' -   € ', ' -   € ']
       ]
     end
+    # rubocop:enable Metrics/MethodLength
 
     def payment_array_by(role)
       payment_array.select { |line| (line[0] == role || line[0] == ' ') }

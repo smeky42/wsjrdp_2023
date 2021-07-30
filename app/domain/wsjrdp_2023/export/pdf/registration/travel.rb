@@ -196,13 +196,15 @@ module Wsjrdp2023
         text '7.1 Der Teilnahmebetrag richtet sich nach der gewählten Teilnahmevariante'\
         +' (s.o. Ziff. 3.2, Reiseform und Pakete) und ggf. nach der Funktion des Teilnehmers im'\
         +' Kontingent. '
-        pdf.move_down 1.mm
-        pdf.make_table(payment_array, cell_style: { padding: 1, border_width: 0,
-                                                    inline_format: true, size: 6 }).draw
+
         pdf.move_down 3.mm
         text 'Das SEPA Lastschriftverfahren wird nach folgendem Plan eingezogen.'\
        + ' Der Einzug erfolgt am 5. des jeweigen Monats bzw. am darauf folgenden Werktag.'
-        pdf.move_down 1.mm
+
+        pdf.move_down 3.mm
+        pdf.make_table(payment_array, cell_style: { padding: 1, border_width: 0,
+                                                    inline_format: true, size: 6 }).draw
+        pdf.move_down 3.mm
         text 'NICHT im Teilnahmebeitrag enthalten sind:'
         pdf.move_down 1.mm
         text '- Reiserücktrittversicherung

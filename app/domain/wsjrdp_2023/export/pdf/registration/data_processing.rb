@@ -47,8 +47,9 @@ module Wsjrdp2023
         + ' betroffenen Personen auf Vertraulichkeit und Integrität ihrer Daten gewährleistet'\
         + ' werden. Daher ist es dem/der Mitarbeitende*n nur gestattet, personenbezogene'\
         + ' Daten in dem Umfang und in der Weise zu verarbeiten, wie es zur Erfüllung der'\
-        + ' Aufgaben im rdp e.V. erforderlich ist. Die zugänglich gemachten personenbezogenen'\
-        + ' Daten dürfen ausschließlich für Vereinszwecke verwendet werden. '
+        + ' Aufgaben des/der Mitarbeitenden im rdp e.V. erforderlich ist.'\
+        + ' Die zugänglich gemachten personenbezogenen'\
+        + ' Daten dürfen ausschließlich für die Durchführung der Veranstaltung verwendet werden. '
         pdf.move_down 1.mm
         text 'Nach diesen Vorschriften ist es untersagt, personenbezogene Daten unbefugt'\
         + ' oder unrechtmäßig zu verarbeiten oder absichtlich oder unabsichtlich die'\
@@ -64,6 +65,10 @@ module Wsjrdp2023
         pdf.move_down 1.mm
         text 'Die Verpflichtung auf die Vertraulichkeit besteht auch nach der'\
         + ' Beendigung der Tätigkeit für den rdp e.V. fort. '
+        pdf.move_down 1.mm
+        text 'Im Rahmen der Tätigkeit unterliegt die/der Mitarbeitende den'\
+        + ' Weisungen des rdp e.V. Diese Vereinbarung wird auch ohne Unterschrift'\
+        + ' durch den rdp e.V. mit Unterzeichnung durch den/die Mitarbeitende*n wirksam.'
         pdf.move_down 1.mm
         text 'Ich, ' + @person.full_name + ' erkläre, in Bezug auf die Vertraulichkeit und'\
         + ' Integrität personenbezogener Daten die Vorgaben der geltenden'\
