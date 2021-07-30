@@ -68,7 +68,7 @@ module Wsjrdp2023
         + ' (Mitglieder des Kontingentsteams im besondern Systemadministratoren, Unitbetreuer,'\
         + ' Ärzte, Tourenplaner, Logistiker, und die jeweilig verantworlichen Unitleiter*innen'\
         + ' ) erhalten je nach Inhalt ihrer Tätigkeit Zugriff'\
-        + ' auf personenbezogene Daten der Teilnehmer, soweit dies für die Erfüllung der'\
+        + ' auf personenbezogene Daten der Teilnehmer*innen, soweit dies für die Erfüllung der'\
         + ' ihnen übertragenen Aufgaben erforderlich ist. Rechtsgrundlage ist Art. 6 Abs.'\
         + ' 1 lit. b DSGVO. Mit den Empfängern ist eine Vertraulichkeitsvereinbarung'\
         + ' abgeschlossen.'
@@ -97,19 +97,19 @@ module Wsjrdp2023
         + ' seinen Sitz in der Republik Korea und damit außerhalb des Geltungsbereiches'\
         + ' der DSGVO und des BDSG. Der Veranstalter hat rechtliche und technische'\
         + ' Vorkehrungen getroffen, damit die Datensicherheit und der Datenschutz der'\
-        + ' personenbezogenen Daten der Teilnehmer zu jeder Zeit gewährleistet ist.'\
+        + ' personenbezogenen Daten der Teilnehmer*innen zu jeder Zeit gewährleistet ist.'\
         + ' Nähere Auskünfte zu diesen Vorkehrungen erteilt der rdp auf Anfrage.'\
         + ' Rechtsgrundlage der Übertragung ist Art. 6 Abs. 1 lit. b DSGVO. '
         pdf.move_down 1.mm
         text '3.4 Auf die erhobenen Gesundheitsdaten haben folgende Personen Zugriff:'\
         + ' Die jeweils verantwortlichen Unitleiter und Unitbetreuer als verantwortliche'\
         + ' Aufsichtspersonen; die Ärztinnen und Ärzte, soweit im Einzelfall eine medizinische'\
-        + ' Betreuung oder Behandlung des Teilnehmers erforderlich wird; die'\
+        + ' Betreuung oder Behandlung des*der Teilnehmers*Teilnehmerin erforderlich wird; die'\
         + ' Systemadministratoren des Deutschen Kontingents. Rechtsgrundlage sind'\
         + ' Art. 6 Abs. 1 lit. b und d DSGVO. Mit den Empfängern'\
         + ' ist eine Vertraulichkeitsvereinbarung abgeschlossen.'
         pdf.move_down 1.mm
-        text '3.5 Soweit gesundheitsbezogene Daten einzelner Teilnehmer an den'\
+        text '3.5 Soweit gesundheitsbezogene Daten einzelner Teilnehmer*innen an den'\
         + ' Veranstalter des Jamboree (The Organizing'\
         + ' Committee for the 25th World Scout Jamboree - '\
         + ' 2023 SaeManGeum, 301, 28 Saemunan-ro 5ga-gil, Jongno-gu, Seoul,'\
@@ -129,7 +129,7 @@ module Wsjrdp2023
         + ' Nach Ablauf der gesetzlichen Aufbewahrungsfristen werden die Daten gelöscht'\
         + ' oder gesperrt.'
         pdf.move_down 1.mm
-        text '4.2 Bild- und Tonaufnahmen der Teilnehmer werden gelöscht, sobald sie nicht'\
+        text '4.2 Bild- und Tonaufnahmen der Teilnehmer*innen werden gelöscht, sobald sie nicht'\
         + ' mehr für Zwecke der Dokumentation der Veranstaltung oder für die'\
         + ' Außendarstellung des rdp benötigt werden.'
 
@@ -162,9 +162,9 @@ module Wsjrdp2023
         text '-  gemäß Art. 18 DSGVO die Einschränkung der Verarbeitung ihrer personenbezogenen'\
         + ' Daten zu verlangen, soweit (1) die Richtigkeit der Daten von ihnen bestritten'\
         + ' wird, (2) die Verarbeitung unrechtmäßig ist, der Betroffene aber deren Löschung'\
-        + ' ablehnt, (3) der rdp die Daten nicht mehr benötigt, der Teilnehmer sie jedoch'\
+        + ' ablehnt, (3) der rdp die Daten nicht mehr benötigt, der*die Teilnehmer*in  sie jedoch'\
         + ' zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen benötigt'\
-        + ' oder (4) der Teilnehmer gemäß Art. 21 DSGVO Widerspruch gegen die Verarbeitung'\
+        + ' oder (4) der*die Teilnehmer*in gemäß Art. 21 DSGVO Widerspruch gegen die Verarbeitung'\
         + ' eingelegt hat;'
         pdf.move_down 1.mm
         text '-  gemäß Art. 20 DSGVO ihre personenbezogenen Daten, die sie dem rdp bereitgestellt'\

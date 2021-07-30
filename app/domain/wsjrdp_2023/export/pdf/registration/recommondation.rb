@@ -27,6 +27,7 @@ module Wsjrdp2023
         text '1. vollständig unterschrieben werden'
         text '2. auf anmeldung.worldscoutjamboree.de unter "Upload>Empfehlung hochladen"'\
         + ' hochgeladen werden'
+        pdf.move_down 3.mm
         pdf.stroke_horizontal_rule
 
         pdf.move_down 3.mm
@@ -62,10 +63,10 @@ module Wsjrdp2023
         text 'Amt: _____________________________ im'\
         + ' Landes-/Diözesanverband _______________________,'
         pdf.move_down 1.mm
-        text "dass ich #{@person.full_name} für geeignet halte, Mitglied einer Unitleitung'\
+        text 'dass ich ' + @person.full_name + ' für geeignet halte, Mitglied einer Unitleitung'\
         + ' für das World Scout Jamboree 2023 zu sein. Sie*er bringt die notwendigen Kompetenzen'\
         + ' für diese Aufgabe mit und kann dadurch für seine Unit zu einem unvergesslichem'\
-        + ' Jamboreeerlebnis maßgeblich beitragen."
+        + ' Jamboreeerlebnis maßgeblich beitragen.'
 
         pdf.make_table([
                          [{ content: '', height: 30 }],
