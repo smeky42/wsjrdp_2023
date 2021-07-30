@@ -61,9 +61,9 @@ module Wsjrdp2023
         + ' Art. 6 Abs. 1 lit. d DSGVO.'
 
         pdf.move_down 3.mm
-        text '4. Empfänger bzw. Kategorien von Empfängern der personenbezogenen Daten', size: 12
+        text '3. Empfänger bzw. Kategorien von Empfängern der personenbezogenen Daten', size: 12
         pdf.move_down 3.mm
-        text '4.1 Einzelne Angehörige von Mitgliedsverbänden, die im Auftrag des rdp in'\
+        text '3.1 Einzelne Angehörige von Mitgliedsverbänden, die im Auftrag des rdp in'\
         + ' Planung, Vorbereitung und Durchführung der Veranstaltung einbezogen sind'\
         + ' (Mitglieder des Kontingentsteams im besondern Systemadministratoren, Unitbetreuer,'\
         + ' Ärzte, Tourenplaner, Logistiker, und die jeweilig verantworlichen Unitleiter*innen'\
@@ -73,7 +73,7 @@ module Wsjrdp2023
         + ' 1 lit. b DSGVO. Mit den Empfängern ist eine Vertraulichkeitsvereinbarung'\
         + ' abgeschlossen.'
         pdf.move_down 1.mm
-        text '4.2 Einzelne personenbezogene Daten werden an Unternehmen und Organisationen'\
+        text '3.2 Einzelne personenbezogene Daten werden an Unternehmen und Organisationen'\
         + 'übertragen, deren'\
         + ' Dienste der Veranstalter in Anspruch nimmt, um seine Pflichten aus dem'\
         + ' Reisevertrag zu erfüllen (im besonderen:'\
@@ -90,7 +90,7 @@ module Wsjrdp2023
         + ' Rechtsgrundlage ist'\
         + ' Art. 6 Abs. 1 lit. b DSGVO.'
         pdf.move_down 1.mm
-        text '4.3 Einzelne personenbezogene Daten werden an den Veranstalter des'\
+        text '3.3 Einzelne personenbezogene Daten werden an den Veranstalter des'\
         + ' Jamboree (The Organizing Committee for the 25th World Scout Jamboree - '\
         + ' 2023 SaeManGeum, 301, 28 Saemunan-ro 5ga-gil, Jongno-gu, Seoul,'\
         + ' Republic of Korea) übermittelt. Dieser hat'\
@@ -101,7 +101,7 @@ module Wsjrdp2023
         + ' Nähere Auskünfte zu diesen Vorkehrungen erteilt der rdp auf Anfrage.'\
         + ' Rechtsgrundlage der Übertragung ist Art. 6 Abs. 1 lit. b DSGVO. '
         pdf.move_down 1.mm
-        text '4.4 Auf die erhobenen Gesundheitsdaten haben folgende Personen Zugriff:'\
+        text '3.4 Auf die erhobenen Gesundheitsdaten haben folgende Personen Zugriff:'\
         + ' Die jeweils verantwortlichen Unitleiter und Unitbetreuer als verantwortliche'\
         + ' Aufsichtspersonen; die Ärztinnen und Ärzte, soweit im Einzelfall eine medizinische'\
         + ' Betreuung oder Behandlung des Teilnehmers erforderlich wird; die'\
@@ -109,31 +109,32 @@ module Wsjrdp2023
         + ' Art. 6 Abs. 1 lit. b und d DSGVO. Mit den Empfängern'\
         + ' ist eine Vertraulichkeitsvereinbarung abgeschlossen.'
         pdf.move_down 1.mm
-        text '4.5 Soweit gesundheitsbezogene Daten einzelner Teilnehmer an den (The Organizing'\
+        text '3.5 Soweit gesundheitsbezogene Daten einzelner Teilnehmer an den'\
+        + ' Veranstalter des Jamboree (The Organizing'\
         + ' Committee for the 25th World Scout Jamboree - '\
         + ' 2023 SaeManGeum, 301, 28 Saemunan-ro 5ga-gil, Jongno-gu, Seoul,'\
         + ' Republic of Korea) übertragen werden, geschieht dies auf der'\
         + ' Grundlage von Art. 6 Abs. 1 lit. b und d DSGVO. '
         pdf.move_down 1.mm
-        text '4.6 Bild- und Tonaufnahmen dürfen vom rdp an Dritte weitergegeben werden,'\
+        text '3.6 Bild- und Tonaufnahmen dürfen vom rdp an Dritte weitergegeben werden,'\
         + ' insbesondere an seine Mitgliedsverbände und für Zwecke der Information der'\
         + ' Öffentlichkeit und für die Außendarstellung. Rechtsgrundlage hierfür ist'\
         + ' Art. 6 Abs. 1 lit. b DSGVO.'
 
         pdf.move_down 3.mm
-        text '5. Speicherungs- und Löschfristen', size: 12
+        text '4. Speicherungs- und Löschfristen', size: 12
         pdf.move_down 3.mm
-        text '5.1 Die erhobenen Daten werden gespeichert, solange ihre Kenntnis für die'\
+        text '4.1 Die erhobenen Daten werden gespeichert, solange ihre Kenntnis für die'\
         + ' Vorbereitung, Durchführung und Nachbereitung des Jamboree erforderlich ist.'\
         + ' Nach Ablauf der gesetzlichen Aufbewahrungsfristen werden die Daten gelöscht'\
         + ' oder gesperrt.'
         pdf.move_down 1.mm
-        text '5.2 Bild- und Tonaufnahmen der Teilnehmer werden gelöscht, sobald sie nicht'\
+        text '4.2 Bild- und Tonaufnahmen der Teilnehmer werden gelöscht, sobald sie nicht'\
         + ' mehr für Zwecke der Dokumentation der Veranstaltung oder für die'\
         + ' Außendarstellung des rdp benötigt werden.'
 
         pdf.move_down 3.mm
-        text '6. Betroffenenrechte', size: 12
+        text '5. Betroffenenrechte', size: 12
         pdf.move_down 3.mm
         text 'Betroffene haben das Recht, '
         pdf.move_down 1.mm
@@ -151,7 +152,9 @@ module Wsjrdp2023
         + ' Vervollständigung ihrer beim rdp gespeicherten personenbezogenen Daten zu verlangen;'
         pdf.move_down 1.mm
         text '-  gemäß Art. 17 DSGVO die Löschung ihrer beim rdp gespeicherten personenbezogenen'\
-        + ' Daten zu verlangen, soweit nicht die Verarbeitung zur Ausübung des Rechts auf freie'\
+        + ' Daten zu verlangen, soweit sie nicht für die Zwecke der Vertragsdurchführung'\
+        + ' erforderlich'\
+        + ' sind oder die nicht die Verarbeitung zur Ausübung des Rechts auf freie'\
         + ' Meinungsäußerung und Information, zur Erfüllung einer rechtlichen Verpflichtung,'\
         + ' aus Gründen des öffentlichen Interesses oder zur Geltendmachung, Ausübung oder'\
         + ' Verteidigung von Rechtsansprüchen erforderlich ist;'

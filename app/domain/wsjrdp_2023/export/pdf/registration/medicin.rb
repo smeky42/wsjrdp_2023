@@ -95,7 +95,7 @@ module Wsjrdp2023
         pdf.move_down 1.mm
         text 'Auf dem Gesundheitsbogen werden sensilbe Daten erfasst. Wir benötigen diese '\
         + 'zur Durchführung der Reise und für den Veranstalter des World Scout Jamborees.'\
-        + ' Wir verfahren sehr sorfältig mit den Daten, mehr dazu findet sich in unseren'\
+        + ' Wir verfahren sehr sorgfältig mit den Daten, mehr dazu findet sich in unseren'\
         + ' Datenschutzhinweisen im Anhang.'
 
         pdf.move_down 3.mm
