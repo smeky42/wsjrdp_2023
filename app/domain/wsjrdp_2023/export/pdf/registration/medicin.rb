@@ -86,7 +86,7 @@ module Wsjrdp2023
         text I18n.t('activerecord.attributes.person.medicine_info')
 
         pdf.move_down 3.mm
-        text 'Grundsätzlich', size: 12
+        text 'Grundsätzliches', size: 12
         pdf.move_down 1.mm
         text 'Änderungen müssen bis zum Antritt der Reise unverzüglich dem Veranstalter/dem '\
         + 'ärztlichem Team über die Anmeldung (anmeldung.worldscoutjamboree.de) mitgeteilt werden.'

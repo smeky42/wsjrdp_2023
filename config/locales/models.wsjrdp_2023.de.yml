@@ -114,10 +114,10 @@ de:
         medicine_info: Damit die Gesundheit der Teilnehmer*innen auch bei medizinischen Notfällen gewährleistet werden kann, müssen die folgenden Fragen wahrheitsgemäß und vollständig beantwortet werden. Der rdp stellt durch technische und organisatorische Maßnahmen sicher, dass der Schutz der nachfolgend erhobenen Gesundheitsdaten gewährleistet wird. Weitere Informationen finden sich in den Hinweisen zur Datenverarbeitung unter 4.4.
         medicine_vaccination: Schutzimpfungen
         medicine_vaccination_info: '(z.B. 12/2016 Prorix Mumps Masern Röteln, 04/2019 boostrix Hepatitis B, 05/2019 FSME)' 
-        medicine_vaccination_help: Nur im Impfausweis dokumentierte Impfungen gelten als durchgeführt. Die impfliste der STIKO findest du unter 
+        medicine_vaccination_help: Nur im Impfausweis dokumentierte Impfungen gelten als durchgeführt.
         medicine_vaccination_recommendation: 'Folgende Impfungen/Grundimmunisierung werden unsererseits empfohlen: Hepatitis A & B. Außerdem werden reisemedizinisch für Touristen für Südkorea (Stand 31.07.2021) weitere Impfungen empfohlen: Typhus, FSME, JapEnzephaltitis, Meningokokken.'
-        medicine_stiko_vaccination: Die von der STIKO empfohlenen Schutzimpfungen wurden geimpft
-        medicine_stiko_info: Die von der STIKO empfohlenen Schutzimpfungen wurden geimpft
+        medicine_stiko_vaccination: Die, von der STIKO empfohlenen Schutzimpfungen wurden geimpft
+        medicine_stiko_info: Die, von der STIKO empfohlenen Schutzimpfungen wurden geimpft
         medicine_preexisting_conditions: Bekannte Vorerkrankungen / Operationen / Kinderkrankheiten
         medicine_abnormalities: Folgende Auffälligkeiten / Erkrankungen sind bekannt 
         medicine_abnormalities_info: (z.B. Asthma, Reisekrankheit,Epilepsie, Angststörung,AD(H)S, erhöhter Betreuungsaufwand, etc.)

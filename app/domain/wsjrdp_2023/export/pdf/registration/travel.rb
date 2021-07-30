@@ -220,19 +220,22 @@ module Wsjrdp2023
         +' müssen, behält sich der rdp vor, den Teilnahmebeitrag um den jeweiligen Erhöhungsbetrag'\
         +' anzupassen. Ab dem 20. Tag vor Reiseantritt ist eine Preiserhöhung unzulässig.'\
         +' Überschreitet der Erhöhungsbetrag 5 % des ursprünglich vereinbarten Preises,'\
-        +' ist der*die Teilnehmer*in nach Maßgabe von Ziff. 8.3 berechtigt, vom Vertrag zurückzutreten.'
+        +' ist der*die Teilnehmer*in nach Maßgabe von Ziff. 8.3'\
+        +' berechtigt, vom Vertrag zurückzutreten.'
         pdf.move_down 1.mm
         text '7.3 Der Beitrag kann nur durch SEPA-Lastschriften entrichtet werden. Hierfür ist'\
         +' die Erteilung eines SEPA-Basis-Lastschriftmandates erforderlich.'
         pdf.move_down 1.mm
 
         pdf.move_down 3.mm
-        text '8. Rücktritt des*der Teilnehmers*in vor Leistungsbeginn ', size: 12
+        text '8. Rücktritt des Teilnehmenden vor Leistungsbeginn ', size: 12
         pdf.move_down 1.mm
-        text '8.1 Der*Die Teilnehmer*in kann jederzeit vor Beginn der Reise von dem Vertrag zurücktreten.'\
+        text '8.1 Der*Die Teilnehmer*in kann jederzeit vor Beginn der Reise von dem Vertrag'\
+        +' zurücktreten.'\
         +' Der Rücktritt ist schriftlich gegenüber dem rdp zu erklären. '
         pdf.move_down 1.mm
-        text '8.2 Erklärt der*die Teilnehmer*in den Rücktritt, so verliert der rdp den Anspruch auf'\
+        text '8.2 Erklärt der*die Teilnehmer*in den Rücktritt, so'\
+        +'  verliert der rdp den Anspruch auf'\
         +' Zahlung des Teilnehmerbeitrages. Stattdessen kann der rdp eine angemessene'\
         +' Entschädigung verlangen, sofern der Rücktritt nicht von ihm zu vertreten'\
         +' ist. Die Höhe der Entschädigung ist pauschaliert wie folgt:'
