@@ -54,17 +54,22 @@ module FinanceHelper
     # rubocop:disable Metrics/MethodLength
     def package(role)
       case role
-      when 'Teilnehmende*r' || 'Unit Leitung'
+      when 'Teilnehmende*r'
+        'die Vor- und Nachbereitung in Deutschland,'\
+        + ' die Teilnahme an den Akklimatisierungstagen in Südkorea,'\
+        + ' die Teilnahme am 25. World Scout Jamboree in Südkorea,'\
+        + ' die Reise nach Südkorea und eine Vor- oder Nachtour'
+      when 'Unit Leitung'
         'die Vor- und Nachbereitung in Deutschland,'\
         + ' die Teilnahme an den Akklimatisierungstagen in Südkorea,'\
         + ' die Teilnahme am 25. World Scout Jamboree in Südkorea,'\
         + ' die Reise nach Südkorea und eine Vor- oder Nachtour'
       when 'Kontingentsteam'
         'die Vor- und Nachbereitung in Deutschland,'\
-        + ' die Teilnahme an den Akklimatisierungstagen in Südkorea,'\
+        + ' die Teilnahme an den Akklimatisierungstagen in Südkorea und'\
         + ' die Teilnahme am 25. World Scout Jamboree in Südkorea'
       else
-        'die Vor- und Nachbereitung in Deutschland,'\
+        'die Vor- und Nachbereitung in Deutschland und'\
         + ' die Teilnahme am 25. World Scout Jamboree in Südkorea'
       end
     end

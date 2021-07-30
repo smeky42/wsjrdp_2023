@@ -35,7 +35,7 @@ module Wsjrdp2023
         text 'Empfehlung als Mitglied einer Unitleitung für das World Scout Jamboree 2023', size: 14
         pdf.move_down 3.mm
         text 'Im Sommer 2023 findet das 25. World Scout Jamboree in Korea statt. Wir als'\
-        + ' Ringe deutscher Pfadfinderinnen und Pfadfinder wollen aus unserem'\
+        + ' Ring deutscher Pfadfinder*innen wollen aus unserem'\
         + ' Selbstverständnis heraus dort gemeinsam als deutsche Pfadfinder*innen auftreten.'
         pdf.move_down 1.mm
         text 'Unser Ziel ist es, dass für alle Units des verbandsübergreifenden deutschen'\
@@ -49,7 +49,8 @@ module Wsjrdp2023
         + ' Unitleitungen eine Empfehlung für die jeweilige'\
         + ' Person. Dies erfolgt durch die Leitung/Vorstand'\
         + ' des jeweiligen Landes- (VCP, BdP, BMPPD)'\
-        + ' bzw. Diözesanverbandes (DPSG). Solltest du'\
+        + ' bzw. Diözesanverbandes (DPSG).'
+        text ' Solltest du'\
         + ' den*die Bewerber*in nicht persönlich kennen,'\
         + ' erkundige dich bitte bei anderen Ebenen, ob dem*der Bewerber*in die Leitung einer Unit'\
         + ' zugetraut werden kann. Schon einmal ein herzliches'\

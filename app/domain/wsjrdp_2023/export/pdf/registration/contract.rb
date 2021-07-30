@@ -91,12 +91,12 @@ module Wsjrdp2023
         " beinhaltet #{package(@person.role_wish)}."
         text 'Die Reise ist für den Zeitraum vom 20.07 bis 21.08.2023'\
         +' geplant. Der Reisezeitraum variiert je nach gewähltem Paket und Lage der'\
-        +" Sommerferien, Reisedauer sind #{package_time(@person.role_wish)}."
+        +" Sommerferien. Reisedauer sind #{package_time(@person.role_wish)}."
 
         pdf.move_down 3.mm
-        text 'Hiermit ' + (of_legal_age ? 'melde ich mich ' : 'melden wir unser Kind ') \
+        text 'Hiermit ' + (of_legal_age ? 'melde ich mich, ' : 'melden wir unser Kind, ') \
         + @person.full_name + ', geboren am ' + @person.birthday.strftime('%d.%m.%Y') \
-        + " verbindlich mit dem Paket #{role_full_name(@person.role_wish)}" \
+        + ", verbindlich mit dem Paket '#{role_full_name(@person.role_wish)}'" \
         + ' zur Teilnahme im Deutschen Kontingent'\
         + ' zum 25. World Scout Jamboree 2023 an. Mit der Anmeldung '\
         + (of_legal_age ? 'akzeptiere ich' : 'akzeptieren wir')\
@@ -104,16 +104,17 @@ module Wsjrdp2023
 
         pdf.move_down 3.mm
         text 'Der rdp behält sich das Recht vor, angekündigte Programminhalte durch'\
-        +' andere zu ersetzen und notwendige Änderungen des Programms unter Wahrung'\
+        +' andere zu ersetzen und notwendige Änderungen des Programms, unter Wahrung'\
         +' des Gesamtcharakters der Veranstaltung vorzunehmen.'
 
         pdf.move_down 3.mm
-        text 'Es besteht die Möglichkeit, dass der Veranstalter des Jamboree in Korea'\
+        text 'Es besteht die Möglichkeit, dass der Veranstalter des Jamborees in Korea'\
         +' ergänzende Bedingungen für die Teilnahme stellt und/oder weitere Daten'\
         +' abfragt. Der rdp muss diese ergänzenden Bedingungen an alle Teilnehmer*innen'\
         +' weitergeben, obwohl er auf den Inhalt keinen Einfluss hat, weil sonst'\
         +' eine Teilnahme nicht möglich ist. Die Teilnehmer*innen werden über diese Änderungen'\
-        +' in Textform unterrichtet. Sollte der Teilnehmer*innen mit diesen ergänzenden Bedingungen'\
+        +' in Textform unterrichtet. Sollte der'\
+        +' Teilnehmer*innen mit diesen ergänzenden Bedingungen'\
         +' nicht einverstanden sein, kann er nach Maßgabe von 8. der Reisebedingungen zu'\
         +' diesem Vertrag zurücktreten. '
 
@@ -128,8 +129,9 @@ module Wsjrdp2023
 
         pdf.move_down 3.mm
 
-        text 'Als Bestandteil dieser Anmeldung haben wir folgende Dokumente in der Anlage'\
-          + ' zur Kenntnis genommen:'
+        text 'Als Bestandteil dieser Anmeldung' + (of_legal_age ? ' habe ich ' : ' haben wir ')\
+        + ' folgende Dokumente in der Anlage'\
+        + ' zur Kenntnis genommen:'
         text '- die Teilnahme- und Reisebedingungen des rdp (v0.3 vom 28.07.2021)'
         text '- die Datenschutzhinweise (v0.3 vom 28.07.2021)'
         text 'Die Dokumente stehen auch unter www.worldscoutjamboree.de/downloads'\
