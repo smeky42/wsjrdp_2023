@@ -26,7 +26,7 @@ module Wsjrdp2023
         text 'Teilnahme- und Reisebedingungen für die Teilnahme im Deutschen Kontingent zum 25. '\
         +'World Scout Jamboree 2023 in Südkorea', size: 14
         pdf.move_down 3.mm
-        text 'v0.3 vom 28.07.2021'
+        text 'v1.0 vom 30.07.2021'
         pdf.move_down 3.mm
         text '1. Veranstalter', size: 12
         pdf.move_down 1.mm
