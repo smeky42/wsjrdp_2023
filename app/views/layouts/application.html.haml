@@ -105,12 +105,21 @@
                 = link_to label, url, target: '_blank'
                 %br/
             %p
-              = "Du hast Fragen zur Anmeldung:"
+              = "Du hast Fragen zum Jamboree:"
               %br/ 
               = " Dann informiere dich auf "
-              = link_to 'www.worldscoutjamboree.de', 'www.worldscoutjamboree.de', target: '_blank'
+              = link_to 'www.worldscoutjamboree.de', 'https://www.worldscoutjamboree.de', target: '_blank'
               = " oder schreib uns eine E-Mail an"
               = mail_to 'info@worldscoutjamboree.de', 'info@worldscoutjamboree.de'
+              %br/
+            %p
+              = "Du hast Fragen zur Anmeldung:"
+              %br/ 
+              = " Diese Anleitung führt dich durch den Anmeldeprozess: "
+              = link_to 'www.worldscoutjamboree.de/howto-anmeldung', 'https://www.worldscoutjamboree.de/howto-anmeldung', target: '_blank'
+              %br/ 
+              = " Oder vielleicht helfen dier die FAQs weiter:"
+              = link_to 'www.worldscoutjamboree.de/faq-anmeldung', 'https://www.worldscoutjamboree.de/faq-anmeldung', target: '_blank'
               %br/
             %p
               = "Die Anmeldung zum World Scout Jamboree des deutschen Kontingents wird ehrenamtlich entwickelt "
@@ -118,7 +127,7 @@
               = link_to 'GitHub', 'https://github.com/smeky42/wsjrdp_2023/'
               = " verfügbar."
             %p 
-              = "Wagon Version 1.3.0 - Events für Unit Leiter"
+              = "World Scout Jamboree 2023 Anmeldung in Version #{Settings.application.version}"
             %p
               = "Datenschutz: "
               = link_to 'https://www.worldscoutjamboree.de/datenschutz/', 'https://www.worldscoutjamboree.de/datenschutz/', target: '_blank'
