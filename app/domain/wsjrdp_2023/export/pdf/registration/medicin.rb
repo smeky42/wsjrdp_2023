@@ -100,23 +100,23 @@ module Wsjrdp2023
         + ' Datenschutzhinweisen im Anhang.'
 
         pdf.move_down 3.mm
-        text I18n.t('activerecord.attributes.person.medicine_vaccination'), size: 10
+        text I18n.t('activerecord.attributes.person.medicine_vaccination_header'), size: 10
         text 'Vaccinations', size: 6, style: :italic
         text I18n.t('activerecord.attributes.person.medicine_vaccination_help')
         pdf.move_down 1.mm
-        text I18n.t('activerecord.attributes.person.medicine_vaccination_recommendation')
-        pdf.move_down 1.mm
-        text 'Impfungen (Impfdatum Monat/Jahr)'
-        text (@person.medicine_vaccination.empty? ?
-          '--' : @person.medicine_vaccination), style: :italic,
-                                                color: '0000ff'
-
-        pdf.move_down 3.mm
         text I18n.t('activerecord.attributes.person.medicine_stiko_vaccination'), size: 10
         text 'My child has the vaccinations recommended by the STIKO'\
         + ' (German Advisory Board for Vaccination)', size: 6, style: :italic
         text '' + (@person.medicine_stiko_vaccination ? 'JA' : 'NEIN'), style: :italic,
                                                                         color: '0000ff'
+
+        pdf.move_down 3.mm
+        text I18n.t('activerecord.attributes.person.medicine_vaccination_recommendation')
+        pdf.move_down 1.mm
+        text 'Weitere Impfungen (Impfdatum Monat/Jahr)'
+        text (@person.medicine_vaccination.empty? ?
+          '--' : @person.medicine_vaccination), style: :italic,
+                                                color: '0000ff'
 
         pdf.move_down 3.mm
         text I18n.t('activerecord.attributes.person.medicine_preexisting_conditions'), size: 10
@@ -233,14 +233,14 @@ module Wsjrdp2023
                                                                               color: '0000ff'
 
         pdf.move_down 3.mm
-        text I18n.t('activerecord.attributes.person.medicine_important'), size: 10
-        text 'This is also important to us: ', size: 6, style: :italic
-        pdf.move_down 1.mm
-        text (@person.medicine_important.empty? ?
-          '--' : @person.medicine_important), style: :italic,
-                                              color: '0000ff'
+        # text I18n.t('activerecord.attributes.person.medicine_important'), size: 10
+        # text 'This is also important to us: ', size: 6, style: :italic
+        # pdf.move_down 1.mm
+        # text (@person.medicine_important.empty? ?
+        #   '--' : @person.medicine_important), style: :italic,
+        #                                       color: '0000ff'
 
-        pdf.move_down 3.mm
+        # pdf.move_down 3.mm
         text 'Im Falle eines Falles', size: 10
         pdf.move_down 1.mm
         text I18n.t('activerecord.attributes.person.medicine_case')
