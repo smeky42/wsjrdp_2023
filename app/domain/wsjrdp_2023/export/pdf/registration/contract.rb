@@ -132,8 +132,8 @@ module Wsjrdp2023
         text 'Als Bestandteil dieser Anmeldung' + (of_legal_age ? ' habe ich ' : ' haben wir ')\
         + ' folgende Dokumente in der Anlage'\
         + ' zur Kenntnis genommen:'
-        text '- die Teilnahme- und Reisebedingungen des rdp (v0.3 vom 28.07.2021)'
-        text '- die Datenschutzhinweise (v0.3 vom 28.07.2021)'
+        text '- die Teilnahme- und Reisebedingungen des rdp (v1.0 vom 30.07.2021)'
+        text '- die Datenschutzhinweise (v1.0 vom 30.07.2021)'
         text 'Die Dokumente stehen auch unter www.worldscoutjamboree.de/downloads'\
         +' zur Verfügung.'
         pdf.move_down 3.mm
