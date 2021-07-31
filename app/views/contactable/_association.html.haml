@@ -10,4 +10,4 @@
         :rdp_association_group, 
         :rdp_association_number)
 - if @person.role_wish == 'Teilnehmende*r'
-  = render_attr(:unit_keys)
+  = render_attrs(entry, :unit_keys)

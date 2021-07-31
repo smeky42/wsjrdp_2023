@@ -110,14 +110,18 @@ de:
         sepa_iban: IBAN
         sepa_bic: BIC
         sepa_status: Finanzstatus
-        medicine_header: Gesundheitsfragebogen
+        medicine_header: Medizinbogen
         medicine_info: Damit die Gesundheit der Teilnehmer*innen auch bei medizinischen Notfällen gewährleistet werden kann, müssen die folgenden Fragen wahrheitsgemäß und vollständig beantwortet werden. Der rdp stellt durch technische und organisatorische Maßnahmen sicher, dass der Schutz der nachfolgend erhobenen Gesundheitsdaten gewährleistet wird. Weitere Informationen finden sich in den Hinweisen zur Datenverarbeitung unter 4.4.
-        medicine_vaccination: Schutzimpfungen
+        medicine_vaccination: Weitere Schutzimpfungen
+        medicine_vaccination_header: Schutzimpfungen
         medicine_vaccination_info: '(z.B. 12/2016 Prorix Mumps Masern Röteln, 04/2019 boostrix Hepatitis B, 05/2019 FSME)' 
         medicine_vaccination_help: Nur im Impfausweis dokumentierte Impfungen gelten als durchgeführt.
         medicine_vaccination_recommendation: 'Folgende Impfungen/Grundimmunisierung werden unsererseits empfohlen: Hepatitis A & B. Außerdem werden reisemedizinisch für Touristen für Südkorea (Stand 31.07.2021) weitere Impfungen empfohlen: Typhus, FSME, JapEnzephaltitis, Meningokokken.'
         medicine_stiko_vaccination: Die, von der STIKO empfohlenen Schutzimpfungen wurden geimpft
-        medicine_stiko_info: Die, von der STIKO empfohlenen Schutzimpfungen wurden geimpft
+        medicine_stiko_info: Informationen dazu findest du auf der Seite des Bundesministieriums
+        medicine_stiko_info_link: https://www.bundesgesundheitsministerium.de/themen/praevention/impfungen/schutzimpfungen.html
+        medicine_bmi_info: eine Überischt vom RKI findest du im Impfkalender
+        medicine_bmi_info_link: https://www.rki.de/DE/Content/Kommissionen/STIKO/Empfehlungen/Aktuelles/Impfkalender.pdf?__blob=publicationFile
         medicine_preexisting_conditions: Bekannte Vorerkrankungen / Operationen / Kinderkrankheiten
         medicine_abnormalities: Folgende Auffälligkeiten / Erkrankungen sind bekannt 
         medicine_abnormalities_info: (z.B. Asthma, Reisekrankheit,Epilepsie, Angststörung,AD(H)S, erhöhter Betreuungsaufwand, etc.)
@@ -125,6 +129,7 @@ de:
         medicine_allergies_info: (z.B. gegen Medikamente, nachgewiesene Lebensmittelallergien, Heuschnupfen, etc.) mit folgenden Symptomen
         medicine_eating_disorders: Es bestehen folgende Essensbesonderheiten (ggf. mit folgenden Symptomen)
         medicine_mobility_needs: Es bestehen folgende Mobilitätsbedürfnisse auf Grund von
+        medicine_mobility_needs_info: (z.B. benötige Transport bei weiteren strecken / Fußverletzung) 
         medicine_infectious_diseases: Es besteht zur Zeit eine infektiöse Erkrankung, wenn ja welche
         medicine_medical_treatment_contact: Zur Zeit in ärztlicher Behandlung bei
         medicine_medical_treatment_contact_info: (behandelnder Arzt Facharzt - Name, Kontaktdaten) 
@@ -134,13 +139,13 @@ de:
         medicine_needs_medication: Bedarfsmedikation 
         medicine_needs_medication_info: (Dosierung / Tageshöchstmenge / Einnahmegrund)
         medicine_medication_help: Mit dem Hausarzt ist abzuklären, ob für die bestehende Dauer- & Bedarfsmedikation ein aktueller Medikamentenplan der Medikamente mitgeführt werden muss.
-        medicine_medications_self_treatment: Die Medikamente werden selbstständig eingenommen
+        medicine_medications_self_treatment: Es werden folgende Medikamente selbstständig eingenommen
         medicine_other: Es ist auf Folgendes zu achten 
         medicine_other_info: (z.B. Besonderheiten, Einschränkungen, etc.)
         medicine_important: Das ist noch wichtig
         medicine_case: Im Falle einer Erkrankung oder eines Unfalles, bei denen durch eine Behandlung oder vorläufige Nicht-Behandlung in der Regel keine bleibenden Schäden zu erwarten sind (Bagatellerkrankungen/-verletzungen, Zecke/Splitter entfernen,...) darf unser Kind eigenständig über Behandlungen entscheiden und in medizinische Eingriffe einwilligen, da es die für eine solche Entscheidung notwendige persönliche geistige und körperliche Reife aufweist. Die Versorgung darf auch von Seiten der Betreuung erfolgen.
         medicine_case_doctor: Bei lebensbedrohlichen Erkrankungen / Unfällen entscheidet der behandelnde Arzt vor Ort.
-        medicine_support: Wie kannst du in Belastungsphasen unterstützt werden? 
+        medicine_support: Wie kannst du in Stresssituationen unterstützt werden? 
         medicine_support_info: (Schokolade, Musik, Lieblings-Song, etc)
         upload_info_ready: Vielen Dank für den Upload. Wir überprüfen die hochgeladenen PDFs und geben dir dann Bescheid.
         upload_passport_pdf: Reisepass
@@ -223,7 +228,7 @@ de:
       cmt_documents: Dokumente sind vollständig unterschrieben und inhaltlich korrekt
 
     text:
-      more_info: Die Anmeldung endet am 31.10. mehr Informationen findest du auf unserer
+      more_info: Die Anmeldung endet am 31.10.2021 mehr Informationen findest du auf unserer
       homepage: Homepage
       homepage_link: https://www.worldscoutjamboree.de/
       invalid_adress: Personen mit ungültiger Adresse
