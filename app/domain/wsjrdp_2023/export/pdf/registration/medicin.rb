@@ -74,7 +74,7 @@ module Wsjrdp2023
         # text @person.all_phone_numbers
 
         phone_numbers = PhoneNumber.select([:contactable_id, :number,
-                                            :label]).where(contactable_id: 2)
+                                            :label]).where(contactable_id: @person.id)
 
         phone_numbers.each do |number|
           text "#{number.label}: #{number.number}"
