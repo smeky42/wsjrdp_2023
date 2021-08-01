@@ -1,0 +1,17 @@
+!!!
+%html
+%head
+
+-title t('activerecord.header.statistic')
+-if @access
+  = 'Personen in Status:'
+  = column_chart Person.where.not(role_wish: "NULL").group(:status).count
+  %br 
+  = 'Angemeldete Personen:'
+  = line_chart @registered_persons_count
+  %br
+  = column_chart Person.where.not(role_wish: "NULL").group(:role_wish).count
+
+
+
+   
