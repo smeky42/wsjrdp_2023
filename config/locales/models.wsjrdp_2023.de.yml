@@ -202,6 +202,7 @@ de:
     header:
       registration_header: Für die Anmeldung zum Worldscoutjamboree hier registrieren
       map: Kontingentskarte 
+      statistic: Statistik
       test_environment: Testumgebung, Daten können jederzeit gelöscht werden!
       additional_contact_header: Notfallkontakte
       additional_contact_header_participant: Sorgeberechtigte
