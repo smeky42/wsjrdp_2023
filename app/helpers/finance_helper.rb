@@ -78,7 +78,9 @@ module FinanceHelper
 
     def package_time(role)
       case role
-      when 'Teilnehmende*r' || 'Unit Leitung'
+      when 'Teilnehmende*r'
+        '20 bis 25 Tage'
+      when 'Unit Leitung'
         '20 bis 25 Tage'
       when 'Kontingentsteam'
         '13 bis 25 Tage'
