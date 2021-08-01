@@ -15,6 +15,10 @@ module Wsjrdp2023::Person
     Person::PUBLIC_ATTRS << :rdp_association << :rdp_association_region
     Person::PUBLIC_ATTRS << :rdp_association_sub_region << :rdp_association_group
     Person::PUBLIC_ATTRS << :rdp_association_number << :longitude << :latitude
+
+    Person::FILTER_ATTRS << :status << :role_wish << :passport_germany << :passport_valid
+    Person::FILTER_ATTRS << :rdp_association << :rdp_association_region
+    Person::FILTER_ATTRS << :rdp_association_sub_region << :rdp_association_group
   end
 
   def role?(role)
