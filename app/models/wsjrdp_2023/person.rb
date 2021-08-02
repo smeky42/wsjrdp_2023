@@ -8,6 +8,8 @@
 module Wsjrdp2023::Person
   extend ActiveSupport::Concern
 
+  include UnitKeyHelper
+
   included do
     # TODO: Requires change in person.rb hitobito
     # Person::GENDERS += ['d']

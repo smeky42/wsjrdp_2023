@@ -14,6 +14,15 @@
       %h2= Person.human_attribute_name(:motivation)
       = auto_link(simple_format(entry.motivation))
 
+    - if @person.role_wish == "Unit Leitung"
+      %h3= "Durch Unit Tags zugeordnete Teilnehmer*innen"
+      = participant_list(@person)
+      %br
+    - if @person.role_wish == "Teilnehmende*r" && !@person.unit_keys.empty?
+      %h3= "Wunsch Unit Leiter*in"
+      = find_unit_leader(@person)
+
+
   %aside.span4.offset1
     - if can?(:show_details, entry)
       %div
@@ -27,7 +36,6 @@
     = render 'people_relations'
 
     = render_attrs(entry, :status,
-                          :unit_keys,
                           :role_wish,
                           :sepa_status)
     = render_attrs(entry, :passport_nationality,

@@ -6,6 +6,8 @@
 #  https://github.com/hitobito/hitobito_wsjrdp_2023.
 
 class Person::CheckController < ApplicationController
+  include UnitKeyHelper
+
   before_action :authorize_action
   decorates :group, :person
 
@@ -45,7 +47,11 @@ class Person::CheckController < ApplicationController
       end
       if params[:url] == 'cmt_documents'
         send_review_mail(@person)
-        @person.status = 'Dokumente vollständig überprüft'
+        # @person.status = 'Dokumente vollständig überprüft'
+        if @person.role_wish == 'Unit Leitung'
+          keys = getRandomKeys(@person).to_s
+          @person.unit_keys = keys
+        end
       end
       @person.save
     end
@@ -77,7 +83,7 @@ class Person::CheckController < ApplicationController
   def send_review_mail(person)
     ReviewMailer.review_mail(person).deliver_now
     flash[:notice] =
-      "Eine Mail zur Überprüfung der Anmeldung wurde an #{params[:mail]} versandt!"
+      "Eine Mail zur Überprüfung der Anmeldung wurde an #{person.email} versandt!"
   end
 
 end
