@@ -11,7 +11,7 @@ application:
   languages:
     de: Deutsch
 
-  version: '2.2.0 - open for everybody with statistic'
+  version: '2.2.1 - open for everybody with statistic'
 
 # The person with this email has root access to everything
 # This person should only be used by the operators of the application,

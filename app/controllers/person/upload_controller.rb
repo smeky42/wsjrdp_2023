@@ -141,7 +141,7 @@ class Person::UploadController < ApplicationController
   end
 
   def participant_complete
-    @person.role_wish == 'Teilnehmer*in' &&
+    @person.role_wish == 'Teilnehmende*r' &&
     standard_documents_complete &&
     @person.status == 'gedruckt'
   end
@@ -173,7 +173,7 @@ class Person::UploadController < ApplicationController
   def send_upload_mail(person)
     ReviewMailer.upload_mail(person).deliver_now
     flash[:notice] =
-      "Eine Mail zur Bestätigung der Vollständigen Anmeldung wurde an #{params[:mail]} versandt!"
+      "Eine Mail zur Bestätigung der Vollständigen Anmeldung wurde an #{person.email} versandt!"
   end
 
 end
