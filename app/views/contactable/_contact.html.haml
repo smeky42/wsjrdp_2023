@@ -14,11 +14,11 @@
       %h2= Person.human_attribute_name(:motivation)
       = auto_link(simple_format(entry.motivation))
 
-    - if @person.role_wish == "Unit Leitung"
+    - if @person.role_wish == "Unit Leitung" && @person.unit_keys.present?
       %h3= "Durch Unit Tags zugeordnete Teilnehmer*innen"
       = participant_list(@person)
       %br
-    - if @person.role_wish == "Teilnehmende*r" && !@person.unit_keys.empty?
+    - if @person.role_wish == "Teilnehmende*r" && @person.unit_keys.present?
       %h3= "Wunsch Unit Leiter*in"
       = find_unit_leader(@person)
 

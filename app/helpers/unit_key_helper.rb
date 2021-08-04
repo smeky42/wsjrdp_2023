@@ -54,8 +54,10 @@ module UnitKeyHelper
 
     def participant_list(person)
       keys = ''
-      JSON.parse(person.unit_keys).each do |key|
-        keys += "\n #{find_participant_by_key(key)} "
+      unless person.unit_keys.nil?
+        JSON.parse(person.unit_keys).each do |key|
+          keys += "\n #{find_participant_by_key(key)} "
+        end
       end
       keys
     end

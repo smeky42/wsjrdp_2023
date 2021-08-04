@@ -87,7 +87,7 @@ class Person::CheckController < ApplicationController
     if params[:url] == 'cmt_documents'
       send_review_mail(@person)
       @person.status = 'Dokumente vollständig überprüft'
-      if @person.role_wish == 'Unit Leitung' && @person.unit_keys.empty?
+      if @person.role_wish == 'Unit Leitung' && @person.unit_keys.nil?
         keys = getRandomKeys(@person).to_s
         @person.unit_keys = keys
       end
