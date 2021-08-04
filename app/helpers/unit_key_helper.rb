@@ -11,6 +11,7 @@ module UnitKeyHelper
 
   included do
 
+    # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
     def getRandomKeys(person)
       plants = plants_yaml
       id = person.id
@@ -24,6 +25,7 @@ module UnitKeyHelper
        "#{id}-#{plants[rand(351...400)]}",
        "#{id}-#{plants[rand(401...450)]}"]
     end
+    # rubocop:enable Metrics/AbcSize, Metrics/MethodLength
 
     def plants_yaml
       YAML.load_file(Rails.root.join('../hitobito_wsjrdp_2023/config/plants.yml')) # [Rails.env]
@@ -32,13 +34,7 @@ module UnitKeyHelper
     def find_participant_by_key(key)
       key_persons = Person.where(role_wish: 'Teilnehmende*r').where(unit_keys: key)
       unless key_persons.empty?
-        if key_persons.count > 1
-          flash[:alert] = "Der Key #{key} wird von mehreren Personen genutzt \n"
-          key_persons.each do |key_person|
-            flash[:alert] += "#{key_person.id} - #{key_person.first_name} #{key_person.last_name}\n"
-          end
-          flash[:alert] += 'bitte wende dich an die Unit-Betreuung.'
-        end
+        check_key_persons(key_persons)
         key_person = key_persons[0]
         return "#{key_person.id} - #{key_person.first_name} #{key_person.last_name}"
       end
@@ -64,6 +60,15 @@ module UnitKeyHelper
       keys
     end
 
+    def check_key_persons(key_persons)
+      if key_persons.count > 1
+        flash[:alert] = "Der Key #{key} wird von mehreren Personen genutzt \n"
+        key_persons.each do |key_person|
+          flash[:alert] += "#{key_person.id} - #{key_person.first_name} #{key_person.last_name}\n"
+        end
+        flash[:alert] += 'bitte wende dich an die Unit-Betreuung.'
+      end
+    end
 
   end
 end

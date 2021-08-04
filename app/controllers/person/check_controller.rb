@@ -42,17 +42,8 @@ class Person::CheckController < ApplicationController
 
   def status_button
     if @manage && request.get?
-      if params[:url] == 'cmt_review'
-        @person.status = 'in Überprüfung durch KT'
-      end
-      if params[:url] == 'cmt_documents'
-        send_review_mail(@person)
-        # @person.status = 'Dokumente vollständig überprüft'
-        if @person.role_wish == 'Unit Leitung'
-          keys = getRandomKeys(@person).to_s
-          @person.unit_keys = keys
-        end
-      end
+      cmt_check
+      cmt_documents
       @person.save
     end
   end
@@ -84,6 +75,23 @@ class Person::CheckController < ApplicationController
     ReviewMailer.review_mail(person).deliver_now
     flash[:notice] =
       "Eine Mail zur Überprüfung der Anmeldung wurde an #{person.email} versandt!"
+  end
+
+  def cmt_check
+    if params[:url] == 'cmt_review'
+      @person.status = 'in Überprüfung durch KT'
+    end
+  end
+
+  def cmt_documents
+    if params[:url] == 'cmt_documents'
+      send_review_mail(@person)
+      @person.status = 'Dokumente vollständig überprüft'
+      if @person.role_wish == 'Unit Leitung' && @person.unit_keys.empty?
+        keys = getRandomKeys(@person).to_s
+        @person.unit_keys = keys
+      end
+    end
   end
 
 end
