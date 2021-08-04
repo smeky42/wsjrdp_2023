@@ -11,6 +11,30 @@
         = render 'person/upload/button_recommondation', f: f 
         = render 'person/upload/button_good_conduct', f: f
         = render 'person/upload/button_data_processing', f: f
+      
+      - if 'in Überprüfung durch KT' == @person.status
+        %h5 
+          = t('activerecord.attributes.person.check_passport_info')
+        = render_attrs(@person, :first_name, :last_name, :birthday, :gender)
+        %h5
+          = t('activerecord.attributes.person.check_registration_info')
+        = render_attrs(@person, :first_name, :last_name)
+        - if (@person.years.to_i < 18) 
+          = render_attrs(@person, :additional_contact_name_a, :additional_contact_name_b, :additional_contact_single) 
+        %h5
+          = t('activerecord.attributes.person.check_sepa_info')
+        = render_attrs(@person, :sepa_name)
+        - if (@person.years.to_i > 18)
+          %h5
+            = t('activerecord.attributes.person.check_good_conduct_info')
+        - if 'Unit Leitung' == @person.role_wish || 'Kontingentsteam' == @person.role_wish
+          %h5
+            = t('activerecord.attributes.person.check_data_processing_info')
+        - if 'Unit Leitung' == @person.role_wish
+          %h5
+            = t('activerecord.attributes.person.check_good_recommondation_info')
+      
+      %br
       %h4
         = t('activerecord.attributes.person.check_next_status_info')
       = standard_form(@person, {url: check_group_person_path,  method: :put}) do |f|

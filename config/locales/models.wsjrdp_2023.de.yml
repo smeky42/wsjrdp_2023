@@ -184,7 +184,12 @@ de:
         check_next_status_info: Teilnehmer*in in den nächsten Status übernehmen
         check_next_state_participant_info: Anmeldung wird gerade von Teilnehmer*in überarbeitet
         check_next_state_unit_info: Die Anmeldung ist vollständig und kontrolliert. Dies wurde dem*der Teilnehmenden bereits bestätigt.
-        upload_info: Um die Anmeldung abzuschließen, musst du noch folgende Dokumente als PDF hochladen. Bitte achte darauf, dass sie gut lesbar und mit allen Unterschriften versehen sind.
+        check_passport_info: Folgende Daten mit dem Ausweis abgleichen
+        check_registration_info: Bei der Anmeldung abgleichen ob alle Unterschriften vorhanden sind
+        check_sepa_info: Bei SEPA abgleichen ob die richtige Unterschrift vorhanden ist
+        check_good_conduct_info: Der Nachweis Führungszeugnis darf nicht älter als drei Monate sein und muss für das Jamboree noch gültig sein
+        check_good_recommondation_info: Die Empfehlung ist valide und unterschrieben 
+        check_data_processing_info: Die Verschwiegenheitsvereinbarung ist unterschrieben 
         upload_passport_info: Wenn du keinen Reisepass hast, kannst du auch ein PDF von deinem Personalausweis oder Kinderausweis hochladen. Wir benötigen deinen Ausweis, um Name und Geburtsdatum zu überprüfen. Alle anderen Daten kannst du verdecken.
         upload_registration_info: Die Anmeldung ist die erste Seite deines PDFs.
         upload_sepa_info: Das SEPA Lastschriftmandat ist die zweite Seite deines PDFs.
