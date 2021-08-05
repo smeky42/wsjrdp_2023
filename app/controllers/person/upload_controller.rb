@@ -40,7 +40,7 @@ class Person::UploadController < ApplicationController
   end
 
   def show_good_conduct
-    download_file(@person.upload_sepa_pdf)
+    download_file(@person.upload_good_conduct_pdf)
   end
 
   def show_data_processing
