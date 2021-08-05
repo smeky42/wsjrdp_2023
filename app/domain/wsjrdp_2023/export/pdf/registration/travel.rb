@@ -26,7 +26,7 @@ module Wsjrdp2023
         text 'Teilnahme- und Reisebedingungen für die Teilnahme im Deutschen Kontingent zum 25. '\
         +'World Scout Jamboree 2023 in Südkorea', size: 14
         pdf.move_down 3.mm
-        text 'v1.0 vom 30.07.2021'
+        text 'v1.1 vom 05.08.2021'
         pdf.move_down 3.mm
         text '1. Veranstalter', size: 12
         pdf.move_down 1.mm
@@ -176,11 +176,11 @@ module Wsjrdp2023
         pdf.move_down 3.mm
         text '6. Anmeldung und Vertragsschluss', size: 12
         pdf.move_down 1.mm
-        text '6.1 Die Anmeldung ist bis zum 01.11.2021 über die Homepage'\
+        text '6.1 Die Anmeldung ist bis zum 31.10.2021 über die Homepage'\
         +' anmeldung.worldscoutjamboree.de möglich. Während des Online-Anmeldeprozesses wird'\
         +' eine PDF-Dokument generiert, das die anmeldende Person lesen und akzeptieren muss.'\
         +' Das Anmeldungsdokument muss unterschrieben werden und spätestens bis zum Anmeldeschluss'\
-        +' am 01.10.2021 über die Homepage hochgeladen werden. Die Anmeldung muss im Original'\
+        +' am 31.10.2021 über die Homepage hochgeladen werden. Die Anmeldung muss im Original'\
         +' (Papierform mit Unterschriften) spätestens zum 01.06.2022 bei den entsprechenden'\
         +'  Betreuer*innen (UL, IST-Betreuung, eKL) abgegeben werden.'
         text 'Bei Personen, die zum Zeitpunkt der Anmeldung das 18. Lebensjahr noch nicht'\
