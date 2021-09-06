@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     
     get '/map', to: "map#index"
     get '/statistic', to: "statistic#index"
+    get '/medicinecheck', to: "medicinecheck#index"
 
     resources :groups do
       resources :people, except: [:new, :create] do

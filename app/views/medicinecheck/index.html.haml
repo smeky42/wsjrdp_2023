@@ -1,0 +1,28 @@
+!!!
+%html
+%head
+
+-title 'Medizin Check'
+-if @access
+  = render_attrs(@person_to_check,
+                      :medicine_vaccination,
+                      :medicine_stiko_vaccination,
+                      :medicine_preexisting_conditions,
+                      :medicine_abnormalities,
+                      :medicine_allergies,
+                      :medicine_eating_disorders,
+                      :medicine_mobility_needs,
+                      :medicine_infectious_diseases,
+                      :medicine_medical_treatment_contact,
+                      :medicine_continous_medication,
+                      :medicine_needs_medication,
+                      :medicine_medications_self_treatment, 
+                      :medicine_other, 
+                      :medicine_important, 
+                      :medicine_support )
+  = standard_form(@person_to_check, url: "/medicinecheck") do |f|
+    = f.error_messages
+    = f.labeled_input_field :medicine_status
+    -# = submit_tag t('activerecord.button.register'), class: "btn btn-primary"
+
+  
