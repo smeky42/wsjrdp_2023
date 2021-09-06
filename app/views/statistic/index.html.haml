@@ -5,12 +5,20 @@
 -title t('activerecord.header.statistic')
 -if @access
   = 'Personen in Status:'
-  = column_chart Person.where.not(role_wish: "NULL").group(:status).count
+  = column_chart Person.where.not(role_wish: "NULL").group(:status).count, max: (Person.where.not(role_wish: "NULL").count / 100).round * 100 - 100
   %br 
-  = 'Angemeldete Personen:'
+  = 'Angemeldete Personen -'
+  = '(im Anmeldeportal mindestens registriert)'
   = line_chart @registered_persons_count
   %br
-  = column_chart Person.where.not(role_wish: "NULL").group(:role_wish).count
+  = column_chart Person.where.not(role_wish: "NULL").group(:role_wish).count, max: (Person.where.not(role_wish: "NULL").count / 100).round * 100 - 100
+  = 'Anmeldung von TN abgeschlossen - '
+  = '(Dokumente vollständig überprüft ODER Upload vollständig ODER in Überprüfung durch KT)'
+  %br
+  = column_chart Person.where(status: "Dokumente vollständig überprüft" ).or(Person.where(status: "Upload vollständig" )).or(Person.where(status: "in Überprüfung durch KT" )).group(:role_wish).count, max: (Person.where.not(role_wish: "NULL").count / 100).round * 100 - 100
+  = 'Dokumente vollständig überprüft'
+  %br
+  = column_chart Person.where(status: "Dokumente vollständig überprüft" ).group(:role_wish).count, max: (Person.where.not(role_wish: "NULL").count / 100).round * 100 - 100
 
 
 

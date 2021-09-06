@@ -26,8 +26,8 @@ class StatisticController < ApplicationController
   end
 
   def registered_person
-    start_date = Date.parse('2021-05-15')
-    end_date = Date.today
+    start_date = Date.parse('2021-07-30')
+    end_date = Time.zone.today
     @total = {}
     @ist = {}
     @tn = {}
