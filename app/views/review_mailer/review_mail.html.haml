@@ -4,7 +4,9 @@
 
 %p Deine Anmeldung ist vollständig. Vielen Dank!
 
-%p Jetzt brauchst du noch etwas Geduld. Eine Bestätigung deiner Teilnahme erhältst du im November, nach Anmeldeschluss, da wir dich erst dann final deiner Gruppe zuteilen können. 
+%p Jetzt brauchst du noch etwas Geduld. Eine Bestätigung deiner Teilnahme erhältst du im November, nach Anmeldeschluss. 
+- if @resource.role_wish == "Teilnehmende*r" || @resource.role_wish == "Unit Leitung"
+  %p Erst dann können wir dich final deiner Unit zuteilen. 
 
 - if @resource.role_wish == "Unit Leitung"
   %p Als Unit Leitung findest du jetzt in deinem Profil unter "Kontaktdaten" neun "Unit Tags". Du kannst jeden "Unit Tag" genau einem Teilnehmenden geben. Die*Der Teilnehmer*in wird dir dann zugeordnet. Mehr dazu findest du in unseren #{link_to "FAQs", "https://www.worldscoutjamboree.de/faq-anmeldung/"}
