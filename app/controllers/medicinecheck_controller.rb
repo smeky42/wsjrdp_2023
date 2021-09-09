@@ -20,7 +20,17 @@ class MedicinecheckController < ApplicationController
       nil
     end
 
+    @possible_medicine_status = Settings.person.medicine_status
+
+    if request.post?
+      group ||= Group.find(params[:group_id])
+      old_person ||= group.people.find(params[:id])
+      old_person.medicine_status = params[:medicine_status]
+      old_person.save
+      flash[:notice] = 'Person mit id ' + params[:id] + ' aktualisiert'
+    end
+
     @person_to_check = Person.where(status: 'Dokumente vollständig überprüft',
-                           medicine_status: 'ungeprüft').first
+                                    medicine_status: 'ungeprüft').first
   end
 end

@@ -48,7 +48,12 @@ person:
     - vollständig # bei Peter angekommen und gescannt
     - Abmeldung Vermerkt # Personen die sich abmelden wollen, bei denen es noch Klärungsbedarf gibt
     - abgemeldet # Alle die nicht mehr am Jamboree Teilnehmen wollen
-
+  
+  medicine_status:
+    - geprüft ok
+    - überpfrüfung benötigt kommunikation
+    - geprüft merkliste
+    - ungeprüft
 
 addresses:
   imported_countries:

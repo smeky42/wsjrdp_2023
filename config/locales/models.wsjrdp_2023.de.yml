@@ -232,6 +232,8 @@ de:
       status_hint: In den nächsten Status schalten
       cmt_review: Überprüfung der Teilnehmer*in beginnen 
       cmt_documents: Dokumente sind vollständig unterschrieben und inhaltlich korrekt
+      medicine_check: Medizin Status speichern
+      person: Zur Person
 
     text:
       more_info: Die Anmeldung endet am 31.10.2021 mehr Informationen findest du auf unserer

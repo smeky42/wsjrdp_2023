@@ -4,6 +4,11 @@
 
 -title 'Medizin Check'
 -if @access
+  = action_button(t('activerecord.button.person'),
+                '/groups/' + @person_to_check.primary_group_id.to_s + '/people/'+ @person_to_check.id.to_s,
+                :search,
+                remote: false,
+                method: :get) 
   = render_attrs(@person_to_check,
                       :medicine_vaccination,
                       :medicine_stiko_vaccination,
@@ -20,9 +25,10 @@
                       :medicine_other, 
                       :medicine_important, 
                       :medicine_support )
-  = standard_form(@person_to_check, url: "/medicinecheck") do |f|
-    = f.error_messages
-    = f.labeled_input_field :medicine_status
-    -# = submit_tag t('activerecord.button.register'), class: "btn btn-primary"
-
-  
+  = form_tag '/medicinecheck', :method => :post do
+    = field_set_tag do
+      = hidden_field_tag(:id, @person_to_check.id)
+      = hidden_field_tag(:group_id, @person_to_check.primary_group_id)
+      = select_tag(:medicine_status, options_for_select(@possible_medicine_status))
+      %br
+      = submit_tag t('activerecord.button.medicine_check'), class: "btn btn-primary"
