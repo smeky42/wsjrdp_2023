@@ -3,7 +3,7 @@
 %head
 
 -title 'Medizin Check'
--if @access
+-if @access && !@person_to_check.nil?
   = action_button(t('activerecord.button.person'),
                 '/groups/' + @person_to_check.primary_group_id.to_s + '/people/'+ @person_to_check.id.to_s,
                 :search,
@@ -32,3 +32,5 @@
       = select_tag(:medicine_status, options_for_select(@possible_medicine_status))
       %br
       = submit_tag t('activerecord.button.medicine_check'), class: "btn btn-primary"
+-else 
+  = "Es gibt nichts zu überprüfen"
