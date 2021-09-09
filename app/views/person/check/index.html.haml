@@ -71,3 +71,28 @@
       = standard_form(@person, {url: check_group_person_path,  method: :put}) do |f|
         = f.labeled_collection_select(:status, Settings.person.status, :to_s, :to_s, {}, class: 'span2') 
         = form_buttons(f, submit_label: 'Status ändern')
+      -if @medicine
+        %h3
+          = "Medizindaten" 
+        = standard_form(@person, {url: check_group_person_path,  method: :put}) do |f|
+          = f.labeled_collection_select(:medicine_status, Settings.person.medicine_status, :to_s, :to_s, {}, class: 'span2') 
+          = form_buttons(f, submit_label: 'Medizin Status ändern')
+        - if @medicine_notes.count == 0
+          = "Keine Notizen"
+        - else 
+          - @medicine_notes.each do |note|
+            .div 
+              = note.created_at.strftime("%Y-%m-%d %H-%M-%S") 
+              = "von " + Person.where(id: note.author_id).first.full_name
+              = " zu " + @person.full_name 
+              = render_attrs(note, :text)
+        = form_with url: check_group_person_path, :method => :put do |f|
+          %dl.dl-horizontal 
+            %dt.muted
+              = "Neue Notiz"
+            %dd
+              = f.text_area :medicine_note, size: "70x5"
+              %br
+              = form_buttons(f, submit_label: "Medizinische Notiz anlegen")
+
+        

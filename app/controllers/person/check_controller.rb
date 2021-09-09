@@ -15,6 +15,8 @@ class Person::CheckController < ApplicationController
     @group ||= Group.find(params[:group_id])
     @person ||= group.people.find(params[:id])
     @manage = manage
+    @medicine = medicine
+    @medicine_notes = medicine_notes
 
     # flash[:alert] = params[:url]
 
@@ -36,6 +38,12 @@ class Person::CheckController < ApplicationController
     current_user.role?('Group::Ist::Leader')
   end
 
+  def medicine
+    current_user.id == 2 ||
+    current_user.id == 320 ||
+    current_user.id == 87
+  end
+
   def authorize_action
     authorize!(:edit, entry)
   end
@@ -50,7 +58,7 @@ class Person::CheckController < ApplicationController
 
   # rubocop:disable Metrics/CyclomaticComplexity,Metrics/PerceivedComplexity,Metrics/MethodLength,Metrics/AbcSize
   def save_put
-    if @manage && request.put?
+    if @manage && request.put? && !params[:person].nil?
       @person.status = params['person']['status'] unless params['person']['status'].nil?
 
       @person.role_wish = params['person']['role_wish'] unless params['person']['role_wish'].nil?
@@ -66,6 +74,16 @@ class Person::CheckController < ApplicationController
       @person.sepa_bic = params['person']['sepa_bic'] unless params['person']['sepa_bic'].nil?
 
       @person.save
+    end
+
+    if @medicine && @manage && request.put? && !params[:medicine_note].nil?
+      MedicineNotes.create(id: MedicineNotes.count + 1,
+                           subject_id: @person.id,
+                           author_id: current_user.id,
+                           text: params[:medicine_note],
+                           created_at: DateTime.now,
+                           updated_at: DateTime.now,
+                           subject_type: 'Person')
     end
   end
   # rubocop:enable Metrics/CyclomaticComplexity,Metrics/PerceivedComplexity,Metrics/MethodLength,Metrics/AbcSize
@@ -92,6 +110,10 @@ class Person::CheckController < ApplicationController
         @person.unit_keys = keys
       end
     end
+  end
+
+  def medicine_notes
+    MedicineNotes.where(subject_id: @person.id)
   end
 
 end

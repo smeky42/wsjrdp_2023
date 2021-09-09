@@ -75,6 +75,8 @@ de:
         description: TN  Mitglieder die noch nicht bestätigt wurden.
     
     attributes:
+      medicine_notes:
+        text: med. Notiz
       person:
         role: Ich möchte mitfahren als
         first_name_dummy: Robert
@@ -196,7 +198,7 @@ de:
         upload_recommondation_info: Als Unit Leitung brauchst du eine unterschriebene Empfehlung deines Landesverbands, deiner Diözese.
         upload_data_processing_info: Du wirst später Teil der Personen sein, die Zugriff auf Daten anderer haben. Daher musst du die Verschwiegenheitsvereinbarung unterschreiben.
         upload_good_conduct_info: Nicht das Führungszeugnis hochladen! Nur den Nachweis deines Verbandes, diesen erhältst du über dein Bundesbüro.
-
+        medicine_status: Status des Medizinbogens
 
         genders:
           m: männlich
