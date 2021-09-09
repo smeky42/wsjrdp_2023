@@ -25,6 +25,7 @@ class MapController < ApplicationController
   def collect_user
     people = Person.where('(status="in Überprüfung durch KT"' +
         ' OR status="Upload vollständig" ' +
+        ' OR status="gedruckt" ' +
         ' OR status="Dokumente vollständig überprüft")')
 
     @users = []
