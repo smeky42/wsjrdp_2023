@@ -38,10 +38,6 @@
         }
 
         function getLetterForPin(person) {
-            if(person.role == "Unitleitung")
-            {
-                return "U";    
-            }
             return person.role[0];
         }
 
@@ -98,6 +94,22 @@
           }
         }
 
+        function showRole(name) {
+          for (var i = 0; i < markers.length; i++) {
+            if (markers[i].role == name) {
+                markers[i].setMap(map);
+            }
+          }
+        }
+
+        function hideRole(name) {
+          for (var i = 0; i < markers.length; i++) {
+            if (markers[i].role == name) {
+                markers[i].setMap(null);
+            }
+          }
+        }
+
         // Removes the markers from the map, but keeps them in the array.
         function clearMarkers() {
           setMapOnAll(null);
@@ -125,6 +137,9 @@
 %input{:onclick =>"clearMarkers();", :type=>"button", :value=>"Hide Markers"}
 %input{:onclick =>"showMarkers();", :type=>"button", :value=>"Show Markers"}
 %br 
+- Settings.person.roles.each do |r|
+  %input{:onclick =>"showRole('" + r + "');", :type=>"button", :value=>"Show " + r}
+  %input{:onclick =>"hideRole('" + r + "');", :type=>"button", :value=>"Hide " + r}
 %br
 - if @invalid_users.present?
   =t('activerecord.text.invalid_adress')

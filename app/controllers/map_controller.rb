@@ -23,7 +23,9 @@ class MapController < ApplicationController
   end
 
   def collect_user
-    people = Person.where('primary_group_id=3')
+    people = Person.where('(status="in Überprüfung durch KT"' +
+        ' OR status="Upload vollständig" ' +
+        ' OR status="Dokumente vollständig überprüft")')
 
     @users = []
     @invalid_users = []
@@ -36,12 +38,12 @@ class MapController < ApplicationController
     id = person.id
     name = person.full_name
     link = get_link(person)
-    role = 'Unitleitung'
-
+    role = person.role_wish
+    status = person.status
     person = update_geodata(person)
 
     if !person.latitude.nil? && !person.longitude.nil?
-      @users.push([id, name, person.latitude, person.longitude, role, link])
+      @users.push([id, name, person.latitude, person.longitude, role, link, status])
     else
       @invalid_users.push([id, name, link])
     end
