@@ -17,6 +17,23 @@ module Wsjrdp2023::Person
     Person::PUBLIC_ATTRS << :rdp_association << :rdp_association_region
     Person::PUBLIC_ATTRS << :rdp_association_sub_region << :rdp_association_group
     Person::PUBLIC_ATTRS << :rdp_association_number << :longitude << :latitude
+    Person::PUBLIC_ATTRS << :additional_contact_name_a << :additional_contact_adress_a
+    Person::PUBLIC_ATTRS << :additional_contact_name_b << :additional_contact_adress_b
+    Person::PUBLIC_ATTRS << :additional_contact_single << :sepa_name << :sepa_address
+    Person::PUBLIC_ATTRS << :sepa_mail << :sepa_iban << :sepa_bic << :sepa_status
+    Person::PUBLIC_ATTRS << :medicine_vaccination << :medicine_stiko_vaccination
+    Person::PUBLIC_ATTRS << :medicine_preexisting_conditions << :medicine_abnormalities
+    Person::PUBLIC_ATTRS << :medicine_allergies << :medicine_eating_disorders
+    Person::PUBLIC_ATTRS << :medicine_mobility_needs << :medicine_infectious_diseases
+    Person::PUBLIC_ATTRS << :medicine_medical_treatment_contact << :medicine_continous_medication
+    Person::PUBLIC_ATTRS << :medicine_needs_medication << :medicine_medications_self_treatment
+    Person::PUBLIC_ATTRS << :medicine_other << :medicine_important << :status
+    Person::PUBLIC_ATTRS << :medicine_support << :passport_nationality << :unit_keys
+    Person::PUBLIC_ATTRS << :passport_number << :passport_germany << :passport_valid
+    Person::PUBLIC_ATTRS << :role_wish << :motivation << :languages_spoken
+    Person::PUBLIC_ATTRS << :shirt_size << :uniform_size << :can_swim
+    Person::PUBLIC_ATTRS << :medicine_status
+
 
     Person::FILTER_ATTRS << :status << :role_wish << :passport_germany << :passport_valid
     Person::FILTER_ATTRS << :rdp_association << :rdp_association_region
