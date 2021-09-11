@@ -30,7 +30,12 @@ class MedicinecheckController < ApplicationController
       flash[:notice] = 'Person mit id ' + params[:id] + ' aktualisiert'
     end
 
-    @person_to_check = Person.where(status: 'Dokumente vollständig überprüft',
-                                    medicine_status: 'ungeprüft').first
+    @person_to_check = if current_user.id == 320
+                         Person.where(status: 'Dokumente vollständig überprüft',
+                                      medicine_status: 'ungeprüft').last
+                       else
+                         Person.where(status: 'Dokumente vollständig überprüft',
+                                      medicine_status: 'ungeprüft').first
+                       end
   end
 end
