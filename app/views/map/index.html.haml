@@ -24,7 +24,7 @@
             //console.log(person)
 
             var pinIcon = (person.status ? "pin_star" : "pin"); // Accepted
-            var pinColor = 'ffffff'; // Unit
+            var pinColor = person.unit_color; // Unit
             var pinLetter = getLetterForPin(person); // Role
             var pinLetterColor = "daa520"; 
             var pinStarColor = 'ffffff';
@@ -49,6 +49,8 @@
             person.location = {lat: parseFloat(personArray[2]), lng: parseFloat(personArray[3])};
             person.role = personArray[4];
             person.link = personArray[5];
+            person.status = personArray[6];
+            person.unit_color = personArray[7];
             return person;
         }
 

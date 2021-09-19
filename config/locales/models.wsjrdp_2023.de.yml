@@ -201,6 +201,7 @@ de:
         upload_data_processing_info: Du wirst später Teil der Personen sein, die Zugriff auf Daten anderer haben. Daher musst du die Verschwiegenheitsvereinbarung unterschreiben.
         upload_good_conduct_info: Nicht das Führungszeugnis hochladen! Nur den Nachweis deines Verbandes, diesen erhältst du über dein Bundesbüro.
         medicine_status: Status des Medizinbogens
+        unit_color: Unit Farbe
 
         genders:
           m: männlich

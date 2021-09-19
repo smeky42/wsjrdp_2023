@@ -66,6 +66,7 @@ class Person::CheckController < ApplicationController
       @person.last_name = params['person']['last_name'] unless params['person']['last_name'].nil?
       @person.birthday = params['person']['birthday'] unless params['person']['birthday'].nil?
       @person.gender = params['person']['gender'] unless params['person']['gender'].nil?
+      @person.unit_color = params['person']['unit_color'] unless params['person']['unit_color'].nil?
 
       @person.sepa_name = params['person']['sepa_name'] unless params['person']['sepa_name'].nil?
       @person.sepa_address = params['person']['sepa_address'] unless params['person']['sepa_address'].nil?

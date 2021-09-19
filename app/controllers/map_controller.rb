@@ -42,9 +42,10 @@ class MapController < ApplicationController
     role = person.role_wish
     status = person.status
     person = update_geodata(person)
+    unit_color = get_unit_color(person)
 
     if !person.latitude.nil? && !person.longitude.nil?
-      @users.push([id, name, person.latitude, person.longitude, role, link, status])
+      @users.push([id, name, person.latitude, person.longitude, role, link, status, unit_color])
     else
       @invalid_users.push([id, name, link])
     end
@@ -78,6 +79,14 @@ class MapController < ApplicationController
       RestClient.get('https://maps.googleapis.com/maps/api/geocode/json?address=' +
         address + '&key=AIzaSyAPS-uHgTIug9RlK_wBotqn_hrMTkQeUVM')
     )
+  end
+
+  def get_unit_color(person)
+    if person.unit_color.blank? || person.unit_color.length != 6
+      return 'ffffff'
+    end
+
+    person.unit_color
   end
 
   def get_link(person)

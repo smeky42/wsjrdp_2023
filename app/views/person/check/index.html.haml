@@ -56,6 +56,7 @@
         = f.labeled(:gender) do
           - (Person::GENDERS + ['']).each do |key|
             = f.inline_radio_button(:gender, key, @person.gender_label(key))
+        = f.labeled_input_field :unit_color
         = form_buttons(f, submit_label: 'Kontaktdaten Ändern ändern')
       %h4
         = t('activerecord.attributes.person.check_finance_info')

@@ -62,7 +62,8 @@ module Wsjrdp2023
         :languages_spoken,
         :shirt_size,
         :uniform_size,
-        :can_swim
+        :can_swim,
+        :unit_color
       ]
 
       # Override crud_controller
