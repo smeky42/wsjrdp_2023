@@ -73,6 +73,8 @@ class Person::CheckController < ApplicationController
       @person.sepa_iban = params['person']['sepa_iban'] unless params['person']['sepa_iban'].nil?
       @person.sepa_bic = params['person']['sepa_bic'] unless params['person']['sepa_bic'].nil?
 
+      @person.medicine_status = params['person']['medicine_status'] unless params['person']['medicine_status'].nil?
+
       @person.save
     end
 
