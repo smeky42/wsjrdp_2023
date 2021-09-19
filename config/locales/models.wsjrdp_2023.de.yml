@@ -84,8 +84,9 @@ de:
         email_dummy: robert.baden-powell@worldscoutjamboree.de
         birthday_info: Geburtstag (dd.mm.yyyy)
         birthday_dummy: 22.02.1857
+        first_name_info: Bitte gib alle deine Vornamen so an, wie diese auf deinem Reisepass stehen. Bei einem Flug wird dein vollständiger Name überprüft.
         nickname: Spitzname / Fahrtenname
-        nickname_info: Falls du hier einen Namen einträgst, werden wir diesen für Namensschilder und als Ansprache in Mails verwenden
+        nickname_info: Falls du hier einen Namen einträgst, werden wir diesen für Namensschilder und als Ansprache in Mails verwenden. Wenn du mehrere Vornamen hast, aber nur mit einem davon angesprochen werden möchtest, kannst du diesen hier angeben.
         rdp_association: Verband
         rdp_association_region: Landesebene, Diözese
         rdp_association_sub_region: Bezirk, Region

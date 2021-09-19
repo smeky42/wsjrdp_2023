@@ -6,7 +6,8 @@
 = field_set_tag do
   -# = f.labeled_input_field :status
   -if (@person.status == 'registriert')
-    = f.labeled_input_fields :first_name, :last_name, :birthday
+    = f.labeled_input_field :first_name, help_inline: t('activerecord.attributes.person.first_name_info')
+    = f.labeled_input_fields :last_name, :birthday
     = f.labeled(:gender) do
       - (Person::GENDERS + ['']).each do |key|
         = f.inline_radio_button(:gender, key, entry.gender_label(key))
