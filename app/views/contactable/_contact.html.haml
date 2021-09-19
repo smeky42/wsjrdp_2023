@@ -20,7 +20,7 @@
       %br
     - if @person.role_wish == "Teilnehmende*r" && @person.unit_keys.present?
       %h3= "Wunsch Unit Leiter*in"
-      = find_unit_leader(@person)
+      = find_unit_leader_name(@person)
 
 
   %aside.span4.offset1

@@ -6,6 +6,8 @@ require 'rest-client'
 class MapController < ApplicationController
   layout 'application'
 
+  include UnitKeyHelper
+
   skip_authorization_check
   def index
     # TODO: CanCan
@@ -82,6 +84,19 @@ class MapController < ApplicationController
   end
 
   def get_unit_color(person)
+    if person.unit_keys.present? && person.unit_color.present? && (person.role_wish == 'Unit Leitung')
+      return person.unit_color
+    end
+
+    if person.role_wish == 'Teilnehmende*r' && person.unit_keys.present?
+      key_persons = find_unit_leader(person)
+      if key_persons.empty?
+        return '00ff00'
+      end
+
+      return get_unit_color(key_persons[0])
+    end
+
     if person.unit_color.blank? || person.unit_color.length != 6
       return 'ffffff'
     end

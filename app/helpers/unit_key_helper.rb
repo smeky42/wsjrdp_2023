@@ -42,8 +42,12 @@ module UnitKeyHelper
     end
 
     def find_unit_leader(person)
-      key_persons = Person.where(role_wish: 'Unit Leitung').where('unit_keys like ?',
-                                                                  "%#{person.unit_keys}%")
+      Person.where(role_wish: 'Unit Leitung').where('unit_keys like ?',
+                                                    "%#{person.unit_keys}%")
+    end
+
+    def find_unit_leader_name(person)
+      key_persons = find_unit_leader(person)
 
       unless key_persons.empty?
         key_person = key_persons[0]
