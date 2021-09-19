@@ -148,7 +148,7 @@ class Person::UploadController < ApplicationController
 
   def unit_leader_complete
     @person.role_wish == 'Unit Leitung' &&
-    standard_documents_complete
+    standard_documents_complete &&
     @person.upload_recommondation_pdf.present? &&
     @person.upload_good_conduct_pdf.present? &&
     @person.upload_data_processing_pdf.present? &&
