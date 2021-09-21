@@ -12,6 +12,7 @@
     :javascript
         var markers = [];
         var map = null;
+        var people =  #{raw @users};
 
         function createPin(person, f){
             var pers = toPersonObject(person)
@@ -24,7 +25,7 @@
             //console.log(person)
 
             var pinIcon = (person.status ? "pin_star" : "pin"); // Accepted
-            var pinColor = person.unit_color; // Unit
+            var pinColor = getUnitColor(person); // Unit
             var pinLetter = getLetterForPin(person); // Role
             var pinLetterColor = "daa520"; 
             var pinStarColor = 'ffffff';
@@ -51,7 +52,38 @@
             person.link = personArray[5];
             person.status = personArray[6];
             person.unit_color = personArray[7];
+            person.unit_leader_id = personArray[8];
             return person;
+        }
+
+        function getUnitColor(person) {
+          if(person.unit_color.length == 6) {
+            return person.unit_color;
+          }
+
+          if(person.role[0] == "K") {
+            return '8b0000'
+          }
+
+          if(person.role[0] == "I") {
+            return '2f4f4f'
+          }
+
+          if(person.role[0] == "T") {
+            return findColorByUnitLeaderId(person.unit_leader_id);
+          }
+
+          return 'ffffff';
+        }
+
+        function findColorByUnitLeaderId(id) {
+         for (var i = 0; i < people.length; i++) {
+            var person = toPersonObject(people[i])
+            if (person.id == id && person.unit_color.length == 6) {
+              return person.unit_color; 
+            } 
+          }
+          return 'ffffff'
         }
 
         function initMap() {
@@ -61,7 +93,7 @@
                 center: germany,
              });
 
-            var people =  #{raw @users} ;
+            
             //console.log("People " + people.length);
 
             for (var i = 0; i < people.length; i++) {
@@ -71,9 +103,10 @@
                    map: map,
                    position: pers.location,
                    icon: createPinImage(pers),
-                   unit_old: pers.unit_old,
-                   unit_planned: pers.unit_planned,
-                   role: pers.role 
+                   id: pers.id,
+                   role: pers.role,
+                   person: pers,
+                   unit_leader_id: pers.unit_leader_id 
                  });
       
                  var infowindow = new google.maps.InfoWindow({
@@ -99,7 +132,7 @@
         function showRole(name) {
           for (var i = 0; i < markers.length; i++) {
             if (markers[i].role == name) {
-                markers[i].setMap(map);
+                markers[i].setMap(map);        
             }
           }
         }
@@ -122,6 +155,43 @@
           setMapOnAll(map);
         }
 
+        function setColor() {
+          var person_id = $("#person_id").val();
+          var color = $('#color').val();
+
+          for (var i = 0; i < markers.length; i++) {
+            if (markers[i].id == person_id || markers[i].unit_leader_id == person_id) {
+                console.log("Marker Gefunden " + markers[i].person.name );
+                markers[i].setMap(null);
+                var pers = markers[i].person; 
+                pers.unit_color = color; 
+                markers[i] = new google.maps.Marker({
+                   map: map,
+                   position: pers.location,
+                   icon: createPinImage(pers),
+                   id: pers.id,
+                   role: pers.role,
+                   person: pers, 
+                   unit_leader_id: pers.unit_leader_id 
+                 });
+                markers[i].setMap(map);
+            }
+          }
+
+            $.ajax({
+              type: "POST",
+              url: "http://localhost:3000/map/color",
+              dataType: "json",
+              data: {person_id: person_id, color: color},
+              success: function(result) {
+                console.log("Success: " + result.response)
+              },
+          });
+        }
+
+
+
+
         var mapScript = document.createElement("script");
         mapScript.src = "https://cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js";
         document.getElementsByTagName("head")[0].appendChild(mapScript)
@@ -136,6 +206,11 @@
 
       
 
+%input{:onclick =>"setColor();", :type=>"button", :value=>"Set Color", :class => "button"}
+%input{:type=>"text", :id => "person_id",:maxlenght => "200" ,:class => "text_field" }
+%input{:type=>"text", :id => "color",:maxlenght => "200" ,:class => "text_field" }
+%br 
+%br
 %input{:onclick =>"clearMarkers();", :type=>"button", :value=>"Hide Markers"}
 %input{:onclick =>"showMarkers();", :type=>"button", :value=>"Show Markers"}
 %br 

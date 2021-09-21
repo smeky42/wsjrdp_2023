@@ -46,6 +46,17 @@ module UnitKeyHelper
                                                     "%#{person.unit_keys}%")
     end
 
+    def find_unit_leader_id(person)
+      key_persons = find_unit_leader(person)
+
+      unless key_persons.empty?
+        key_person = key_persons[0]
+        return key_person.id.to_s
+      end
+
+      '0'
+    end
+
     def find_unit_leader_name(person)
       key_persons = find_unit_leader(person)
 

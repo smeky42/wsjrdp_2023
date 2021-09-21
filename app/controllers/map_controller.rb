@@ -24,6 +24,25 @@ class MapController < ApplicationController
     collect_user
   end
 
+  def color
+    @access = current_user.role?('Group::Root::Admin') ||
+              current_user.role?('Group::Root::Leader') ||
+              current_user.role?('Group::UnitSupport::Leader') ||
+              current_user.role?('Group::UnitSupport::Member')
+
+    unless @access
+      flash[:alert] = I18n.t('activerecord.alert.map_access')
+      return
+    end
+
+    person = Person.where(id: params[:person_id]).first
+    person.unit_color = params[:color]
+    person.save
+
+
+    render json: { response: params[:person_id] + ' ' + params[:color] }
+  end
+
   def collect_user
     people = Person.where('(status="in Überprüfung durch KT"' +
         ' OR status="Upload vollständig" ' +
@@ -45,9 +64,11 @@ class MapController < ApplicationController
     status = person.status
     person = update_geodata(person)
     unit_color = get_unit_color(person)
+    unit_leader_id = find_unit_leader_id(person)
 
     if !person.latitude.nil? && !person.longitude.nil?
-      @users.push([id, name, person.latitude, person.longitude, role, link, status, unit_color])
+      @users.push([id, name, person.latitude, person.longitude, role, link, status, unit_color,
+                   unit_leader_id])
     else
       @invalid_users.push([id, name, link])
     end
@@ -84,21 +105,8 @@ class MapController < ApplicationController
   end
 
   def get_unit_color(person)
-    if person.unit_keys.present? && person.unit_color.present? && (person.role_wish == 'Unit Leitung')
-      return person.unit_color
-    end
-
-    if person.role_wish == 'Teilnehmende*r' && person.unit_keys.present?
-      key_persons = find_unit_leader(person)
-      if key_persons.empty?
-        return '00ff00'
-      end
-
-      return get_unit_color(key_persons[0])
-    end
-
     if person.unit_color.blank? || person.unit_color.length != 6
-      return 'ffffff'
+      return ''
     end
 
     person.unit_color

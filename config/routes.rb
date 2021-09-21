@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     put '/registration', to: "registration#index"
     
     get '/map', to: "map#index"
+    post '/map/color', to: "map#color"
     get '/statistic', to: "statistic#index"
     get '/medicinecheck', to: "medicinecheck#index"
     post '/medicinecheck', to: "medicinecheck#index"
