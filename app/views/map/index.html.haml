@@ -77,7 +77,7 @@
         }
 
         function findColorByUnitLeaderId(id) {
-         for (var i = 0; i < people.length; i++) {
+          for (var i = 0; i < people.length; i++) {
             var person = toPersonObject(people[i])
             if (person.id == id && person.unit_color.length == 6) {
               return person.unit_color; 
@@ -180,7 +180,7 @@
 
             $.ajax({
               type: "POST",
-              url: "http://localhost:3000/map/color",
+              url: window.location +"/color",
               dataType: "json",
               data: {person_id: person_id, color: color},
               success: function(result) {
