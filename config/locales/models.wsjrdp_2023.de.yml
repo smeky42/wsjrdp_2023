@@ -183,7 +183,7 @@ de:
         printed_info: Du hast deine Anmeldung erfolgreich gedruckt. Hier kannst du sie dir noch einmal herunterladen. Im nächsten Schritt musst du die Anmeldung und weitere Dokumente bei 'Upload' hochladen.
         check_contact_info: Wenn du die Kontaktinformationen änderst, muss der Teilnehmende eine neue Anmeldung hochgeladen haben! Diese muss auch in Papierform eingereicht werden.
         check_finance_info: Wenn du die Finanzdaten änderst, muss der Teilnehmende ein neues Lastschriftmandat hochgeladen haben!
-        check_status_info: Den Status nur händisch setzten, wenn der Teilnehmende nicht automatisch benachrichtigt werden soll.
+        check_status_info: Den Status nur händisch setzten, wenn der Teilnehmende nicht automatisch benachrichtigt werden soll. Falls ein Dokument neu hochgeladen werden soll kann es hier gelöscht werden. 
         check_document_info: Hochgeladene Dokumente einsehen
         check_next_status_info: Teilnehmer*in in den nächsten Status übernehmen
         check_next_state_participant_info: Anmeldung wird gerade von Teilnehmer*in überarbeitet

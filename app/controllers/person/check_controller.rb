@@ -76,6 +76,13 @@ class Person::CheckController < ApplicationController
 
       @person.medicine_status = params['person']['medicine_status'] unless params['person']['medicine_status'].nil?
 
+      @person.upload_passport_pdf = params['person']['upload_passport_pdf'] unless params['person']['upload_passport_pdf'].nil?
+      @person.upload_registration_pdf = params['person']['upload_registration_pdf'] unless params['person']['upload_registration_pdf'].nil?
+      @person.upload_sepa_pdf = params['person']['upload_sepa_pdf'] unless params['person']['upload_sepa_pdf'].nil?
+      @person.upload_recommondation_pdf = params['person']['upload_recommondation_pdf'] unless params['person']['upload_recommondation_pdf'].nil?
+      @person.upload_good_conduct_pdf =  params['person']['upload_good_conduct_pdf'] unless params['person']['upload_good_conduct_pdf'].nil?
+      @person.upload_data_processing_pdf = params['person']['upload_data_processing_pdf'] unless params['person']['upload_data_processing_pdf'].nil?
+
       @person.save
     end
 

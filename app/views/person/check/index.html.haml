@@ -71,6 +71,12 @@
         = t('activerecord.attributes.person.check_status_info')
       = standard_form(@person, {url: check_group_person_path,  method: :put}) do |f|
         = f.labeled_collection_select(:status, Settings.person.status, :to_s, :to_s, {}, class: 'span2') 
+        = f.labeled_input_fields :upload_passport_pdf, 
+                                 :upload_registration_pdf, 
+                                 :upload_sepa_pdf, 
+                                 :upload_recommondation_pdf,
+                                 :upload_good_conduct_pdf,
+                                 :upload_data_processing_pdf
         = form_buttons(f, submit_label: 'Status ändern')
       -if @medicine
         %h3
