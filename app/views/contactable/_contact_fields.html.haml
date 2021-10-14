@@ -32,6 +32,8 @@
 = field_set_tag do 
   = f.labeled_input_field :shirt_size, placeholder: t('activerecord.attributes.person.shirt_size_info')
   = f.labeled_input_field :uniform_size, placeholder: t('activerecord.attributes.person.uniform_size_info')
+  = link_to t('activerecord.attributes.person.uniform_size_info_link_text'), t('activerecord.attributes.person.uniform_size_info_link'), target: '_blank'
+
 
 = field_set_tag do
   = f.labeled_inline_fields_for :social_accounts, 'contactable/social_account_fields'

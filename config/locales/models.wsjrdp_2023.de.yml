@@ -159,6 +159,8 @@ de:
         upload_sepa_pdf: SEPA
         upload_recommondation_pdf: Empfehlung
         upload_good_conduct_pdf: Nachweis Führungszeugnis
+        upload_good_conduct_info_link_text: Falls du keine Möglichkeit hast bis zum 31.10 deinen Nachweis für das Führungszeugnis zu beantragen, findest du auf unserer Homepage ein Ersatzdokument.
+        upload_good_conduct_info_link: https://www.worldscoutjamboree.de/app/uploads/2021/10/2021-10-13-Ersatz-Besta%CC%88tigung-Fu%CC%88hrungszeugnis.pdf
         passport_nationality: Nationalität
         passport_nationality_info: z.B. Deutsch 
         passport_number: Reisepassnummer
@@ -177,6 +179,8 @@ de:
         shirt_size_info: z.B. M
         uniform_size: Tracht- bzw. Klufthemdgröße
         uniform_size_info: z.B. 38 
+        uniform_size_info_link_text: Eine Größentabelle findest du auf unserer Homepage. 
+        uniform_size_info_link: https://www.worldscoutjamboree.de/app/uploads/2021/10/masstabellen-ausru%CC%88ster-rdp-Hemden-und-Blusen-Langarm.pdf
         can_swim: Ich kann schwimmen 
         preview_info: Hier kannst du dir ein Vorschau-PDF genererieren, ohne die Anmeldung zu sperren. Dieses bitte nicht zum Upload verwenden. 
         print_info: Hier kannst du deine Anmeldung verbindlich drucken. Nach dem Drucken, werden einige Felder zur Bearbeitung gesperrt. Dieses PDF bitte unterschreiben und bei 'Upload' hochladen.
