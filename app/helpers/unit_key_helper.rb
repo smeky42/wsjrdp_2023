@@ -34,7 +34,7 @@ module UnitKeyHelper
     def find_participant_by_key(key)
       key_persons = Person.where(role_wish: 'Teilnehmende*r').where(unit_keys: key)
       unless key_persons.empty?
-        check_key_persons(key_persons)
+        check_key_persons(key, key_persons)
         key_person = key_persons[0]
         return "#{key_person.id} - #{key_person.first_name} #{key_person.last_name}"
       end
@@ -77,7 +77,7 @@ module UnitKeyHelper
       keys
     end
 
-    def check_key_persons(key_persons)
+    def check_key_persons(key, key_persons)
       if key_persons.count > 1
         flash[:alert] = "Der Key #{key} wird von mehreren Personen genutzt \n"
         key_persons.each do |key_person|
