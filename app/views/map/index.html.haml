@@ -70,7 +70,10 @@
           }
 
           if(person.role[0] == "T") {
-            return findColorByUnitLeaderId(person.unit_leader_id);
+            if( person.unit_color == null || person.unit_color == "" ) {
+              person.unit_color = findColorByUnitLeaderId(person.unit_leader_id); 
+            } 
+            return person.unit_color;
           }
 
           return 'ffffff';
@@ -180,6 +183,47 @@
               },
           });
         }
+        function hideColor(color) {
+        for (var i = 0; i < markers.length; i++) {
+          if (markers[i].person.unit_color == color) {
+              markers[i].setMap(null);
+            }
+          }
+        } 
+
+      function showColor(color) {
+        for (var i = 0; i < markers.length; i++) {
+          if (markers[i].person.unit_color == color) {
+            markers[i].setMap(map);  
+          }
+        }
+      }
+
+
+        function refreshColor() {
+          color = {};
+          for (var i = 0; i < markers.length; i++) {
+            var pers = markers[i].person; 
+            //console.log(pers.name +  " - " + pers.unit_color);
+            if (pers.unit_color == "") {
+              pers.unit_color == "unassigned";
+            }
+            if (color[pers.unit_color] != null) {
+              color[pers.unit_color] = color[pers.unit_color] + 1;
+            } else {
+              color[pers.unit_color] = 1;
+            }            
+          }
+        
+          for (const [key, value] of Object.entries(color)) {
+              $( "#unitColorTable" ).append( `<div style="background-color:` + "#" + key + ";color:#daa520" + 
+              `;padding:20px;float:left;">${key}: ${value}`+
+               `<p><button onclick="showColor('${key}');">Show</button>` +
+               `<button onclick="hideColor('${key}');">Hide</button></p>` +
+              `</div>`);
+            }
+
+        }
 
         var mapScript = document.createElement("script");
         mapScript.src = "https://cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js";
@@ -206,6 +250,11 @@
   %input{:onclick =>"showRole('" + r + "');", :type=>"button", :value=>"Show " + r}
   %input{:onclick =>"hideRole('" + r + "');", :type=>"button", :value=>"Hide " + r}
 %br
+%br
+%div{:style => "border: 1px green;"}
+  %input{:onclick =>"refreshColor();", :type=>"button", :value=>"Refresh Unit Color Table"}
+  %div{id: "unitColorTable"}
+%br 
 - if @invalid_users.present?
   =t('activerecord.text.invalid_adress')
   %br 
