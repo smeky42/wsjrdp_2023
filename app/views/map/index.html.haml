@@ -62,11 +62,13 @@
           }
 
           if(person.role[0] == "K") {
-            return '8b0000'
+            person.unit_color = '8b0000';
+            return person.unit_color;
           }
 
           if(person.role[0] == "I") {
-            return '2f4f4f'
+            person.unit_color = '2f4f4f';
+            return person.unit_color;
           }
 
           if(person.role[0] == "T") {
@@ -75,8 +77,8 @@
             } 
             return person.unit_color;
           }
-
-          return 'ffffff';
+          person.unit_color = 'ffffff'
+          return person.unit_color;
         }
 
         function findColorByUnitLeaderId(id) {
@@ -102,6 +104,7 @@
                   markers.push(createMarker(pers));
                 });
             };
+          refreshColor();
         }
 
         function createMarker(pers){
@@ -182,6 +185,7 @@
                 console.log("Success: " + result.response)
               },
           });
+          refreshColor();
         }
         function hideColor(color) {
         for (var i = 0; i < markers.length; i++) {
@@ -215,6 +219,7 @@
             }            
           }
         
+          $( "#unitColorTable" ).empty();
           for (const [key, value] of Object.entries(color)) {
               $( "#unitColorTable" ).append( `<div style="background-color:` + "#" + key + ";color:#daa520" + 
               `;padding:20px;float:left;">${key}: ${value}`+
