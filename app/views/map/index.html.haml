@@ -23,11 +23,11 @@
 
         function createPinImage(person) {
             //console.log(person)
-
+            var unitColor = getUnitColor(person);
             var pinIcon = (person.status ? "pin_star" : "pin"); // Accepted
-            var pinColor = getUnitColor(person); // Unit
+            var pinColor = unitColor; // Unit
             var pinLetter = getLetterForPin(person); // Role
-            var pinLetterColor = "daa520"; 
+            var pinLetterColor = invertColor(unitColor); 
             var pinStarColor = 'ffffff';
             var pinImage = new google.maps.MarkerImage("https://chart.apis.google.com/chart?chst=d_map_xpin_letter&chld=" + pinIcon + "|" + pinLetter + "|" + pinColor + "|"+ pinLetterColor + "|" + pinStarColor,
               new google.maps.Size(21, 34),
@@ -203,26 +203,64 @@
         }
       }
 
+      function invertColor(hex) {
+            if (hex.indexOf('#') === 0) {
+                hex = hex.slice(1);
+            }
+            // convert 3-digit hex to 6-digits.
+            if (hex.length === 3) {
+                hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+            }
+            if (hex.length !== 6) {
+                throw new Error('Invalid HEX color.');
+            }
+            // invert color components
+            var r = (255 - parseInt(hex.slice(0, 2), 16)).toString(16),
+                g = (255 - parseInt(hex.slice(2, 4), 16)).toString(16),
+                b = (255 - parseInt(hex.slice(4, 6), 16)).toString(16);
+            // pad each with zeros and return
+            return padZero(r) + padZero(g) + padZero(b);
+        }
+
+        function padZero(str, len) {
+            len = len || 2;
+            var zeros = new Array(len).join('0');
+            return (zeros + str).slice(-len);
+        }
+
 
         function refreshColor() {
           color = {};
           for (var i = 0; i < markers.length; i++) {
             var pers = markers[i].person; 
             //console.log(pers.name +  " - " + pers.unit_color);
-            if (pers.unit_color == "") {
-              pers.unit_color == "unassigned";
-            }
-            if (color[pers.unit_color] != null) {
-              color[pers.unit_color] = color[pers.unit_color] + 1;
+             if (color[pers.unit_color] == null) {
+                  color[pers.unit_color] = {"leader": 0, "member":0}
+                } 
+
+            if (pers.role[0] == "T") {
+                if (color[pers.unit_color].member != null) {
+                  color[pers.unit_color].member = color[pers.unit_color].member + 1;
+                } else {
+                  color[pers.unit_color].member = 1;
+                } 
             } else {
-              color[pers.unit_color] = 1;
-            }            
+                if (color[pers.unit_color].leader != null) {
+                  color[pers.unit_color].leader = color[pers.unit_color].leader + 1;
+                } else {
+                  color[pers.unit_color].leader = 1;
+                } 
+            }
+
+           
           }
+
+
         
           $( "#unitColorTable" ).empty();
           for (const [key, value] of Object.entries(color)) {
-              $( "#unitColorTable" ).append( `<div style="background-color:` + "#" + key + ";color:#daa520" + 
-              `;padding:20px;float:left;">${key}: ${value}`+
+              $( "#unitColorTable" ).append( `<div style="background-color:` + "#" + key + ";color:#" + invertColor(key) + 
+              `;padding:20px;float:left;">${key}<p> L: ${color[key].leader}, T: ${value.member}</p>`+
                `<p><button onclick="showColor('${key}');">Show</button>` +
                `<button onclick="hideColor('${key}');">Hide</button></p>` +
               `</div>`);
