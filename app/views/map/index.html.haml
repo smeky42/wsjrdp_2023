@@ -212,7 +212,8 @@
                 hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
             }
             if (hex.length !== 6) {
-                throw new Error('Invalid HEX color.');
+                return "000000";
+                //throw new Error('Invalid HEX color.');
             }
             // invert color components
             var r = (255 - parseInt(hex.slice(0, 2), 16)).toString(16),
@@ -251,20 +252,31 @@
                   color[pers.unit_color].leader = 1;
                 } 
             }
-
-           
           }
 
-
-        
-          $( "#unitColorTable" ).empty();
+          sortedColor = [];
           for (const [key, value] of Object.entries(color)) {
-              $( "#unitColorTable" ).append( `<div style="background-color:` + "#" + key + ";color:#" + invertColor(key) + 
-              `;padding:20px;float:left;">${key}<p> L: ${color[key].leader}, T: ${value.member}</p>`+
-               `<p><button onclick="showColor('${key}');">Show</button>` +
-               `<button onclick="hideColor('${key}');">Hide</button></p>` +
+            sortedColor.push([key,value]);
+          }
+          sortedColor.sort(function(a, b) {
+              var members = b[1].member - a[1].member;
+              if(members == 0) {
+                return b[1].leader - a[1].leader;
+              }
+              return members;
+          });
+
+          
+
+          $( "#unitColorTable" ).empty();
+
+          sortedColor.forEach(function(sortedColor){
+            $( "#unitColorTable" ).append( `<div style="background-color:` + "#" + sortedColor[0] + ";color:#" + invertColor(sortedColor[0]) + 
+              `;padding:20px;float:left;">${sortedColor[0]}<p> L: ${sortedColor[1].leader}, T: ${sortedColor[1].member}</p>`+
+               `<p><button onclick="showColor('${sortedColor[0]}');">Show</button>` +
+               `<button onclick="hideColor('${sortedColor[0]}');">Hide</button></p>` +
               `</div>`);
-            }
+          });
 
         }
 
