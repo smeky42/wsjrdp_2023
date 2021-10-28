@@ -1,5 +1,5 @@
 #main.row-fluid
-  - if @printable and (@person.status == 'registriert')
+  - if @printable and (@person.status == 'registriert') and @registration_online
     - if can?(:edit, @person)
       = action_button(t('activerecord.button.print_preview'),
                       '/groups/' + params[:group_id] + '/people/'+ params[:id] + '/print/preview',

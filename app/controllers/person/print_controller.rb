@@ -13,9 +13,20 @@ class Person::PrintController < ApplicationController
     @group ||= Group.find(params[:group_id])
     @person ||= group.people.find(params[:id])
     @printable = printable
+
+    @registration_online = (Date.today < Settings.registration_end_date) ||
+            current_user.role?('Group::Root::Admin') ||
+            current_user.role?('Group::Root::Leader') ||
+            current_user.role?('Group::UnitSupport::Leader') ||
+            current_user.role?('Group::UnitSupport::Member')
+
     unless printable
       flash[:alert] = (I18n.t 'activerecord.alert.print') + ': ' + not_printable_reason
     end
+
+    unless @registration_online 
+      flash[:alert] = (I18n.t 'activerecord.alert.registration_end')
+    end 
 
     unless @person.status == 'registriert'
       flash[:info] = (I18n.t 'activerecord.text.print')
@@ -23,7 +34,7 @@ class Person::PrintController < ApplicationController
   end
 
   def preview
-    if printable && (@person.status == 'registriert')
+    if printable && (@person.status == 'registriert') && @registration_online
       pdf = Wsjrdp2023::Export::Pdf::Registration.render(@person, true)
 
       send_data pdf, type: :pdf, disposition: 'attachment',
@@ -32,7 +43,7 @@ class Person::PrintController < ApplicationController
   end
 
   def submit
-    if printable && (@person.status == 'registriert')
+    if printable && (@person.status == 'registriert') && @registration_online
       pdf = Wsjrdp2023::Export::Pdf::Registration.new_pdf(@person, false)
 
       folder = file_folder

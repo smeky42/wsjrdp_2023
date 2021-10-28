@@ -259,7 +259,7 @@ de:
       iban: Deine IBAN ist fehlerhaft, bitte überprüfe diese noch einmal!
       sepa_mail: Deine Mailadrese für das SEPA Verfahren ist fehlerhaft, bitte überprüfe diese noch einmal!
       print: Leider kannst du noch nicht drucken. Unter Kontaktdaten fehlen noch korrekte Angaben für folgende Felder
-
+      registration_end: Leider hast du unseren Anmeldeschluss (31.10.2021) verpasst, daher kannst du keine Anmeldung mehr drucken.
       
   contactable:
     additional_email_fields:

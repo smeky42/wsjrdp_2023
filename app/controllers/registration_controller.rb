@@ -12,8 +12,9 @@ class RegistrationController < ActionController::Base
 
   def index
     @possible_roles = Settings.person.roles
-
-    if request.post? && (check_mail && check_name && check_birthday)
+    @registration_online = (Date.today < Settings.registration_end_date)
+    
+    if request.post? && @registration_online && (check_mail && check_name && check_birthday)
       person = register_person
       send_registration_mail(person)
     end
