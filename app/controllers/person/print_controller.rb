@@ -34,7 +34,7 @@ class Person::PrintController < ApplicationController
   end
 
   def preview
-    if printable && (@person.status == 'registriert') && @registration_online
+    if printable && (@person.status == 'registriert')
       pdf = Wsjrdp2023::Export::Pdf::Registration.render(@person, true)
 
       send_data pdf, type: :pdf, disposition: 'attachment',
@@ -43,7 +43,7 @@ class Person::PrintController < ApplicationController
   end
 
   def submit
-    if printable && (@person.status == 'registriert') && @registration_online
+    if printable && (@person.status == 'registriert') 
       pdf = Wsjrdp2023::Export::Pdf::Registration.new_pdf(@person, false)
 
       folder = file_folder
