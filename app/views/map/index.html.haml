@@ -28,7 +28,7 @@
             var pinColor = unitColor; // Unit
             var pinLetter = getLetterForPin(person); // Role
             var pinLetterColor = invertColor(unitColor); 
-            var pinStarColor = 'ffffff';
+            var pinStarColor = getColorForPin(person);
             var pinImage = new google.maps.MarkerImage("https://chart.apis.google.com/chart?chst=d_map_xpin_letter&chld=" + pinIcon + "|" + pinLetter + "|" + pinColor + "|"+ pinLetterColor + "|" + pinStarColor,
               new google.maps.Size(21, 34),
               new google.maps.Point(0,0),
@@ -40,6 +40,13 @@
 
         function getLetterForPin(person) {
             return person.role[0];
+        }
+
+       function getColorForPin(person) {
+            if(person.status == "Dokumente vollständig überprüft") {
+              return 'ffd700';
+            }
+            return 'ffffff';
         }
 
         function toPersonObject(personArray) {
