@@ -28,7 +28,7 @@ email:
   # while the actual recipients go in the bcc field.
   mass_recipient: <%= "Deutsches Kontingent zum World Scout Jamboree 2023  <info@worldscoutjamboree.de>" %>
 
-registration_end_date: 2021-11-01 04:00:00
+registration_end_date: 2021-11-01 00:00:00
 
 person:
   roles:
