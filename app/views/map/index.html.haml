@@ -236,6 +236,15 @@
             return (zeros + str).slice(-len);
         }
 
+        function listUnit(color) {
+            $( "#unitTable" ).empty();
+            for (var i = 0; i < markers.length; i++) {
+              if (markers[i].person.unit_color == color) {
+                $( "#unitTable" ).append("<div style='margin:3px'>" + markers[i].person.role[0] + ": "  + markers[i].person.link +"</div>")
+              }
+            }
+        }
+
 
         function refreshColor() {
           color = {};
@@ -273,15 +282,15 @@
               return members;
           });
 
-          
+
 
           $( "#unitColorTable" ).empty();
-
           sortedColor.forEach(function(sortedColor){
             $( "#unitColorTable" ).append( `<div style="background-color:` + "#" + sortedColor[0] + ";color:#" + invertColor(sortedColor[0]) + 
               `;padding:20px;float:left;">${sortedColor[0]}<p> L: ${sortedColor[1].leader}, T: ${sortedColor[1].member}</p>`+
                `<p><button onclick="showColor('${sortedColor[0]}');">Show</button>` +
                `<button onclick="hideColor('${sortedColor[0]}');">Hide</button></p>` +
+               `<p><button onclick="listUnit('${sortedColor[0]}');">List Unit</button></p>` +
               `</div>`);
           });
 
@@ -313,9 +322,13 @@
   %input{:onclick =>"hideRole('" + r + "');", :type=>"button", :value=>"Hide " + r}
 %br
 %br
-%div{:style => "border: 1px green;"}
+%div{:style => "width:80%;float:left;"}
   %input{:onclick =>"refreshColor();", :type=>"button", :value=>"Refresh Unit Color Table"}
   %div{id: "unitColorTable"}
+%br 
+%div{:style => "width:100%; float:none;margin-left:10px;"}
+  %div{id: "unitTable"}
+%div{:style => "width:100%; float:none;"}
 %br 
 - if @invalid_users.present?
   =t('activerecord.text.invalid_adress')
