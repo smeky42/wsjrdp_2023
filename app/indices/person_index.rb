@@ -22,5 +22,7 @@ ThinkingSphinx::Index.define_partial :person do
           sepa_mail,
           sepa_iban,
           sepa_bic,
-          sepa_status
+          sepa_status,
+          unit_keys,
+          unit_color
 end
