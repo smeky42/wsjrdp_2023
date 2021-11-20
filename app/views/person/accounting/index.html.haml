@@ -1,0 +1,66 @@
+#main.row-fluid
+  - if can?(:edit, @person)
+    = t('activerecord.attributes.person.accounting_info')
+    %br 
+    = standard_form(@person, {url: accounting_group_person_path,  method: :get}) do |f|
+      = f.error_messages
+    %h3
+      = "Buchungen" 
+    - if @accounting_entries.nil? || @accounting_entries.count == 0
+      = "Keine Buchungen"
+    - else 
+      %table{:width => "600"}
+        %tbody{:style => "border: 1px solid gray"}
+          %tr
+            %th{:style => "border: 1px solid gray"} Zeitstempel
+            %th{:style => "border: 1px solid gray"} Autor
+            %th{:style => "border: 1px solid gray"} Kommentar
+            %th{:style => "border: 1px solid gray", :align => "right"} Betrag
+          %tr
+            %td{:style => "border: 1px solid gray"}= ""
+            %td{:style => "border: 1px solid gray"}= "System"
+            %td{:style => "border: 1px solid gray"}= "Teilnehmendenbetrag Gesamt"
+            %td{:style => "border: 1px solid gray", :align => "right"}= @accounting_payment_value
+          - @accounting_entries.each do |entry|
+            %tr
+              %td{:style => "border: 1px solid gray"}= entry.created_at.strftime("%d.%m.%Y %H:%M:%S") 
+              %td{:style => "border: 1px solid gray"}= Person.where(id: entry.author_id).first.full_name
+              %td{:style => "border: 1px solid gray"}= entry.comment
+              %td{:style => "border: 1px solid gray", :align => "right"}= accounting_value(entry.ammount)
+        %tfoot
+          %tr
+            %td= ""
+            %td= ""
+            %td{:style => "font-weight: bold", :align => "center"}= "Kontostand "
+            %td{:style => "font-weight: bold; border-bottom-style: double", :align => "right"}= @accounting_balance
+    %h3
+      = "Ratenplan" 
+    - if @accounting_entries.nil? || @accounting_entries.count == 0
+      = "Keine Buchungen"
+    - else 
+      %table{:border => 1, :width => "600"}
+        %tbody
+          %tr
+            %th Zeitpunkt
+            %th{:align => "right"} Betrag
+          - @accounting_payment_array.each do |entry|
+            %tr
+              %td= "05. " + entry[:month]
+              %td{:align => "right"}= entry[:ammount]
+            
+    %br
+
+    -if @accounting
+      = form_with url: accounting_group_person_path, local: true, :method => :put do |f|
+        %dl.dl-horizontal 
+          %dt.muted
+            = "Betrag in Cent"
+          %dd
+            = f.number_field :accounting_ammount
+            %br
+          %dt.muted
+            = "Kommentar"
+          %dd
+            = f.text_area :accounting_comment, size: "70x5"
+            %br
+            = form_buttons(f, submit_label: "Buchung anlegen")
