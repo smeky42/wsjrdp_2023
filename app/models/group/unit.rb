@@ -13,7 +13,7 @@ class Group::Unit < ::Group
 
   ### ROLES
   class Leader < ::Role
-    self.permissions = [:group_other_roles_and_below_full]
+    self.permissions = [:group_full]
   end
 
   class Member < ::Role
