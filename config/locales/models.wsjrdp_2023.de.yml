@@ -105,6 +105,7 @@ de:
         additional_contact_address_info: Sofern abweichend von Kontaktdaten Teilnehmer*in
         additional_mail_info: Weitere E-Mail-Adressen und Telefonummern, um bei Fragen, zur Information oder auch bei Notfällen Kontakt aufzunehmen
         additional_mail_help: Mit "Versand" gekennzeichnete Mails werden zusätzlich zur primären Mailadresse benachrichtigt
+        accounting_info: Hier erhälst du einen Überblick über deine bisherigen Zahlungen und deinen Ratenplan
         sepa_header: Kontaktdaten Kontoinhaber*in
         sepa_info: werden für das SEPA Lastschriftmandat und bei Fragen rund um den Zahlungsverkehr verwendet 
         sepa_name: Kontoinhaber*in
@@ -278,6 +279,7 @@ de:
       additional_contact: Weitere Kontaktdaten
       check: Teilnehmerdaten überprüfen
       upload: Upload
+      accounting: Buchhaltung
     form_tabs:
       general: Kontaktdaten Teilnehmer*in
       additional_contact: Weitere Kontaktdaten
