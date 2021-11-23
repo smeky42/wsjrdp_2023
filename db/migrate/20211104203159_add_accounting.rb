@@ -7,7 +7,7 @@
 
 class AddAccounting < ActiveRecord::Migration[4.2]
   def change
-    create_table "accounting", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    create_table "accounting_entries", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
       t.integer "subject_id", null: false
       t.integer "author_id", null: false
       t.integer "ammount", null: false
