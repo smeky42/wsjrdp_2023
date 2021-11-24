@@ -11,7 +11,7 @@ application:
   languages:
     de: Deutsch
 
-  version: '2.7.1 - end of registration'
+  version: '3.0.0 - Units'
 
 # The person with this email has root access to everything
 # This person should only be used by the operators of the application,
