@@ -23,6 +23,10 @@ module Sheet
         :upload_group_person_path,
         if: :show
 
+    tab 'people.tabs.accounting',
+        :accounting_group_person_path,
+        if: :show
+
     tab 'people.tabs.check',
         :check_group_person_path,
         if: (lambda do |view, _group, _person|
