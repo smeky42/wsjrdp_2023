@@ -32,6 +32,49 @@ module FinanceHelper
     end
     # rubocop:enable Metrics/MethodLength
 
+    def ammount(ammount)
+      if ammount == "- € "
+        return 0
+      end
+      ammount.gsub(".","").split(" ")[0].to_i * 100
+    end
+
+    def payment_by_month(role, month)
+      payment_data_by(role)[month]
+    end
+
+    def payment_data_till_month(role, month)
+      payment_data_by(role)[0..month]
+    end
+
+    def payment_data_till_date(role, end_date)
+      start_date = Time.new(2021,12,4)
+      month = (end_date.year * 12 + end_date.month) - (start_date.year * 12 + start_date.month)
+      payment_data_by(role)[0..month]
+    end
+
+
+    def accounting_balance
+      balance = - total_payment_by(@person.role_wish)
+      accountEntries = accounting_entries
+      accountEntries.each {|x|  
+        balance -= x.ammount
+      }
+      balance
+    end
+
+    def dept(month) 
+      (total_payment_by(@person.role_wish) + payment_data_till_month(@person.role_wish, month).inject(0){|sum,x| sum + x })
+    end
+
+    def total_payment_by(role)
+      -1 * ammount(payment_array_by(role)[1][1])
+    end
+    def  payment_data_by(role)
+      payment_array_by_role = payment_array_by(role)
+      payment_array_by_role[1].drop(2).map{|x| ammount(x)}
+    end
+
     def payment_array_by(role)
       payment_array.select { |line| (line[0] == role || line[0] == ' ') }
     end

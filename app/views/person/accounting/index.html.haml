@@ -33,6 +33,11 @@
             %td= ""
             %td{:style => "font-weight: bold", :align => "center"}= "Kontostand "
             %td{:style => "font-weight: bold; border-bottom-style: double", :align => "right"}= @accounting_balance
+      
+    
+    %h3
+      = "Nächste Rate"
+      = @next_payment
     %h3
       = "Ratenplan" 
     - if @accounting_entries.nil? || @accounting_entries.count == 0
@@ -43,11 +48,12 @@
           %tr
             %th Zeitpunkt
             %th{:align => "right"} Betrag
+            %th{:align => "right"} Soll Kontostand
           - @accounting_payment_array.each do |entry|
             %tr
-              %td= "05. " + entry[:month]
+              %td=entry[:month].strftime("%d.%m.%Y")
               %td{:align => "right"}= entry[:ammount]
-            
+              %td{:align => "right"}= entry[:total]            
     %br
 
     -if @accounting

@@ -16,19 +16,28 @@ class Person::AccountingController < ApplicationController
     @person ||= group.people.find(params[:id])
     @accounting = accounting
     @accounting_entries = accounting_entries
-    @accounting_payment_value = accounting_payment_value
+    @accounting_payment_value = get_number_to_currency(total_payment_by(@person.role_wish))
     @accounting_payment_array = accounting_payment_array
-    @accounting_balance = accounting_balance
+    @accounting_balance = get_number_to_currency(- accounting_balance)
+    @next_payment = get_number_to_currency(next_payment)
     save_put
   end
 
   def accounting_value(value)
-    text_value = value.to_f / 100
-    number_to_currency(text_value, :separator => ",", :delimiter => ".", format: "%n %u")
+    number_to_currency(value.to_f / 100, :separator => ",", :delimiter => ".", format: "%n %u")
   end
   helper_method :accounting_value
 
   private
+  #ToDo dynamic
+  def next_payment
+    to_pay = dept(0) + accounting_balance
+
+    if to_pay < 0
+      to_pay = 0
+    end 
+    to_pay 
+  end 
 
   def entry
     @person ||= Person.find(params[:id])
@@ -53,7 +62,7 @@ class Person::AccountingController < ApplicationController
                            comment: params[:accounting_comment],
                            created_at: DateTime.now)
       flash[:notice] =
-      "Buchung #{params[:accounting_comment]} in Höhe von #{get_number_to_currency(params[:accounting_ammount].to_i/100)} erfolgreich angelegt!"
+      "Buchung #{params[:accounting_comment]} in Höhe von #{get_number_to_currency(params[:accounting_ammount].to_i)} erfolgreich angelegt!"
       redirect_back(fallback_location: "/")
     end
   end
@@ -63,41 +72,30 @@ class Person::AccountingController < ApplicationController
     AccountingEntries.where(subject_id: @person.id)
   end
 
-  def accounting_payment_value
-    int_value = "-" + get_text_to_currency(get_payment_value)
-  end
-
   def accounting_payment_array
     array = Array.new
-    payment_array = payment_array_by(@person.role_wish).dup
-    payment_array[0].each_index {
-      |x| if payment_array[1][x] != " -   € " && payment_array[0][x] != "Gesamtbeitrag" && payment_array[1][x] != @person.role_wish
+    start_date = Date.new(2021,12,5)
+    payment_data = payment_data_till_date(@person.role_wish, Date.new(2023,5,6))
+    payment_data.each_with_index { |data,x| 
         array.push({
-            month: payment_array[0][x],
-            ammount: get_text_to_currency(payment_array[1][x])
+            month: start_date + x.months,
+            ammount: get_number_to_currency(payment_by_month(@person.role_wish, x)),
+            total: get_number_to_currency(dept(x)),
         }
-        )
-      end
+      ) 
     }
+
     array
   end
 
-  def accounting_balance
-    balance = 0
-    balance = 0 - get_payment_value[1...-3].to_i
-    accountEntries = accounting_entries
-    accountEntries.each {
-      |x|  balance = balance + (x.ammount.to_f/100)
-    }
-    get_number_to_currency(balance)
-  end
+
 
   def get_text_to_currency(number)
-    number_to_currency(number[0...-3], :separator => ",", :delimiter => ".", format: "%n %u")
+    number_to_currency(number.to_f / 100, :separator => ",", :delimiter => ".", format: "%n %u")
   end
 
   def get_number_to_currency(number)
-    number_to_currency(number, :separator => ",", :delimiter => ".", format: "%n %u")
+    number_to_currency(number.to_f / 100, :separator => ",", :delimiter => ".", format: "%n %u")
   end
 
   def get_payment_value
