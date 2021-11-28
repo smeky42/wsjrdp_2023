@@ -25,7 +25,15 @@ module Sheet
 
     tab 'people.tabs.accounting',
         :accounting_group_person_path,
-        if: :show
+        if: (lambda do |view, _group, _person|
+          view.current_user.role?('Group::Root::Admin') ||
+          view.current_user.role?('Group::Root::Leader') ||
+          view.current_user.role?('Group::UnitSupport::Leader') ||
+          view.current_user.role?('Group::UnitSupport::Member') ||
+          view.current_user.role?('Group::Ist::Leader') || 
+          view.current_user == _person 
+          # TODO: use view.can
+        end)
 
     tab 'people.tabs.check',
         :check_group_person_path,

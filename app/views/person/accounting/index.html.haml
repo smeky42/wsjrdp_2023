@@ -1,5 +1,5 @@
 #main.row-fluid
-  - if can?(:edit, @person)
+  - if @authorize_view
     = t('activerecord.attributes.person.accounting_info')
     %br 
     = standard_form(@person, {url: accounting_group_person_path,  method: :get}) do |f|

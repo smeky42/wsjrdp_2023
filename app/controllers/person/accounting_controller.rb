@@ -14,6 +14,12 @@ class Person::AccountingController < ApplicationController
   def index
     @group ||= Group.find(params[:group_id])
     @person ||= group.people.find(params[:id])
+
+    unless authorize_view
+      return 
+    end 
+
+    @authorize_view = authorize_view
     @accounting = accounting
     @accounting_entries = accounting_entries
     @accounting_payment_value = get_number_to_currency(total_payment_by(@person.role_wish))
@@ -22,6 +28,15 @@ class Person::AccountingController < ApplicationController
     @next_payment = get_number_to_currency(next_payment)
     save_put
   end
+
+  def authorize_view
+    (current_user.role?('Group::Root::Admin') ||
+    current_user.role?('Group::Root::Leader') ||
+    current_user.role?('Group::UnitSupport::Leader') ||
+    current_user.role?('Group::UnitSupport::Member') ||
+    current_user.role?('Group::Ist::Leader') || 
+    current_user == @person )
+  end 
 
   def accounting_value(value)
     number_to_currency(value.to_f / 100, :separator => ",", :delimiter => ".", format: "%n %u")
