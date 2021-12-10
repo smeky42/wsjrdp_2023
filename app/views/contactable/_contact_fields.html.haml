@@ -31,7 +31,7 @@
 
 = field_set_tag do 
   = f.labeled_input_field :shirt_size, placeholder: t('activerecord.attributes.person.shirt_size_info')
-  = f.labeled_input_field :uniform_size, placeholder: t('activerecord.attributes.person.uniform_size_info')
+  = f.labeled_collection_select(:uniform_size, @possible_uniforms, :to_s, :to_s, {}, class: 'span2')
   = link_to t('activerecord.attributes.person.uniform_size_info_link_text'), t('activerecord.attributes.person.uniform_size_info_link'), target: '_blank'
 
 

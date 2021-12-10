@@ -56,6 +56,27 @@ person:
     - überpfrüfung benötigt kommunikation
     - geprüft merkliste
     - ungeprüft
+  
+  shirt_sizes:
+    - Klufthemd XS 35/36 
+    - Klufthemd S 37/38 
+    - Klufthemd M 39/40
+    - Klufthemd L 41/42
+    - Klufthemd XL 43/44
+    - Klufthemd XXL 45/46
+    - Klufthemd XXXL 47/48
+    - Klufthemd S-Schlank 38S
+    - Klufthemd M-Schlank 40S
+    - Klufthemd L-Schlank 42S
+    - Klufthemd XL-Schlank 44S
+    - Kluftbluse 34
+    - Kluftbluse 36
+    - Kluftbluse 38
+    - Kluftbluse 40
+    - Kluftbluse 42
+    - Kluftbluse 44
+    - Kluftbluse 46
+    - Kluftbluse 48
 
 addresses:
   imported_countries:
@@ -106,3 +127,4 @@ additional_email:
     - Sekundärer Notfallkontakt
     - Arbeit
     - Andere
+

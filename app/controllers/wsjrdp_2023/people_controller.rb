@@ -73,6 +73,12 @@ module Wsjrdp2023
         @rdp_groups = YAML.load_file(Rails.root.join('' \
                                     '../hitobito_wsjrdp_2023/config/rdp_groups.yml'))[Rails.env]
 
+        unless (Settings.person.shirt_sizes.include?(entry.uniform_size))
+          @possible_uniforms = Settings.person.shirt_sizes.unshift(entry.uniform_size)
+        else 
+          @possible_uniforms = Settings.person.shirt_sizes
+        end 
+
         respond_with(entry, &block)
       end
     end
