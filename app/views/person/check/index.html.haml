@@ -1,5 +1,37 @@
 #main.row-fluid
   - if can?(:edit, @person)
+    - if (@manage || @leader_of_unit)
+      %h4
+        = t('activerecord.attributes.person.check_next_status_info') 
+      - if 'bestätigt durch KT' == @person.status
+        = t('activerecord.attributes.person.check_next_state_cmt_approved_info')
+        - if @check_url_id
+          %h5 
+          = t('activerecord.attributes.person.check_passport_info')
+          = render_attrs(@person, :first_name, :last_name, :birthday, :gender)
+          %h5
+            = t('activerecord.attributes.person.check_registration_info')
+          = render_attrs(@person, :first_name, :last_name)
+          - if (@person.years.to_i < 18) 
+            = render_attrs(@person, :additional_contact_name_a, :additional_contact_name_b, :additional_contact_single) 
+          %h5
+            = t('activerecord.attributes.person.check_sepa_info')
+          = render_attrs(@person, :sepa_name)
+          %h5
+            = t('activerecord.attributes.person.check_l_info')
+          %br 
+          = standard_form(@person, {url: check_group_person_path,  method: :put}) do |f|
+            = render 'person/check/button_l_review', f: f
+        - else 
+          = t('activerecord.attributes.person.check_next_state_cmt_approved_info_error')
+      - elsif 'in Überprüfung durch UL' == @person.status
+        = t('activerecord.attributes.person.check_next_state_ul_info')
+      - elsif 'bestätigt durch Leitung' == @person.status
+        = t('activerecord.attributes.person.check_next_state_ul_approved_info')
+      - else  
+        = t('activerecord.attributes.person.check_next_state_ul_standard_info') 
+    %br
+    %br 
     - if @manage
       -# = f.error_messages
       %h4

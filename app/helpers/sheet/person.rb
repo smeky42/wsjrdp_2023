@@ -42,7 +42,8 @@ module Sheet
                view.current_user.role?('Group::Root::Leader') ||
                view.current_user.role?('Group::UnitSupport::Leader') ||
                view.current_user.role?('Group::UnitSupport::Member') ||
-               view.current_user.role?('Group::Ist::Leader')
+               view.current_user.role?('Group::Ist::Leader') ||
+               view.current_user.role?('Group::Unit::Leader')
                # TODO: use view.can
              end)
 

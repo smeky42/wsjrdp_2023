@@ -46,7 +46,7 @@ person:
     - Gruppe zugewiesen # Jeder der eine Unit hat
     - bestätigt durch KT # Jeder der bestätigt Teil einer Unit des Kontingentes ist
     - in Überprüfung durch UL # In Papierform mit QR Code
-    - bestätigt durch UL # QR Code gescannt und Unterschriften bestätigt
+    - bestätigt durch Leitung # QR Code gescannt und Unterschriften bestätigt
     - vollständig # bei Peter angekommen und gescannt
     - Abmeldung Vermerkt # Personen die sich abmelden wollen, bei denen es noch Klärungsbedarf gibt
     - abgemeldet # Alle die nicht mehr am Jamboree Teilnehmen wollen

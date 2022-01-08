@@ -17,9 +17,9 @@ class Person::CheckController < ApplicationController
     @manage = manage
     @medicine = medicine
     @medicine_notes = medicine_notes
-
-    # flash[:alert] = params[:url]
-
+    @leader_of_unit = leader_of_unit
+    @check_url_id = check_url_document_id(params[:url])
+   
     status_button
     save_put
   end
@@ -30,6 +30,10 @@ class Person::CheckController < ApplicationController
     @person ||= Person.find(params[:id])
   end
 
+  def leader_of_unit
+    current_user.role?('Group::Unit::Leader')
+  end
+
   def manage
     current_user.role?('Group::Root::Admin') ||
     current_user.role?('Group::Root::Leader') ||
@@ -37,6 +41,24 @@ class Person::CheckController < ApplicationController
     current_user.role?('Group::UnitSupport::Member') ||
     current_user.role?('Group::Ist::Leader')
   end
+
+  def check_url_document_id(url_id) 
+    if url_id.nil?
+      return false 
+    end 
+    date = @person.upload_registration_pdf.split("/")[-1].split("-")
+    day = date[2]
+    month = date[1]
+    year = date[0]
+    doc_id = Base64.encode64(@person.id.to_s + "#{day}.#{month}.#{year}").gsub(/\n+/, "")
+
+    if (url_id == doc_id)
+      return true
+    else  
+      flash[:alert] = doc_id + " != " + url_id
+    end 
+    false 
+  end 
 
   def medicine
     current_user.id == 2 ||
@@ -49,6 +71,11 @@ class Person::CheckController < ApplicationController
   end
 
   def status_button
+    if (@manage|| @leader_of_unit) && request.get?
+      ul_check 
+      @person.save 
+    end 
+
     if @manage && request.get?
       cmt_check
       cmt_documents
@@ -119,6 +146,13 @@ class Person::CheckController < ApplicationController
         keys = getRandomKeys(@person).to_s
         @person.unit_keys = keys
       end
+    end
+  end
+
+  def ul_check
+    if params[:task] == 'l_review' && check_url_document_id(params[:url])
+      @person.status = 'bestätigt durch Leitung'
+      @person.save
     end
   end
 

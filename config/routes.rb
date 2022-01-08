@@ -36,6 +36,7 @@ Rails.application.routes.draw do
           get 'check' => 'person/check#index'
           put 'check' => 'person/check#index'
           get 'check/:url' => 'person/check#index'
+          get 'check/:url/:task' => 'person/check#index'
           get 'upload' => 'person/upload#index'
           put 'upload' => 'person/upload#index'
           get 'upload/show_passport' => 'person/upload#show_passport'

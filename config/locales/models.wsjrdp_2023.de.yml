@@ -192,10 +192,16 @@ de:
         check_document_info: Hochgeladene Dokumente einsehen
         check_next_status_info: Teilnehmer*in in den nächsten Status übernehmen
         check_next_state_participant_info: Anmeldung wird gerade von Teilnehmer*in überarbeitet
-        check_next_state_unit_info: Die Anmeldung ist vollständig und kontrolliert. Dies wurde dem*der Teilnehmenden bereits bestätigt.
+        check_next_state_unit_info: Die Anmeldung ist vollständig und kontrolliert. 
+        check_next_state_cmt_approved_info: Die Teilnahme wurde dem*der Teilnehmenden vom KT bereits bestätigt. Der nächste Schritt ist die Überprüfung durch dich als Leitung.
+        check_next_state_cmt_approved_info_error: Leider hast du nicht den richtigen QR Code gescannt. Bitte melde dich bei deinem Unit Betreuer.
+        check_next_state_ul_standard_info: Der Teilnehmer befindet sich in einem Status den du nicht bearbeiten kannst.
+        check_next_state_ul_info: Die Dokumente befinden sich in Überprüfung durch dich als Leitung.
+        check_next_state_ul_approved_info: Die Dokumente wurden vom KT und der jeweiligen Leitung bereits bestätigt. Der nächste Schritt ist der versandt der Dokumente als Gruppe!
         check_passport_info: Folgende Daten mit dem Ausweis abgleichen
         check_registration_info: Bei der Anmeldung abgleichen ob alle Unterschriften vorhanden sind
         check_sepa_info: Bei SEPA abgleichen ob die richtige Unterschrift vorhanden ist
+        check_l_info: Des weiteren bitte den Medizinbogen (behält die jeweilige Leitung) prüfen. 
         check_good_conduct_info: Der Nachweis Führungszeugnis darf nicht älter als drei Monate sein und muss für das Jamboree noch gültig sein
         check_good_recommondation_info: Die Empfehlung ist valide und unterschrieben 
         check_data_processing_info: Die Verschwiegenheitsvereinbarung ist unterschrieben 
@@ -240,8 +246,9 @@ de:
       edit_hint: Zum Bearbeiten öffnen 
       save: Speichern
       status_hint: In den nächsten Status schalten
-      cmt_review: Überprüfung der Teilnehmer*in beginnen 
+      cmt_review: Überprüfung der Teilnehmer*in beginnen
       cmt_documents: Dokumente sind vollständig unterschrieben und inhaltlich korrekt
+      l_review: Die Dokumente liegen mir vollständig unterschrieben und korrekt im Orginal vor
       medicine_check: Medizin Status speichern
       person: Zur Person
 
