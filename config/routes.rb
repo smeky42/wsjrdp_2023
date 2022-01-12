@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     post '/medicinecheck', to: "medicinecheck#index"
 
     resources :groups do
+        get 'print_group_registration' => 'group/print_registration#index' 
       resources :people, except: [:new, :create] do
         member do
           post :send_password_instructions
