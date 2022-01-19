@@ -27,7 +27,7 @@
       - elsif 'in Überprüfung durch UL' == @person.status
         = t('activerecord.attributes.person.check_next_state_ul_info')
       - elsif 'bestätigt durch Leitung' == @person.status
-        = t('activerecord.attributes.person.check_next_state_ul_approved_info')
+        = t('activerecord.attributes.person.check_approved_state_ul_standard_info')
       - else  
         = t('activerecord.attributes.person.check_next_state_ul_standard_info') 
     %br
