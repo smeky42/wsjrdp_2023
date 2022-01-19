@@ -57,9 +57,9 @@ module Wsjrdp2023
           l_member = @members[i]
           r_member = @members[i+1]
           if i.even? 
-            if !r_member.nil?
+            if !r_member.nil? && !l_member.nil?
               table_data << ["#{l_member.id}:", "#{l_member.first_name} #{l_member.last_name}" ,", geb. am #{l_member.birthday.strftime('%d.%m.%y')}"," ", "#{r_member.id}:", "#{r_member.first_name} #{r_member.last_name}" ,", geb. am #{r_member.birthday.strftime('%d.%m.%y')}"]
-            else 
+            elsif !l_member.nil?  
               table_data << ["#{l_member.id}:", "#{l_member.first_name} #{l_member.last_name}" ,", geb. am #{l_member.birthday.strftime('%d.%m.%y')}"," ", " ", " " ," "]
             end
           end 
