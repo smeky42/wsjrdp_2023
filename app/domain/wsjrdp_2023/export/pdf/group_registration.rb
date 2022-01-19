@@ -9,19 +9,19 @@ module Wsjrdp2023
   module Export::Pdf
     module GroupRegistration
       class Runner
-        def render(group, pdf_preview)
-          new_pdf(group, pdf_preview).render
+        def render(group, members)
+          new_pdf(group, members).render
         end
 
         # rubocop:disable Metrics/AbcSize
         # rubocop:disable Metrics/MethodLength
-        def new_pdf(group, pdf_preview)
+        def new_pdf(group, members)
           pdf = Prawn::Document.new(page_size: 'A4',
                                     page_layout: :portrait,
                                     margin: 2.cm,
                                     bottom_margin: 1.cm)
 
-          sections.each { |section| section.new(pdf, group).render }
+          sections.each { |section| section.new(pdf, group, members).render }
 
           # define header & footer variables
           imagePath = '../hitobito_wsjrdp_2023/app/assets/images/'
@@ -63,7 +63,7 @@ module Wsjrdp2023
         end
 
         def sections
-          []
+          [Groupsheet]
         end
       end
       mattr_accessor :runner

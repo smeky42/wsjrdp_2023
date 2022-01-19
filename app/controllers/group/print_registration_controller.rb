@@ -11,12 +11,14 @@ class Group::PrintRegistrationController < ApplicationController
 
   def index
     @group ||= Group.find(params[:group_id])
+    @members ||= Person.where(primary_group_id: params[:group_id])
+
     @printable = printable
 
     unless printable
       flash[:alert] = not_printable_reason
     else 
-      pdf = Wsjrdp2023::Export::Pdf::GroupRegistration.new_pdf(@group, false)
+      pdf = Wsjrdp2023::Export::Pdf::GroupRegistration.new_pdf(@group, @members)
 
       folder = file_folder
       name = file_name
