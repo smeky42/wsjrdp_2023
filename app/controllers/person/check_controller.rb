@@ -55,8 +55,13 @@ class Person::CheckController < ApplicationController
     if (url_id == doc_id)
       return true
     else  
-      flash[:alert] = doc_id + " != " + url_id
-    end 
+      flash[:alert] = "Der QR Code passt nicht zur Anmeldung des Teilnehmers. " +  
+      "Bitte überprüfe ob du die aktuellsten Anmeldeunterlagen hast.  " 
+      if @manage
+        flash[:alert] += " \n Id should be #{doc_id}"
+      end 
+
+    end
     false 
   end 
 
