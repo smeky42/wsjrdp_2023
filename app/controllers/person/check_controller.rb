@@ -52,10 +52,12 @@ class Person::CheckController < ApplicationController
   def check_url_document_id(url_id) 
     if url_id.nil? || 
       @person.upload_registration_pdf.nil? ||
-      @person.upload_registration_pdf.split("/")[-1].nil?
+      @person.generated_registration_pdf.nil? ||
+      @person.generated_registration_pdf.split("/")[-1].nil?
       return false 
     end 
-    date = @person.upload_registration_pdf.split("/")[-1].split("-")
+
+    date = @person.generated_registration_pdf.split("/")[-1].split("-")
     day = date[2]
     month = date[1]
     year = date[0]
