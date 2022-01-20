@@ -13,7 +13,14 @@ class Person::CheckController < ApplicationController
 
   def index
     @group ||= Group.find(params[:group_id])
-    @person ||= group.people.find(params[:id])
+    @person ||= People.find(params[:id])
+
+    if @person.primary_group_id.to_s != params[:group_id]
+      redirect_url = "#{request.base_url}/groups/#{@person.primary_group_id}/people/#{@person.id}/check/#{params[:url]}"
+      Rails.logger.debug("== #{params[:group_id]} redirect to #{redirect_url}")
+      redirect_to redirect_url
+    end 
+
     @manage = manage
     @medicine = medicine
     @medicine_notes = medicine_notes
@@ -43,7 +50,9 @@ class Person::CheckController < ApplicationController
   end
 
   def check_url_document_id(url_id) 
-    if url_id.nil?
+    if url_id.nil? || 
+      @person.upload_registration_pdf.nil? ||
+      @person.upload_registration_pdf.split("/")[-1].nil?
       return false 
     end 
     date = @person.upload_registration_pdf.split("/")[-1].split("-")
@@ -58,7 +67,7 @@ class Person::CheckController < ApplicationController
       flash[:alert] = "Der QR Code passt nicht zur Anmeldung des Teilnehmers. " +  
       "Bitte überprüfe ob du die aktuellsten Anmeldeunterlagen hast.  " 
       if @manage
-        flash[:alert] += " \n Id should be #{doc_id}"
+        flash[:alert] += " \n ID: #{doc_id}"
       end 
 
     end
