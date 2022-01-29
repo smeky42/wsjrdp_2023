@@ -24,3 +24,6 @@ rubocop-results.xml
 
 # OSX
 .DS_Store
+
+bin/Create-Unit-Mailing-Lists.rb
+
