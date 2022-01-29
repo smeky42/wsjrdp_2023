@@ -3,7 +3,7 @@
 %head
 
 -title t('activerecord.header.map')
--if @access
+-if true
   #main.row-fluid
     %div{:style => 'width:100%;'}
       #map{:style => 'width: 100%; height: 1200px;'}
@@ -308,10 +308,6 @@
         mapScript.src = "https://maps.google.com/maps/api/js?key=AIzaSyAPS-uHgTIug9RlK_wBotqn_hrMTkQeUVM&callback=initMap";
         document.getElementsByTagName("head")[0].appendChild(mapScript)
 
-
-%input{:onclick =>"setColor();", :type=>"button", :value=>"Set Color", :class => "button"}
-%input{:type=>"text", :id => "person_id",:maxlenght => "200" ,:class => "text_field" }
-%input{:type=>"text", :id => "color",:maxlenght => "200" ,:class => "text_field" }
 %br 
 %br
 %input{:onclick =>"clearMarkers();", :type=>"button", :value=>"Hide Markers"}

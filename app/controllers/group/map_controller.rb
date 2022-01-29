@@ -3,57 +3,23 @@
 
 require 'rest-client'
 
-class MapController < ApplicationController
-  layout 'application'
+class Group::MapController < ApplicationController
+  # layout 'application'
+  before_action :authorize_action
+  decorates :group, :person
 
   include UnitKeyHelper
 
-  skip_authorization_check
   def index
-    # TODO: CanCan
-    @access = current_user.role?('Group::Root::Admin') ||
-              current_user.role?('Group::Root::Leader') ||
-              current_user.role?('Group::UnitSupport::Leader') ||
-              current_user.role?('Group::UnitSupport::Member')
-
-    unless @access
-      flash[:alert] = I18n.t('activerecord.alert.map_access')
-      return
-    end
-
-    collect_user
-  end
-
-  def color
-    @access = current_user.role?('Group::Root::Admin') ||
-              current_user.role?('Group::Root::Leader') ||
-              current_user.role?('Group::UnitSupport::Leader') ||
-              current_user.role?('Group::UnitSupport::Member')
-
-    unless @access
-      flash[:alert] = I18n.t('activerecord.alert.map_access')
-      return
-    end
-
-    person = Person.where(id: params[:person_id]).first
-    person.unit_color = params[:color]
-    person.save
-
-
-    render json: { response: params[:person_id] + ' ' + params[:color] }
-  end
-
-  def collect_user
-    people = Person.where('(status="in Überprüfung durch KT"' +
-        ' OR status="Upload vollständig" ' +
-        ' OR status="Dokumente vollständig überprüft")')
+    @group ||= Group.find(params[:group_id])
+    @members ||= Person.where(primary_group_id: params[:group_id])
 
     @users = []
-    @invalid_users = []
-    people.each do |person|
+    @members.each do |person|
       add_user(person)
     end
   end
+
 
   def add_user(person)
     id = person.id
@@ -68,9 +34,7 @@ class MapController < ApplicationController
     if !person.latitude.nil? && !person.longitude.nil?
       @users.push([id, name, person.latitude, person.longitude, role, link, status, unit_color,
                    unit_leader_id])
-    else
-      @invalid_users.push([id, name, link])
-    end
+    end 
   end
 
   def update_geodata(person)
@@ -114,5 +78,13 @@ class MapController < ApplicationController
   def get_link(person)
     '<a href="' + request.base_url + '/groups/' + person.primary_group_id.to_s +
       '/people/' + person.id.to_s + '" target="_blank">' + person.full_name.to_s + '</a>'
+  end
+
+  def entry
+    @group ||= Group.find(params[:group_id])
+  end
+
+  def authorize_action
+    authorize!(:edit, entry)
   end
 end
