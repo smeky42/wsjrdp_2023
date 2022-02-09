@@ -11,7 +11,7 @@ application:
   languages:
     de: Deutsch
 
-  version: '3.2.0 - Unit Bestätigung'
+  version: '3.2.1 - Unit Bestätigung'
 
 # The person with this email has root access to everything
 # This person should only be used by the operators of the application,
