@@ -11,6 +11,8 @@ class Group::Ist < ::Group
 
   self.layer = true
 
+  children Group::Ist
+
   ### ROLES
   class Leader < ::Role
     self.permissions = [:layer_and_below_full, :event]
