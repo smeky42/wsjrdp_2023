@@ -66,4 +66,9 @@
           %dd
             = f.text_area :accounting_comment, size: "70x5"
             %br
+          %dt.muted
+            = "Status"
+          %dd
+            = f.collection_select(:sepa_status, @possible_sepa_states, :to_s, :to_s, {:selected => @person.sepa_status.to_s}, class: 'span2')
+          %br
             = form_buttons(f, submit_label: "Buchung anlegen")

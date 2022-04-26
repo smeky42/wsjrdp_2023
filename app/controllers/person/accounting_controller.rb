@@ -26,6 +26,7 @@ class Person::AccountingController < ApplicationController
     @accounting_payment_array = accounting_payment_array
     @accounting_balance = get_number_to_currency(- accounting_balance)
     @next_payment = get_number_to_currency(next_payment)
+    @possible_sepa_states = Settings.person.sepa_status 
     save_put
   end
 
@@ -76,8 +77,12 @@ class Person::AccountingController < ApplicationController
                            ammount: params[:accounting_ammount],
                            comment: params[:accounting_comment],
                            created_at: DateTime.now)
+      
+      @person.sepa_status = params[:sepa_status]
+      @person.save
+      
       flash[:notice] =
-      "Buchung #{params[:accounting_comment]} in Höhe von #{get_number_to_currency(params[:accounting_ammount].to_i)} erfolgreich angelegt!"
+      "Buchung #{params[:accounting_comment]} in Höhe von #{get_number_to_currency(params[:accounting_ammount].to_i)} erfolgreich angelegt! Status auf #{params[:sepa_status]} gesetzt."
       redirect_back(fallback_location: "/")
     end
   end

@@ -56,7 +56,12 @@ person:
     - überpfrüfung benötigt kommunikation
     - geprüft merkliste
     - ungeprüft
-  
+
+  sepa_status:
+    - OK
+    - In Überprüfung
+    - Zahlung ausstehend
+    
   shirt_sizes:
     - Größe auswählen
     - Klufthemd XS 35/36 
