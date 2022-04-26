@@ -26,7 +26,8 @@ class Person::CheckController < ApplicationController
     @medicine_notes = medicine_notes
     @leader_of_unit = leader_of_unit
     @check_url_id = check_url_document_id(params[:url])
-   
+    
+    event_check
     status_button
     save_put
   end
@@ -125,7 +126,7 @@ class Person::CheckController < ApplicationController
       @person.upload_recommondation_pdf = params['person']['upload_recommondation_pdf'] unless params['person']['upload_recommondation_pdf'].nil?
       @person.upload_good_conduct_pdf =  params['person']['upload_good_conduct_pdf'] unless params['person']['upload_good_conduct_pdf'].nil?
       @person.upload_data_processing_pdf = params['person']['upload_data_processing_pdf'] unless params['person']['upload_data_processing_pdf'].nil?
-
+            
       @person.save
     end
 
@@ -164,6 +165,17 @@ class Person::CheckController < ApplicationController
       end
     end
   end
+
+  def event_check 
+    if (@manage|| @leader_of_unit) && request.put? && !params[:person].nil?
+      @person.jamb_first_event = params['person']['jamb_first_event'] unless params['person']['jamb_first_event'].nil?
+      @person.jamb_second_event = params['person']['jamb_second_event'] unless params['person']['jamb_second_event'].nil?
+      @person.jamb_third_event = params['person']['jamb_third_event'] unless params['person']['jamb_third_event'].nil?
+      @person.jamb_fourth_event = params['person']['jamb_fourth_event'] unless params['person']['jamb_fourth_event'].nil?
+      @person.jamb_precamp_event = params['person']['jamb_precamp_event'] unless params['person']['jamb_precamp_event'].nil?
+      @person.save
+    end 
+  end 
 
   def ul_check
     if params[:task] == 'l_review' && check_url_document_id(params[:url])

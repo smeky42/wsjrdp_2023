@@ -39,7 +39,12 @@ module Wsjrdp2023::PersonSerializer
                      :shirt_size,
                      :uniform_size,
                      :can_swim,
-                     :unit_color
+                     :unit_color,
+                     :jamb_first_event, 
+                     :jamb_second_event, 
+                     :jamb_third_event, 
+                     :jamb_fourth_event, 
+                     :jamb_precamp_event
     end
   end
 end

@@ -205,7 +205,8 @@ de:
         check_l_info: Des weiteren bitte den Medizinbogen (behält die jeweilige Leitung) prüfen. 
         check_good_conduct_info: Der Nachweis Führungszeugnis darf nicht älter als drei Monate sein und muss für das Jamboree noch gültig sein
         check_good_recommondation_info: Die Empfehlung ist valide und unterschrieben 
-        check_data_processing_info: Die Verschwiegenheitsvereinbarung ist unterschrieben 
+        check_data_processing_info: Die Verschwiegenheitsvereinbarung ist unterschrieben
+        check_events: Teilnahme an Vorbereitungstreffen 
         upload_passport_info: Wenn du keinen Reisepass hast, kannst du auch ein PDF von deinem Personalausweis oder Kinderausweis hochladen. Wir benötigen deinen Ausweis, um Name und Geburtsdatum zu überprüfen. Alle anderen Daten kannst du verdecken.
         upload_registration_info: Die Anmeldung ist die erste Seite deines PDFs.
         upload_sepa_info: Das SEPA Lastschriftmandat ist die zweite Seite deines PDFs.
@@ -214,6 +215,11 @@ de:
         upload_good_conduct_info: Nicht das Führungszeugnis hochladen! Nur den Nachweis deines Verbandes, diesen erhältst du über dein Bundesbüro.
         medicine_status: Status des Medizinbogens
         unit_color: Unit Farbe
+        jamb_first_event: VBT I 
+        jamb_second_event: VBT II
+        jamb_third_event: VBT III
+        jamb_fourth_event: VBT IV
+        jamb_precamp_event: Vorlager
 
         genders:
           m: männlich
