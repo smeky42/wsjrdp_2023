@@ -219,7 +219,7 @@ de:
         jamb_second_event: VBT II
         jamb_third_event: VBT III
         jamb_fourth_event: VBT IV
-        jamb_precamp_event: Vorlager
+        jamb_precamp_event: Kontingentslager
 
         genders:
           m: männlich
