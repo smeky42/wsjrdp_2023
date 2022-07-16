@@ -155,6 +155,8 @@ de:
         upload_info: Bitte lade die folgenden Dokumente als PDF Datei hoch, um deine Anmeldung fürs Kontingentsteam zur Überprüfung freizugeben.
         upload_passport_pdf: Reisepass
         upload_data_processing_pdf: Vereinbarung
+        upload_additional_pdf: Weiteres Dokument
+        upload_additional_pdf_info: Hier kannst du ein weiteres Dokumente hochladen
         upload_registration_pdf: Anmeldung
         generated_registration_pdf: Generierte Anmeldung
         upload_sepa_pdf: SEPA
@@ -248,6 +250,7 @@ de:
       show_sepa: SEPA einsehen
       show_data_processing: Verschwiegenheitsvereinbarung einsehen
       show_good_conduct: Nachweis Führungszeugnis einsehen
+      show_additional: Weiteres Dokument einsehen
       review_hint: Dokument einsehen
       edit: Bearbeiten
       edit_hint: Zum Bearbeiten öffnen 

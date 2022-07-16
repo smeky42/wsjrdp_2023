@@ -47,6 +47,8 @@ Rails.application.routes.draw do
           get 'upload/show_good_conduct' => 'person/upload#show_good_conduct'
           get 'upload/show_sepa' => 'person/upload#show_sepa'
           get 'upload/show_data_processing' => 'person/upload#show_data_processing'
+          get 'upload/show_additional' => 'person/upload#show_additional'
+
 
         end 
       end 

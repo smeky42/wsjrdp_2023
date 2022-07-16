@@ -1,0 +1,8 @@
+- if @person.upload_additional_pdf.present?
+    = action_button(t('activerecord.button.show_additional'),
+                    '/groups/' + params[:group_id] + '/people/'+ params[:id] + '/upload/show_additional',
+                    :envelope,
+                    remote: false,
+                    method: :get,
+                    rel: :tooltip,
+                    title: t('activerecord.button.review_hint'))

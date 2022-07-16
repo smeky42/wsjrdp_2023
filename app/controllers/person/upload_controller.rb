@@ -47,6 +47,10 @@ class Person::UploadController < ApplicationController
     download_file(@person.upload_data_processing_pdf)
   end
 
+  def show_additional
+    download_file(@person.upload_additional_pdf)
+  end
+
 
   private
 
@@ -78,6 +82,7 @@ class Person::UploadController < ApplicationController
       upload_file(params[:person][:upload_recommondation_pdf], 'upload_recommondation_pdf')
       upload_file(params[:person][:upload_good_conduct_pdf], 'upload_good_conduct_pdf')
       upload_file(params[:person][:upload_data_processing_pdf], 'upload_data_processing_pdf')
+      upload_file(params[:person][:upload_additional_pdf], 'upload_additional_pdf')
     end
   end
   # rubocop:enable Metrics/AbcSize
