@@ -11,7 +11,7 @@ application:
   languages:
     de: Deutsch
 
-  version: '3.4.0 - Weiteres Dokument'
+  version: '3.5.0 - Remove Outdated Options'
 
 # The person with this email has root access to everything
 # This person should only be used by the operators of the application,
