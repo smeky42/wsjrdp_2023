@@ -57,8 +57,6 @@
         = f.labeled(:upload_good_conduct_pdf, t('activerecord.attributes.person.upload_good_conduct_pdf')) do
           = f.file_field(:upload_good_conduct_pdf)
           = render 'person/upload/button_good_conduct'
-        = link_to t('activerecord.attributes.person.upload_good_conduct_info_link_text'), t('activerecord.attributes.person.upload_good_conduct_info_link'), target: '_blank'
-
       %br
       %br
       = form_buttons(f, submit_label: 'Dokumente hochladen', cancel_url: person_path(@person))
