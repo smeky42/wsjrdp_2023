@@ -65,11 +65,14 @@ module Wsjrdp2023
         :uniform_size,
         :can_swim,
         :unit_color,
-        :jamb_first_event, 
-        :jamb_second_event, 
-        :jamb_third_event, 
-        :jamb_fourth_event, 
-        :jamb_precamp_event
+        :jamb_first_event,
+        :jamb_second_event,
+        :jamb_third_event,
+        :jamb_fourth_event,
+        :jamb_precamp_event,
+        :bus_travel,
+        :air_travel,
+        :extra_luggage
       ]
 
       # Override crud_controller

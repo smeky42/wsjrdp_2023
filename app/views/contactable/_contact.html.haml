@@ -42,6 +42,9 @@
                           :passport_number,
                           :passport_germany,
                           :passport_valid)
+    = render_attrs(entry, :bus_travel,
+                          :extra_luggage,
+                          :air_travel)
     = render_attrs(entry, :languages_spoken,
                           :shirt_size,
                           :uniform_size,

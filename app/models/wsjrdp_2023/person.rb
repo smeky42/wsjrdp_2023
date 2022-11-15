@@ -33,6 +33,7 @@ module Wsjrdp2023::Person
     Person::PUBLIC_ATTRS << :role_wish << :motivation << :languages_spoken
     Person::PUBLIC_ATTRS << :shirt_size << :uniform_size << :can_swim
     Person::PUBLIC_ATTRS << :medicine_status << :unit_color
+    Person::PUBLIC_ATTRS << :bus_travel << :air_travel << :extra_luggage
 
 
     Person::FILTER_ATTRS << :status << :role_wish << :passport_germany << :passport_valid

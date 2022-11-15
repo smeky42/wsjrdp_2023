@@ -222,6 +222,10 @@ de:
         jamb_third_event: VBT III
         jamb_fourth_event: VBT IV
         jamb_precamp_event: Kontingentslager
+        bus_travel: Bus Kontingentslager
+        air_travel: Flug Jamboree 
+        extra_luggage: Zusatzgepäck Bus 
+        extra_luggage_info: Hier kannst du angeben, welches Material du zusätzlich zu deinem Privatgepäck im Bus mitnimmst. z. B. eine Jurte, Zargesbox 100l Unitmaterial 
 
         genders:
           m: männlich

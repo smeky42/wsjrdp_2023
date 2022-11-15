@@ -46,4 +46,6 @@
   = f.labeled_input_field :additional_information
   = render 'picture_fields', f: f
 
+= field_set_tag do
+  = f.labeled_input_field :extra_luggage, placeholder: t('activerecord.attributes.person.extra_luggage_info')
 
