@@ -38,6 +38,12 @@
       = standard_form(@person, {url: check_group_person_path,  method: :put}) do |f|
         = f.labeled_input_fields :jamb_first_event, :jamb_second_event, :jamb_third_event, :jamb_fourth_event, :jamb_precamp_event
         = form_buttons(f, submit_label: 'Teilnahme an VBT ändern')
+    %h4
+      = t('activerecord.attributes.person.check_passport')
+    - if (@manage || @leader_of_unit)
+      = standard_form(@person, {url: check_group_person_path,  method: :put}) do |f|
+        = f.labeled_input_fields :passport_approved
+        = form_buttons(f, submit_label: 'Reisepass überprüft ändern')
     - if @manage
       -# = f.error_messages
       %h4

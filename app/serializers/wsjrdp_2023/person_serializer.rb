@@ -47,7 +47,8 @@ module Wsjrdp2023::PersonSerializer
                      :jamb_precamp_event,
                      :bus_travel,
                      :air_travel,
-                     :extra_luggage
+                     :extra_luggage,
+                     :passport_approved
     end
   end
 end

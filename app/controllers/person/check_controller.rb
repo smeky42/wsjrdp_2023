@@ -19,15 +19,16 @@ class Person::CheckController < ApplicationController
       redirect_url = "#{request.base_url}/groups/#{@person.primary_group_id}/people/#{@person.id}/check/#{params[:url]}"
       Rails.logger.debug("== #{params[:group_id]} redirect to #{redirect_url}")
       redirect_to redirect_url
-    end 
+    end
 
     @manage = manage
     @medicine = medicine
     @medicine_notes = medicine_notes
     @leader_of_unit = leader_of_unit
     @check_url_id = check_url_document_id(params[:url])
-    
+
     event_check
+    passport_check
     status_button
     save_put
   end
@@ -50,32 +51,33 @@ class Person::CheckController < ApplicationController
     current_user.role?('Group::Ist::Leader')
   end
 
-  def check_url_document_id(url_id) 
-    if url_id.nil? || 
+  def check_url_document_id(url_id)
+    if url_id.nil? ||
       @person.upload_registration_pdf.nil? ||
       @person.generated_registration_pdf.nil? ||
-      @person.generated_registration_pdf.split("/")[-1].nil?
-      return false 
-    end 
+      @person.generated_registration_pdf.split('/')[-1].nil?
+      return false
+    end
 
-    date = @person.generated_registration_pdf.split("/")[-1].split("-")
+    date = @person.generated_registration_pdf.split('/')[-1].split('-')
     day = date[2]
     month = date[1]
     year = date[0]
-    doc_id = Base64.encode64(@person.id.to_s + "#{day}.#{month}.#{year}").gsub(/\n+/, "")
+    doc_id = Base64.encode64(@person.id.to_s + "#{day}.#{month}.#{year}").gsub(/\n+/, '')
 
-    if (url_id == doc_id)
+    if url_id == doc_id
       return true
-    else  
-      flash[:alert] = "Der QR Code passt nicht zur Anmeldung des Teilnehmers. " +  
-      "Bitte überprüfe ob du die aktuellsten Anmeldeunterlagen hast.  " 
+    else
+      flash[:alert] = 'Der QR Code passt nicht zur Anmeldung des Teilnehmers. ' +
+      'Bitte überprüfe ob du die aktuellsten Anmeldeunterlagen hast.  '
       if @manage
         flash[:alert] += " \n ID: #{doc_id}"
-      end 
+      end
 
     end
-    false 
-  end 
+
+    false
+  end
 
   def medicine
     current_user.id == 2 ||
@@ -88,10 +90,10 @@ class Person::CheckController < ApplicationController
   end
 
   def status_button
-    if (@manage|| @leader_of_unit) && request.get?
-      ul_check 
-      @person.save 
-    end 
+    if (@manage || @leader_of_unit) && request.get?
+      ul_check
+      @person.save
+    end
 
     if @manage && request.get?
       cmt_check
@@ -126,7 +128,7 @@ class Person::CheckController < ApplicationController
       @person.upload_recommondation_pdf = params['person']['upload_recommondation_pdf'] unless params['person']['upload_recommondation_pdf'].nil?
       @person.upload_good_conduct_pdf =  params['person']['upload_good_conduct_pdf'] unless params['person']['upload_good_conduct_pdf'].nil?
       @person.upload_data_processing_pdf = params['person']['upload_data_processing_pdf'] unless params['person']['upload_data_processing_pdf'].nil?
-            
+
       @person.save
     end
 
@@ -166,16 +168,23 @@ class Person::CheckController < ApplicationController
     end
   end
 
-  def event_check 
-    if (@manage|| @leader_of_unit) && request.put? && !params[:person].nil?
+  def event_check
+    if (@manage || @leader_of_unit) && request.put? && !params[:person].nil?
       @person.jamb_first_event = params['person']['jamb_first_event'] unless params['person']['jamb_first_event'].nil?
       @person.jamb_second_event = params['person']['jamb_second_event'] unless params['person']['jamb_second_event'].nil?
       @person.jamb_third_event = params['person']['jamb_third_event'] unless params['person']['jamb_third_event'].nil?
       @person.jamb_fourth_event = params['person']['jamb_fourth_event'] unless params['person']['jamb_fourth_event'].nil?
       @person.jamb_precamp_event = params['person']['jamb_precamp_event'] unless params['person']['jamb_precamp_event'].nil?
       @person.save
-    end 
-  end 
+    end
+  end
+
+  def passport_check
+    if (@manage || @leader_of_unit) && request.put? && !params[:person].nil?
+      @person.passport_approved = params['person']['passport_approved'] unless params['person']['passport_approved'].nil?
+      @person.save
+    end
+  end
 
   def ul_check
     if params[:task] == 'l_review' && check_url_document_id(params[:url])
