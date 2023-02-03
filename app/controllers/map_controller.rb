@@ -44,10 +44,7 @@ class MapController < ApplicationController
   end
 
   def collect_user
-    people = Person.where('(status="in Überprüfung durch KT"' +
-        ' OR status="Upload vollständig" ' +
-        ' OR status="Dokumente vollständig überprüft")')
-
+    people = Person.where('(status = "bestätigt durch KT" or status = "bestätigt durch Leitung" or status = "vollständig")')
     @users = []
     @invalid_users = []
     people.each do |person|
