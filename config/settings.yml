@@ -11,7 +11,7 @@ application:
   languages:
     de: Deutsch
 
-  version: '3.9.0 - Map'
+  version: '3.10.0 - Rail and Fly'
 
 # The person with this email has root access to everything
 # This person should only be used by the operators of the application,
@@ -56,6 +56,11 @@ person:
     - überpfrüfung benötigt kommunikation
     - geprüft merkliste
     - ungeprüft
+
+  rail_and_fly: 
+    - Rail and Fly 
+    - Rail and Fly nicht möglich 
+    - Kein Rail and Fly
 
   sepa_status:
     - OK

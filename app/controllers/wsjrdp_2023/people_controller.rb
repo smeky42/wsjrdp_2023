@@ -73,7 +73,9 @@ module Wsjrdp2023
         :bus_travel,
         :air_travel,
         :extra_luggage,
-        :passport_approved
+        :passport_approved,
+        :rail_and_fly,
+        :rail_and_fly_reason
       ]
 
       # Override crud_controller

@@ -228,6 +228,9 @@ de:
         extra_luggage_info: Hier kannst du angeben, welches Material du zusätzlich zu deinem Privatgepäck im Bus mitnimmst. z. B. eine Jurte, Zargesbox 100l Unitmaterial 
         check_passport: Reisepass im Orginal von der Unitleitung geprüft
         passport_approved: Reisepass überprüft
+        rail_and_fly: Rail and Fly 
+        rail_and_fly_reason: Begründung für Rail and Fly Änderung
+        rail_and_fly_text: Begründet die Anreise via Rail & Fly ändern 
         genders:
           m: männlich
           w: weiblich

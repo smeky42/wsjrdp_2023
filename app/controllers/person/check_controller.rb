@@ -29,6 +29,7 @@ class Person::CheckController < ApplicationController
 
     event_check
     passport_check
+    rail_and_fly_check
     status_button
     save_put
   end
@@ -182,6 +183,14 @@ class Person::CheckController < ApplicationController
   def passport_check
     if (@manage || @leader_of_unit) && request.put? && !params[:person].nil?
       @person.passport_approved = params['person']['passport_approved'] unless params['person']['passport_approved'].nil?
+      @person.save
+    end
+  end
+
+  def rail_and_fly_check
+    if (@manage || @leader_of_unit) && request.put? && !params[:person].nil?
+      @person.rail_and_fly = params['person']['rail_and_fly'] unless params['person']['rail_and_fly'].nil?
+      @person.rail_and_fly_reason = params['person']['rail_and_fly_reason'] unless params['person']['rail_and_fly_reason'].nil?
       @person.save
     end
   end

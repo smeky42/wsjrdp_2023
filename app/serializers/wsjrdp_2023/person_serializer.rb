@@ -48,7 +48,9 @@ module Wsjrdp2023::PersonSerializer
                      :bus_travel,
                      :air_travel,
                      :extra_luggage,
-                     :passport_approved
+                     :passport_approved,
+                     :rail_and_fly,
+                     :rail_and_fly_reason
     end
   end
 end

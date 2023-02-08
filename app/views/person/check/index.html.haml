@@ -33,6 +33,14 @@
     %br
     %br
     %h4
+      = t('activerecord.attributes.person.rail_and_fly_text') 
+    - if (@manage || @leader_of_unit)
+      = standard_form(@person, {url: check_group_person_path,  method: :put}) do |f|
+        = f.labeled_collection_select(:rail_and_fly, Settings.person.rail_and_fly, :to_s, :to_s, {}, class: 'span2') 
+        = f.labeled_input_fields :rail_and_fly_reason
+        - if @person.rail_and_fly != "Rail and Fly nicht möglich" || @manage
+          = form_buttons(f, submit_label: 'Rail & Fly Status ändern')
+    %h4
       = t('activerecord.attributes.person.check_events') 
     - if (@manage || @leader_of_unit)
       = standard_form(@person, {url: check_group_person_path,  method: :put}) do |f|
