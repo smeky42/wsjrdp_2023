@@ -71,7 +71,7 @@ class Person::AccountingController < ApplicationController
   # rubocop:disable Metrics/CyclomaticComplexity,Metrics/PerceivedComplexity,Metrics/MethodLength,Metrics/AbcSize
   def save_put
     if @accounting && request.put? && !params[:accounting_comment].nil? && !params[:accounting_ammount].nil?
-      AccountingEntries.create(id: AccountingEntries.count + 1,
+      AccountingEntries.create(id: AccountingEntries.last.id + 1,
                            subject_id: @person.id,
                            author_id: current_user.id,
                            ammount: params[:accounting_ammount],
