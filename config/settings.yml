@@ -11,7 +11,7 @@ application:
   languages:
     de: Deutsch
 
-  version: '3.10.1 - Rail and Fly'
+  version: '3.11.0 - External Event registration'
 
 # The person with this email has root access to everything
 # This person should only be used by the operators of the application,
