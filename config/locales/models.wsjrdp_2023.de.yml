@@ -231,6 +231,16 @@ de:
         rail_and_fly: Rail and Fly 
         rail_and_fly_reason: Begründung für Rail and Fly Änderung
         rail_and_fly_text: Begründet die Anreise via Rail & Fly ändern 
+        last_order_header: Letze Infos
+        last_order_info: Vor dem Jamboree benötigen wir noch folgende Infos von euch
+        last_order_kola: Bis zum 15.04. ob und wie du am KoLa teilnimmst 
+        last_order_kola_info: Du bist automatisch angemeldet und kannst dich hier vom Bus und auch komplett abmelden. Wenn du normal teilnimmst musst du hier nichts ändern. Falls du etwas änderst, gib bitte deiner Leitung Bescheid.
+        last_order_head: Bis zum 15.04. ob du Baseballkappe oder Fischerhut möchtest 
+        last_order_head_info: Zum Head
+        last_order_head_link: www.muetze.de
+        last_order_keta: Bis zum 01.07. dein K-Eta
+        last_order_keta_info:  Hier findest du eine Anleitung wie du dein K-Eta beantragst.
+        last_order_keta_link: www.keta.de
         genders:
           m: männlich
           w: weiblich
@@ -312,6 +322,7 @@ de:
       rdp_association: Verbandszugehörigkeit
       finance: SEPA
       medicine: Gesundheitsbogen
+      last_order: Letze Abfrage
   global:
     tabs:
       info: Kontaktdaten

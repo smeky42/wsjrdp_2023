@@ -22,6 +22,10 @@
 
     #medicine.tab-pane
       = render 'contactable/medicine', f: f
+    
+    #last_order.tab-pane
+      = render 'contactable/last_order', f: f
+
 
 - if can?(:index_notes, entry)
   = render 'notes/section', create_path: group_person_notes_path(@group, entry)
