@@ -106,6 +106,7 @@ de:
         additional_mail_info: Weitere E-Mail-Adressen und Telefonummern, um bei Fragen, zur Information oder auch bei Notfällen Kontakt aufzunehmen
         additional_mail_help: Mit "Versand" gekennzeichnete Mails werden zusätzlich zur primären Mailadresse benachrichtigt
         accounting_info: Hier erhälst du einen Überblick über deine bisherigen Zahlungen und deinen Ratenplan
+        istjobs_info: Hier kannst du deine Jobs auswählen
         sepa_header: Kontaktdaten Kontoinhaber*in
         sepa_info: werden für das SEPA Lastschriftmandat und bei Fragen rund um den Zahlungsverkehr verwendet 
         sepa_name: Kontoinhaber*in
@@ -324,6 +325,7 @@ de:
       check: Teilnehmerdaten überprüfen
       upload: Upload
       accounting: Buchhaltung
+      istjobs: IST-Jobs
     form_tabs:
       general: Kontaktdaten Teilnehmer*in
       additional_contact: Weitere Kontaktdaten

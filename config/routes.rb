@@ -34,6 +34,8 @@ Rails.application.routes.draw do
           get 'print/submit' => 'person/print#submit'
           get 'accounting' => 'person/accounting#index'
           put 'accounting' => 'person/accounting#index'
+          get 'istjobs' => 'person/istjobs#index'
+          put 'istjobs' => 'person/istjobs#index'
           get 'check' => 'person/check#index'
           put 'check' => 'person/check#index'
           get 'check/:url' => 'person/check#index'

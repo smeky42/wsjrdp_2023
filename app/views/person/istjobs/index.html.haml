@@ -1,0 +1,74 @@
+#main.row-fluid
+  - if @authorize_view
+    = t('activerecord.attributes.person.accounting_info')
+    %br 
+    = standard_form(@person, {url: istjobs_group_person_path,  method: :get}) do |f|
+      = f.error_messages
+    %h3
+      = "IST-Jobs" 
+    - if @accounting_entries.nil? || @accounting_entries.count == 0
+      = "Keine Buchungen"
+    - else 
+      %table{:width => "600"}
+        %tbody{:style => "border: 1px solid gray"}
+          %tr
+            %th{:style => "border: 1px solid gray"} Zeitstempel
+            %th{:style => "border: 1px solid gray"} Autor
+            %th{:style => "border: 1px solid gray"} Kommentar
+            %th{:style => "border: 1px solid gray", :align => "right"} Betrag
+          %tr
+            %td{:style => "border: 1px solid gray"}= ""
+            %td{:style => "border: 1px solid gray"}= "System"
+            %td{:style => "border: 1px solid gray"}= "Teilnehmendenbetrag Gesamt"
+            %td{:style => "border: 1px solid gray", :align => "right"}= @accounting_payment_value
+          - @accounting_entries.each do |entry|
+            %tr
+              %td{:style => "border: 1px solid gray"}= entry.created_at.strftime("%d.%m.%Y %H:%M:%S") 
+              %td{:style => "border: 1px solid gray"}= Person.where(id: entry.author_id).first.full_name
+              %td{:style => "border: 1px solid gray"}= entry.comment
+              %td{:style => "border: 1px solid gray", :align => "right"}= accounting_value(entry.ammount)
+        %tfoot
+          %tr
+            %td= ""
+            %td= ""
+            %td{:style => "font-weight: bold", :align => "center"}= "Kontostand "
+            %td{:style => "font-weight: bold; border-bottom-style: double", :align => "right"}= @accounting_balance
+      
+    
+    -# %h3
+    -#   = "Nächste Rate"
+    -#   = @next_payment
+    %h3
+      = "Ratenplan" 
+    %table{:border => 1, :width => "600"}
+      %tbody
+        %tr
+          %th Zeitpunkt
+          %th{:align => "right"} Betrag
+          %th{:align => "right"} Soll Kontostand
+        - @accounting_payment_array.each do |entry|
+          %tr
+            %td=entry[:month].strftime("%d.%m.%Y")
+            %td{:align => "right"}= entry[:ammount]
+            %td{:align => "right"}= entry[:total]            
+    %br
+
+    -if @accounting
+      = form_with url: istjobs_group_person_path, local: true, :method => :put do |f|
+        %dl.dl-horizontal 
+          %dt.muted
+            = "Betrag in Cent"
+          %dd
+            = f.number_field :accounting_ammount
+            %br
+          %dt.muted
+            = "Kommentar"
+          %dd
+            = f.text_area :accounting_comment, size: "70x5"
+            %br
+          %dt.muted
+            = "Status"
+          %dd
+            = f.collection_select(:sepa_status, @possible_sepa_states, :to_s, :to_s, {:selected => @person.sepa_status.to_s}, class: 'span2')
+          %br
+            = form_buttons(f, submit_label: "Buchung anlegen")
