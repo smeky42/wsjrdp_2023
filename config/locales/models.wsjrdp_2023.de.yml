@@ -155,8 +155,8 @@ de:
         upload_info: Bitte lade die folgenden Dokumente als PDF Datei hoch, um deine Anmeldung fürs Kontingentsteam zur Überprüfung freizugeben.
         upload_passport_pdf: Reisepass
         upload_data_processing_pdf: Vereinbarung
-        upload_additional_pdf: Weiteres Dokument
-        upload_additional_pdf_info: Hier kannst du ein weiteres Dokumente hochladen
+        upload_additional_pdf: K-Eta PDF
+        upload_additional_pdf_info: Bitte lade hier das K-Eta hoch, damit deine Leitung auch zugriff darauf hat.
         upload_registration_pdf: Anmeldung
         generated_registration_pdf: Generierte Anmeldung
         upload_sepa_pdf: SEPA
@@ -231,19 +231,20 @@ de:
         rail_and_fly: Rail and Fly 
         rail_and_fly_reason: Begründung für Rail and Fly Änderung
         rail_and_fly_text: Begründet die Anreise via Rail & Fly ändern 
-        last_order_header: Letze Infos
+        last_order_header: Letzte Info Abfrage
         last_order_info: Vor dem Jamboree benötigen wir noch folgende Infos von euch
-        last_order_kola: Bis zum 15.04. ob und wie du am KoLa teilnimmst 
-        last_order_kola_info: Du bist automatisch angemeldet und kannst dich hier vom Bus und auch komplett abmelden. Wenn du normal teilnimmst musst du hier nichts ändern. Falls du etwas änderst, gib bitte deiner Leitung Bescheid.
-        last_order_head: Bis zum 15.04. ob du Baseballkappe oder Fischerhut möchtest 
-        last_order_head_info: Zum Head
-        last_order_head_link: www.muetze.de
-        last_order_keta: Bis zum 01.07. dein K-Eta
-        last_order_keta_info:  Hier findest du eine Anleitung wie du dein K-Eta beantragst.
-        last_order_keta_link: www.keta.de
+        last_order_kola: Teilnahme am Kontingentslager 
+        last_order_kola_info: Du bist automatisch angemeldet. Hier kannst du dich vom Bus oder auch komplett abmelden. Wenn du normal teilnimmst musst du hier nichts ändern! Falls du etwas änderst, gib bitte deiner Leitung Bescheid.
+        last_order_head: Baseballkappe oder Fischerhut 
+        last_order_head_info: Hier findest du Bilder zu unseren Kopfbedeckungen
+        last_order_head_link: https://www.worldscoutjamboree.de/kopfbedeckung/
+        last_order_keta: Das K-Eta
+        last_order_keta_info:  Das K-Eta kannst du im Reiter Upload auf dieser Seite hochladen. Hier findest du eine Anleitung wie du dein K-Eta beantragst. 
+        last_order_keta_link: https://www.worldscoutjamboree.de/k-eta/
         kola_participation: Ich nehme am Kontingentlager teil
-        kola_bus: Ich nehme den offiziellen Bus zum Kontingentlager
+        kola_bus: Ich nehme den offiziellen Bus zum Kontingentslager
         kola_reason: Falls du einen Haken entfernt hast Begründe warum
+        head: Kopfbedeckung
 
         genders:
           m: männlich
@@ -272,7 +273,7 @@ de:
       show_sepa: SEPA einsehen
       show_data_processing: Verschwiegenheitsvereinbarung einsehen
       show_good_conduct: Nachweis Führungszeugnis einsehen
-      show_additional: Weiteres Dokument einsehen
+      show_additional: K-Eta einsehen
       review_hint: Dokument einsehen
       edit: Bearbeiten
       edit_hint: Zum Bearbeiten öffnen 

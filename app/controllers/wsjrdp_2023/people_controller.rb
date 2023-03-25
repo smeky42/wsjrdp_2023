@@ -78,7 +78,8 @@ module Wsjrdp2023
         :rail_and_fly_reason,
         :kola_participation,
         :kola_bus,
-        :kola_reason
+        :kola_reason,
+        :head
       ]
 
       # Override crud_controller

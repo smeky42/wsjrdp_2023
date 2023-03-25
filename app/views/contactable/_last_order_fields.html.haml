@@ -7,4 +7,16 @@
   = t('activerecord.attributes.person.last_order_header') 
 = t('activerecord.attributes.person.last_order_info')
 
+%h4
+  = t('activerecord.attributes.person.last_order_kola') 
+= t('activerecord.attributes.person.last_order_kola_info')
 = f.labeled_input_fields :kola_participation, :kola_bus, :kola_reason
+
+%h4
+  = t('activerecord.attributes.person.last_order_head') 
+= link_to t('activerecord.attributes.person.last_order_head_info'), t('activerecord.attributes.person.last_order_head_link'), target: '_blank'
+= f.labeled_collection_select(:head, ['Baseballkappe','Fischerhut'], :to_s, :to_s, {}, class: 'span2')
+
+%h4
+  = t('activerecord.attributes.person.last_order_keta') 
+= link_to t('activerecord.attributes.person.last_order_keta_info'), t('activerecord.attributes.person.last_order_head_link'), target: '_blank'
