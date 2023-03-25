@@ -241,6 +241,10 @@ de:
         last_order_keta: Bis zum 01.07. dein K-Eta
         last_order_keta_info:  Hier findest du eine Anleitung wie du dein K-Eta beantragst.
         last_order_keta_link: www.keta.de
+        kola_participation: Ich nehme am Kontingentlager teil
+        kola_bus: Ich nehme den offiziellen Bus zum Kontingentlager
+        kola_reason: Falls du einen Haken entfernt hast Begründe warum
+
         genders:
           m: männlich
           w: weiblich

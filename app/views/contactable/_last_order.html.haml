@@ -12,6 +12,9 @@
   = t('activerecord.attributes.person.last_order_kola') 
 = t('activerecord.attributes.person.last_order_kola_info')
 
+= render_attrs(entry,
+                     :kola_participation, :kola_bus, :kola_reason)
+
 
 %h4
   = t('activerecord.attributes.person.last_order_head') 
