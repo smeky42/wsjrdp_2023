@@ -156,7 +156,7 @@ de:
         upload_passport_pdf: Reisepass
         upload_data_processing_pdf: Vereinbarung
         upload_additional_pdf: K-Eta PDF
-        upload_additional_pdf_info: Bitte lade hier das K-Eta hoch, damit deine Leitung auch zugriff darauf hat.
+        upload_additional_pdf_info: Bitte lade hier das K-Eta hoch, damit deine Leitung auch Zugriff darauf hat.
         upload_registration_pdf: Anmeldung
         generated_registration_pdf: Generierte Anmeldung
         upload_sepa_pdf: SEPA
@@ -232,7 +232,7 @@ de:
         rail_and_fly_reason: Begründung für Rail and Fly Änderung
         rail_and_fly_text: Begründet die Anreise via Rail & Fly ändern 
         last_order_header: Letzte Info Abfrage
-        last_order_info: Vor dem Jamboree benötigen wir noch folgende Infos von euch
+        last_order_info: Vor dem Jamboree benötigen wir noch folgende Infos von euch.
         last_order_kola: Teilnahme am Kontingentslager 
         last_order_kola_info: Du bist automatisch angemeldet. Hier kannst du dich vom Bus oder auch komplett abmelden. Wenn du normal teilnimmst musst du hier nichts ändern! Falls du etwas änderst, gib bitte deiner Leitung Bescheid.
         last_order_head: Baseballkappe oder Fischerhut 
@@ -245,6 +245,9 @@ de:
         kola_bus: Ich nehme den offiziellen Bus zum Kontingentslager
         kola_reason: Falls du einen Haken entfernt hast Begründe warum
         head: Kopfbedeckung
+        pronoun: Pronomen
+        pronoun_header: Personalpronomen und Spitznamen
+        pronoun_info: Hier kannst du zusätzlich zu deinem Spitznamen, den wir für Namensschilder und in Mails nutzen, auch noch dein Personalpronomen wählen.
 
         genders:
           m: männlich

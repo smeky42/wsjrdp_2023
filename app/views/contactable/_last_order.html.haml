@@ -7,6 +7,12 @@
   = t('activerecord.attributes.person.last_order_header') 
 = t('activerecord.attributes.person.last_order_info')
 
+%br
+%br
+%h4
+  = t('activerecord.attributes.person.pronoun_header') 
+= t('activerecord.attributes.person.pronoun_info')
+= render_attrs(entry, :pronoun, :nickname)
 
 %h4
   = t('activerecord.attributes.person.last_order_kola') 

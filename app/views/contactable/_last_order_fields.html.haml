@@ -7,6 +7,14 @@
   = t('activerecord.attributes.person.last_order_header') 
 = t('activerecord.attributes.person.last_order_info')
 
+%br
+%br
+%h4
+  = t('activerecord.attributes.person.pronoun_header') 
+= t('activerecord.attributes.person.pronoun_info')
+= f.labeled_collection_select(:pronoun, ['','they','he','she','-'], :to_s, :to_s, {}, class: 'span2')
+= f.labeled_input_fields :nickname
+
 %h4
   = t('activerecord.attributes.person.last_order_kola') 
 = t('activerecord.attributes.person.last_order_kola_info')
@@ -19,4 +27,4 @@
 
 %h4
   = t('activerecord.attributes.person.last_order_keta') 
-= link_to t('activerecord.attributes.person.last_order_keta_info'), t('activerecord.attributes.person.last_order_head_link'), target: '_blank'
+= link_to t('activerecord.attributes.person.last_order_keta_info'), t('activerecord.attributes.person.last_order_keta_link'), target: '_blank'

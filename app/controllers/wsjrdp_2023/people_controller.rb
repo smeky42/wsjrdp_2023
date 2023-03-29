@@ -79,7 +79,8 @@ module Wsjrdp2023
         :kola_participation,
         :kola_bus,
         :kola_reason,
-        :head
+        :head,
+        :pronoun
       ]
 
       # Override crud_controller
