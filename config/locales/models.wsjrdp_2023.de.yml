@@ -325,7 +325,7 @@ de:
       check: Teilnehmerdaten überprüfen
       upload: Upload
       accounting: Buchhaltung
-      istjobs: IST-Jobs
+      ist_job: IST-Jobs
     form_tabs:
       general: Kontaktdaten Teilnehmer*in
       additional_contact: Weitere Kontaktdaten

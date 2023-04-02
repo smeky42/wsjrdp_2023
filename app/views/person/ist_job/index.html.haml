@@ -1,0 +1,57 @@
+-#  Copyright (c) 2012-2021, German Contingent for the Worldscoutjamboree 2023. This file is part of
+-#  hitobito_wsjrdp_2023 and licensed under the Affero General Public License version 3
+-#  or later. See the COPYING file at the top-level directory or at
+-#  https://github.com/hitobito/hitobito_wsjrdp_2023.
+
+#main.row-fluid
+  %h4 
+    = "IST Job Wahl"
+    -# = f.labeled_input_fields :first_choice, :first_specialization, :second_choice, :second_specialization, :third_choice, :third_specialization,
+
+  -if @authorize_view
+    = form_with url: ist_job_group_person_path, local: true, :method => :put do |f|
+      %dl.dl-horizontal 
+        %dt.muted
+          = "Job Priorität 1. Wahl"
+        %dd
+          = f.collection_select(:first_choice, @possible_ist_jobs, :to_s, :to_s, {:selected => @job[:first_choice]}, class: 'span6')
+        %dt.muted
+          = ""
+          %dd
+            = "Entsprechende Spezialisierung (d.h., Fähigkeiten, Berufserfahrung, Ausbildungen usw.) für den gewählten Job."
+            %br
+        %dt.muted
+          = ""
+          %dd
+            = f.text_area :first_specialization, size: "100x5", class: 'span6', value: @job[:first_specialization]
+            %br
+        %dt.muted
+          = "Job Priorität 2. Wahl"
+        %dd
+          = f.collection_select(:second_choice, @possible_ist_jobs, :to_s, :to_s, {:selected => @job[:second_choice]}, class: 'span6')
+        %dt.muted
+          = ""
+          %dd
+            = "Entsprechende Spezialisierung (d.h., Fähigkeiten, Berufserfahrung, Ausbildungen usw.) für den gewählten Job."
+            %br
+        %dt.muted
+          = ""
+          %dd
+            = f.text_area :second_specialization, size: "100x5", class: 'span6', value: @job[:second_specialization]
+            %br
+        %dt.muted
+          = "Job Priorität 3. Wahl"
+        %dd
+          = f.collection_select(:third_choice, @possible_ist_jobs, :to_s, :to_s, {:selected => @job[:third_choice]}, class: 'span6')
+        %dt.muted
+          = ""
+          %dd
+            = "Entsprechende Spezialisierung (d.h., Fähigkeiten, Berufserfahrung, Ausbildungen usw.) für den gewählten Job."
+            %br
+        %dt.muted
+          = ""
+          %dd
+            = f.text_area :third_specialization, size: "100x5", class: 'span6', value: @job[:third_specialization] 
+            %br
+        %br
+          = form_buttons(f, submit_label: "Auswahl speichern")

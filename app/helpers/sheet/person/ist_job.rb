@@ -7,7 +7,7 @@
 
 module Sheet
   class Person < Base
-    class Istjobs < Base
+    class IstJob < Base
 
       self.parent_sheet = Sheet::Person
 

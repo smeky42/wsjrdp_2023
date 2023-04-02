@@ -25,25 +25,23 @@ module Sheet
 
     tab 'people.tabs.accounting',
         :accounting_group_person_path,
-        if: (lambda do |view, _group, _person|
+        if: (lambda do |view, _group, person|
           view.current_user.role?('Group::Root::Admin') ||
           view.current_user.role?('Group::Root::Leader') ||
           view.current_user.role?('Group::UnitSupport::Leader') ||
           view.current_user.role?('Group::UnitSupport::Member') ||
-          view.current_user.role?('Group::Ist::Leader') || 
-          view.current_user == _person 
+          view.current_user.role?('Group::Ist::Leader') ||
+          view.current_user == person
           # TODO: use view.can
         end)
 
-    tab 'people.tabs.istjobs',
-        :istjobs_group_person_path,
-        if: (lambda do |view, _group, _person|
-          view.current_user.role?('Group::Root::Admin') ||
+    tab 'people.tabs.ist_job',
+        :ist_job_group_person_path,
+        if: (lambda do |view, _group, person|
+          (view.current_user.role?('Group::Root::Admin') ||
           view.current_user.role?('Group::Root::Leader') ||
-          view.current_user.role?('Group::UnitSupport::Leader') ||
-          view.current_user.role?('Group::UnitSupport::Member') ||
-          view.current_user.role?('Group::Ist::Leader') || 
-          view.current_user == _person 
+          view.current_user.role?('Group::Ist::Leader') ||
+          view.current_user == person) && person.role_wish == 'IST'
           # TODO: use view.can
         end)
 
