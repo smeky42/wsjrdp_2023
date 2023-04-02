@@ -11,7 +11,7 @@ application:
   languages:
     de: Deutsch
 
-  version: '3.11.0 - External Event registration'
+  version: '3.13.0 - IST Jobs and Last Order'
 
 # The person with this email has root access to everything
 # This person should only be used by the operators of the application,
