@@ -242,7 +242,7 @@ de:
         last_order_keta: Das K-Eta
         last_order_keta_info:  Das K-Eta kannst du im Reiter Upload auf dieser Seite hochladen. Hier findest du eine Anleitung wie du dein K-Eta beantragst. 
         last_order_keta_link: https://www.worldscoutjamboree.de/k-eta/
-        kola_participation: Ich nehme am Kontingentlager teil
+        kola_participation: Ich nehme am Kontingentslager teil
         kola_bus: Ich nehme den offiziellen Bus zum Kontingentslager
         kola_reason: Falls du einen Haken entfernt hast Begründe warum
         head: Kopfbedeckung
@@ -332,7 +332,7 @@ de:
       rdp_association: Verbandszugehörigkeit
       finance: SEPA
       medicine: Gesundheitsbogen
-      last_order: Letze Abfrage
+      last_order: Letzte Abfrage
   global:
     tabs:
       info: Kontaktdaten
