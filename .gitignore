@@ -26,4 +26,4 @@ rubocop-results.xml
 .DS_Store
 
 bin/Create-Unit-Mailing-Lists.rb
-
+config/korea_secret.yml

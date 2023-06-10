@@ -1,0 +1,25 @@
+-#  Copyright (c) 2012-2021, German Contingent for the Worldscoutjamboree 2023. This file is part of
+-#  hitobito_wsjrdp_2023 and licensed under the Affero General Public License version 3
+-#  or later. See the COPYING file at the top-level directory or at
+-#  https://github.com/hitobito/hitobito_wsjrdp_2023.
+
+#main.row-fluid
+  %h4 
+    = "Anmeldung beim Veranstalter in Korea"
+    -# = f.labeled_input_fields :first_choice, :first_specialization, :second_choice, :second_specialization, :third_choice, :third_specialization,
+
+  = "Wir haben dich beim koreanischen Veranstalter gemeldet und deine Daten soweit möglich übertragen. Du kannst dein Passwort für die koreanische Anmeldung hier neu setzen."
+  -if @authorize_view
+    = form_with url: korea_reg_group_person_path, local: true, :method => :put do |f|
+      %dl.dl-horizontal
+        %dt.muted
+          = "Anmeldung Korea: "  
+        %dd
+          = link_to "register.2023wsjkorea.org", "https://register.2023wsjkorea.org/home/sub.php?menukey=1625&language=en"
+        %dt.muted
+          = "Korea ID: "  
+        %dd
+          = @person.korea_id
+          %br
+          %br
+          = form_buttons(f, submit_label: "Passwort neu setzten")

@@ -36,6 +36,8 @@ Rails.application.routes.draw do
           put 'accounting' => 'person/accounting#index'
           get 'ist_job' => 'person/ist_job#index'
           put 'ist_job' => 'person/ist_job#index'
+          get 'korea_reg' => 'person/korea_reg#index'
+          put 'korea_reg' => 'person/korea_reg#index'
           get 'check' => 'person/check#index'
           put 'check' => 'person/check#index'
           get 'check/:url' => 'person/check#index'
