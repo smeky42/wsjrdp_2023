@@ -20,7 +20,6 @@ class Person::KoreaRegController < ApplicationController
     save_put
   end
 
-
   private
 
   def entry
@@ -279,7 +278,7 @@ class Person::KoreaRegController < ApplicationController
   end
 
   def save_put
-    if request.put? && @authorize_view
+    if request.put?
       Rails.logger.debug '====> Experimental Korea Password Reset'
       Rails.logger.debug '====> Initial Request'
       cookie_token = initial_token_request
