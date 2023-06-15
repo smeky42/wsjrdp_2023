@@ -47,13 +47,7 @@ module Sheet
 
     tab 'people.tabs.korea_reg',
         :korea_reg_group_person_path,
-        if: (lambda do |view, _group, person|
-          (view.current_user.role?('Group::Root::Admin') ||
-          view.current_user.role?('Group::Root::Leader') ||
-          view.current_user.role?('Group::Ist::Leader') ||
-          view.current_user == person) && person.role_wish == 'Kontingentsteam'
-          # TODO: use view.can
-        end)
+        if: :show
 
     tab 'people.tabs.check',
         :check_group_person_path,

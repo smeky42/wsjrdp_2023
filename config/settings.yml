@@ -11,7 +11,7 @@ application:
   languages:
     de: Deutsch
 
-  version: '3.13.2 - IST Jobs and Last Order'
+  version: '3.14.0 - Korean Registration for Everyone'
 
 # The person with this email has root access to everything
 # This person should only be used by the operators of the application,

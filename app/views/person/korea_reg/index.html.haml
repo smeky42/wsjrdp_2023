@@ -8,18 +8,18 @@
     = "Anmeldung beim Veranstalter in Korea"
     -# = f.labeled_input_fields :first_choice, :first_specialization, :second_choice, :second_specialization, :third_choice, :third_specialization,
 
-  = "Wir haben dich beim koreanischen Veranstalter gemeldet und deine Daten soweit möglich übertragen. Du kannst dein Passwort für die koreanische Anmeldung hier neu setzen."
-  -if @authorize_view
-    = form_with url: korea_reg_group_person_path, local: true, :method => :put do |f|
-      %dl.dl-horizontal
-        %dt.muted
-          = "Anmeldung Korea: "  
-        %dd
-          = link_to "register.2023wsjkorea.org", "https://register.2023wsjkorea.org/home/sub.php?menukey=1625&language=en"
-        %dt.muted
-          = "Korea ID: "  
-        %dd
-          = @person.korea_id
-          %br
-          %br
-          = form_buttons(f, submit_label: "Passwort neu setzten")
+  = "Wir haben dich beim koreanischen Veranstalter gemeldet und deine Daten soweit nötig übertragen. Du kannst dein Passwort für die koreanische Anmeldung hier neu setzen (und am Besten gleich in einen Passwort-Manager kopieren)." 
+  = link_to "Bitte lies bevor du dich dort einloggst unsere Anleitung unter: https://www.worldscoutjamboree.de/registration-korea/", "https://www.worldscoutjamboree.de/registration-korea/", target: :_blank
+  = form_with url: korea_reg_group_person_path, local: true, :method => :put do |f|
+    %dl.dl-horizontal
+      %dt.muted
+        = "Anmeldung Korea: "  
+      %dd
+        = link_to "register.2023wsjkorea.org", "https://register.2023wsjkorea.org/home/sub.php?menukey=1625&language=en", target: :_blank
+      %dt.muted
+        = "Korea ID: "  
+      %dd
+        = @person.korea_id
+        %br
+        %br
+        = form_buttons(f, submit_label: "Passwort neu setzten")

@@ -17,21 +17,9 @@ class Person::KoreaRegController < ApplicationController
     @group ||= Group.find(params[:group_id])
     @person ||= group.people.find(params[:id])
 
-    unless authorize_view
-      return
-    end
-
-    @authorize_view = authorize_view
-
     save_put
   end
 
-  def authorize_view
-    (current_user.role?('Group::Root::Admin') ||
-    current_user.role?('Group::Root::Leader') ||
-    current_user.role?('Group::Ist::Leader') ||
-    current_user == @person) && @person.role_wish == 'Kontingentsteam'
-  end
 
   private
 
