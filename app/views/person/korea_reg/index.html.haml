@@ -23,3 +23,7 @@
         %br
         %br
         = form_buttons(f, submit_label: "Passwort neu setzten")
+      %dt.muted
+        = "Korea QR-Code: "  
+      %dd
+        %img{:src => "https://register.2023wsjkorea.org/base/php/wsj/Qrcode/QR.php?id=" + @person.korea_id, :width => "200", :height => "200"}
