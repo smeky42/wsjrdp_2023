@@ -80,7 +80,8 @@ module Wsjrdp2023
         :kola_bus,
         :kola_reason,
         :head,
-        :pronoun
+        :pronoun,
+        :korea_id
       ]
 
       # Override crud_controller

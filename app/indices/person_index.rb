@@ -24,5 +24,6 @@ ThinkingSphinx::Index.define_partial :person do
           sepa_bic,
           sepa_status,
           unit_keys,
-          unit_color
+          unit_color,
+          korea_id
 end

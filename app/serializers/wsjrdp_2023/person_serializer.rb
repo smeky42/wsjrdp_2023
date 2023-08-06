@@ -50,7 +50,8 @@ module Wsjrdp2023::PersonSerializer
                      :extra_luggage,
                      :passport_approved,
                      :rail_and_fly,
-                     :rail_and_fly_reason
+                     :rail_and_fly_reason,
+                     :korea_id
     end
   end
 end
